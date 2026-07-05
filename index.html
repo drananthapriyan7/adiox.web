@@ -3,360 +3,580 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adiox — Cloud Trading Platform for Modern Traders</title>
-  <meta name="description" content="Follow traders, automate strategies, and compete in live markets. The cloud trading platform built for modern traders." />
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Adiox — Learn, Train, Compete &amp; Trade | Prop Trading Ecosystem</title>
+  <meta name="description" content="The all-in-one prop trading ecosystem: tournaments, challenge simulation, copy trading, AI coaching & pro tools. Start free — evolve from beginner to funded." />
+  <link rel="canonical" href="https://adiox.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adiox — Learn, Train, Compete & Trade | Prop Trading Ecosystem" />
+  <meta property="og:description" content="The all-in-one prop trading ecosystem: tournaments, challenge simulation, copy trading, AI coaching & pro tools. Start free — evolve from beginner to funded." />
+  <meta property="og:url" content="https://adiox.com/" />
+  <meta property="og:site_name" content="Adiox" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/home.css" />
+
+  <!-- Structured data: Organization, WebSite + SearchAction, SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://adiox.com/#org",
+        "name": "Adiox",
+        "url": "https://adiox.com/",
+        "logo": "https://adiox.com/assets/logo.png",
+        "description": "Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a realistic simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account.",
+        "sameAs": [
+          "https://x.com/adiox",
+          "https://discord.gg/adiox",
+          "https://t.me/adiox",
+          "https://www.youtube.com/@adiox"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://adiox.com/#website",
+        "url": "https://adiox.com/",
+        "name": "Adiox",
+        "publisher": { "@id": "https://adiox.com/#org" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://adiox.com/search?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/",
+        "description": "Prop trading ecosystem with a challenge simulator (PropSim), trading tournaments, copy trading marketplace, AI trading coach, backtesting, journaling, and multi-account management (PropSync).",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free tier — no card required" },
+        "publisher": { "@id": "https://adiox.com/#org" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Adiox?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Adiox free to start?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Creating an Adiox account is free and requires no card. The free tier includes Academy lessons, free tournaments, the trading glossary, and community access. Paid options — simulator runs from $10, evaluations, and Pro subscriptions — unlock as you progress, so you only pay when you're ready to level up." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Learn, Train, Compete, Trade mean?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They are the four stages of a trader's evolution on Adiox. Learn builds knowledge with the Academy and AI Coach. Train builds skill safely with PropSim, backtesting, and journaling. Compete proves skill in tournaments, PvP games, and leaderboards. Trade is the professional stage: funded challenges, copy trading, signals, and risk tools." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get funded through Adiox?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Adiox offers performance-based evaluations — 1-step, 2-step, instant, and pay-later formats. Pass an evaluation on simulated capital and you qualify for a funded account with performance-based payouts. Trading involves risk and funding is never guaranteed; results depend entirely on your performance under the published rules." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need experience to join Adiox?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No experience is required. Complete beginners start in the Adiox Academy with structured learning paths and an AI coach, then practice risk-free in the simulator before any money is at stake. Experienced traders can skip straight to evaluations, tournaments, PropSync multi-account management, or the copy-trading marketplace." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which platforms does Adiox connect to?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Adiox connects to MetaTrader 5 (MT5), TradeLocker, and Match-Trader. PropSync syncs and monitors accounts across multiple prop firms in one dashboard, while the Adiox Copier mirrors signals and copy-trading strategies to your connected platform accounts with your own risk settings applied." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     NAV
-══════════════════════════════════════ -->
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">ADIOX</a>
+<!-- ══════════════════════════ LIVE TICKER ══════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><i class="dot dot-gold"></i>Weekend Clash prize pool <b class="mono gold">$12,500</b></span>
+    <span class="ticker-item"><i class="dot dot-teal"></i><b class="mono">2,417</b> simulated evaluations run this week</span>
+    <span class="ticker-item"><i class="dot dot-gold"></i>Latest payout <b class="mono gold">$3,240</b> — trader K.M.</span>
+    <span class="ticker-item"><i class="dot dot-blue"></i><b class="mono">96</b> tournaments live this month</span>
+    <span class="ticker-item"><i class="dot dot-violet"></i>AI Coach reviewed <b class="mono">18,309</b> trades today</span>
+    <span class="ticker-item"><i class="dot dot-gold"></i>Weekend Clash prize pool <b class="mono gold">$12,500</b></span>
+    <span class="ticker-item"><i class="dot dot-teal"></i><b class="mono">2,417</b> simulated evaluations run this week</span>
+    <span class="ticker-item"><i class="dot dot-gold"></i>Latest payout <b class="mono gold">$3,240</b> — trader K.M.</span>
+    <span class="ticker-item"><i class="dot dot-blue"></i><b class="mono">96</b> tournaments live this month</span>
+    <span class="ticker-item"><i class="dot dot-violet"></i>AI Coach reviewed <b class="mono">18,309</b> trades today</span>
+  </div>
+</div>
 
-    <ul class="nav-links">
-      <li><a href="#product">Platform</a></li>
-      <li><a href="#strategies">Strategies</a></li>
-      <li><a href="#competitions">Compete</a></li>
-      <li><a href="#funded">Funded</a></li>
-      <li><a href="#learn">Learn</a></li>
-    </ul>
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a>
+            <a href="/learn/ai-coach">AI Coach</a>
+            <a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a>
+            <a href="/train/backtesting">Backtesting Engine</a>
+            <a href="/train/journal">Trading Journal</a>
+            <a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a>
+            <a href="/compete/trading-games">The Arena</a>
+            <a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a>
+            <a href="/trade/copy-trading">Copy Trading</a>
+            <a href="/trade/signals">Signal Hub</a>
+            <a href="/trade/propsync">PropSync</a>
+            <a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col">
+            <a href="/blog">Blog</a>
+            <a href="/glossary">Glossary</a>
+            <a href="/faq">Help Center</a>
+            <a href="/about">About &amp; Roadmap</a>
+            <a href="/partners">Partners</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <div class="nav-cta">
-      <a href="#" class="btn btn-ghost" style="padding:10px 20px;font-size:14px;">Log in</a>
-      <a href="#" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Start Trading</a>
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
     </div>
 
-    <div class="nav-hamburger" aria-label="Menu">
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </header>
 
 <!-- Mobile menu -->
-<div class="mobile-menu" style="display:none;"></div>
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions">
+    <a href="/login" class="btn btn-ghost">Log in</a>
+    <a href="/signup" class="btn btn-primary">Start Free</a>
+  </div>
+</div>
 
+<main>
 
-<!-- ══════════════════════════════════════
-     1. HERO
-══════════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
+<!-- ══════════════════════════ 1. HERO ══════════════════════════ -->
+<section class="hero" id="hero">
+  <canvas id="coreCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
 
-  <div class="hero-content container" style="width:100%;">
+  <div class="container hero-content">
+    <p class="eyebrow reveal">THE PROP TRADING ECOSYSTEM</p>
 
-    <div class="hero-left">
-      <div class="hero-eyebrow">
-        <span class="badge">Cloud Trading Platform</span>
+    <h1 class="hero-title reveal">
+      <span class="w-learn">Learn.</span>
+      <span class="w-train">Train.</span>
+      <span class="w-compete">Compete.</span>
+      <span class="w-trade">Trade.</span>
+    </h1>
+
+    <p class="hero-sub reveal">
+      Adiox is the operating system for prop trading performance —
+      one ecosystem that takes you from your first lesson to funded professional.
+    </p>
+
+    <p class="hero-pitch reveal">
+      Adiox is a unified prop trading ecosystem built around four stages: Learn, Train,
+      Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations
+      in a realistic simulator, compete in tournaments and PvP trading games, and graduate
+      to funded challenges, copy trading, signals, and professional risk tools — all inside
+      one account.
+    </p>
+
+    <div class="hero-actions reveal">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start Free</a>
+      <a href="#pillars" class="btn btn-ghost btn-lg js-scroll">Explore the Ecosystem ↓</a>
+      <a href="#film" class="btn btn-text">▶ Watch the 60-sec film</a>
+    </div>
+
+    <div class="hero-trust reveal">
+      <div class="trust-stat"><b class="mono" data-count="28400">0</b><span>traders in the ecosystem</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-stat"><b class="mono" data-count="2417">0</b><span>simulated evaluations this week</span></div>
+      <div class="trust-div"></div>
+      <div class="trust-stat"><b class="mono gold" data-count="148200" data-prefix="$">0</b><span>in prizes &amp; payouts to date</span></div>
+    </div>
+  </div>
+
+  <a href="#problem" class="scroll-cue js-scroll" aria-label="Scroll down"><span></span></a>
+</section>
+
+<!-- ══════════════════════════ 2. PROBLEM → ANSWER ══════════════════════════ -->
+<section class="section problem" id="problem">
+  <div class="container">
+    <div class="split">
+      <div class="split-left reveal">
+        <p class="eyebrow">THE PROBLEM</p>
+        <h2>Your trading life is scattered across six different apps</h2>
+        <p class="lead">
+          A course in one tab. A journal in another. A prop firm dashboard, a signal group,
+          a backtester, and a Discord for competitions — none of them talking to each other.
+          Every switch costs focus, data, and money.
+        </p>
+        <ul class="scatter-list">
+          <li>Courses that never connect to your real results</li>
+          <li>Evaluations you pay for before you've ever practiced one</li>
+          <li>Journals, copiers, and risk tools sold as separate subscriptions</li>
+          <li>No single record of your evolution as a trader</li>
+        </ul>
       </div>
-
-      <h1 class="hero-title">
-        Cloud trading for
-        <span class="grad-text">modern traders</span>
-      </h1>
-
-      <p class="hero-sub">
-        Follow top traders, automate your strategies, and compete in live markets —
-        all from the cloud. No setup. No limits.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5,3 19,12 5,21"/></svg>
-          Start Trading
-        </a>
-        <a href="#product" class="btn btn-ghost">Explore Strategies →</a>
-      </div>
-
-      <div class="hero-trust">
-        <div class="hero-trust-avatars">
-          <span class="av1">AK</span>
-          <span class="av2">MR</span>
-          <span class="av3">JP</span>
-          <span class="av4">SL</span>
-        </div>
-        <div class="hero-trust-text">
-          <strong>28,000+ active traders</strong>
-          <span>Join the fastest growing trading community</span>
+      <div class="split-right reveal">
+        <p class="eyebrow teal">THE ANSWER</p>
+        <h2 class="answer-h">One account. One ecosystem. <span class="grad-text">Every stage of your evolution.</span></h2>
+        <p class="lead">
+          Adiox unifies the entire journey — learning, simulation, competition, and
+          professional trading tools — into one connected platform, so your data,
+          progress, and edge travel with you.
+        </p>
+        <div class="unify-visual" aria-hidden="true">
+          <span class="chipf">Academy</span><span class="chipf">Journal</span><span class="chipf">Simulator</span>
+          <span class="chipf">Tournaments</span><span class="chipf">Copier</span><span class="chipf">Risk Tools</span>
+          <span class="unify-arrow">→</span>
+          <span class="unify-core">ADIOX</span>
         </div>
       </div>
     </div>
-
-    <!-- Dashboard visual -->
-    <div class="hero-right">
-      <div class="hero-float-card hero-float-1">
-        <div class="float-label">Portfolio Return</div>
-        <div class="float-val profit">+$4,821.40</div>
-      </div>
-
-      <div class="hero-dashboard">
-        <div class="dash-header">
-          <h4>Live Portfolio</h4>
-          <span class="dash-live">LIVE</span>
-        </div>
-
-        <div class="dash-chart">
-          <div class="dash-bar" style="height:40%;animation-delay:.05s"></div>
-          <div class="dash-bar up" style="height:55%;animation-delay:.10s"></div>
-          <div class="dash-bar down" style="height:35%;animation-delay:.15s"></div>
-          <div class="dash-bar up" style="height:65%;animation-delay:.20s"></div>
-          <div class="dash-bar" style="height:50%;animation-delay:.25s"></div>
-          <div class="dash-bar up" style="height:80%;animation-delay:.30s"></div>
-          <div class="dash-bar up" style="height:70%;animation-delay:.35s"></div>
-          <div class="dash-bar down" style="height:45%;animation-delay:.40s"></div>
-          <div class="dash-bar up" style="height:90%;animation-delay:.45s"></div>
-          <div class="dash-bar up" style="height:75%;animation-delay:.50s"></div>
-          <div class="dash-bar" style="height:60%;animation-delay:.55s"></div>
-          <div class="dash-bar up" style="height:95%;animation-delay:.60s"></div>
-        </div>
-
-        <div class="dash-stats">
-          <div class="dash-stat">
-            <div class="dash-stat-label">Total Return</div>
-            <div class="dash-stat-val green">+38.4%</div>
-          </div>
-          <div class="dash-stat">
-            <div class="dash-stat-label">Win Rate</div>
-            <div class="dash-stat-val blue">73%</div>
-          </div>
-          <div class="dash-stat">
-            <div class="dash-stat-label">Copying</div>
-            <div class="dash-stat-val" style="color:#e879f9;">4 traders</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-float-card hero-float-2">
-        <div class="float-label">Weekly Rank</div>
-        <div class="float-val rank">#7 Global 🏆</div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════
-     2. PRODUCT ENGINE
-══════════════════════════════════════ -->
-<section class="product" id="product">
+<!-- ══════════════════════════ 3. FOUR PILLARS ══════════════════════════ -->
+<section class="section pillars" id="pillars">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="badge">Platform Core</span>
-      <h2>Three pillars.<br><span class="grad-text">One unified edge.</span></h2>
-      <p>Everything you need to trade smarter — copy, build, and discover — in one cloud-native platform.</p>
-    </div>
+    <p class="eyebrow center reveal">THE FOUR PILLARS</p>
+    <h2 class="center reveal">The prop trading ecosystem, in four stages</h2>
+    <p class="lead center reveal">Every feature on Adiox belongs to one of four stages. Wherever you are today, there's a doorway built for you.</p>
 
-    <div class="product-tabs reveal">
-      <button class="ptab active" data-panel="panel-copy">
-        📡 Copy Trading
+    <div class="pillar-tabs reveal" role="tablist" aria-label="The four pillars">
+      <button class="pillar-tab active" role="tab" aria-selected="true" aria-controls="panel-learn" id="tab-learn" data-pillar="learn">
+        <span class="glyph glyph-learn" aria-hidden="true"></span><b>Learn</b><span class="pt-sub">Build knowledge</span>
       </button>
-      <button class="ptab" data-panel="panel-strategies">
-        ⚡ Strategies
+      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-train" id="tab-train" data-pillar="train">
+        <span class="glyph glyph-train" aria-hidden="true"></span><b>Train</b><span class="pt-sub">Build skill safely</span>
       </button>
-      <button class="ptab" data-panel="panel-signals">
-        🎯 Signals
+      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-compete" id="tab-compete" data-pillar="compete">
+        <span class="glyph glyph-compete" aria-hidden="true"></span><b>Compete</b><span class="pt-sub">Prove skill</span>
+      </button>
+      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-trade" id="tab-trade" data-pillar="trade">
+        <span class="glyph glyph-trade" aria-hidden="true"></span><b>Trade</b><span class="pt-sub">Earn professionally</span>
       </button>
     </div>
 
-    <!-- Copy Trading Panel -->
-    <div class="product-panel active" id="panel-copy">
-      <div class="panel-info reveal">
-        <span class="badge" style="margin-bottom:16px;">Primary</span>
-        <h3>Follow the best.<br><span class="grad-text">Automatically.</span></h3>
-        <p>Connect to top-performing traders and let Adiox execute their trades in your account — with full control over allocation and risk.</p>
-        <ul class="panel-features">
-          <li>Follow top-performing traders in one click</li>
-          <li>Cloud execution — no local setup required</li>
-          <li>Control your portfolio allocation per trader</li>
-          <li>Risk-managed copying with drawdown limits</li>
-          <li>Real-time performance tracking & analytics</li>
-        </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="#" class="btn btn-primary">Start Copying</a>
-          <a href="#strategies" class="btn btn-ghost">Browse Traders →</a>
+    <div class="pillar-panels reveal">
+      <div class="pillar-panel active p-learn" role="tabpanel" id="panel-learn" aria-labelledby="tab-learn">
+        <div class="pp-copy">
+          <h3>Study with a coach that never sleeps</h3>
+          <p>Structured learning paths in the Adiox Academy, an AI Coach that answers in plain language, and a glossary that turns jargon into knowledge — free from day one.</p>
+          <ul class="pp-list">
+            <li><b>Adiox Academy</b> — guided courses from candlesticks to funded-account rules</li>
+            <li><b>AI Coach</b> — ask anything, get feedback on every trade you take</li>
+            <li><b>Glossary</b> — every prop trading term, explained in 60 seconds</li>
+          </ul>
+          <a class="btn btn-ghost" href="/learn">Enter the Learn hub →</a>
+        </div>
+        <div class="pp-cards">
+          <a class="pp-card" href="/learn/academy"><b>Academy</b><span>Learning paths &amp; courses</span></a>
+          <a class="pp-card" href="/learn/ai-coach"><b>AI Coach</b><span>Personal trading mentor</span></a>
+          <a class="pp-card" href="/glossary"><b>Glossary</b><span>Terms, decoded</span></a>
         </div>
       </div>
 
-      <div class="panel-visual reveal reveal-delay-2">
-        <div class="trader-cards">
-          <div class="trader-card">
-            <div class="trader-avatar" style="background:linear-gradient(135deg,#4a9eff,#8b5cf6)">AK</div>
-            <div class="trader-info">
-              <div class="trader-name">AlphaKing</div>
-              <div class="trader-sub">2,341 followers · Forex</div>
-            </div>
-            <div class="trader-stats">
-              <div class="trader-return">+127.4%</div>
-              <div class="trader-followers">12mo return</div>
-            </div>
+      <div class="pillar-panel p-train" role="tabpanel" id="panel-train" aria-labelledby="tab-train" hidden>
+        <div class="pp-copy">
+          <h3>Practice the challenge before you pay for it</h3>
+          <p>PropSim recreates real prop-firm evaluations — targets, drawdown rules, daily limits — on simulated capital. Backtest, journal, and build strategies without risking a dollar of evaluation fees.</p>
+          <ul class="pp-list">
+            <li><b>PropSim</b> — prop-firm-style evaluation simulator, runs from $10</li>
+            <li><b>Backtesting Engine</b> — replay years of market data against your rules</li>
+            <li><b>Trading Journal</b> — every trade logged, tagged, and scored automatically</li>
+            <li><b>Strategy Lab</b> — no-code strategy builder</li>
+          </ul>
+          <a class="btn btn-ghost" href="/train">Enter the Train hub →</a>
+        </div>
+        <div class="pp-cards">
+          <a class="pp-card" href="/train/simulator"><b>PropSim</b><span>Challenge simulator</span></a>
+          <a class="pp-card" href="/train/backtesting"><b>Backtesting</b><span>Prove your edge on history</span></a>
+          <a class="pp-card" href="/train/journal"><b>Journal</b><span>Your feedback loop</span></a>
+          <a class="pp-card" href="/train/strategy-builder"><b>Strategy Lab</b><span>No-code builder</span></a>
+        </div>
+      </div>
+
+      <div class="pillar-panel p-compete" role="tabpanel" id="panel-compete" aria-labelledby="tab-compete" hidden>
+        <div class="pp-copy">
+          <h3>Trading tournaments with real prizes</h3>
+          <p>Free and paid tournaments, 1v1 duels and squad battles in the Arena, and public leaderboards where rankings — not follower counts — decide who's good.</p>
+          <ul class="pp-list">
+            <li><b>Tournaments</b> — scheduled competitions with published prize pools</li>
+            <li><b>The Arena</b> — PvP trading duels and team-based games</li>
+            <li><b>Leaderboards</b> — global rankings, public and verifiable</li>
+          </ul>
+          <a class="btn btn-ghost" href="/compete">Enter the Compete hub →</a>
+        </div>
+        <div class="pp-cards">
+          <a class="pp-card" href="/compete/tournaments"><b>Tournaments</b><span>Free &amp; paid, real prizes</span></a>
+          <a class="pp-card" href="/compete/trading-games"><b>The Arena</b><span>1v1 duels &amp; squads</span></a>
+          <a class="pp-card" href="/compete/leaderboards"><b>Leaderboards</b><span>Global rankings</span></a>
+        </div>
+      </div>
+
+      <div class="pillar-panel p-trade" role="tabpanel" id="panel-trade" aria-labelledby="tab-trade" hidden>
+        <div class="pp-copy">
+          <h3>Trade like a professional operation</h3>
+          <p>Funded challenges in every format, a copy-trading marketplace, the Signal Hub with the Adiox Copier, and PropSync to run every prop account you own from one command deck.</p>
+          <ul class="pp-list">
+            <li><b>Challenges &amp; Funding</b> — 1-step, 2-step, instant, and pay-later evaluations</li>
+            <li><b>Copy Trading</b> — follow verified strategies or monetize your own</li>
+            <li><b>Signal Hub + Adiox Copier</b> — signals executed with your risk settings</li>
+            <li><b>PropSync + Prop Tools</b> — multi-account manager, Risk Manager, News Filter</li>
+          </ul>
+          <a class="btn btn-ghost" href="/trade">Enter the Trade hub →</a>
+        </div>
+        <div class="pp-cards">
+          <a class="pp-card" href="/trade/challenges"><b>Challenges</b><span>Get evaluated, get funded</span></a>
+          <a class="pp-card" href="/trade/copy-trading"><b>Copy Trading</b><span>Marketplace of strategies</span></a>
+          <a class="pp-card" href="/trade/signals"><b>Signal Hub</b><span>Signals + Adiox Copier</span></a>
+          <a class="pp-card" href="/trade/propsync"><b>PropSync</b><span>All prop accounts, one deck</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ 4. ECOSYSTEM MAP ══════════════════════════ -->
+<section class="section ecomap" id="ecosystem">
+  <div class="container">
+    <p class="eyebrow center reveal">THE ECOSYSTEM</p>
+    <h2 class="center reveal">Everything orbits one thing: you</h2>
+    <p class="lead center reveal">Twelve connected features, one trader at the center. Hover any node to see how it fits.</p>
+
+    <div class="orbit-wrap reveal" id="orbitWrap">
+      <svg class="orbit-svg" viewBox="0 0 800 800" role="img" aria-label="Interactive map of the Adiox ecosystem: twelve features orbiting the trader">
+        <defs>
+          <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="400" cy="400" r="150" class="orbit-ring"/>
+        <circle cx="400" cy="400" r="250" class="orbit-ring"/>
+        <circle cx="400" cy="400" r="340" class="orbit-ring"/>
+        <circle cx="400" cy="400" r="90" fill="url(#coreGrad)"/>
+        <g id="orbitThreads" class="orbit-threads"></g>
+      </svg>
+      <div class="orbit-center">
+        <span class="oc-avatar">YOU</span>
+        <span class="oc-label">The Trader</span>
+      </div>
+      <!-- nodes injected by JS -->
+    </div>
+    <div class="orbit-tip" id="orbitTip" hidden></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ 5. TRADER'S JOURNEY ══════════════════════════ -->
+<section class="section journey" id="journey">
+  <div class="container">
+    <p class="eyebrow center reveal">THE TRADER'S JOURNEY</p>
+    <h2 class="center reveal">From first lesson to funded professional</h2>
+    <p class="lead center reveal">One path, four milestones. Your account carries your history through every stage.</p>
+
+    <div class="journey-line" id="journeyLine">
+      <div class="jl-progress" id="jlProgress"></div>
+
+      <article class="milestone reveal" data-stage="learn">
+        <div class="ms-num mono">01</div>
+        <div class="ms-body">
+          <h3>Beginner — the classroom</h3>
+          <p>Start free in the Academy. Learning paths, the AI Coach, and zero pressure — no card, no risk, no jargon walls.</p>
+          <p class="ms-stat mono">Free forever · 40+ structured lessons</p>
+        </div>
+      </article>
+
+      <article class="milestone reveal" data-stage="train">
+        <div class="ms-num mono">02</div>
+        <div class="ms-body">
+          <h3>Simulated evaluations — the holodeck</h3>
+          <p>Run prop-firm-style challenges in PropSim before you ever pay evaluation fees. Journal every trade, find the leaks, fix them cheaply.</p>
+          <p class="ms-stat mono">2,417 simulated evaluations run this week</p>
+        </div>
+      </article>
+
+      <article class="milestone reveal" data-stage="compete">
+        <div class="ms-num mono">03</div>
+        <div class="ms-body">
+          <h3>Tournament rankings — the arena</h3>
+          <p>Prove your consistency where everyone can see it. Free entries to start, prize pools when you're ready, a public rank that follows you.</p>
+          <p class="ms-stat mono">96 tournaments live this month</p>
+        </div>
+      </article>
+
+      <article class="milestone reveal" data-stage="trade">
+        <div class="ms-num mono">04</div>
+        <div class="ms-body">
+          <h3>Funded professional — the command deck</h3>
+          <p>Pass an evaluation, trade simulated capital for performance-based payouts, and run every account with PropSync and pro risk tools.</p>
+          <p class="ms-stat mono gold">$148,200 in prizes &amp; payouts to date</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ 6. FEATURE SPOTLIGHTS ══════════════════════════ -->
+<section class="section spotlights" id="features">
+  <div class="container">
+
+    <!-- PropSim -->
+    <div class="spot reveal">
+      <div class="spot-copy">
+        <p class="eyebrow teal">TRAIN · PROPSIM</p>
+        <h2>Practice prop firm challenges before you pay for one</h2>
+        <p class="lead">PropSim recreates evaluation conditions — profit targets, daily drawdown, max loss — on simulated capital. Fail for $10, learn the lesson, pass the real one.</p>
+        <ul class="spot-list">
+          <li>Real evaluation rulesets, including FTMO®-style formats*</li>
+          <li>Instant rule-breach alerts so you learn <em>why</em> you failed</li>
+          <li>Every run feeds your Journal and AI Coach automatically</li>
+        </ul>
+        <a href="/train/simulator" class="btn btn-primary magnetic">Try the Simulator — $10</a>
+      </div>
+      <div class="spot-media tilt">
+        <div class="device sim-ui" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">PropSim — Evaluation #4,112</span><span class="pill pill-live">RUNNING</span></div>
+          <div class="sim-stats">
+            <div class="sim-stat"><span>Profit target</span><b class="mono teal">$6,240 / $8,000</b><i class="bar"><i style="width:78%"></i></i></div>
+            <div class="sim-stat"><span>Daily drawdown</span><b class="mono">-1.2% / -5%</b><i class="bar bar-safe"><i style="width:24%"></i></i></div>
+            <div class="sim-stat"><span>Days traded</span><b class="mono">7 / 30</b><i class="bar"><i style="width:23%"></i></i></div>
           </div>
-          <div class="trader-card">
-            <div class="trader-avatar" style="background:linear-gradient(135deg,#8b5cf6,#e879f9)">SR</div>
-            <div class="trader-info">
-              <div class="trader-name">ScalpRoyale</div>
-              <div class="trader-sub">1,102 followers · Crypto</div>
-            </div>
-            <div class="trader-stats">
-              <div class="trader-return">+89.2%</div>
-              <div class="trader-followers">12mo return</div>
-            </div>
+          <svg class="sim-chart" viewBox="0 0 320 90" preserveAspectRatio="none">
+            <path d="M0,70 L30,62 L55,66 L85,48 L110,54 L140,38 L170,44 L200,30 L235,36 L265,20 L295,26 L320,12" fill="none" stroke="#22D3EE" stroke-width="2"/>
+            <path d="M0,70 L30,62 L55,66 L85,48 L110,54 L140,38 L170,44 L200,30 L235,36 L265,20 L295,26 L320,12 L320,90 L0,90 Z" fill="rgba(34,211,238,0.08)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tournaments / Arena -->
+    <div class="spot spot-flip reveal">
+      <div class="spot-copy">
+        <p class="eyebrow violet">COMPETE · TOURNAMENTS &amp; THE ARENA</p>
+        <h2>Trading tournaments with real prizes</h2>
+        <p class="lead">Scheduled competitions, 1v1 duels, and squad battles — ranked on skill, settled on the leaderboard, paid from published prize pools.</p>
+        <ul class="spot-list">
+          <li>Free entry tournaments every week — no card required</li>
+          <li>PvP duels in the Arena: same market, same capital, best trader wins</li>
+          <li>Public, verifiable leaderboards and season rankings</li>
+        </ul>
+        <a href="/compete/tournaments" class="btn btn-primary magnetic">Join a Free Tournament</a>
+      </div>
+      <div class="spot-media tilt">
+        <div class="device arena-ui" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Weekend Clash — Final</span><span class="pill pill-gold">$12,500 POOL</span></div>
+          <div class="duel">
+            <div class="duel-side"><span class="duel-av av-a">RX</span><b>Rexon</b><span class="mono teal">+8.4%</span></div>
+            <div class="duel-vs mono">VS</div>
+            <div class="duel-side"><span class="duel-av av-b">NV</span><b>NovaFx</b><span class="mono">+6.1%</span></div>
           </div>
-          <div class="trader-card">
-            <div class="trader-avatar" style="background:linear-gradient(135deg,#e879f9,#fb923c)">QT</div>
-            <div class="trader-info">
-              <div class="trader-name">QuantTech</div>
-              <div class="trader-sub">3,718 followers · Indices</div>
-            </div>
-            <div class="trader-stats">
-              <div class="trader-return">+61.7%</div>
-              <div class="trader-followers">12mo return</div>
-            </div>
-          </div>
-          <div class="trader-card">
-            <div class="trader-avatar" style="background:linear-gradient(135deg,#fb923c,#4a9eff)">NW</div>
-            <div class="trader-info">
-              <div class="trader-name">NightWatch</div>
-              <div class="trader-sub">889 followers · Commodities</div>
-            </div>
-            <div class="trader-stats">
-              <div class="trader-return">+44.3%</div>
-              <div class="trader-followers">12mo return</div>
-            </div>
+          <div class="arena-rows">
+            <div class="arena-row"><span class="mono">#1</span><b>Rexon</b><span class="mono teal">+8.4%</span></div>
+            <div class="arena-row"><span class="mono">#2</span><b>NovaFx</b><span class="mono">+6.1%</span></div>
+            <div class="arena-row"><span class="mono">#3</span><b>Drift</b><span class="mono">+5.7%</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Strategies Panel -->
-    <div class="product-panel" id="panel-strategies">
-      <div class="panel-info reveal">
-        <span class="badge" style="margin-bottom:16px;background:rgba(74,158,255,0.1);color:var(--blue);border-color:rgba(74,158,255,0.2);">Secondary</span>
-        <h3>Build strategies.<br><span class="grad-text">Without code.</span></h3>
-        <p>Design rule-based automations using our no-code strategy builder. Backtest against historical data, then deploy to live markets in seconds.</p>
-        <ul class="panel-features">
-          <li>Drag-and-drop no-code strategy builder</li>
-          <li>Rule-based automation with custom triggers</li>
-          <li>Backtesting against years of market data</li>
-          <li>One-click deployment to live or paper trading</li>
-          <li>Advanced risk configuration per strategy</li>
+    <!-- Copy Trading -->
+    <div class="spot reveal">
+      <div class="spot-copy">
+        <p class="eyebrow">TRADE · COPY TRADING</p>
+        <h2>Follow verified strategies — or monetize your own</h2>
+        <p class="lead">A cloud copy-trading marketplace with audited stats, drawdown-aware allocation, and private groups for strategy creators.</p>
+        <ul class="spot-list">
+          <li>Every strategy shows verified history — no screenshot bragging</li>
+          <li>Your risk settings override the provider's, always</li>
+          <li>Creators earn performance fees through private groups</li>
         </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="#" class="btn btn-primary">Build a Strategy</a>
-          <a href="#" class="btn btn-ghost">View Templates →</a>
-        </div>
+        <a href="/trade/copy-trading" class="btn btn-primary magnetic">Browse Strategies</a>
       </div>
-      <div class="panel-visual reveal reveal-delay-2">
-        <div class="strategy-builder">
-          <div class="sb-header">Strategy Builder — EMA Cross System</div>
-          <div class="sb-blocks">
-            <div class="sb-block if">
-              <span class="sb-tag">IF</span>
-              EMA(9) crosses above EMA(21)
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 16px;">
-              <div style="width:2px;height:20px;background:rgba(255,255,255,0.1);margin-left:24px;"></div>
-              <span style="font-size:11px;color:var(--muted);">and</span>
-            </div>
-            <div class="sb-block if">
-              <span class="sb-tag">AND</span>
-              Volume > 1.5× 20-day average
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 16px;">
-              <div style="width:2px;height:20px;background:rgba(74,222,128,0.2);margin-left:24px;"></div>
-              <span style="font-size:11px;color:var(--muted);">then</span>
-            </div>
-            <div class="sb-block then">
-              <span class="sb-tag">BUY</span>
-              Long 2% of portfolio @ Market
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;padding:0 16px;">
-              <div style="width:2px;height:20px;background:rgba(255,255,255,0.1);margin-left:24px;"></div>
-              <span style="font-size:11px;color:var(--muted);">exit</span>
-            </div>
-            <div class="sb-block stop">
-              <span class="sb-tag">STOP</span>
-              Stop Loss 2% · Take Profit 6%
-            </div>
-          </div>
-
-          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--card-b);display:flex;justify-content:space-between;align-items:center;">
-            <div style="font-size:12px;color:var(--muted);">Backtest: 3 years · 1,204 trades</div>
-            <div style="font-size:14px;font-weight:800;color:#4ade80;">Win rate: 67.4%</div>
-          </div>
+      <div class="spot-media tilt">
+        <div class="device copy-ui" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Copy Trading — Marketplace</span><span class="pill">142 STRATEGIES</span></div>
+          <div class="strat-card"><div><b>Momentum One</b><span class="strat-meta">FX majors · 14 months</span></div><span class="mono teal">+31.2%</span><button class="mini-btn">Copy</button></div>
+          <div class="strat-card"><div><b>Gold Standard</b><span class="strat-meta">XAUUSD · 9 months</span></div><span class="mono teal">+24.8%</span><button class="mini-btn">Copy</button></div>
+          <div class="strat-card"><div><b>IndexFlow</b><span class="strat-meta">US indices · 22 months</span></div><span class="mono teal">+19.5%</span><button class="mini-btn">Copy</button></div>
         </div>
       </div>
     </div>
 
-    <!-- Signals Panel -->
-    <div class="product-panel" id="panel-signals">
-      <div class="panel-info reveal">
-        <span class="badge" style="margin-bottom:16px;background:rgba(232,121,249,0.1);color:var(--pink);border-color:rgba(232,121,249,0.2);">Support</span>
-        <h3>Discover verified<br><span class="grad-text">signal providers.</span></h3>
-        <p>Subscribe to battle-tested signal providers with verifiable track records. Get alerts, insights, and strategy ideas delivered in real time.</p>
-        <ul class="panel-features">
-          <li>Browse verified signal providers by performance</li>
-          <li>Performance-based discovery & rankings</li>
-          <li>Subscription-based access with free previews</li>
-          <li>Real-time alerts via app, email, or webhook</li>
-          <li>Deep strategy insights & historical analysis</li>
+    <!-- AI Coach -->
+    <div class="spot spot-flip reveal">
+      <div class="spot-copy">
+        <p class="eyebrow violet">LEARN · AI COACH</p>
+        <h2>Your AI Coach reviews every trade you take</h2>
+        <p class="lead">Not a chatbot bolted on — an AI layer wired into your journal, simulator runs, and evaluations. It sees your patterns before you do.</p>
+        <ul class="spot-list">
+          <li>Post-trade reviews with the exact rule or habit that cost you</li>
+          <li>Weekly performance reports in plain language</li>
+          <li>Trained on your data — advice gets sharper the more you trade</li>
         </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="#" class="btn btn-primary">Browse Signals</a>
-          <a href="#" class="btn btn-ghost">Become a Provider →</a>
-        </div>
+        <a href="/learn/ai-coach" class="btn btn-primary magnetic">Meet Your AI Coach</a>
       </div>
-      <div class="panel-visual reveal reveal-delay-2">
-        <div class="signal-list">
-          <div class="signal-item">
-            <div class="signal-icon" style="background:rgba(74,158,255,0.15);">📈</div>
-            <div class="signal-info">
-              <div class="signal-name">FX Precision Pro</div>
-              <div class="signal-meta">Forex · 847 subscribers · Verified</div>
-            </div>
-            <div class="signal-right">
-              <div class="signal-wr">82% WR</div>
-              <div class="signal-price">$29/mo</div>
-            </div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-icon" style="background:rgba(139,92,246,0.15);">₿</div>
-            <div class="signal-info">
-              <div class="signal-name">CryptoEdge Daily</div>
-              <div class="signal-meta">Crypto · 2,103 subscribers · Verified</div>
-            </div>
-            <div class="signal-right">
-              <div class="signal-wr">74% WR</div>
-              <div class="signal-price">$49/mo</div>
-            </div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-icon" style="background:rgba(251,146,60,0.15);">🛢️</div>
-            <div class="signal-info">
-              <div class="signal-name">Commodity Hawk</div>
-              <div class="signal-meta">Commodities · 512 subscribers</div>
-            </div>
-            <div class="signal-right">
-              <div class="signal-wr">70% WR</div>
-              <div class="signal-price">$19/mo</div>
-            </div>
-          </div>
-          <div class="signal-item">
-            <div class="signal-icon" style="background:rgba(74,222,128,0.15);">📊</div>
-            <div class="signal-info">
-              <div class="signal-name">Quant Macro Index</div>
-              <div class="signal-meta">Indices · 1,290 subscribers · Verified</div>
-            </div>
-            <div class="signal-right">
-              <div class="signal-wr">78% WR</div>
-              <div class="signal-price">$39/mo</div>
-            </div>
-          </div>
+      <div class="spot-media tilt">
+        <div class="device coach-ui" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">AI Coach</span><span class="pill pill-violet">ANALYZING</span></div>
+          <div class="chat-msg ai">You've broken your own 1% risk rule on 4 of your last 6 losing trades — all after a winning streak. Overconfidence pattern.</div>
+          <div class="chat-msg user">How do I fix it?</div>
+          <div class="chat-msg ai">Enable the Risk Manager hard-cap at 1% and I'll flag any order above it before execution. Want me to switch it on?</div>
         </div>
       </div>
     </div>
@@ -364,721 +584,259 @@
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════
-     3. LIVE STATS
-══════════════════════════════════════ -->
-<section class="stats" id="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="stat-number" data-target="28400" data-suffix="+">0</div>
-        <div class="stat-label">Active Traders</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-number" data-target="4800" data-suffix="+">0</div>
-        <div class="stat-label">Strategies Running</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-number" data-prefix="$" data-target="2.4" data-suffix="B" data-decimals="1">0</div>
-        <div class="stat-label">Volume Copied</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-number" data-target="73.2" data-suffix="%">0</div>
-        <div class="stat-label">Avg Win Rate</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-4">
-        <div class="stat-number" data-prefix="$" data-target="94" data-suffix="M+">0</div>
-        <div class="stat-label">Profits Generated</div>
-      </div>
-    </div>
+<!-- ══════════════════════════ 7. LIVE STATS BAND ══════════════════════════ -->
+<section class="statband" id="stats">
+  <div class="container statband-grid reveal">
+    <div class="bigstat"><b class="mono" data-count="28400">0</b><span>traders in the ecosystem</span></div>
+    <div class="bigstat"><b class="mono" data-count="96">0</b><span>tournaments this month</span></div>
+    <div class="bigstat"><b class="mono" data-count="2417">0</b><span>simulated evaluations this week</span></div>
+    <div class="bigstat"><b class="mono gold" data-count="148200" data-prefix="$">0</b><span>in prizes &amp; payouts</span></div>
   </div>
+  <p class="statband-note container">Live platform data. Simulated results are labeled as simulated; past performance does not guarantee future results.</p>
 </section>
 
-
-<!-- ══════════════════════════════════════
-     4. TOP STRATEGIES & SIGNAL PROVIDERS
-══════════════════════════════════════ -->
-<section class="strategies" id="strategies">
+<!-- ══════════════════════════ 8. LEADERBOARD TEASER ══════════════════════════ -->
+<section class="section lboard" id="leaderboard">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="badge">Performance-Driven</span>
-      <h2>Top strategies &<br><span class="grad-text">verified providers</span></h2>
-      <p>Discover high-performing trading systems ranked by real verified results, risk-adjusted returns, and community trust.</p>
-    </div>
-
-    <div class="strategy-grid">
-
-      <!-- Card 1 -->
-      <div class="card strategy-card reveal">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(74,158,255,0.1);">🚀</div>
-          <div>
-            <div class="strategy-name">Momentum Surge</div>
-            <div class="strategy-type">Trend Following · Crypto</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:84%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+214.3%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">79%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-14.2%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-med">Medium</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">1,204 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card strategy-card reveal reveal-delay-1">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(139,92,246,0.1);">⚡</div>
-          <div>
-            <div class="strategy-name">Grid Sniper FX</div>
-            <div class="strategy-type">Grid Trading · Forex</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:68%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+96.8%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">84%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-8.7%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-low">Low</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">3,891 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card strategy-card reveal reveal-delay-2">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(251,146,60,0.1);">🔥</div>
-          <div>
-            <div class="strategy-name">Volatility Crusher</div>
-            <div class="strategy-type">Breakout · Indices</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:91%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+341.0%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">62%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-29.1%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-high">High</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">677 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card strategy-card reveal reveal-delay-1">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(74,222,128,0.1);">🎯</div>
-          <div>
-            <div class="strategy-name">DCA Optimizer</div>
-            <div class="strategy-type">DCA Automation · Multi-asset</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:72%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+58.3%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">91%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-5.2%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-low">Low</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">5,214 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="card strategy-card reveal reveal-delay-2">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(232,121,249,0.1);">🌐</div>
-          <div>
-            <div class="strategy-name">Macro Rotation</div>
-            <div class="strategy-type">Macro · Global Indices</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:60%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+72.1%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">71%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-11.4%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-med">Medium</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">2,088 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="card strategy-card reveal reveal-delay-3">
-        <div class="strategy-top">
-          <div class="strategy-icon" style="background:rgba(74,158,255,0.1);">🤖</div>
-          <div>
-            <div class="strategy-name">AI Scalper v2</div>
-            <div class="strategy-type">AI-Powered · Crypto</div>
-          </div>
-        </div>
-        <div class="strategy-chart-bar"><div class="strategy-chart-fill" style="width:78%"></div></div>
-        <div class="strategy-metrics">
-          <div>
-            <div class="s-metric-label">12mo Return</div>
-            <div class="s-metric-val profit">+168.7%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Win Rate</div>
-            <div class="s-metric-val" style="color:var(--blue);">76%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Max Drawdown</div>
-            <div class="s-metric-val" style="color:#f87171;">-19.6%</div>
-          </div>
-          <div>
-            <div class="s-metric-label">Risk Level</div>
-            <div class="s-metric-val"><span class="risk-badge risk-med">Medium</span></div>
-          </div>
-        </div>
-        <div class="strategy-footer">
-          <div style="font-size:12px;color:var(--muted);">4,502 followers</div>
-          <button class="copy-btn">Copy Strategy</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:40px;" class="reveal">
-      <a href="#" class="btn btn-ghost">View All Strategies →</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════
-     5. LIVE COMPETITIONS
-══════════════════════════════════════ -->
-<section class="competitions" id="competitions">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="badge" style="background:rgba(251,146,60,0.1);color:var(--orange);border-color:rgba(251,146,60,0.2);">Live Now</span>
-      <h2>Trade. Compete.<br><span class="grad-text">Rank.</span></h2>
-      <p>Enter weekly tournaments and timed trading battles. Climb the live leaderboard and earn real rewards.</p>
-    </div>
-
-    <div class="comp-grid">
-
-      <div class="card comp-card reveal">
-        <div class="comp-header">
-          <div class="comp-title-wrap">
-            <h3>🏆 Weekly Championship</h3>
-            <p>Open to all traders · Forex & Crypto</p>
-          </div>
-          <div>
-            <div class="comp-prize">$25,000</div>
-            <div class="comp-prize-label">Prize Pool</div>
-          </div>
-        </div>
-
-        <div class="comp-timer" data-timer="2026-05-18T23:59:59">
-          <div class="timer-block"><div class="timer-num" data-days>07</div><div class="timer-unit">Days</div></div>
-          <div class="timer-block"><div class="timer-num" data-hours>14</div><div class="timer-unit">Hours</div></div>
-          <div class="timer-block"><div class="timer-num" data-mins>32</div><div class="timer-unit">Mins</div></div>
-          <div class="timer-block"><div class="timer-num" data-secs>18</div><div class="timer-unit">Secs</div></div>
-        </div>
-
-        <div class="comp-leaderboard">
-          <div class="leader-row">
-            <div class="leader-rank rank-1">1</div>
-            <div class="leader-name">AlphaKing</div>
-            <div class="leader-pnl">+82.4%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-2">2</div>
-            <div class="leader-name">QuantRider</div>
-            <div class="leader-pnl">+71.1%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-3">3</div>
-            <div class="leader-name">NightOwl_X</div>
-            <div class="leader-pnl">+68.8%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-other">4</div>
-            <div class="leader-name">TrendHawk</div>
-            <div class="leader-pnl">+54.2%</div>
-          </div>
-        </div>
-        <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;">Enter Competition</a>
-      </div>
-
-      <div class="card comp-card reveal reveal-delay-1">
-        <div class="comp-header">
-          <div class="comp-title-wrap">
-            <h3>⚡ Flash Battle</h3>
-            <p>24-hour sprint · Crypto only</p>
-          </div>
-          <div>
-            <div class="comp-prize">$5,000</div>
-            <div class="comp-prize-label">Prize Pool</div>
-          </div>
-        </div>
-
-        <div class="comp-timer" data-timer="2026-05-12T12:00:00">
-          <div class="timer-block"><div class="timer-num" data-days>00</div><div class="timer-unit">Days</div></div>
-          <div class="timer-block"><div class="timer-num" data-hours>09</div><div class="timer-unit">Hours</div></div>
-          <div class="timer-block"><div class="timer-num" data-mins>44</div><div class="timer-unit">Mins</div></div>
-          <div class="timer-block"><div class="timer-num" data-secs>07</div><div class="timer-unit">Secs</div></div>
-        </div>
-
-        <div class="comp-leaderboard">
-          <div class="leader-row">
-            <div class="leader-rank rank-1">1</div>
-            <div class="leader-name">ScalpRoyale</div>
-            <div class="leader-pnl">+34.1%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-2">2</div>
-            <div class="leader-name">FlashPoint</div>
-            <div class="leader-pnl">+28.7%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-3">3</div>
-            <div class="leader-name">Velocity_9</div>
-            <div class="leader-pnl">+21.3%</div>
-          </div>
-          <div class="leader-row">
-            <div class="leader-rank rank-other">4</div>
-            <div class="leader-name">RedLine</div>
-            <div class="leader-pnl">+17.9%</div>
-          </div>
-        </div>
-        <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;">View Leaderboard →</a>
-      </div>
-
-    </div>
-
-    <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="reveal">
-      <div class="card" style="padding:20px;display:flex;align-items:center;gap:20px;">
-        <div style="font-size:32px;">📅</div>
-        <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">Seasonal Leaderboard</div>
-          <div style="font-size:13px;color:var(--muted);">Q2 2026 · Top 100 traders compete for $100K annual prize</div>
-        </div>
-        <a href="#" class="btn btn-ghost" style="padding:8px 16px;font-size:13px;white-space:nowrap;margin-left:auto;">View →</a>
-      </div>
-      <div class="card" style="padding:20px;display:flex;align-items:center;gap:20px;">
-        <div style="font-size:32px;">🎖️</div>
-        <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">Special Event: Volatility Cup</div>
-          <div style="font-size:13px;color:var(--muted);">Starts May 20 · High volatility assets only</div>
-        </div>
-        <a href="#" class="btn btn-ghost" style="padding:8px 16px;font-size:13px;white-space:nowrap;margin-left:auto;">Join →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════
-     6. FUNDED CHALLENGES
-══════════════════════════════════════ -->
-<section class="funded" id="funded">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="badge" style="background:rgba(74,222,128,0.1);color:#4ade80;border-color:rgba(74,222,128,0.2);">Earn Capital</span>
-      <h2>Prove your edge.<br><span class="grad-text">Get funded.</span></h2>
-      <p>Complete evaluation programs to earn funded trading capital. Scale your account based on performance.</p>
-    </div>
-
-    <div class="funded-grid">
-
-      <div class="card funded-card reveal">
-        <div class="funded-tier">Starter</div>
-        <div class="funded-amount">$10,000</div>
-        <div class="funded-sub">Funded capital upon passing</div>
-        <ul class="funded-rules">
-          <li><span>Profit Target</span><span>8%</span></li>
-          <li><span>Max Daily Loss</span><span>4%</span></li>
-          <li><span>Max Total Loss</span><span>8%</span></li>
-          <li><span>Profit Split</span><span>70%</span></li>
-          <li><span>Duration</span><span>30 days</span></li>
-        </ul>
-        <hr class="funded-divider" />
-        <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Evaluation phases</div>
-        <div class="phase-track">
-          <div class="phase-step done"></div>
-          <div class="phase-arrow">→</div>
-          <div class="phase-step pending"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:20px;">
-          <span>Phase 1</span><span>Funded</span>
-        </div>
-        <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;font-size:14px;">Start Challenge — $79</a>
-      </div>
-
-      <div class="card funded-card featured reveal reveal-delay-1">
-        <div class="funded-tier">Professional</div>
-        <div class="funded-amount grad">$50,000</div>
-        <div class="funded-sub">Funded capital upon passing</div>
-        <ul class="funded-rules">
-          <li><span>Profit Target</span><span>10%</span></li>
-          <li><span>Max Daily Loss</span><span>5%</span></li>
-          <li><span>Max Total Loss</span><span>10%</span></li>
-          <li><span>Profit Split</span><span>80%</span></li>
-          <li><span>Duration</span><span>60 days</span></li>
-        </ul>
-        <hr class="funded-divider" />
-        <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Evaluation phases</div>
-        <div class="phase-track">
-          <div class="phase-step done"></div>
-          <div class="phase-arrow">→</div>
-          <div class="phase-step done"></div>
-          <div class="phase-arrow">→</div>
-          <div class="phase-step pending"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:20px;">
-          <span>Phase 1</span><span>Phase 2</span><span>Funded</span>
-        </div>
-        <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px;">Start Challenge — $299</a>
-      </div>
-
-      <div class="card funded-card reveal reveal-delay-2">
-        <div class="funded-tier">Elite</div>
-        <div class="funded-amount">$200,000</div>
-        <div class="funded-sub">Funded capital upon passing</div>
-        <ul class="funded-rules">
-          <li><span>Profit Target</span><span>12%</span></li>
-          <li><span>Max Daily Loss</span><span>5%</span></li>
-          <li><span>Max Total Loss</span><span>12%</span></li>
-          <li><span>Profit Split</span><span>90%</span></li>
-          <li><span>Duration</span><span>90 days</span></li>
-        </ul>
-        <hr class="funded-divider" />
-        <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Evaluation phases</div>
-        <div class="phase-track">
-          <div class="phase-step done"></div>
-          <div class="phase-arrow">→</div>
-          <div class="phase-step done"></div>
-          <div class="phase-arrow">→</div>
-          <div class="phase-step pending"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:20px;">
-          <span>Phase 1</span><span>Phase 2</span><span>Funded</span>
-        </div>
-        <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;font-size:14px;">Start Challenge — $799</a>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:32px;" class="reveal">
-      <p style="color:var(--muted);font-size:13px;">Scale your funded account up to <strong style="color:var(--text);">$2,000,000</strong> based on trading performance · Bi-weekly payouts</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════
-     7. LEARN & MISSIONS
-══════════════════════════════════════ -->
-<section class="learn" id="learn">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="badge" style="background:rgba(74,158,255,0.1);color:var(--blue);border-color:rgba(74,158,255,0.2);">Level Up</span>
-      <h2>Learn by doing,<br><span class="grad-text">not just reading.</span></h2>
-      <p>Complete interactive missions, earn XP, and build real trading skills through guided challenges.</p>
-    </div>
-
-    <div class="learn-layout">
-
+    <div class="lb-head reveal">
       <div>
-        <h3 style="font-size:18px;font-weight:700;margin-bottom:20px;color:var(--muted);">Active Missions</h3>
-        <div class="learn-missions">
-
-          <div class="card mission-card completed reveal">
-            <div class="mission-icon" style="background:rgba(74,222,128,0.1);">✅</div>
-            <div class="mission-info">
-              <div class="mission-title">Place your first copy trade</div>
-              <div class="mission-meta">Completed · +50 XP earned</div>
-            </div>
-            <div class="mission-check">✓</div>
-          </div>
-
-          <div class="card mission-card reveal reveal-delay-1">
-            <div class="mission-icon" style="background:rgba(139,92,246,0.1);">⚡</div>
-            <div class="mission-info">
-              <div class="mission-title">Build your first strategy</div>
-              <div class="mission-meta">2 of 4 steps done · In Progress</div>
-            </div>
-            <span class="mission-xp">+100 XP</span>
-          </div>
-
-          <div class="card mission-card reveal reveal-delay-2">
-            <div class="mission-icon" style="background:rgba(251,146,60,0.1);">🏆</div>
-            <div class="mission-info">
-              <div class="mission-title">Enter a live competition</div>
-              <div class="mission-meta">Not started · Unlocked</div>
-            </div>
-            <span class="mission-xp">+200 XP</span>
-          </div>
-
-          <div class="card mission-card reveal reveal-delay-3">
-            <div class="mission-icon" style="background:rgba(74,158,255,0.1);">📊</div>
-            <div class="mission-info">
-              <div class="mission-title">Backtest 3 strategies</div>
-              <div class="mission-meta">Not started · Unlocked</div>
-            </div>
-            <span class="mission-xp">+150 XP</span>
-          </div>
-
-          <div class="card mission-card reveal reveal-delay-4" style="opacity:.5;">
-            <div class="mission-icon" style="background:rgba(255,255,255,0.05);">🔒</div>
-            <div class="mission-info">
-              <div class="mission-title">Pass a funded challenge</div>
-              <div class="mission-meta">Locked · Complete 5 missions first</div>
-            </div>
-            <span class="mission-xp">+500 XP</span>
-          </div>
-
-        </div>
+        <p class="eyebrow violet">THIS WEEK'S RANKINGS</p>
+        <h2>The leaderboard doesn't care about your follower count</h2>
       </div>
-
-      <div class="reveal reveal-delay-1">
-        <div class="learn-path">
-          <h3>Trading Mastery Path</h3>
-          <div class="path-steps">
-
-            <div class="path-step">
-              <div class="path-step-line">
-                <div class="path-dot done">✓</div>
-                <div class="path-connector"></div>
-              </div>
-              <div class="path-content">
-                <h4>Platform Basics</h4>
-                <p>Navigate the dashboard, connect your account, explore tools</p>
-                <span class="path-tag done-tag">Completed</span>
-              </div>
-            </div>
-
-            <div class="path-step">
-              <div class="path-step-line">
-                <div class="path-dot done">✓</div>
-                <div class="path-connector"></div>
-              </div>
-              <div class="path-content">
-                <h4>Copy Trading Fundamentals</h4>
-                <p>Choose traders, manage allocation, understand risk metrics</p>
-                <span class="path-tag done-tag">Completed</span>
-              </div>
-            </div>
-
-            <div class="path-step">
-              <div class="path-step-line">
-                <div class="path-dot active">3</div>
-                <div class="path-connector"></div>
-              </div>
-              <div class="path-content">
-                <h4>Strategy Building</h4>
-                <p>Design rules, configure triggers, run backtests, deploy live</p>
-                <span class="path-tag active-tag">In Progress</span>
-              </div>
-            </div>
-
-            <div class="path-step">
-              <div class="path-step-line">
-                <div class="path-dot locked">4</div>
-                <div class="path-connector"></div>
-              </div>
-              <div class="path-content">
-                <h4>Competition Preparation</h4>
-                <p>Sharpen your edge, study top performers, manage battle capital</p>
-                <span class="path-tag locked-tag">Locked</span>
-              </div>
-            </div>
-
-            <div class="path-step">
-              <div class="path-step-line">
-                <div class="path-dot locked">5</div>
-              </div>
-              <div class="path-content">
-                <h4>Funded Trader Track</h4>
-                <p>Evaluation rules, risk discipline, scaling strategies</p>
-                <span class="path-tag locked-tag">Locked</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="card" style="padding:20px;margin-top:16px;display:flex;align-items:center;gap:16px;">
-          <div style="font-size:28px;">🎓</div>
-          <div style="flex:1">
-            <div style="font-size:14px;font-weight:700;margin-bottom:2px;">Strategy Playbooks</div>
-            <div style="font-size:12px;color:var(--muted);">Pre-built guides for scalping, swing, and DCA setups</div>
-          </div>
-          <a href="#" class="btn btn-ghost" style="padding:8px 16px;font-size:13px;">Browse →</a>
-        </div>
-      </div>
-
+      <a href="/compete/leaderboards" class="btn btn-ghost">Full leaderboards →</a>
     </div>
+
+    <div class="lb-grid reveal">
+      <div class="podium" aria-hidden="true">
+        <div class="pod pod-2"><span class="pod-av">NV</span><b>NovaFx</b><span class="mono">+6.1%</span><i></i></div>
+        <div class="pod pod-1"><span class="pod-crown">👑</span><span class="pod-av">RX</span><b>Rexon</b><span class="mono gold">+8.4%</span><i></i></div>
+        <div class="pod pod-3"><span class="pod-av">DR</span><b>Drift</b><span class="mono">+5.7%</span><i></i></div>
+      </div>
+
+      <table class="lb-table">
+        <caption class="sr-only">Top 10 traders this week by return</caption>
+        <thead><tr><th>#</th><th>Trader</th><th>Return</th><th>Win rate</th></tr></thead>
+        <tbody class="mono">
+          <tr><td>1</td><td class="lb-name">Rexon</td><td class="teal">+8.4%</td><td>68%</td></tr>
+          <tr><td>2</td><td class="lb-name">NovaFx</td><td class="teal">+6.1%</td><td>61%</td></tr>
+          <tr><td>3</td><td class="lb-name">Drift</td><td class="teal">+5.7%</td><td>64%</td></tr>
+          <tr><td>4</td><td class="lb-name">Kestrel</td><td class="teal">+5.2%</td><td>57%</td></tr>
+          <tr><td>5</td><td class="lb-name">MonoPip</td><td class="teal">+4.9%</td><td>59%</td></tr>
+          <tr><td>6</td><td class="lb-name">Aster</td><td class="teal">+4.4%</td><td>55%</td></tr>
+          <tr><td>7</td><td class="lb-name">Volt</td><td class="teal">+4.1%</td><td>62%</td></tr>
+          <tr><td>8</td><td class="lb-name">Nimbus</td><td class="teal">+3.8%</td><td>53%</td></tr>
+          <tr><td>9</td><td class="lb-name">Fathom</td><td class="teal">+3.5%</td><td>58%</td></tr>
+          <tr><td>10</td><td class="lb-name">Onyx</td><td class="teal">+3.2%</td><td>51%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fineprint reveal">Results from simulated tournament accounts. Simulated performance is not indicative of future results.</p>
   </div>
 </section>
 
+<!-- ══════════════════════════ 9. AI LAYER TEASER ══════════════════════════ -->
+<section class="section ailayer" id="ai">
+  <div class="container ailayer-inner reveal">
+    <p class="eyebrow violet center">THE AI LAYER</p>
+    <h2 class="center">Every feature you touch makes your AI Coach smarter</h2>
+    <p class="lead center">Lessons you finish, simulations you run, tournaments you enter, trades you take — it all feeds one intelligence layer that coaches <em>you</em>, not a generic "average trader."</p>
+    <div class="ai-chips center">
+      <span class="chipf">Academy progress</span><span class="chipf">Journal entries</span><span class="chipf">PropSim runs</span>
+      <span class="chipf">Tournament results</span><span class="chipf">Live trades</span>
+      <span class="unify-arrow">→</span><span class="chipf chip-ai">AI Coach</span>
+    </div>
+    <div class="center"><a href="/learn/ai-coach" class="btn btn-primary magnetic">Meet Your AI Coach</a></div>
+  </div>
+</section>
 
-<!-- ══════════════════════════════════════
-     8. FINAL CTA
-══════════════════════════════════════ -->
-<section class="final-cta">
-  <div class="final-cta-bg"></div>
+<!-- ══════════════════════════ 10. COMMUNITY WALL ══════════════════════════ -->
+<section class="section community" id="community">
   <div class="container">
-    <div class="reveal">
-      <span class="badge" style="margin-bottom:20px;">Ready to start?</span>
-      <h2>Start trading<br><span class="grad-text">smarter today.</span></h2>
-      <p>Join 28,000+ traders already using Adiox to copy, compete, and grow their capital in the cloud.</p>
-      <div class="final-cta-actions">
-        <a href="#" class="btn btn-primary" style="padding:16px 36px;font-size:16px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5,3 19,12 5,21"/></svg>
-          Start Trading
-        </a>
-        <a href="#product" class="btn btn-ghost" style="padding:16px 36px;font-size:16px;">Explore Strategies</a>
-        <a href="#competitions" class="btn btn-outline" style="padding:16px 36px;font-size:16px;">Join Live Competition</a>
+    <p class="eyebrow center reveal">THE COMMUNITY</p>
+    <h2 class="center reveal">Traders who evolve together</h2>
+    <p class="lead center reveal">14,200 members on Discord · 9,800 on Telegram · rankings, duels, and payouts posted daily.</p>
+
+    <div class="testi-grid reveal">
+      <figure class="testi">
+        <blockquote>"I failed two paid challenges before Adiox. Ran nine PropSim evaluations at $10 each, found my drawdown habit, passed the real one on my next attempt."</blockquote>
+        <figcaption><span class="t-av">MK</span><div><b>Marek K.</b><span>Funded trader · Prague</span></div></figcaption>
+      </figure>
+      <figure class="testi">
+        <blockquote>"The Arena got me addicted to being consistent. You can't fake it in a 1v1 — the leaderboard is the only opinion that counts."</blockquote>
+        <figcaption><span class="t-av">SA</span><div><b>Sofia A.</b><span>Arena season 2 finalist · Dubai</span></div></figcaption>
+      </figure>
+      <figure class="testi">
+        <blockquote>"PropSync runs my five prop accounts from one screen. The Risk Manager has stopped me from breaching a daily limit twice this month alone."</blockquote>
+        <figcaption><span class="t-av">JT</span><div><b>James T.</b><span>Multi-account trader · London</span></div></figcaption>
+      </figure>
+      <figure class="testi">
+        <blockquote>"I publish my strategy in a private group and earn from performance fees. Adiox verified my track record — that's what made followers trust it."</blockquote>
+        <figcaption><span class="t-av">LN</span><div><b>Lena N.</b><span>Strategy provider · Singapore</span></div></figcaption>
+      </figure>
+    </div>
+    <p class="fineprint center reveal">Individual experiences on simulated and evaluation accounts. Not typical results; trading involves substantial risk.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════ 11. PRICING TEASER ══════════════════════════ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <p class="eyebrow center reveal">PRICING</p>
+    <h2 class="center reveal">Start free. Upgrade as you evolve.</h2>
+    <p class="lead center reveal">No card to start. Pay only for the stages you're ready for.</p>
+
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <h3>Explorer</h3>
+        <div class="price mono">$0<span>/forever</span></div>
+        <ul><li>Adiox Academy access</li><li>Free tournaments</li><li>Glossary &amp; community</li><li>Basic journal</li></ul>
+        <a href="/signup" class="btn btn-ghost">Start Free</a>
       </div>
-      <p style="margin-top:24px;font-size:13px;color:var(--muted);">No credit card required · Free account · Cancel anytime</p>
+      <div class="price-card price-hot">
+        <span class="price-badge">MOST POPULAR</span>
+        <h3>Operator</h3>
+        <div class="price mono">$29<span>/month</span></div>
+        <ul><li>Everything in Explorer</li><li>PropSim runs included monthly</li><li>AI Coach + full journal</li><li>Backtesting &amp; Strategy Lab</li></ul>
+        <a href="/pricing" class="btn btn-primary">See Pricing</a>
+      </div>
+      <div class="price-card">
+        <h3>Professional</h3>
+        <div class="price mono">$79<span>/month</span></div>
+        <ul><li>Everything in Operator</li><li>PropSync multi-account manager</li><li>Risk Manager + News Filter</li><li>Signal Hub + Adiox Copier</li></ul>
+        <a href="/pricing" class="btn btn-ghost">See Pricing</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ══════════════════════════ QUIZ ROUTER ══════════════════════════ -->
+<section class="section quiz reveal" id="quiz">
+  <div class="container quiz-inner">
+    <div>
+      <h2>Not sure where to start?</h2>
+      <p class="lead">Take the 60-second trader quiz and we'll route you to the right stage — Learn, Train, Compete, or Trade.</p>
+    </div>
+    <a href="/quiz" class="btn btn-primary btn-lg magnetic">Find my starting point →</a>
+  </div>
+</section>
 
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
+<!-- ══════════════════════════ 12. FAQ ══════════════════════════ -->
+<section class="section faq" id="faq">
+  <div class="container faq-inner">
+    <p class="eyebrow center reveal">QUESTIONS, ANSWERED</p>
+    <h2 class="center reveal">Frequently asked questions</h2>
+
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What is Adiox?</summary>
+        <p>Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Adiox free to start?</summary>
+        <p>Yes. Creating an Adiox account is free and requires no card. The free tier includes Academy lessons, free tournaments, the trading glossary, and community access. Paid options — simulator runs from $10, evaluations, and Pro subscriptions — unlock as you progress, so you only pay when you're ready to level up.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does Learn, Train, Compete, Trade mean?</summary>
+        <p>They are the four stages of a trader's evolution on Adiox. Learn builds knowledge with the Academy and AI Coach. Train builds skill safely with PropSim, backtesting, and journaling. Compete proves skill in tournaments, PvP games, and leaderboards. Trade is the professional stage: funded challenges, copy trading, signals, and risk tools.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I get funded through Adiox?</summary>
+        <p>Yes. Adiox offers performance-based evaluations — 1-step, 2-step, instant, and pay-later formats. Pass an evaluation on simulated capital and you qualify for a funded account with performance-based payouts. Trading involves risk and funding is never guaranteed; results depend entirely on your performance under the published rules.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need experience to join Adiox?</summary>
+        <p>No experience is required. Complete beginners start in the Adiox Academy with structured learning paths and an AI coach, then practice risk-free in the simulator before any money is at stake. Experienced traders can skip straight to evaluations, tournaments, PropSync multi-account management, or the copy-trading marketplace.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which platforms does Adiox connect to (MT5, TradeLocker, Match-Trader)?</summary>
+        <p>Adiox connects to MetaTrader 5 (MT5), TradeLocker, and Match-Trader. PropSync syncs and monitors accounts across multiple prop firms in one dashboard, while the Adiox Copier mirrors signals and copy-trading strategies to your connected platform accounts with your own risk settings applied.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ 13. FINAL CTA ══════════════════════════ -->
+<section class="finale" id="start">
+  <div class="finale-glow" aria-hidden="true"></div>
+  <div class="container center reveal">
+    <h2 class="finale-title">Your evolution starts here.</h2>
+    <p class="lead">One ecosystem. Every stage of your evolution.</p>
+    <a href="/signup" class="btn btn-primary btn-xl magnetic">Create Free Account</a>
+    <p class="micro">No card required · 2-minute setup</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════ 14. FOOTER ══════════════════════════ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo" style="display:inline-block;">ADIOX</div>
-        <p>The cloud trading platform for modern traders. Copy, automate, compete — all in one place.</p>
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
         <div class="footer-social">
-          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-link" aria-label="Discord">💬</a>
-          <a href="#" class="social-link" aria-label="Telegram">✈</a>
-          <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h5>Platform</h5>
-        <ul>
-          <li><a href="#">Copy Trading</a></li>
-          <li><a href="#">Strategy Builder</a></li>
-          <li><a href="#">Signal Providers</a></li>
-          <li><a href="#">Live Competitions</a></li>
-          <li><a href="#">Funded Challenges</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h5>Learn</h5>
-        <ul>
-          <li><a href="#">Missions & XP</a></li>
-          <li><a href="#">Strategy Playbooks</a></li>
-          <li><a href="#">Video Tutorials</a></li>
-          <li><a href="#">Blog & Analysis</a></li>
-          <li><a href="#">Help Center</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#">About Adiox</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Affiliate Program</a></li>
-        </ul>
-      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a>
+          <a href="/learn/ai-coach">AI Coach</a>
+          <a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a>
+          <a href="/train/backtesting">Backtesting</a>
+          <a href="/train/journal">Journal</a>
+          <a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a>
+          <a href="/compete/trading-games">The Arena</a>
+          <a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a>
+          <a href="/trade/copy-trading">Copy Trading</a>
+          <a href="/trade/signals">Signal Hub</a>
+          <a href="/trade/propsync">PropSync</a>
+          <a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/blog">Blog</a>
+          <a href="/partners">Partners</a>
+          <a href="/contact">Contact</a>
+          <a href="/faq">Help Center</a>
+        </div>
+      </nav>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2026 Adiox. All rights reserved. Trading involves risk.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Risk Disclosure</a>
-        <a href="#">Cookies</a>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a>
+        <a href="/legal/privacy">Privacy Policy</a>
+        <a href="/legal/risk-disclosure">Risk Disclosure</a>
+        <a href="/legal/regional-restrictions">Regional Restrictions</a>
       </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js" defer></script>
+<script src="js/home.js" defer></script>
 </body>
 </html>
