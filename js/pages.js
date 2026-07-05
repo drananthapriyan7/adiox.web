@@ -297,6 +297,72 @@
     };
   }
 
+  /* ── ARENA DUEL: two energy avatars over a shifting candlestick battlefield ── */
+  function makeDuel() {
+    var candles = [];
+    for (var i = 0; i < 40; i++) candles.push({ v: 0.5, target: 0.5, next: 0 });
+    var sparks = [];
+    for (var s = 0; s < 26; s++) sparks.push({ a: rand(0, Math.PI * 2), r: rand(30, 55), sp: rand(0.001, 0.0025), side: s % 2 });
+    return function (t) {
+      ctx.clearRect(0, 0, W, H);
+      var groundY = H * 0.82;
+      // battlefield candles
+      var cw = W / candles.length;
+      candles.forEach(function (c, i) {
+        if (t > c.next) { c.target = 0.15 + Math.random() * 0.85; c.next = t + rand(600, 2600); }
+        c.v += (c.target - c.v) * 0.03;
+        var h = c.v * H * 0.22;
+        var lean = (i / candles.length - 0.5); // violet left → teal right
+        var col = lean < 0 ? "139,92,246" : "34,211,238";
+        var alpha = 0.1 + 0.25 * c.v;
+        ctx.fillStyle = "rgba(" + col + "," + alpha + ")";
+        ctx.fillRect(i * cw + 1, groundY - h, cw - 2, h);
+        ctx.strokeStyle = "rgba(" + col + "," + alpha * 0.7 + ")";
+        ctx.beginPath();
+        ctx.moveTo(i * cw + cw / 2, groundY - h - c.v * 18);
+        ctx.lineTo(i * cw + cw / 2, groundY - h);
+        ctx.stroke();
+      });
+      // ground line
+      ctx.strokeStyle = "rgba(255,255,255,0.1)";
+      ctx.beginPath(); ctx.moveTo(0, groundY); ctx.lineTo(W, groundY); ctx.stroke();
+      // two energy avatars
+      var ax = W * 0.24 + mx * 12, bx = W * 0.76 + mx * 12;
+      var ay = H * 0.42 + Math.sin(t * 0.0011) * 10, by = H * 0.42 + Math.cos(t * 0.0013) * 10;
+      [[ax, ay, "139,92,246"], [bx, by, "34,211,238"]].forEach(function (av) {
+        var g = ctx.createRadialGradient(av[0], av[1], 0, av[0], av[1], 90);
+        g.addColorStop(0, "rgba(" + av[2] + ",0.5)");
+        g.addColorStop(0.4, "rgba(" + av[2] + ",0.14)");
+        g.addColorStop(1, "rgba(" + av[2] + ",0)");
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(av[0], av[1], 90, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,0.9)";
+        ctx.beginPath(); ctx.arc(av[0], av[1], 7, 0, Math.PI * 2); ctx.fill();
+      });
+      // orbiting sparks
+      sparks.forEach(function (sp) {
+        sp.a += sp.sp * 16;
+        var cx = sp.side ? bx : ax, cy = sp.side ? by : ay;
+        var col = sp.side ? "34,211,238" : "139,92,246";
+        var x = cx + Math.cos(sp.a) * sp.r, y = cy + Math.sin(sp.a) * sp.r * 0.6;
+        ctx.fillStyle = "rgba(" + col + ",0.8)";
+        ctx.beginPath(); ctx.arc(x, y, 1.6, 0, Math.PI * 2); ctx.fill();
+      });
+      // energy tether between avatars, pulsing
+      var pulse = 0.12 + 0.12 * Math.abs(Math.sin(t * 0.0016));
+      var grad = ctx.createLinearGradient(ax, ay, bx, by);
+      grad.addColorStop(0, "rgba(139,92,246," + pulse + ")");
+      grad.addColorStop(1, "rgba(34,211,238," + pulse + ")");
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(ax, ay);
+      var midY = Math.min(ay, by) - 40 + Math.sin(t * 0.002) * 16;
+      ctx.quadraticCurveTo((ax + bx) / 2, midY, bx, by);
+      ctx.stroke();
+    };
+  }
+
   /* ── ECOSYSTEM: neural network of pillar-colored nodes ── */
   function makeNetwork() {
     var COLS = ["59,130,246", "34,211,238", "139,92,246", "245,185,66"];
@@ -339,6 +405,7 @@
     scene === "holodeck" ? makeHolodeck() :
     scene === "arena" ? makeArena() :
     scene === "skyline" ? makeSkyline() :
+    scene === "duel" ? makeDuel() :
     makeNetwork();
 
   if (reducedMotion) {
