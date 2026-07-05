@@ -1,0 +1,29 @@
+# Adiox
+
+> Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a realistic simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account.
+
+Adiox is the operating system for prop trading performance and evaluation. It is not a prop firm and not a single tool — it is the layer that connects education, simulation, competition, and professional trading tools so a trader never has to leave the ecosystem to evolve.
+
+## Start here
+
+- [The Adiox Ecosystem](https://adiox.com/ecosystem): The complete map of the platform — every feature, how the four stages connect, and the public roadmap. Read this first.
+- [Home](https://adiox.com/): Overview, live platform statistics, pricing, and FAQ.
+
+## The four stages
+
+- [Learn](https://adiox.com/learn): Trading education — Adiox Academy courses, AI Coach, and glossary. Free forever.
+- [Train](https://adiox.com/train): Skill building on simulated capital — PropSim challenge simulator (from $10), backtesting engine, auto-logging trading journal, Strategy Lab.
+- [Compete](https://adiox.com/compete): Skill proving — free and paid tournaments with published prize pools, 1v1 Arena duels, public leaderboards.
+- [Trade](https://adiox.com/trade): Professional stage — funded challenges (1-step, 2-step, instant, pay-later), copy-trading marketplace, Signal Hub with copier, PropSync multi-account manager, Risk Manager, News Filter.
+
+## Facts
+
+- Free tier requires no card; simulator runs start at $10.
+- Platform connections: MetaTrader 5 (MT5), TradeLocker, Match-Trader.
+- All evaluation and tournament accounts use simulated capital; funding is performance-based and never guaranteed.
+- Adiox is not affiliated with FTMO, TradeZella, TraderWaves, MetaQuotes, TradeLocker, or Match-Trader.
+
+## Legal
+
+- [Risk Disclosure](https://adiox.com/legal/risk-disclosure)
+- [Regional Restrictions](https://adiox.com/legal/regional-restrictions)

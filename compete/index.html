@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Competitions — Tournaments, Duels &amp; Leaderboards | Adiox</title>
+  <meta name="description" content="Trading competitions with real prizes: free weekly tournaments, 1v1 Arena duels, squad battles, and public leaderboards — all on simulated capital, ranked on skill." />
+  <link rel="canonical" href="https://adiox.com/compete" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trading Competitions — Tournaments, Duels & Leaderboards | Adiox" />
+  <meta property="og:description" content="Trading competitions with real prizes: free weekly tournaments, 1v1 Arena duels, squad battles, and public leaderboards — ranked on skill." />
+  <meta property="og:url" content="https://adiox.com/compete" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "url": "https://adiox.com/compete",
+        "name": "Trading Competitions — Tournaments, Duels & Leaderboards",
+        "description": "The Compete stage of the Adiox ecosystem: trading tournaments with prize pools, 1v1 duels and squad games in the Arena, and public global leaderboards.",
+        "isPartOf": { "@id": "https://adiox.com/#website" },
+        "hasPart": [
+          { "@type": "WebPage", "name": "Trading Tournaments", "url": "https://adiox.com/compete/tournaments" },
+          { "@type": "WebPage", "name": "The Arena — Trading Games", "url": "https://adiox.com/compete/trading-games" },
+          { "@type": "WebPage", "name": "Leaderboards", "url": "https://adiox.com/compete/leaderboards" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Compete", "item": "https://adiox.com/compete" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Are Adiox tournaments free to enter?", "acceptedAnswer": { "@type": "Answer", "text": "There are free tournaments every week that require no card and no payment — real prizes included. Larger competitions may have paid entry with bigger published prize pools. Every tournament page states the entry cost and prize structure upfront." } },
+          { "@type": "Question", "name": "What can I win in trading competitions?", "acceptedAnswer": { "@type": "Answer", "text": "Prize pools are published before each event and can include cash prizes, funded-challenge vouchers, and subscription credit. Payouts go to the top of the leaderboard under rules stated on the tournament page. Prizes and availability vary by region." } },
+          { "@type": "Question", "name": "Is competitive trading gambling?", "acceptedAnswer": { "@type": "Answer", "text": "Adiox competitions are skill-based: every participant trades the same markets with the same simulated capital and rules, and rankings are decided by trading performance, not chance. Paid-entry competitions may still be restricted in some jurisdictions — see our Regional Restrictions page." } },
+          { "@type": "Question", "name": "How do 1v1 Arena duels work?", "acceptedAnswer": { "@type": "Answer", "text": "Two traders receive identical simulated accounts and a fixed time window on the same market. Best risk-adjusted performance wins the duel and the rating points. Duels are matched by skill rating, so you climb by beating traders at your own level." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-compete">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- HERO — neon arena bowl -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="arena" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Compete</span></nav>
+    <p class="eyebrow accent reveal">STAGE 03 — PROVE SKILL</p>
+    <h1 class="page-h1 reveal">Trading competitions where <span class="accent">skill is the only currency</span></h1>
+
+    <div class="defbox reveal">
+      <b>What is a trading competition?</b>
+      <p>A trading competition is a skill-based event where participants trade identical simulated accounts under identical rules for a fixed period, ranked by performance. Prizes go to the top of the leaderboard. It recreates the pressure of live trading — with entry fees, not trading capital, as the only cost.</p>
+    </div>
+
+    <p class="philosophy reveal">
+      Practice without stakes eventually plateaus — you need pressure to find out what your discipline is really made of. The Compete stage is that pressure, engineered safely. Weekly free tournaments let anyone test themselves against the field for nothing; bigger events put published prize pools on the line. In the Arena, 1v1 duels strip trading down to its purest form: same market, same capital, same clock, best trader wins. And everything you achieve is recorded on public, verifiable leaderboards — a rank that follows you across the ecosystem and becomes your reputation when you later publish strategies or signals. No follower counts, no screenshots, no claimed results. Just a number next to your name that you earned where everyone could watch.
+    </p>
+
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="/compete/tournaments" class="btn btn-primary btn-lg magnetic">Join a Tournament</a>
+      <a href="#inside" class="btn btn-ghost btn-lg">What's inside ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section" id="inside" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WHAT'S INSIDE</p>
+    <h2 class="center reveal">The arena, the ladder, and the record book</h2>
+    <div class="feat-grid reveal">
+      <a class="feat-card" href="/compete/tournaments">
+        <span class="glyph glyph-compete" aria-hidden="true"></span>
+        <h3>Tournaments</h3>
+        <p>Scheduled competitions on simulated capital, from free weekly events to headline tournaments with published prize pools. Entry rules stated upfront, always.</p>
+        <span class="go">Browse Tournaments →</span>
+      </a>
+      <a class="feat-card" href="/compete/trading-games">
+        <span class="glyph glyph-compete" aria-hidden="true"></span>
+        <h3>The Arena</h3>
+        <p>1v1 trading duels and squad battles matched by skill rating. Same market, same capital, fixed clock — the leaderboard settles the argument.</p>
+        <span class="go">Enter the Arena →</span>
+      </a>
+      <a class="feat-card" href="/compete/leaderboards">
+        <span class="glyph glyph-compete" aria-hidden="true"></span>
+        <h3>Leaderboards</h3>
+        <p>Public, verifiable global rankings by week, season, and all time. Your rank travels with you — and powers your copy-trading reputation.</p>
+        <span class="go">See the Rankings →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTS -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1)); padding-top:70px; padding-bottom:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">HOW COMPETE CONNECTS</p>
+    <h2 class="center reveal">Rankings become reputation</h2>
+    <div class="connect-strip reveal">
+      <div class="cs-node"><b>Train</b><span>Consistency built in the simulator</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node hot"><b>Compete</b><span>Tournaments · Arena · Leaderboards</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Trade</b><span>Verified rank powers copy-trading trust</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section" style="background:var(--bg-1); padding-top:60px; padding-bottom:60px;">
+  <div class="container">
+    <figure class="testi testi-solo reveal">
+      <blockquote>"The Arena got me addicted to being consistent. You can't fake it in a 1v1 — the leaderboard is the only opinion that counts."</blockquote>
+      <figcaption><span class="t-av">SA</span><div><b>Sofia A.</b><span>Arena season 2 finalist · Dubai</span></div></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" style="background:var(--bg-0);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Competing on Adiox, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>Are Adiox tournaments free to enter?</summary>
+        <p>There are free tournaments every week that require no card and no payment — real prizes included. Larger competitions may have paid entry with bigger published prize pools. Every tournament page states the entry cost and prize structure upfront.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What can I win in trading competitions?</summary>
+        <p>Prize pools are published before each event and can include cash prizes, funded-challenge vouchers, and subscription credit. Payouts go to the top of the leaderboard under rules stated on the tournament page. Prizes and availability vary by region.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is competitive trading gambling?</summary>
+        <p>Adiox competitions are skill-based: every participant trades the same markets with the same simulated capital and rules, and rankings are decided by trading performance, not chance. Paid-entry competitions may still be restricted in some jurisdictions — see our <a href="/legal/regional-restrictions">Regional Restrictions</a> page.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do 1v1 Arena duels work?</summary>
+        <p>Two traders receive identical simulated accounts and a fixed time window on the same market. Best risk-adjusted performance wins the duel and the rating points. Duels are matched by skill rating, so you climb by beating traders at your own level.</p>
+      </details>
+    </div>
+
+    <div class="related reveal">
+      <a href="/blog/tournament-strategy-guide"><b>Tournament strategy guide</b>Why aggressive early, defensive late usually loses.</a>
+      <a href="/blog/what-leaderboards-measure"><b>What leaderboards actually measure</b>Risk-adjusted return, explained without math anxiety.</a>
+      <a href="/blog/from-arena-to-funded"><b>From Arena to funded</b>How competitive traders convert rank into a career.</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>This week's free tournament is open.</h2>
+    <p class="lead center" style="margin-bottom:30px;">No card, no entry fee — just you against the field.</p>
+    <a href="/compete/tournaments" class="btn btn-primary btn-xl magnetic">Join a Tournament</a>
+    <p class="micro">Free entries weekly · prize pools published upfront</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+</body>
+</html>

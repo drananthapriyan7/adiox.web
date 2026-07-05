@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Practice — Prop Firm Challenge Simulator &amp; Tools | Adiox</title>
+  <meta name="description" content="Practice prop firm challenges before you pay for one. PropSim evaluation simulator from $10, backtesting engine, auto-logging journal, and a no-code strategy builder." />
+  <link rel="canonical" href="https://adiox.com/train" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trading Practice — Prop Firm Challenge Simulator & Tools | Adiox" />
+  <meta property="og:description" content="Practice prop firm challenges before you pay for one. PropSim evaluation simulator from $10, backtesting, journaling, and a no-code strategy builder." />
+  <meta property="og:url" content="https://adiox.com/train" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "url": "https://adiox.com/train",
+        "name": "Trading Practice — Prop Firm Challenge Simulator & Tools",
+        "description": "The Train stage of the Adiox ecosystem: PropSim challenge simulator, backtesting engine, trading journal, and Strategy Lab.",
+        "isPartOf": { "@id": "https://adiox.com/#website" },
+        "hasPart": [
+          { "@type": "WebPage", "name": "PropSim Challenge Simulator", "url": "https://adiox.com/train/simulator" },
+          { "@type": "WebPage", "name": "Backtesting Engine", "url": "https://adiox.com/train/backtesting" },
+          { "@type": "WebPage", "name": "Trading Journal", "url": "https://adiox.com/train/journal" },
+          { "@type": "WebPage", "name": "Strategy Lab", "url": "https://adiox.com/train/strategy-builder" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Train", "item": "https://adiox.com/train" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How much does a PropSim run cost?", "acceptedAnswer": { "@type": "Answer", "text": "Simulated evaluation runs start at $10 — a fraction of a typical evaluation fee. Operator and Professional subscribers get simulator runs included monthly. Failing in the simulator costs you a lesson, not a full challenge fee." } },
+          { "@type": "Question", "name": "How realistic are the simulated evaluations?", "acceptedAnswer": { "@type": "Answer", "text": "PropSim reproduces real evaluation rulesets — profit targets, daily and overall drawdown limits, minimum trading days — including popular industry formats. Prices come from real market data feeds. The one thing it removes is the fee at risk, which is exactly the point." } },
+          { "@type": "Question", "name": "Does the Trading Journal log trades automatically?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Trades from PropSim, backtests, tournaments, and connected live platforms (MT5, TradeLocker, Match-Trader) are captured automatically, tagged by setup and session, and scored. Every entry also feeds your AI Coach for pattern analysis." } },
+          { "@type": "Question", "name": "Can I build strategies without coding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Strategy Lab is a no-code builder: define entries, exits, and risk rules with visual blocks, then validate them instantly against the Backtesting Engine. Coded strategies are not required anywhere on Adiox." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-train">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- HERO — holodeck grid -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="holodeck" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Train</span></nav>
+    <p class="eyebrow accent reveal">STAGE 02 — BUILD SKILL SAFELY</p>
+    <h1 class="page-h1 reveal">Practice the challenge <span class="accent">before you pay for it</span></h1>
+
+    <div class="defbox reveal">
+      <b>What is trading practice on Adiox?</b>
+      <p>Trading practice means rehearsing under real evaluation conditions — profit targets, drawdown limits, daily rules — on simulated capital, so mistakes cost lessons instead of fees. Adiox combines a prop-firm challenge simulator, historical backtesting, and automatic journaling into one connected training loop.</p>
+    </div>
+
+    <p class="philosophy reveal">
+      The Train stage exists because of a simple, expensive pattern: most traders' first real evaluation is also their first evaluation ever. They pay full price to discover how drawdown rules feel under pressure — and the market charges tuition without teaching the lesson. Adiox replaces that with deliberate practice. PropSim recreates real challenge conditions for a fraction of the cost, the Backtesting Engine lets you interrogate your strategy against years of history before risking a single simulated dollar, and the Journal captures every trade automatically so nothing is lost to memory or ego. Every rep feeds your AI Coach, which means every failure in here is converted into specific, personal feedback. Fail cheaply, learn precisely, and walk into your real evaluation already knowing how it ends.
+    </p>
+
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="/train/simulator" class="btn btn-primary btn-lg magnetic">Open the Simulator</a>
+      <a href="#inside" class="btn btn-ghost btn-lg">What's inside ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section" id="inside" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WHAT'S INSIDE</p>
+    <h2 class="center reveal">Your holodeck: four training tools, one feedback loop</h2>
+    <div class="feat-grid cols4 reveal">
+      <a class="feat-card" href="/train/simulator">
+        <span class="glyph glyph-train" aria-hidden="true"></span>
+        <h3>PropSim</h3>
+        <p>Prop-firm-style evaluation simulator with real rulesets and instant breach alerts. Runs from $10 — fail here, not on a paid challenge.</p>
+        <span class="go">Try the Simulator →</span>
+      </a>
+      <a class="feat-card" href="/train/backtesting">
+        <span class="glyph glyph-train" aria-hidden="true"></span>
+        <h3>Backtesting Engine</h3>
+        <p>Replay years of market data against your rules. Know your win rate, drawdown, and expectancy before the market tests them for you.</p>
+        <span class="go">Start Backtesting →</span>
+      </a>
+      <a class="feat-card" href="/train/journal">
+        <span class="glyph glyph-train" aria-hidden="true"></span>
+        <h3>Trading Journal</h3>
+        <p>Every trade captured, tagged, and scored automatically — from simulator, tournaments, and connected live accounts alike.</p>
+        <span class="go">See the Journal →</span>
+      </a>
+      <a class="feat-card" href="/train/strategy-builder">
+        <span class="glyph glyph-train" aria-hidden="true"></span>
+        <h3>Strategy Lab</h3>
+        <p>Design rule-based strategies with visual blocks — no code — and validate them instantly against the Backtesting Engine.</p>
+        <span class="go">Enter the Lab →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTS -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1)); padding-top:70px; padding-bottom:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">HOW TRAIN CONNECTS</p>
+    <h2 class="center reveal">Practice feeds proof</h2>
+    <div class="connect-strip reveal">
+      <div class="cs-node"><b>Learn</b><span>Lessons set the rules</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node hot"><b>Train</b><span>PropSim · Journal · Backtesting</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Compete</b><span>Tournament-ready consistency</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Trade</b><span>Sim stats say when you're evaluation-ready</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section" style="background:var(--bg-1); padding-top:60px; padding-bottom:60px;">
+  <div class="container">
+    <figure class="testi testi-solo reveal">
+      <blockquote>"I failed two paid challenges before Adiox. Ran nine PropSim evaluations at $10 each, found my drawdown habit, passed the real one on my next attempt. The simulator paid for itself twenty times over."</blockquote>
+      <figcaption><span class="t-av">MK</span><div><b>Marek K.</b><span>Funded trader · Prague</span></div></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" style="background:var(--bg-0);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Training on Adiox, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>How much does a PropSim run cost?</summary>
+        <p>Simulated evaluation runs start at $10 — a fraction of a typical evaluation fee. Operator and Professional subscribers get simulator runs included monthly. Failing in the simulator costs you a lesson, not a full challenge fee.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How realistic are the simulated evaluations?</summary>
+        <p>PropSim reproduces real evaluation rulesets — profit targets, daily and overall drawdown limits, minimum trading days — including popular industry formats. Prices come from real market data feeds. The one thing it removes is the fee at risk, which is exactly the point.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does the Trading Journal log trades automatically?</summary>
+        <p>Yes. Trades from PropSim, backtests, tournaments, and connected live platforms (MT5, TradeLocker, Match-Trader) are captured automatically, tagged by setup and session, and scored. Every entry also feeds your AI Coach for pattern analysis.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I build strategies without coding?</summary>
+        <p>Yes. Strategy Lab is a no-code builder: define entries, exits, and risk rules with visual blocks, then validate them instantly against the Backtesting Engine. Coded strategies are not required anywhere on Adiox.</p>
+      </details>
+    </div>
+
+    <div class="related reveal">
+      <a href="/blog/why-traders-fail-prop-challenges"><b>Why traders fail prop challenges</b>The five rule breaches behind most failed evaluations.</a>
+      <a href="/blog/how-to-backtest-a-strategy"><b>How to backtest a strategy</b>A practical walkthrough, no code required.</a>
+      <a href="/blog/journaling-that-actually-changes-behavior"><b>Journaling that changes behavior</b>What to tag, what to review, what to ignore.</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>Rehearse the evaluation. Then pass it.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Your first simulated challenge run costs less than lunch.</p>
+    <a href="/train/simulator" class="btn btn-primary btn-xl magnetic">Open the Simulator</a>
+    <p class="micro">Runs from $10 · real evaluation rulesets</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+</body>
+</html>
