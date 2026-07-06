@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prop Tools — Risk Manager &amp; News Filter for Funded Accounts | Adiox</title>
+  <meta name="description" content="Protect your funded account from the two account-killers: drawdown breaches and news-rule violations. Risk Manager with daily loss lock, plus a News Filter with per-firm rule presets." />
+  <link rel="canonical" href="https://adiox.com/trade/prop-tools" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prop Tools — Risk Manager & News Filter for Funded Accounts | Adiox" />
+  <meta property="og:description" content="Daily loss lock, drawdown guard, position size calculator, and a news filter with per-firm rule presets — the tools that keep funded accounts alive." />
+  <meta property="og:url" content="https://adiox.com/trade/prop-tools" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/trade.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/trade/prop-tools",
+        "name": "Prop Tools — Risk Manager & News Filter for Funded Accounts",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Trade", "item": "https://adiox.com/trade" },
+          { "@type": "ListItem", "position": 3, "name": "Prop Tools", "item": "https://adiox.com/trade/prop-tools" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox Risk Manager",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/trade/prop-tools",
+        "description": "Risk protection for funded trading accounts: position size calculator, daily loss lock, max drawdown guard, auto-close at threshold, and lot-size discipline enforcement on MT5, TradeLocker, and Match-Trader.",
+        "publisher": { "@id": "https://adiox.com/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox News Filter",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/trade/prop-tools",
+        "description": "News-rule compliance for funded accounts: economic calendar, high-impact event alerts, pre-news trade blocking, and per-firm news-rule presets.",
+        "publisher": { "@id": "https://adiox.com/#org" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "Set up Adiox Prop Tools in 3 minutes",
+        "step": [
+          { "@type": "HowToStep", "name": "Connect your account", "text": "Link your MT5, TradeLocker, or Match-Trader account to Adiox — one secure connection, revocable anytime." },
+          { "@type": "HowToStep", "name": "Load your firm's preset", "text": "Pick your prop firm's rule preset: daily loss limit, drawdown type, news windows, and reset times load automatically." },
+          { "@type": "HowToStep", "name": "Arm the guards", "text": "Switch on the daily loss lock, drawdown guard, and news filter. Adjust thresholds if you want tighter limits than your firm's." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is a prop firm news rule?", "acceptedAnswer": { "@type": "Answer", "text": "A news rule restricts trading around high-impact economic releases (NFP, CPI, FOMC, central bank rate decisions). Common versions: no opening or closing positions within 2–5 minutes of the event, no holding positions through it, or profits from news-window trades not counting. Rules differ by firm — violating them can void profits or terminate a funded account, which is why the News Filter ships with per-firm presets." } },
+          { "@type": "Question", "name": "How do I avoid a drawdown breach?", "acceptedAnswer": { "@type": "Answer", "text": "Three habits prevent most breaches: size positions from your remaining daily-loss budget (not from your account balance), stop trading well before the limit rather than at it, and automate the stopping. The Risk Manager does all three — it calculates safe position sizes, warns as you approach your threshold, and can auto-close everything before the firm's line is hit." } },
+          { "@type": "Question", "name": "What is a daily loss lock?", "acceptedAnswer": { "@type": "Answer", "text": "A daily loss lock is a hard stop on your own trading: once your losses for the day reach a level you set — typically below the firm's actual limit — the tool closes open positions and blocks new orders until the daily reset. It converts the firm's account-ending rule into a survivable, self-imposed one." } },
+          { "@type": "Question", "name": "Can I trade news on a funded account?", "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on your firm. Some allow news trading freely, many restrict opening or closing positions in a 2–5 minute window around high-impact events, and some prohibit holding through them. Check your firm's rules — or load its preset in the News Filter, which blocks only what your specific firm prohibits and leaves everything else alone." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-trade">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="skyline" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/trade">Trade</a><span class="sep">/</span><span class="here">Prop Tools</span>
+    </nav>
+    <p class="eyebrow accent reveal">PROP TOOLS — RISK MANAGER + NEWS FILTER</p>
+    <h1 class="page-h1 reveal">The tools that keep <span class="accent">funded accounts alive</span></h1>
+    <p class="lead reveal">
+      Funded accounts don't usually die from bad analysis. They die from a drawdown breach on a
+      tilted afternoon, or a position held 90 seconds into NFP. These two tools exist to make
+      both nearly impossible.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Protect My Account</a>
+      <a href="#risk-manager" class="btn btn-ghost btn-lg">Set Up Risk Manager</a>
+      <a href="#news-filter" class="btn btn-text">Enable News Filter →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ACCOUNTS DIE ═══ -->
+<section class="section" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WHY FUNDED ACCOUNTS DIE</p>
+    <h2 class="center reveal">The two killers, by the numbers</h2>
+    <div class="death-strip reveal">
+      <div class="death"><b>~2 in 3</b><span>funded account terminations trace to drawdown breaches — most on a single bad day, not a bad month</span></div>
+      <div class="death"><b>2–5 min</b><span>the typical restricted window around high-impact news — and the easiest rule to violate by accident</span></div>
+      <div class="death"><b>1 trade</b><span>is all it takes. The account you spent months earning has no memory of your good days</span></div>
+    </div>
+    <p class="fineprint center reveal">Directional industry figures for illustration; your firm's statistics and rules govern your account.</p>
+  </div>
+</section>
+
+<!-- ═══ RISK MANAGER ═══ -->
+<section class="section" id="risk-manager" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">TOOL 01 — RISK MANAGER</p>
+        <h2>Discipline, automated</h2>
+        <p class="lead">Every feature answers the same question: "what stops today from being the day?" Set your limits once — tighter than your firm's — and let the machine hold the line your willpower can't.</p>
+        <table class="tool-table">
+          <tbody>
+            <tr><td>Position size calculator</td><td>Sizes every order from your remaining daily-loss budget and stop distance — not from vibes.</td></tr>
+            <tr><td>Daily loss lock</td><td>Hit your self-set daily limit and trading stops: positions close, new orders block until reset.</td></tr>
+            <tr><td>Max drawdown guard</td><td>Tracks overall drawdown against your firm's exact calculation method and warns at 70% and 85%.</td></tr>
+            <tr><td>Auto-close at threshold</td><td>Flattens everything the moment equity touches your floor — faster than you can hesitate.</td></tr>
+            <tr><td>Lot-size discipline</td><td>Caps maximum lots per order and per symbol, so "one more zero by accident" can't happen.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal">
+        <div class="loss-lock">
+          <span class="sw on" data-toggle aria-label="Daily loss lock"></span>
+          <div>
+            <b>DAILY LOSS LOCK — ARMED</b>
+            <span>Locks trading at <span class="mono" style="color:#F87171;">-3.5%</span> · Firm limit <span class="mono">-5.0%</span> · resets 17:00 EST</span>
+          </div>
+        </div>
+        <div class="scenario">
+          <p class="scenario-intro">It's 14:10. You're -3.4% on the day and sure the next one wins it back.</p>
+          <div class="scn">
+            <div class="scn-col scn-without">
+              <h3>Without Risk Manager</h3>
+              <p>You double size to recover. It goes 20 pips against you. Daily loss crosses -5% with the position still open.</p>
+              <p class="scn-result">ACCOUNT TERMINATED · months of work gone</p>
+            </div>
+            <div class="scn-col scn-with">
+              <h3>With Risk Manager</h3>
+              <p>At -3.5% the lock fires: position closed, orders blocked, a notification suggests you go for a walk.</p>
+              <p class="scn-result">ACCOUNT ALIVE · trade again tomorrow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWS FILTER ═══ -->
+<section class="section" id="news-filter" style="background:var(--bg-1);">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <div class="device" style="transform:none;" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">News Filter — Today</span><span class="pill pill-live">ARMED · FIRM C PRESET</span></div>
+          <div class="arena-rows">
+            <div class="arena-row"><span class="mono">13:30</span><b>USD · Non-Farm Payrolls</b><span class="risk-pill risk-high">BLOCKED ±3 MIN</span></div>
+            <div class="arena-row"><span class="mono">15:00</span><b>USD · ISM Services PMI</b><span class="risk-pill risk-med">ALERT ONLY</span></div>
+            <div class="arena-row"><span class="mono">19:00</span><b>USD · FOMC Minutes</b><span class="risk-pill risk-high">BLOCKED ±5 MIN</span></div>
+          </div>
+          <div class="chat-msg ai" style="margin-top:14px; border-color:rgba(245,185,66,0.35); background:rgba(245,185,66,0.08); color:#FCD34D;">NFP in 90 seconds. Your EURUSD position violates Firm C's news rule — closing it now. Re-entry unblocked at 13:33.</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow accent">TOOL 02 — NEWS FILTER</p>
+        <h2>Your firm's news rules, enforced automatically</h2>
+        <p class="lead">Every firm writes its news rule differently. The News Filter knows the difference — load your firm's preset and it blocks exactly what's prohibited, nothing more.</p>
+        <table class="tool-table">
+          <tbody>
+            <tr><td>Economic calendar</td><td>High-impact events for your traded symbols, in your timezone, inside your dashboard.</td></tr>
+            <tr><td>Event alerts</td><td>Push/Telegram warnings 15, 5, and 2 minutes before anything that affects an open position.</td></tr>
+            <tr><td>Pre-news trade blocking</td><td>Blocks opening — and optionally closes — positions inside the restricted window.</td></tr>
+            <tr><td>Per-firm presets</td><td>Each firm's exact news rule (window length, hold-through policy, counted events), maintained by Adiox.</td></tr>
+          </tbody>
+        </table>
+        <div class="scenario">
+          <p class="scenario-intro">90 seconds before NFP. You have a position open.</p>
+          <div class="scn">
+            <div class="scn-col scn-without">
+              <h3>Without News Filter</h3>
+              <p>You forgot the calendar. The spike hits your TP — then the firm voids the profit and flags the account for a news-rule violation.</p>
+              <p class="scn-result">PROFIT VOIDED · ACCOUNT UNDER REVIEW</p>
+            </div>
+            <div class="scn-col scn-with">
+              <h3>With News Filter</h3>
+              <p>Alert at T-15 and T-5; at T-3 the filter closes the position per your firm's preset and blocks re-entry until 13:33.</p>
+              <p class="scn-result">RULE RESPECTED · ACCOUNT CLEAN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWS RULES REFERENCE ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">PLAIN-LANGUAGE REFERENCE</p>
+    <h2 class="center reveal">Common prop-firm news rules, decoded</h2>
+    <p class="lead center reveal">The patterns you'll actually meet — check your own firm's terms for specifics, or load its preset and let the filter do the reading.</p>
+    <div class="cmp-wrap reveal" style="max-width:900px; margin-left:auto; margin-right:auto;">
+      <table class="cmp-table" style="min-width:680px;">
+        <caption class="sr-only">Common prop firm news rule types</caption>
+        <thead>
+          <tr><th>Rule type</th><th>What it means</th><th>Typical window</th><th>If violated</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">No open/close window</th><td>Can't open or close positions around the event</td><td>±2–5 min</td><td>Profit voided</td></tr>
+          <tr><th scope="row">No holding through</th><td>Positions must be flat before the release</td><td>±5 min</td><td>Breach / termination</td></tr>
+          <tr><th scope="row">Profits don't count</th><td>Trading allowed, but news-window gains excluded from targets</td><td>±2 min</td><td>Gains excluded</td></tr>
+          <tr><th scope="row">Unrestricted</th><td>News trading fully allowed (often funded phase only)</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORKS WITH ═══ -->
+<section class="section" id="platforms" style="background:var(--bg-0); padding-top:70px; padding-bottom:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WORKS WITH</p>
+    <h2 class="center reveal">Guards your accounts wherever they live</h2>
+    <div class="integrations reveal">
+      <div class="integ"><b>MetaTrader 5</b><span>MT5</span></div>
+      <div class="integ"><b>TradeLocker</b><span>WEB &amp; MOBILE</span></div>
+      <div class="integ"><b>Match-Trader</b><span>PROP NATIVE</span></div>
+    </div>
+    <p class="fineprint center reveal">Adiox is not affiliated with MetaQuotes, TradeLocker, or Match-Trader. All trademarks belong to their respective owners.</p>
+  </div>
+</section>
+
+<!-- ═══ SETUP ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">SETUP</p>
+    <h2 class="center reveal">Protected in three minutes</h2>
+    <div class="eval-line cols3 reveal">
+      <div class="eval-step"><span class="eval-dot">1</span><h3>Connect your account</h3><p>MT5, TradeLocker, or Match-Trader — one secure link, revocable anytime.</p></div>
+      <div class="eval-step"><span class="eval-dot">2</span><h3>Load your firm's preset</h3><p>Daily loss, drawdown type, news windows, and reset times load automatically.</p></div>
+      <div class="eval-step"><span class="eval-dot">3</span><h3>Arm the guards</h3><p>Flip on the loss lock, drawdown guard, and news filter. Tighten thresholds if you like.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:var(--bg-1);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Protection, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What is a prop firm news rule?</summary>
+        <p>A news rule restricts trading around high-impact economic releases (NFP, CPI, FOMC, central bank rate decisions). Common versions: no opening or closing positions within 2–5 minutes of the event, no holding positions through it, or profits from news-window trades not counting. Rules differ by firm — violating them can void profits or terminate a funded account, which is why the News Filter ships with per-firm presets.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I avoid a drawdown breach?</summary>
+        <p>Three habits prevent most breaches: size positions from your remaining daily-loss budget (not from your account balance), stop trading well before the limit rather than at it, and automate the stopping. The Risk Manager does all three — it calculates safe position sizes, warns as you approach your threshold, and can auto-close everything before the firm's line is hit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a daily loss lock?</summary>
+        <p>A daily loss lock is a hard stop on your own trading: once your losses for the day reach a level you set — typically below the firm's actual limit — the tool closes open positions and blocks new orders until the daily reset. It converts the firm's account-ending rule into a survivable, self-imposed one.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I trade news on a funded account?</summary>
+        <p>It depends entirely on your firm. Some allow news trading freely, many restrict opening or closing positions in a 2–5 minute window around high-impact events, and some prohibit holding through them. Check your firm's rules — or load its preset in the News Filter, which blocks only what your specific firm prohibits and leaves everything else alone.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>You earned the account. Now make it un-killable.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Three minutes of setup versus months of re-qualifying. Easy math.</p>
+    <a href="/signup" class="btn btn-primary btn-xl magnetic">Protect My Account</a>
+    <p class="micro">Risk Manager + News Filter · included in the Professional plan</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/trade.js" defer></script>
+</body>
+</html>

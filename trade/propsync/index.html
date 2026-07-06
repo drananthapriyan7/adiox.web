@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PropSync — Manage All Your Prop Firm Accounts in One Dashboard | Adiox</title>
+  <meta name="description" content="Run every prop firm account from one command center: unified equity and drawdown view, per-firm rule tracking, breach-prevention alerts, and consolidated analytics across MT5, TradeLocker, and Match-Trader." />
+  <link rel="canonical" href="https://adiox.com/trade/propsync" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PropSync — Manage All Your Prop Firm Accounts in One Dashboard | Adiox" />
+  <meta property="og:description" content="Unified equity and drawdown view, per-firm rule tracking, breach-prevention alerts, and consolidated analytics for traders running multiple prop accounts." />
+  <meta property="og:url" content="https://adiox.com/trade/propsync" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/trade.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/trade/propsync",
+        "name": "PropSync — Manage All Your Prop Firm Accounts in One Dashboard",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Trade", "item": "https://adiox.com/trade" },
+          { "@type": "ListItem", "position": 3, "name": "PropSync", "item": "https://adiox.com/trade/propsync" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PropSync",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/trade/propsync",
+        "description": "Multi-account manager for prop traders: syncs accounts across MetaTrader 5, TradeLocker, and Match-Trader, tracks each firm's rules, consolidates equity and drawdown analytics, and warns before daily-loss or drawdown breaches.",
+        "publisher": { "@id": "https://adiox.com/#org" },
+        "offers": { "@type": "Offer", "price": "79", "priceCurrency": "USD", "description": "Included in the Adiox Professional plan" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How do traders manage multiple prop firm accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Most juggle separate dashboards, spreadsheets, and mental math for each firm's rules — which is exactly how accidental breaches happen. PropSync replaces that with one command center: every account's balance, open risk, daily loss, and distance-to-breach in a single live view, with each firm's specific rules tracked automatically." } },
+          { "@type": "Question", "name": "Can I see all my funded accounts in one place?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PropSync connects accounts across MetaTrader 5, TradeLocker, and Match-Trader — regardless of which prop firm issued them — and unifies them into one dashboard with combined equity, per-account health states, and consolidated analytics. Adding an account takes about a minute." } },
+          { "@type": "Question", "name": "Does PropSync copy trades between my prop accounts?", "acceptedAnswer": { "@type": "Answer", "text": "PropSync includes cross-account trade management, but firm rules come first: many prop firms restrict or prohibit copying between accounts, and PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional." } },
+          { "@type": "Question", "name": "How do breach-prevention alerts work?", "acceptedAnswer": { "@type": "Answer", "text": "PropSync tracks each account's daily loss and overall drawdown against that firm's specific limits in real time. When any account approaches a threshold you set — say 70% of the daily loss limit — you get an instant alert in the app, by push, or by Telegram, and the account tile turns amber, then red. The warning comes before the breach, not after." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-trade">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="skyline" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content" style="max-width:1000px;">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/trade">Trade</a><span class="sep">/</span><span class="here">PropSync</span>
+    </nav>
+    <p class="eyebrow accent reveal">PROPSYNC — MULTI-ACCOUNT MANAGER</p>
+    <h1 class="page-h1 reveal">Every prop account. <span class="accent">One command center.</span></h1>
+    <p class="lead reveal">
+      Five firms, five dashboards, five drawdown rules — and one mistimed trade away from a breach.
+      PropSync unifies all of it: live equity, open risk, and distance-to-breach for every account
+      you run, on one screen.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Sync My Accounts</a>
+      <a href="#dashboard" class="btn btn-ghost btn-lg">See the Dashboard Live</a>
+      <a href="#platforms" class="btn btn-text">Check Supported Platforms →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAIN WALL ═══ -->
+<section class="section" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE PROBLEM</p>
+    <h2 class="center reveal">Running multiple prop accounts is a second job you didn't apply for</h2>
+    <div class="pain-wall reveal">
+      <div class="pain"><b>5 dashboards, 5 logins</b>Alt-tabbing between firm portals while positions are open. One stale tab and you're trading blind on an account you forgot was in drawdown.</div>
+      <div class="pain"><b>5 different rule sets</b>Firm A resets daily loss at 5pm EST, Firm B at midnight server time. Firm C counts floating P&amp;L, Firm D doesn't. You keep it all in your head — until you don't.</div>
+      <div class="pain"><b>One mistake = breach</b>A funded account you spent months earning dies in one oversized position or one forgotten daily limit. The firm doesn't care that it was an accident.</div>
+      <div class="pain"><b>Spreadsheet accounting</b>Balances, payout dates, and milestones tracked by hand in a sheet that's always one day out of date.</div>
+      <div class="pain"><b>No combined picture</b>You can't see your true total exposure or overall equity curve across firms — so you can't manage yourself like a portfolio.</div>
+      <div class="pain"><b>Payout chaos</b>Different cycles, different minimums, different processing windows. Money gets left on the table because nobody can track five calendars.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DASHBOARD DEMO ═══ -->
+<section class="section" id="dashboard" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE ANSWER</p>
+    <h2 class="center reveal">One dashboard. Every account. Live.</h2>
+    <p class="lead center reveal">Each tile is a live account: balance, open risk, and how close you are to that firm's specific limits — green, amber, or red at a glance.</p>
+
+    <div class="tilt reveal" style="max-width:880px; margin:44px auto 0;">
+      <div class="device deck" aria-hidden="true">
+        <div class="dev-bar"><span class="dev-title">PropSync — Command Deck</span><span class="pill pill-live">6 ACCOUNTS SYNCED</span></div>
+        <div class="sim-stats" style="grid-template-columns:repeat(3,1fr); display:grid; gap:10px; margin-bottom:4px;">
+          <div class="sim-stat"><span>Combined equity</span><b class="mono teal">$412,380</b></div>
+          <div class="sim-stat"><span>Total open risk</span><b class="mono">1.4%</b></div>
+          <div class="sim-stat"><span>Next payout window</span><b class="mono gold">Firm B · 2 days</b></div>
+        </div>
+        <div class="deck-grid">
+          <div class="acct">
+            <div class="acct-head"><b>Firm A · $100k</b><span class="health h-ok"></span></div>
+            <span class="mono teal">$104,210</span>
+            <i class="bar"><i style="width:18%"></i></i>
+            <div class="acct-meta"><span>DAILY LOSS 0.9% / 5%</span><span>MT5</span></div>
+          </div>
+          <div class="acct">
+            <div class="acct-head"><b>Firm B · $50k</b><span class="health h-ok"></span></div>
+            <span class="mono teal">$51,875</span>
+            <i class="bar"><i style="width:10%"></i></i>
+            <div class="acct-meta"><span>DAILY LOSS 0.4% / 4%</span><span>TRADELOCKER</span></div>
+          </div>
+          <div class="acct">
+            <div class="acct-head"><b>Firm C · $100k</b><span class="health h-warn"></span></div>
+            <span class="mono">$98,640</span>
+            <i class="bar"><i style="width:72%; background:linear-gradient(90deg,#F5B942,#F87171);"></i></i>
+            <div class="acct-meta"><span>DAILY LOSS 3.6% / 5%</span><span>MT5</span></div>
+          </div>
+          <div class="acct">
+            <div class="acct-head"><b>Firm D · $25k</b><span class="health h-ok"></span></div>
+            <span class="mono teal">$26,930</span>
+            <i class="bar"><i style="width:6%"></i></i>
+            <div class="acct-meta"><span>DAILY LOSS 0.2% / 4%</span><span>MATCH-TRADER</span></div>
+          </div>
+          <div class="acct">
+            <div class="acct-head"><b>Firm E · $100k</b><span class="health h-ok"></span></div>
+            <span class="mono teal">$103,425</span>
+            <i class="bar"><i style="width:24%"></i></i>
+            <div class="acct-meta"><span>DAILY LOSS 1.2% / 5%</span><span>MT5</span></div>
+          </div>
+          <div class="acct">
+            <div class="acct-head"><b>Firm F · $25k eval</b><span class="health h-ok"></span></div>
+            <span class="mono teal">$27,300</span>
+            <i class="bar bar-safe"><i style="width:91%"></i></i>
+            <div class="acct-meta"><span>TARGET 91% COMPLETE</span><span>TRADELOCKER</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CROSS-ACCOUNT MANAGEMENT ═══ -->
+<section class="section" style="background:var(--bg-1);">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">CROSS-ACCOUNT MANAGEMENT</p>
+        <h2>Manage trades across accounts — inside each firm's rules</h2>
+        <p class="lead">Place, size, and close positions on any synced account from one interface. Group-close everything before news, flatten a single firm, or mirror a setup to selected accounts.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>One-click flatten: per account, per firm, or everything</li>
+          <li>Per-account lot sizing computed from each firm's limits</li>
+          <li>Session presets: which accounts trade London, which trade NY</li>
+        </ul>
+        <p class="rule-why" style="margin-top:20px;"><b>COMPLIANCE FIRST</b>Many firms restrict or prohibit copying trades between accounts. PropSync ships with per-firm compliance presets that disable cross-account copying where a firm disallows it. Following each firm's terms is your responsibility — PropSync makes it easier, never optional.</p>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow accent">CONSOLIDATED ANALYTICS</p>
+        <h2>Your true equity curve — all firms combined</h2>
+        <p class="lead">See yourself the way a fund sees a portfolio: combined equity curve, per-firm breakdown, win rate by session and instrument across every account.</p>
+        <div class="device" style="margin-top:24px; transform:none;" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Analytics — Combined equity (90d)</span><span class="pill">6 ACCOUNTS</span></div>
+          <svg class="sim-chart" viewBox="0 0 320 90" preserveAspectRatio="none">
+            <path d="M0,74 L25,70 L50,72 L75,63 L100,66 L125,56 L150,60 L175,48 L200,52 L225,40 L250,44 L275,30 L300,34 L320,22" fill="none" stroke="#F5B942" stroke-width="2"/>
+            <path d="M0,74 L25,70 L50,72 L75,63 L100,66 L125,56 L150,60 L175,48 L200,52 L225,40 L250,44 L275,30 L300,34 L320,22 L320,90 L0,90 Z" fill="rgba(245,185,66,0.08)"/>
+          </svg>
+          <div class="acct-meta" style="margin-top:10px;"><span>BEST FIRM: B (+7.2%)</span><span>WORST SESSION: NY PM (-0.8%)</span><span>COMBINED: +9.4%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAYOUTS & MILESTONES ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">PAYOUTS &amp; MILESTONES</p>
+    <h2 class="center reveal">Five payout calendars, merged into one</h2>
+    <p class="lead center reveal">PropSync tracks every firm's payout cycle, minimums, and scaling milestones — and tells you the optimal day to request on each account.</p>
+    <div class="winners reveal">
+      <div class="winner-card"><span class="w-event">Firm B · eligible now</span><b>Request window open</b><span class="w-prize">$1,875 available</span><span class="w-date">closes in 2 days</span></div>
+      <div class="winner-card"><span class="w-event">Firm A · in 6 days</span><b>Cycle 4 of 4</b><span class="w-prize">$4,210 projected</span><span class="w-date">min. reached ✓</span></div>
+      <div class="winner-card"><span class="w-event">Firm E · milestone</span><b>Scale-up at +10%</b><span class="w-prize">$100k → $150k</span><span class="w-date">1.8% to go</span></div>
+      <div class="winner-card"><span class="w-event">Firm F · evaluation</span><b>Phase 2 target</b><span class="w-prize">91% complete</span><span class="w-date">on pace · 4 days</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BREACH PREVENTION ═══ -->
+<section class="section" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">BREACH PREVENTION</p>
+    <h2 class="center reveal">PropSync warns you <em>before</em> a rule breach. Not after.</h2>
+    <p class="lead center reveal" style="max-width:740px;">Every account's daily loss and drawdown is tracked live against that firm's specific limits — including its reset time and whether floating P&amp;L counts. Cross your alert threshold on any account and you know in seconds.</p>
+    <div class="alert-demo reveal" role="img" aria-label="Example breach-prevention alert">
+      <span class="a-icon">⚠️</span>
+      <div>
+        <b>Firm C · $100k — approaching daily loss limit</b>
+        <p>Daily loss at <span class="mono">-3.6%</span> of <span class="mono">-5.0%</span> (72%). Floating P&amp;L included per Firm C rules. Limit resets 17:00 EST. <u>Flatten Firm C</u> · <u>Mute 1h</u></p>
+      </div>
+    </div>
+    <div class="ba reveal">
+      <div class="ba-col ba-before">
+        <h3>Before PropSync</h3>
+        <ul>
+          <li>Rules memorized, badly, across five firms</li>
+          <li>Breach discovered in a termination email</li>
+          <li>Daily loss checked manually between trades</li>
+          <li>Total exposure unknown during news</li>
+        </ul>
+      </div>
+      <div class="ba-col ba-after">
+        <h3>With PropSync</h3>
+        <ul>
+          <li>Every firm's rules tracked automatically</li>
+          <li>Amber at 70%, red at 85% — before the line</li>
+          <li>Push/Telegram alert the second it matters</li>
+          <li>One-click flatten across any or all accounts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLATFORMS ═══ -->
+<section class="section" id="platforms" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1)); padding-top:80px; padding-bottom:80px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">SUPPORTED PLATFORMS</p>
+    <h2 class="center reveal">If your firm runs on these, PropSync runs your firm accounts</h2>
+    <div class="integrations reveal">
+      <div class="integ"><b>MetaTrader 5</b><span>MT5</span></div>
+      <div class="integ"><b>TradeLocker</b><span>WEB &amp; MOBILE</span></div>
+      <div class="integ"><b>Match-Trader</b><span>PROP NATIVE</span></div>
+    </div>
+    <p class="fineprint center reveal">Works with accounts from any prop firm issued on these platforms. Adiox is not affiliated with MetaQuotes, TradeLocker, Match-Trader, or any prop firm. Read-only sync available for firms that restrict third-party order routing.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:var(--bg-1);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">PropSync, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>How do traders manage multiple prop firm accounts?</summary>
+        <p>Most juggle separate dashboards, spreadsheets, and mental math for each firm's rules — which is exactly how accidental breaches happen. PropSync replaces that with one command center: every account's balance, open risk, daily loss, and distance-to-breach in a single live view, with each firm's specific rules tracked automatically.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I see all my funded accounts in one place?</summary>
+        <p>Yes. PropSync connects accounts across MetaTrader 5, TradeLocker, and Match-Trader — regardless of which prop firm issued them — and unifies them into one dashboard with combined equity, per-account health states, and consolidated analytics. Adding an account takes about a minute.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does PropSync copy trades between my prop accounts?</summary>
+        <p>PropSync includes cross-account trade management, but firm rules come first: many prop firms restrict or prohibit copying between accounts, and PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do breach-prevention alerts work?</summary>
+        <p>PropSync tracks each account's daily loss and overall drawdown against that firm's specific limits in real time. When any account approaches a threshold you set — say 70% of the daily loss limit — you get an instant alert in the app, by push, or by Telegram, and the account tile turns amber, then red. The warning comes before the breach, not after.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>Stop managing dashboards. Start managing capital.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Connect your first account in about a minute. The command deck does the rest.</p>
+    <a href="/signup" class="btn btn-primary btn-xl magnetic">Sync My Accounts</a>
+    <p class="micro">Included in the Professional plan · MT5, TradeLocker &amp; Match-Trader</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/trade.js" defer></script>
+</body>
+</html>

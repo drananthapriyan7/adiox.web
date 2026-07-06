@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal Hub — Verified Trading Signals + Auto-Copier | Adiox</title>
+  <meta name="description" content="Trading signals with receipts: every signal timestamped and tracked on-platform. Subscribe to verified providers and auto-execute with the Adiox Copier on MT5, TradeLocker, or Match-Trader." />
+  <link rel="canonical" href="https://adiox.com/trade/signals" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Signal Hub — Verified Trading Signals + Auto-Copier | Adiox" />
+  <meta property="og:description" content="Trading signals with receipts: timestamped, tracked on-platform, no edited screenshots. Auto-execute with the Adiox Copier." />
+  <meta property="og:url" content="https://adiox.com/trade/signals" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/trade.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/trade/signals",
+        "name": "Signal Hub — Verified Trading Signals + Auto-Copier",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Trade", "item": "https://adiox.com/trade" },
+          { "@type": "ListItem", "position": 3, "name": "Signal Hub", "item": "https://adiox.com/trade/signals" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Adiox Signal Hub",
+        "serviceType": "Trading signal distribution and automated execution",
+        "provider": { "@type": "Organization", "name": "Adiox", "url": "https://adiox.com/" },
+        "description": "Verified trading signal marketplace with on-platform timestamped track records and the Adiox Copier, which auto-executes subscribed signals on MetaTrader 5, TradeLocker, and Match-Trader accounts within user-defined risk limits."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How do I know a signal provider is legit?", "acceptedAnswer": { "@type": "Answer", "text": "On Adiox, you don't have to trust — you can check. Every signal a provider publishes is timestamped by the platform at the moment it's issued and tracked against real market prices afterward. Win rates, average return, and drawdown are computed by Adiox from that record. Edited screenshots, backdated calls, and deleted losers are impossible by design." } },
+          { "@type": "Question", "name": "How does a trade copier work?", "acceptedAnswer": { "@type": "Answer", "text": "A trade copier turns a signal into an actual order on your account automatically. With the Adiox Copier you connect your MT5, TradeLocker, or Match-Trader account, choose providers, and set your risk per trade. When a signal fires, the Copier sizes and places the order within your limits — including stop loss and take profit — in under a second, without you touching a terminal." } },
+          { "@type": "Question", "name": "Can I receive signals without auto-execution?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every subscription includes manual delivery — in the Adiox app, by Telegram, or over the API — with entry, stop, and target clearly stated. The Copier is optional; many subscribers start manual and enable auto-execution once they trust a provider's record." } },
+          { "@type": "Question", "name": "How do signal providers earn on Adiox?", "acceptedAnswer": { "@type": "Answer", "text": "Providers set tiered subscription prices (for example: signals-only, signals + analysis, priority tier). Adiox handles billing and distribution and keeps a platform share; providers keep the majority. Because records are verified on-platform, honest providers convert followers dramatically better than screenshot marketing ever could." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-trade">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="network" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/trade">Trade</a><span class="sep">/</span><span class="here">Signal Hub</span>
+    </nav>
+    <p class="eyebrow accent reveal">SIGNAL HUB + ADIOX COPIER</p>
+    <h1 class="page-h1 reveal">Trading signals <span class="accent">with receipts</span></h1>
+    <p class="lead reveal">
+      The signal industry runs on edited screenshots. Adiox runs on timestamps. Every signal is
+      recorded by the platform the moment it's issued and tracked against real prices afterward —
+      so a provider's record is measured, not marketed.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="#providers" class="btn btn-primary btn-lg magnetic">Find a Signal Provider</a>
+      <a href="#copier" class="btn btn-ghost btn-lg">Set Up the Copier</a>
+      <a href="#sell" class="btn btn-text">Start Selling Signals →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOR SUBSCRIBERS ═══ -->
+<section class="section" id="providers" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">FOR SUBSCRIBERS</p>
+    <h2 class="center reveal">Providers with verified records — like athlete cards, not ads</h2>
+    <div class="provider-cards reveal">
+      <div class="provider">
+        <span class="prov-av">VK</span>
+        <b>VectorKilo</b>
+        <span class="verified">VERIFIED · 16 MONTHS</span>
+        <div class="prov-stats">
+          <span>Signals<b>1,412</b></span>
+          <span>Win rate<b class="teal">61%</b></span>
+          <span>Subs<b>2,304</b></span>
+        </div>
+        <p style="font-size:12.5px; color:var(--ink-dim);">FX majors · London session · avg 2 signals/day · full SL/TP on every call</p>
+        <button class="mini-btn">View record</button>
+      </div>
+      <div class="provider">
+        <span class="prov-av">AU</span>
+        <b>AurumDesk</b>
+        <span class="verified">VERIFIED · 11 MONTHS</span>
+        <div class="prov-stats">
+          <span>Signals<b>688</b></span>
+          <span>Win rate<b class="teal">57%</b></span>
+          <span>Subs<b>1,187</b></span>
+        </div>
+        <p style="font-size:12.5px; color:var(--ink-dim);">Gold &amp; silver · NY session · swing bias · risk grade B</p>
+        <button class="mini-btn">View record</button>
+      </div>
+      <div class="provider">
+        <span class="prov-av">QS</span>
+        <b>QuietSignal</b>
+        <span class="verified">VERIFIED · 23 MONTHS</span>
+        <div class="prov-stats">
+          <span>Signals<b>402</b></span>
+          <span>Win rate<b class="teal">66%</b></span>
+          <span>Subs<b>3,910</b></span>
+        </div>
+        <p style="font-size:12.5px; color:var(--ink-dim);">Indices · low frequency, high conviction · 1–3 signals/week</p>
+        <button class="mini-btn">View record</button>
+      </div>
+    </div>
+    <p class="fineprint center reveal">Demo provider data shown. Delivery via the Adiox app, Telegram, or API — entry, stop, and target on every signal. Not investment advice.</p>
+  </div>
+</section>
+
+<!-- ═══ THE COPIER ═══ -->
+<section class="section" id="copier" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE ADIOX COPIER</p>
+    <h2 class="center reveal">From signal to filled order — without touching a terminal</h2>
+    <p class="lead center reveal">The Copier auto-executes your subscribed signals on your own MT5, TradeLocker, or Match-Trader account, sized to your rules, in under a second.</p>
+    <div class="eval-line cols3 reveal">
+      <div class="eval-step"><span class="eval-dot">1</span><h3>Connect your account</h3><p>MT5, TradeLocker, or Match-Trader — one secure connection, revocable anytime.</p></div>
+      <div class="eval-step"><span class="eval-dot">2</span><h3>Choose your providers</h3><p>Subscribe to any verified provider; enable the Copier per provider, not all-or-nothing.</p></div>
+      <div class="eval-step"><span class="eval-dot">3</span><h3>Set your risk</h3><p>Fixed lots or % risk per signal, max concurrent positions, and an equity floor that halts everything.</p></div>
+    </div>
+    <div class="center reveal" style="margin-top:34px;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Set Up the Copier</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VERIFICATION SYSTEM ═══ -->
+<section class="section" style="background:var(--bg-1);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE VERIFICATION SYSTEM</p>
+    <h2 class="center reveal">Why fake screenshots die here</h2>
+    <div class="fair-grid reveal">
+      <div class="fair-card"><h3>Timestamped at issue</h3><p>A signal exists the moment it's published on-platform — with entry, stop, and target locked in. Nothing can be backdated or "called earlier in the private chat."</p></div>
+      <div class="fair-card"><h3>Tracked to outcome</h3><p>Every signal is scored against real market prices until stop or target hits. Winners and losers both stay on the record, permanently.</p></div>
+      <div class="fair-card"><h3>Computed, not claimed</h3><p>Win rate, average R, drawdown, and frequency are calculated by Adiox from the tracked history. Providers can't edit their own stats — full stop.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOR PROVIDERS ═══ -->
+<section class="section" id="sell" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">FOR PROVIDERS</p>
+        <h2>Sell signals on the strength of your record, not your marketing</h2>
+        <p class="lead">Tiered subscriptions, audience analytics, and a verified history that closes the trust gap for you. If your calls are good, the platform proves it — every day, automatically.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Tiered pricing: signals-only, signals + analysis, priority access</li>
+          <li>Subscriber analytics: growth, churn, revenue, engagement per signal</li>
+          <li>Delivery handled for you — app, Telegram, API, and the Copier</li>
+        </ul>
+        <a href="/signup" class="btn btn-primary magnetic" style="margin-top:10px;">Start Selling Signals</a>
+      </div>
+      <div class="reveal">
+        <div class="rev-split" style="margin-top:0;">
+          <div class="rev-card you"><span class="prize-place">PROVIDERS KEEP</span><div class="prize-pct">70%</div><p class="prize-note">of subscription revenue</p></div>
+          <div class="rev-card"><span class="prize-place">PLATFORM</span><div class="prize-pct">30%</div><p class="prize-note">billing, delivery, verification &amp; Copier infra</p></div>
+        </div>
+        <p class="fineprint" style="margin-top:16px;">Payouts monthly. Providers must maintain a live verified record; stale or disconnected accounts are delisted automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:var(--bg-0);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Signals, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>How do I know a signal provider is legit?</summary>
+        <p>On Adiox, you don't have to trust — you can check. Every signal a provider publishes is timestamped by the platform at the moment it's issued and tracked against real market prices afterward. Win rates, average return, and drawdown are computed by Adiox from that record. Edited screenshots, backdated calls, and deleted losers are impossible by design.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does a trade copier work?</summary>
+        <p>A trade copier turns a signal into an actual order on your account automatically. With the Adiox Copier you connect your MT5, TradeLocker, or Match-Trader account, choose providers, and set your risk per trade. When a signal fires, the Copier sizes and places the order within your limits — including stop loss and take profit — in under a second, without you touching a terminal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I receive signals without auto-execution?</summary>
+        <p>Yes. Every subscription includes manual delivery — in the Adiox app, by Telegram, or over the API — with entry, stop, and target clearly stated. The Copier is optional; many subscribers start manual and enable auto-execution once they trust a provider's record.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do signal providers earn on Adiox?</summary>
+        <p>Providers set tiered subscription prices (for example: signals-only, signals + analysis, priority tier). Adiox handles billing and distribution and keeps a platform share; providers keep the majority. Because records are verified on-platform, honest providers convert followers dramatically better than screenshot marketing ever could.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DUAL CTA ═══ -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>Receipts beat screenshots.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Subscribe to a verified record — or start building yours today.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="#providers" class="btn btn-primary btn-lg magnetic">See Verified Track Records</a>
+      <a href="/signup" class="btn btn-ghost btn-lg">Start Selling Signals</a>
+    </div>
+    <p class="micro">Timestamped on-platform · Copier optional · not investment advice</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Signals and copied trades involve substantial risk; past performance does not guarantee future results. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/trade.js" defer></script>
+</body>
+</html>
