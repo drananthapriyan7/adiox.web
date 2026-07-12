@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PropSim — Practice Prop Firm Challenges for $10 | Adiox</title>
+  <meta name="description" content="Practice prop firm challenges before you pay for one. PropSim recreates real evaluation rules — targets, drawdowns, news windows — on simulated capital, from $10 per run." />
+  <link rel="canonical" href="https://adiox.com/train/simulator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PropSim — Practice Prop Firm Challenges for $10 | Adiox" />
+  <meta property="og:description" content="Practice prop firm challenges before you pay for one. Real evaluation rules, realistic conditions, full debrief report — from $10 per run." />
+  <meta property="og:url" content="https://adiox.com/train/simulator" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/train.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/train/simulator",
+        "name": "PropSim — Practice Prop Firm Challenges for $10",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Train", "item": "https://adiox.com/train" },
+          { "@type": "ListItem", "position": 3, "name": "PropSim", "item": "https://adiox.com/train/simulator" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PropSim",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/train/simulator",
+        "description": "Prop firm challenge simulator: practice evaluations under real rule sets — profit targets, daily and max drawdown, time limits, news windows — on simulated capital with realistic spreads and slippage. Runs from $10.",
+        "publisher": { "@id": "https://adiox.com/#org" },
+        "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD", "description": "Single simulated evaluation run" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How PropSim works",
+        "step": [
+          { "@type": "HowToStep", "name": "Pick a rule set", "text": "Choose an industry-style preset (2-step, 1-step) or build a custom rule set: profit target, daily and max drawdown, time limit, news rules." },
+          { "@type": "HowToStep", "name": "Trade realistic conditions", "text": "Trade the simulated evaluation with real spreads, slippage, sessions, and scheduled news events — the same pressure, none of the fee risk." },
+          { "@type": "HowToStep", "name": "Get a full performance report", "text": "The Debrief shows exactly what passed or broke the attempt — which rule, which trade, what time, and the behavioral pattern behind it." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Can I practice a prop firm challenge before paying for one?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PropSim recreates prop-firm evaluation conditions — profit targets, daily and overall drawdown limits, minimum days, news windows — on simulated capital for $10 per run. You experience the exact rule pressure of a real challenge, fail safely, and only pay for a real evaluation once you pass consistently." } },
+          { "@type": "Question", "name": "Why do most traders fail prop firm evaluations?", "acceptedAnswer": { "@type": "Answer", "text": "Mostly on rules, not markets: oversized positions after losses breach the daily drawdown, rushed entries in the first days dig early holes, and news-window violations void otherwise good trades. Simulated evaluation data shows the majority of failures happen on a single bad day — which is precisely what practice runs teach you to survive." } },
+          { "@type": "Question", "name": "What is a challenge simulator?", "acceptedAnswer": { "@type": "Answer", "text": "A challenge simulator is a training environment that reproduces a prop firm evaluation — same targets, drawdown limits, and time rules — on simulated capital. Unlike a demo account, it enforces the rules and ends the attempt when you breach them, then explains why. It exists so your first real evaluation isn't your first evaluation ever." } },
+          { "@type": "Question", "name": "Are PropSim rule sets the same as real prop firms'?", "acceptedAnswer": { "@type": "Answer", "text": "PropSim ships with presets modeled on popular industry evaluation formats, including FTMO®-style 2-step rules, plus fully custom rule sets. Adiox is not affiliated with or endorsed by FTMO or any prop firm; presets reproduce publicly documented rule structures so your practice transfers to whichever firm you choose." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-train">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="holodeck" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/train">Train</a><span class="sep">/</span><span class="here">PropSim</span>
+    </nav>
+    <p class="eyebrow accent reveal">PROPSIM — CHALLENGE SIMULATOR</p>
+    <h1 class="page-h1 reveal">Practice the challenge <span class="accent">before you pay for it</span></h1>
+    <p class="lead reveal">
+      FTMO®-style evaluations, simulated for $10.* The same targets, the same drawdown rules,
+      the same pressure — with a full debrief instead of a lost fee when it goes wrong.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="#builder" class="btn btn-primary btn-lg magnetic">Create a Practice Challenge — $10</a>
+      <a href="#debrief" class="btn btn-ghost btn-lg">See a Sample Debrief Report</a>
+    </div>
+    <p class="fineprint reveal">*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®. Presets reproduce publicly documented rule structures.</p>
+  </div>
+</section>
+
+<!-- ═══ WHY TRADERS FAIL ═══ -->
+<section class="section" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WHY TRADERS FAIL CHALLENGES</p>
+    <h2 class="center reveal">The evaluation doesn't beat traders. Three habits do.</h2>
+    <div class="fail-strip reveal">
+      <div class="fail"><b>~40%</b><span>of failed simulated attempts breach in the first five days — rushed entries digging early holes</span></div>
+      <div class="fail"><b>1 day</b><span>most drawdown breaches happen on a single bad day, usually after a losing streak triggers oversizing</span></div>
+      <div class="fail"><b>±2 min</b><span>the news window where "one quick trade" voids profits or ends attempts outright</span></div>
+    </div>
+    <p class="fineprint center reveal">Directional figures from simulated evaluation runs, for illustration. A full data report is planned as attempts accumulate.</p>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">HOW PROPSIM WORKS</p>
+    <h2 class="center reveal">Three steps, one honest mirror</h2>
+    <div class="steps reveal">
+      <div class="step"><div class="step-num" style="color:rgba(34,211,238,0.35);">01</div><h3>Pick a rule set</h3><p>Industry-style presets or a fully custom build: profit target, daily and max drawdown, time limit, news rules.</p></div>
+      <div class="step"><div class="step-num" style="color:rgba(34,211,238,0.35);">02</div><h3>Trade realistic conditions</h3><p>Real spreads, slippage, sessions, and scheduled news events. The rules are enforced live — breach one and the attempt ends, exactly like the real thing.</p></div>
+      <div class="step"><div class="step-num" style="color:rgba(34,211,238,0.35);">03</div><h3>Get the full report</h3><p>The Debrief shows what broke the attempt — which rule, which trade, what time — and feeds your Journal and AI Coach automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHALLENGE BUILDER ═══ -->
+<section class="section" id="builder" style="background:var(--bg-1);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">CHALLENGE BUILDER</p>
+    <h2 class="center reveal">Configure your practice run right here</h2>
+    <p class="lead center reveal">Pick a preset or build your own rules. Your configuration carries into signup.</p>
+
+    <div class="builder-grid reveal" id="challengeBuilder">
+      <div class="builder-main">
+        <span class="b-label">Rule set preset</span>
+        <div class="preset-tabs" role="tablist" aria-label="Rule set presets">
+          <button class="preset-tab active" data-preset="two-step">FTMO®-style 2-step*</button>
+          <button class="preset-tab" data-preset="one-step">1-step</button>
+          <button class="preset-tab" data-preset="custom">Custom</button>
+        </div>
+
+        <span class="b-label">Profit target</span>
+        <div class="b-slider-row">
+          <div class="b-slider-head"><span>Phase 1 target</span><b id="bTargetVal">8%</b></div>
+          <input type="range" min="4" max="15" step="1" value="8" class="b-slider" id="bTarget" aria-label="Profit target percent" />
+        </div>
+
+        <span class="b-label">Drawdown rules</span>
+        <div class="b-slider-row">
+          <div class="b-slider-head"><span>Daily drawdown limit</span><b id="bDailyVal">-5%</b></div>
+          <input type="range" min="2" max="8" step="1" value="5" class="b-slider" id="bDaily" aria-label="Daily drawdown percent" />
+        </div>
+        <div class="b-slider-row" style="margin-top:12px;">
+          <div class="b-slider-head"><span>Max overall drawdown</span><b id="bMaxVal">-10%</b></div>
+          <input type="range" min="4" max="15" step="1" value="10" class="b-slider" id="bMax" aria-label="Max drawdown percent" />
+        </div>
+
+        <span class="b-label">Time limit</span>
+        <div class="b-slider-row">
+          <div class="b-slider-head"><span>Days to complete (0 = none)</span><b id="bDaysVal">No limit</b></div>
+          <input type="range" min="0" max="60" step="5" value="0" class="b-slider" id="bDays" aria-label="Time limit in days" />
+        </div>
+
+        <span class="b-label">News rules</span>
+        <div class="b-toggle-row">
+          <span class="sw on" id="bNews" role="switch" tabindex="0" aria-checked="true" aria-label="Enforce news windows"
+            style="width:46px;height:24px;border-radius:999px;position:relative;flex:none;background:rgba(255,255,255,0.1);border:1px solid var(--line);cursor:pointer;"></span>
+          Enforce ±2 min windows around high-impact events
+        </div>
+      </div>
+
+      <aside class="builder-summary" aria-live="polite">
+        <h3>Your practice challenge</h3>
+        <div class="rings" aria-hidden="true">
+          <div class="ring-wrap">
+            <svg class="ring" id="ringTarget" width="64" height="64" viewBox="0 0 64 64">
+              <circle class="track" cx="32" cy="32" r="26"/>
+              <circle class="val" cx="32" cy="32" r="26" stroke-dasharray="163.36" stroke-dashoffset="76"/>
+            </svg>
+            <span class="ring-num" id="ringTargetNum">8%</span>
+            <span class="ring-label">TARGET</span>
+          </div>
+          <div class="ring-wrap">
+            <svg class="ring ring-dd" id="ringDD" width="64" height="64" viewBox="0 0 64 64">
+              <circle class="track" cx="32" cy="32" r="26"/>
+              <circle class="val" cx="32" cy="32" r="26" stroke-dasharray="163.36" stroke-dashoffset="54"/>
+            </svg>
+            <span class="ring-num" id="ringDDNum">10%</span>
+            <span class="ring-label">MAX DD</span>
+          </div>
+        </div>
+        <div class="sum-row"><span>Preset</span><b id="sumPreset">FTMO®-style 2-step*</b></div>
+        <div class="sum-row"><span>Rules</span><b id="sumRules">8% target · -5%/-10% DD</b></div>
+        <div class="sum-row"><span>Time limit</span><b id="sumTime">No time limit</b></div>
+        <div class="sum-row"><span>News windows</span><b id="sumNews">Enforced</b></div>
+        <div class="price-line"><span>Per run</span><b>$10</b></div>
+        <a href="/signup?sim=1" class="btn btn-primary magnetic" id="builderCta">Create a Practice Challenge</a>
+        <p class="note">Included monthly on Operator &amp; Professional plans</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REALISTIC CONDITIONS ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">REALISTIC CONDITIONS</p>
+    <h2 class="center reveal">If it felt like a demo, it wouldn't teach you anything</h2>
+    <div class="fair-grid reveal">
+      <div class="fair-card"><h3>Real market texture</h3><p>Live-feed pricing with realistic spreads and slippage by session — London opens tight, rollover gets ugly, exactly like your funded account will.</p></div>
+      <div class="fair-card"><h3>Enforced rules</h3><p>Drawdown is computed exactly the way firms compute it (including floating P&amp;L where applicable). Breach a rule and the run ends — no do-overs mid-attempt.</p></div>
+      <div class="fair-card"><h3>Scheduled news</h3><p>Real economic calendar events fire during your run. If your rule set restricts news trading, the restriction is live — practice respecting it now, cheaply.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE DEBRIEF ═══ -->
+<section class="section" id="debrief" style="background:var(--bg-0);">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">THE DEBRIEF</p>
+        <h2>Every failed run becomes a diagnosis</h2>
+        <p class="lead">A $500 challenge tells you that you failed. A $10 PropSim run tells you why — trade by trade, rule by rule — and hands the pattern to your AI Coach so it doesn't happen twice.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>The exact trade and timestamp that broke the attempt</li>
+          <li>Rule-pressure timeline: how close you ran to each limit, daily</li>
+          <li>Behavioral flags: oversizing after losses, session drift, revenge sequences</li>
+          <li>Auto-filed to your <a href="/train/journal" style="text-decoration:underline;">Journal</a> and <a href="/learn/ai-coach" style="text-decoration:underline;">AI Coach</a></li>
+        </ul>
+      </div>
+      <div class="tilt reveal">
+        <div class="device" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Debrief — Attempt #7 · FTMO®-style 2-step*</span><span class="pill" style="color:#F87171;border-color:rgba(248,113,113,0.4);">FAILED · DAY 9</span></div>
+          <div class="debrief-rows">
+            <div class="debrief-row crit"><span class="d-flag">⛔</span><div><b>Daily drawdown breach — 14:22, Day 9</b>Trade #31 (EURUSD, 2.4 lots) pushed daily loss to -5.2%. Position was 3× your average size.</div></div>
+            <div class="debrief-row"><span class="d-flag">⚠️</span><div><b>Pattern: oversizing after losses</b>Your 3 largest positions all followed 2+ consecutive losers. This is the revenge sequence — 4th flagged run.</div></div>
+            <div class="debrief-row"><span class="d-flag">📊</span><div><b>The good news</b>Days 1–8: +6.1% toward the 8% target with clean rule margins. Your baseline process passes — your tilt doesn't.</div></div>
+            <div class="debrief-row"><span class="d-flag">🎯</span><div><b>Coach recommendation</b>Cap size at 1% after any loss. Rerun this exact rule set — projected pass probability improves materially.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COST LOGIC ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-2));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE MATH</p>
+    <h2 class="center reveal">Failure is a fixed cost. Choose the small one.</h2>
+    <div class="costmath reveal">
+      <div class="cost-card bad">
+        <span class="cost-num">$500</span>
+        <span>a failed real challenge<br/>= one lesson, learned expensively</span>
+      </div>
+      <div class="cost-vs">VS</div>
+      <div class="cost-card good">
+        <span class="cost-num">$10</span>
+        <span>a failed PropSim run<br/>= the same lesson + a full debrief</span>
+      </div>
+    </div>
+    <p class="lead center reveal" style="margin-top:28px;">Fifty practice failures cost less than one real one. Nobody needs fifty — most traders find their breaking habit inside five runs.</p>
+  </div>
+</section>
+
+<!-- ═══ SUCCESS PATHWAY ═══ -->
+<section class="section" style="background:var(--bg-1);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">THE PATHWAY</p>
+    <h2 class="center reveal">Simulate. Pass consistently. Then pay once.</h2>
+    <div class="connect-strip reveal">
+      <div class="cs-node hot"><b>Simulate</b><span>Run your target firm's rules for $10</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Pass consistently</b><span>2–3 clean passes, no rule pressure</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Take the real challenge</b><span>Walk in knowing how it ends</span></div>
+    </div>
+    <p class="center reveal" style="margin-top:30px;">
+      <a href="/trade/challenges" class="btn btn-ghost btn-lg">I'm Ready for the Real Thing →</a>
+    </p>
+    <p class="fineprint center reveal">Bonus: 3 clean simulated passes qualify you for the <a href="/trade/challenges#paylater">Pay-Later challenge</a> — $0 upfront.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:var(--bg-0);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">PropSim, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>Can I practice a prop firm challenge before paying for one?</summary>
+        <p>Yes. PropSim recreates prop-firm evaluation conditions — profit targets, daily and overall drawdown limits, minimum days, news windows — on simulated capital for $10 per run. You experience the exact rule pressure of a real challenge, fail safely, and only pay for a real evaluation once you pass consistently.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why do most traders fail prop firm evaluations?</summary>
+        <p>Mostly on rules, not markets: oversized positions after losses breach the daily drawdown, rushed entries in the first days dig early holes, and news-window violations void otherwise good trades. Simulated evaluation data shows the majority of failures happen on a single bad day — which is precisely what practice runs teach you to survive.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a challenge simulator?</summary>
+        <p>A challenge simulator is a training environment that reproduces a prop firm evaluation — same targets, drawdown limits, and time rules — on simulated capital. Unlike a demo account, it enforces the rules and ends the attempt when you breach them, then explains why. It exists so your first real evaluation isn't your first evaluation ever.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are PropSim rule sets the same as real prop firms'?</summary>
+        <p>PropSim ships with presets modeled on popular industry evaluation formats, including FTMO®-style 2-step rules, plus fully custom rule sets. Adiox is not affiliated with or endorsed by FTMO or any prop firm; presets reproduce publicly documented rule structures so your practice transfers to whichever firm you choose.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta" style="background: radial-gradient(700px 380px at 50% 115%, rgba(34,211,238,0.2), transparent 70%), var(--bg-0);">
+  <div class="container reveal">
+    <h2>Your first evaluation shouldn't be your first evaluation.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Ten dollars. Real rules. A debrief that changes your next attempt.</p>
+    <a href="#builder" class="btn btn-primary btn-xl magnetic">Create a Practice Challenge — $10</a>
+    <p class="micro">Simulated capital · included monthly on paid plans</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/train.js" defer></script>
+</body>
+</html>

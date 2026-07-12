@@ -363,6 +363,63 @@
     };
   }
 
+  /* ── AI COACH: neural orb — particle sphere of violet synapses ── */
+  function makeNeural() {
+    var pts = [];
+    for (var i = 0; i < 110; i++) {
+      // fibonacci sphere distribution
+      var phi = Math.acos(1 - 2 * (i + 0.5) / 110);
+      var theta = Math.PI * (1 + Math.sqrt(5)) * i;
+      pts.push({ phi: phi, theta: theta, pulse: rand(0, Math.PI * 2) });
+    }
+    return function (t) {
+      ctx.clearRect(0, 0, W, H);
+      var cx = W / 2 + mx * 20, cy = H * 0.45 + my * 14;
+      var R = Math.min(W, H) * 0.26;
+      var rotY = t * 0.00025;
+      // glow
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 1.8);
+      g.addColorStop(0, "rgba(139,92,246,0.16)");
+      g.addColorStop(1, "rgba(139,92,246,0)");
+      ctx.fillStyle = g;
+      ctx.fillRect(cx - R * 2, cy - R * 2, R * 4, R * 4);
+      // project points
+      var proj = pts.map(function (p) {
+        var x = Math.sin(p.phi) * Math.cos(p.theta + rotY);
+        var y = Math.cos(p.phi);
+        var z = Math.sin(p.phi) * Math.sin(p.theta + rotY);
+        // breathing morph
+        var r = R * (1 + 0.06 * Math.sin(t * 0.0012 + p.pulse));
+        var persp = 2.6 / (2.6 + z);
+        return [cx + x * r * persp, cy + y * r * 0.92 * persp, persp, z];
+      });
+      // synapse links between near points
+      for (var i = 0; i < proj.length; i++) {
+        for (var j = i + 1; j < proj.length; j++) {
+          var dx = proj[i][0] - proj[j][0], dy = proj[i][1] - proj[j][1];
+          var d = dx * dx + dy * dy;
+          if (d < R * R * 0.14) {
+            var a = 0.16 * (1 - d / (R * R * 0.14)) * Math.min(proj[i][2], proj[j][2]);
+            ctx.beginPath();
+            ctx.moveTo(proj[i][0], proj[i][1]);
+            ctx.lineTo(proj[j][0], proj[j][1]);
+            ctx.strokeStyle = "rgba(167,139,250," + a + ")";
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+      // nodes
+      proj.forEach(function (p, i) {
+        var flick = 0.4 + 0.5 * Math.abs(Math.sin(t * 0.0016 + pts[i].pulse));
+        ctx.beginPath();
+        ctx.arc(p[0], p[1], 1.7 * p[2], 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(196,181,253," + flick * Math.max(0.2, p[2] - 0.6) + ")";
+        ctx.fill();
+      });
+    };
+  }
+
   /* ── ECOSYSTEM: neural network of pillar-colored nodes ── */
   function makeNetwork() {
     var COLS = ["59,130,246", "34,211,238", "139,92,246", "245,185,66"];
@@ -406,6 +463,7 @@
     scene === "arena" ? makeArena() :
     scene === "skyline" ? makeSkyline() :
     scene === "duel" ? makeDuel() :
+    scene === "neural" ? makeNeural() :
     makeNetwork();
 
   if (reducedMotion) {

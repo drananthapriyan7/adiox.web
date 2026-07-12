@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adiox Blog — Prop Trading Guides, Strategy &amp; Original Data</title>
+  <meta name="description" content="Prop trading guides organized by the four pillars — Learn, Train, Compete, Trade — plus original data research from millions of simulated evaluation trades." />
+  <link rel="canonical" href="https://adiox.com/blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adiox Blog — Prop Trading Guides, Strategy & Original Data" />
+  <meta property="og:description" content="Guides by pillar plus original data research from simulated evaluations." />
+  <meta property="og:url" content="https://adiox.com/blog" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/content.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "url": "https://adiox.com/blog",
+        "name": "Adiox Blog",
+        "description": "Prop trading guides organized by the Learn, Train, Compete, Trade pillars, plus original data research from simulated evaluations.",
+        "publisher": { "@id": "https://adiox.com/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adiox.com/blog" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<section class="section" style="background:var(--bg-1); padding-top:70px;">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Blog</span></nav>
+    <h1 class="page-h1 center" style="margin-left:auto; margin-right:auto;">The Adiox <span class="grad-text">Blog</span></h1>
+    <p class="lead center">Guides organized by the four pillars, plus original research from platform data. Answer-first, always.</p>
+
+    <div class="cat-pills" role="tablist" aria-label="Blog categories">
+      <button class="cat-pill active" data-cat="all">All</button>
+      <button class="cat-pill" data-cat="learn">Learn</button>
+      <button class="cat-pill" data-cat="train">Train</button>
+      <button class="cat-pill" data-cat="compete">Compete</button>
+      <button class="cat-pill" data-cat="trade">Trade</button>
+      <button class="cat-pill" data-cat="data">Data &amp; Research</button>
+    </div>
+
+    <div class="post-grid">
+      <a class="post" data-cat="data" href="/blog/what-simulated-evaluations-reveal">
+        <span class="cat c-data">DATA &amp; RESEARCH</span>
+        <h3>What 10,000 simulated evaluations reveal about why traders fail</h3>
+        <p>Original platform data: when breaches happen, which rule kills most attempts, and the behavior that predicts passing.</p>
+        <span class="p-meta">14 min · flagship report</span>
+      </a>
+      <a class="post" data-cat="learn" href="/blog/how-prop-firm-evaluations-work">
+        <span class="cat c-learn">LEARN</span>
+        <h3>How do prop firm evaluations work?</h3>
+        <p>Targets, drawdown types, time limits, and the traps between them — the complete beginner's anatomy of a challenge.</p>
+        <span class="p-meta">12 min</span>
+      </a>
+      <a class="post" data-cat="learn" href="/blog/trading-psychology-basics">
+        <span class="cat c-learn">LEARN</span>
+        <h3>Trading psychology basics: the measurable version</h3>
+        <p>Skip the affirmations. The five measurable signs of revenge trading, and how a journal exposes each one.</p>
+        <span class="p-meta">9 min</span>
+      </a>
+      <a class="post" data-cat="learn" href="/blog/first-30-days-on-adiox">
+        <span class="cat c-learn">LEARN</span>
+        <h3>Your first 30 days on Adiox</h3>
+        <p>A week-by-week starting plan through Learn and Train — from first lesson to first simulated evaluation.</p>
+        <span class="p-meta">8 min</span>
+      </a>
+      <a class="post" data-cat="train" href="/blog/why-traders-fail-prop-challenges">
+        <span class="cat c-train">TRAIN</span>
+        <h3>Why traders fail prop challenges</h3>
+        <p>The five rule breaches behind most failed evaluations — and the practice runs that inoculate against each.</p>
+        <span class="p-meta">10 min</span>
+      </a>
+      <a class="post" data-cat="train" href="/blog/how-to-backtest-a-strategy">
+        <span class="cat c-train">TRAIN</span>
+        <h3>How to backtest a strategy (no code required)</h3>
+        <p>Bar replay, sample sizes, profit factor, and the honest way to know if your edge exists before risking a dollar.</p>
+        <span class="p-meta">14 min</span>
+      </a>
+      <a class="post" data-cat="train" href="/blog/backtesting-vs-demo-trading">
+        <span class="cat c-train">TRAIN</span>
+        <h3>Backtesting vs demo trading — which prepares you faster?</h3>
+        <p>They answer different questions. The efficient order, and where each fits in the road to funded.</p>
+        <span class="p-meta">7 min</span>
+      </a>
+      <a class="post" data-cat="train" href="/blog/journaling-that-actually-changes-behavior">
+        <span class="cat c-train">TRAIN</span>
+        <h3>Journaling that actually changes behavior</h3>
+        <p>What to tag, what to review weekly, and what to ignore completely. A working system, not a stationery hobby.</p>
+        <span class="p-meta">11 min</span>
+      </a>
+      <a class="post" data-cat="compete" href="/blog/tournament-strategy-guide">
+        <span class="cat c-compete">COMPETE</span>
+        <h3>Tournament strategy guide</h3>
+        <p>Why aggressive-early-defensive-late usually loses, and what risk-adjusted scoring actually rewards.</p>
+        <span class="p-meta">9 min</span>
+      </a>
+      <a class="post" data-cat="compete" href="/blog/what-is-pvp-trading">
+        <span class="cat c-compete">COMPETE</span>
+        <h3>What is PvP trading?</h3>
+        <p>The category explainer: identical market replays, ELO matchmaking, and why duels are skill, not chance.</p>
+        <span class="p-meta">8 min</span>
+      </a>
+      <a class="post" data-cat="compete" href="/blog/from-arena-to-funded">
+        <span class="cat c-compete">COMPETE</span>
+        <h3>From Arena to funded</h3>
+        <p>How competitive traders convert rank into reputation, and reputation into a copy-trading income.</p>
+        <span class="p-meta">10 min</span>
+      </a>
+      <a class="post" data-cat="trade" href="/blog/challenge-formats-compared">
+        <span class="cat c-trade">TRADE</span>
+        <h3>Challenge formats compared: 1-step vs 2-step vs instant</h3>
+        <p>Costs, odds, and trade-offs of every evaluation format — including when pay-later beats them all.</p>
+        <span class="p-meta">11 min</span>
+      </a>
+      <a class="post" data-cat="trade" href="/blog/surviving-your-first-funded-month">
+        <span class="cat c-trade">TRADE</span>
+        <h3>Surviving your first funded month</h3>
+        <p>The rules change when the account is real. Payout timing, risk resets, and the week-one mistakes to skip.</p>
+        <span class="p-meta">13 min</span>
+      </a>
+      <a class="post" data-cat="trade" href="/blog/running-multiple-prop-accounts">
+        <span class="cat c-trade">TRADE</span>
+        <h3>Running multiple prop accounts without breaching</h3>
+        <p>Why multi-account breaches happen, the compliance traps, and how a command-deck workflow prevents them.</p>
+        <span class="p-meta">12 min</span>
+      </a>
+      <a class="post" data-cat="trade" href="/blog/how-to-avoid-signal-scams">
+        <span class="cat c-trade">TRADE</span>
+        <h3>How to avoid trading signal scams</h3>
+        <p>The edited-screenshot playbook, the questions that expose it, and what verified track records look like.</p>
+        <span class="p-meta">9 min</span>
+      </a>
+      <a class="post" data-cat="data" href="/blog/how-many-prop-accounts-average">
+        <span class="cat c-data">DATA &amp; RESEARCH</span>
+        <h3>How many prop accounts does the average funded trader run?</h3>
+        <p>Nobody publishes this number. We do — from anonymized PropSync data, with distribution and breach correlation.</p>
+        <span class="p-meta">10 min · original data</span>
+      </a>
+    </div>
+
+    <div class="newsletter reveal">
+      <h2 style="font-size:22px;">The Funded Letter</h2>
+      <p class="lead center" style="font-size:15px;">One email a week: a data insight, a rule decoded, a trader story. No hype, unsubscribable in one click.</p>
+      <form data-demo>
+        <input type="email" placeholder="you@example.com" aria-label="Email address" required />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/content.js" defer></script>
+</body>
+</html>

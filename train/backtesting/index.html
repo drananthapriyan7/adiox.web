@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backtesting Engine — Bar Replay &amp; Strategy Testing | Adiox</title>
+  <meta name="description" content="Prove your strategy on ten years of markets before risking a dollar. Bar replay at 1x–20x speed, session filters, win rate, profit factor, expectancy — results flow into your journal." />
+  <link rel="canonical" href="https://adiox.com/train/backtesting" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Backtesting Engine — Bar Replay & Strategy Testing | Adiox" />
+  <meta property="og:description" content="Bar replay at 1x–20x speed, session filters, and the metrics that matter — win rate, profit factor, expectancy, R-multiples." />
+  <meta property="og:url" content="https://adiox.com/train/backtesting" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/train.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/train/backtesting",
+        "name": "Backtesting Engine — Bar Replay & Strategy Testing",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Train", "item": "https://adiox.com/train" },
+          { "@type": "ListItem", "position": 3, "name": "Backtesting", "item": "https://adiox.com/train/backtesting" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox Backtesting Engine",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/train/backtesting",
+        "description": "Online backtesting with candle-by-candle bar replay at 1x–20x speed, 10+ years of FX, metals, indices and crypto data, session and condition filters, and full performance metrics that flow into the Adiox Trading Journal.",
+        "publisher": { "@id": "https://adiox.com/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is bar replay?", "acceptedAnswer": { "@type": "Answer", "text": "Bar replay plays historical market data forward candle by candle, hiding the future, so you can trade the past as if it were live. Unlike scrolling a chart — where your eye already knows the outcome — replay forces real decisions at the hard right edge, at any speed from 1x to 20x." } },
+          { "@type": "Question", "name": "How much historical data do I need to backtest a strategy?", "acceptedAnswer": { "@type": "Answer", "text": "Enough to cover different market regimes: trending, ranging, and high-volatility periods. As a rule of thumb, at least 100 trades from your rules across 2+ years of data for intraday strategies, and 5–10 years for swing strategies. The Adiox engine covers 10+ years so regime variety is never the limit." } },
+          { "@type": "Question", "name": "What is profit factor?", "acceptedAnswer": { "@type": "Answer", "text": "Profit factor is gross profit divided by gross loss. Above 1.0 the strategy makes money; 1.5+ is generally solid; 2.0+ is excellent but rare and worth double-checking for overfitting. It's a better health check than win rate alone because it accounts for how big your winners are relative to your losers." } },
+          { "@type": "Question", "name": "Is backtesting better than demo trading?", "acceptedAnswer": { "@type": "Answer", "text": "They answer different questions. Backtesting compresses years of strategy evidence into hours — ideal for proving an edge exists. Demo (or simulated evaluation) trading tests execution and psychology in real time. The efficient order: backtest until the numbers hold up, then pressure-test yourself in PropSim before paying for an evaluation." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-train">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="holodeck" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/train">Train</a><span class="sep">/</span><span class="here">Backtesting</span>
+    </nav>
+    <p class="eyebrow accent reveal">BACKTESTING ENGINE</p>
+    <h1 class="page-h1 reveal">Prove your strategy on <span class="accent">ten years of markets</span> before risking a dollar</h1>
+    <p class="lead reveal">
+      Stop forward-testing with real money. Replay history candle by candle, trade it like it's live,
+      and let the numbers — not the feelings — tell you whether your edge exists.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start Backtesting</a>
+      <a href="#replay" class="btn btn-ghost btn-lg">Try the Replay Demo ↓</a>
+      <a href="#coverage" class="btn btn-text">See Data Coverage →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REPLAY DEMO ═══ -->
+<section class="section" id="replay" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">BAR-REPLAY ENGINE</p>
+    <h2 class="center reveal">Feel it. This demo is live — press play.</h2>
+    <p class="lead center reveal">The market unfolds candle by candle with the future hidden. Trade the hard right edge at 1× or scrub through a year of London sessions at 20×.</p>
+
+    <div class="replay-wrap reveal" id="replayDemo">
+      <div class="replay-frame hud">
+        <div class="dev-bar"><span class="dev-title">Replay — EURUSD M15 (demo data)</span><span class="pill pill-live">REPLAY</span></div>
+        <canvas class="replay-canvas" aria-label="Interactive bar replay demo of a candlestick chart"></canvas>
+        <div class="vcr">
+          <button class="vcr-btn" id="vcrPlay" aria-label="Play or pause replay">▶</button>
+          <button class="vcr-btn" id="vcrStep" aria-label="Step one bar forward">⏭</button>
+          <button class="vcr-btn" id="vcrReset" aria-label="Restart replay">⟲</button>
+          <button class="vcr-speed active" data-speed="1">1×</button>
+          <button class="vcr-speed" data-speed="5">5×</button>
+          <button class="vcr-speed" data-speed="20">20×</button>
+          <span class="vcr-time">BAR 20 / 120 · 1×</span>
+          <span class="vcr-track"><i></i></span>
+        </div>
+      </div>
+      <p class="fineprint center" style="margin-top:14px;">A 30-second taste. The full engine adds order entry, position tracking, and instant metrics on every replayed trade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DATA COVERAGE ═══ -->
+<section class="section" id="coverage" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">DATA COVERAGE</p>
+    <h2 class="center reveal">Enough history to meet every kind of market</h2>
+    <div class="fair-grid reveal">
+      <div class="fair-card"><h3>Markets</h3><p>FX majors &amp; minors, gold and silver, US &amp; EU index CFDs, and major crypto pairs — the instruments prop firms actually offer.</p></div>
+      <div class="fair-card"><h3>Depth</h3><p>10+ years on FX and metals, 8+ on indices, full listed history on crypto. Trending 2021, ranging 2019, chaotic 2020 — all in the set.</p></div>
+      <div class="fair-card"><h3>Granularity</h3><p>M1 through weekly candles, with session-accurate spreads modeled per instrument. Test the strategy you'll actually trade, at the timeframe you'll trade it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METRICS ═══ -->
+<section class="section" style="background:var(--bg-1);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">METRICS THAT MATTER</p>
+    <h2 class="center reveal">The six numbers that decide if your edge is real</h2>
+    <div class="metric-grid reveal">
+      <div class="metric"><b>Win rate</b><p>The percentage of trades that close in profit. Meaningless alone — a 30% win rate with big winners beats a 70% one with big losers.</p><a href="/glossary">Glossary: win rate →</a></div>
+      <div class="metric"><b>Profit factor</b><p>Gross profit ÷ gross loss. Above 1.0 you're profitable; 1.5+ is solid; 2.0+ deserves a check for overfitting.</p><a href="/glossary">Glossary: profit factor →</a></div>
+      <div class="metric"><b>Expectancy</b><p>Average amount you make (or lose) per trade. The single number that says whether repeating this strategy compounds up or down.</p><a href="/glossary">Glossary: expectancy →</a></div>
+      <div class="metric"><b>Max drawdown</b><p>Your worst peak-to-trough equity drop. If it exceeds a prop firm's limit in backtest, it will in the evaluation too.</p><a href="/glossary">Glossary: drawdown →</a></div>
+      <div class="metric"><b>R-multiples</b><p>Every result measured in units of initial risk. A +2R trade made twice what it risked — the honest way to compare trades of any size.</p><a href="/glossary">Glossary: R-multiple →</a></div>
+      <div class="metric"><b>Trade frequency</b><p>Setups per week at your rules. Decides whether the edge is tradable within evaluation time limits and your actual schedule.</p><a href="/glossary">Glossary: frequency →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FILTERS & OPTIMIZATION ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">SESSION &amp; CONDITION FILTERS</p>
+        <h2>Test only the hours you actually trade</h2>
+        <p class="lead">A strategy that wins all day but loses your two available hours is a losing strategy for you. Slice results by what matters:</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Sessions: London only, NY open, Asia range — your window</li>
+          <li>Conditions: news days vs quiet days, trending vs ranging regimes</li>
+          <li>Calendar: day-of-week and month effects, surfaced automatically</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow accent">OPTIMIZATION — WITH GUARDRAILS</p>
+        <h2>Tune parameters without fooling yourself</h2>
+        <p class="lead">Sweep stop distances, targets, and indicator settings across ranges — then validate on out-of-sample data the optimizer never saw. The engine flags curve-fit results instead of celebrating them.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Parameter sweeps with heat-mapped results</li>
+          <li>Automatic in-sample / out-of-sample split</li>
+          <li>Overfitting warnings on suspiciously perfect settings</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTEGRATION STRIP ═══ -->
+<section class="section" style="background:var(--bg-0); padding-top:70px; padding-bottom:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">FROM BACKTEST TO JOURNAL</p>
+    <h2 class="center reveal">Results don't die in a report tab</h2>
+    <div class="connect-strip reveal">
+      <div class="cs-node hot"><b>Backtest</b><span>Every replayed trade recorded</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>Journal</b><span>Tagged &amp; filed alongside live trades</span></div>
+      <span class="cs-arrow">→</span>
+      <div class="cs-node"><b>AI Coach</b><span>Compares your live execution to your tested edge</span></div>
+    </div>
+    <p class="center reveal" style="margin-top:28px;"><a href="/signup" class="btn btn-ghost">Send Results to My Journal →</a></p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Backtesting, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What is bar replay?</summary>
+        <p>Bar replay plays historical market data forward candle by candle, hiding the future, so you can trade the past as if it were live. Unlike scrolling a chart — where your eye already knows the outcome — replay forces real decisions at the hard right edge, at any speed from 1x to 20x.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much historical data do I need to backtest a strategy?</summary>
+        <p>Enough to cover different market regimes: trending, ranging, and high-volatility periods. As a rule of thumb, at least 100 trades from your rules across 2+ years of data for intraday strategies, and 5–10 years for swing strategies. The Adiox engine covers 10+ years so regime variety is never the limit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is profit factor?</summary>
+        <p>Profit factor is gross profit divided by gross loss. Above 1.0 the strategy makes money; 1.5+ is generally solid; 2.0+ is excellent but rare and worth double-checking for overfitting. It's a better health check than win rate alone because it accounts for how big your winners are relative to your losers.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is backtesting better than demo trading?</summary>
+        <p>They answer different questions. Backtesting compresses years of strategy evidence into hours — ideal for proving an edge exists. Demo (or simulated evaluation) trading tests execution and psychology in real time. The efficient order: backtest until the numbers hold up, then pressure-test yourself in <a href="/train/simulator">PropSim</a> before paying for an evaluation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta" style="background: radial-gradient(700px 380px at 50% 115%, rgba(34,211,238,0.2), transparent 70%), var(--bg-0);">
+  <div class="container reveal">
+    <h2>The market already ran the experiment. Read the results.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Ten years of history versus one hunch. Choose your evidence.</p>
+    <a href="/signup" class="btn btn-primary btn-xl magnetic">Start Backtesting</a>
+    <p class="micro">Included on Operator &amp; Professional plans</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Backtested performance has inherent limitations and does not represent actual trading. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/train.js" defer></script>
+</body>
+</html>

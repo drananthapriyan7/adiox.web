@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Glossary — Prop Trading Terms Explained | Adiox</title>
+  <meta name="description" content="Every prop trading term explained in plain language in about 60 seconds: drawdown, breach, R-multiple, scaling plan, copier, and more — each with a 'see it in Adiox' link." />
+  <link rel="canonical" href="https://adiox.com/glossary" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trading Glossary — Prop Trading Terms Explained | Adiox" />
+  <meta property="og:description" content="Every prop trading term explained in plain language in about 60 seconds each." />
+  <meta property="og:url" content="https://adiox.com/glossary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/content.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://adiox.com/glossary" }
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://adiox.com/glossary#set",
+        "name": "Adiox Trading Glossary",
+        "description": "Plain-language definitions of prop trading terms.",
+        "url": "https://adiox.com/glossary"
+      },
+      { "@type": "DefinedTerm", "name": "Drawdown", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "The decline in account equity from a peak to a subsequent low, usually expressed as a percentage. Prop firms limit both daily drawdown and maximum overall drawdown; exceeding either ends an evaluation or funded account." },
+      { "@type": "DefinedTerm", "name": "Daily loss limit", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "The maximum an account's equity may fall below the day's starting balance before the firm ends the account or evaluation. Typically 3–5%. Some firms include floating (unrealized) P&L in the calculation." },
+      { "@type": "DefinedTerm", "name": "Breach", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "Any violation of a prop firm's account rules — most commonly exceeding the daily loss limit or maximum drawdown. A breach typically terminates the evaluation or funded account immediately." },
+      { "@type": "DefinedTerm", "name": "Prop firm (proprietary trading firm)", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "A company that lets traders trade the firm's (usually simulated) capital after passing a performance evaluation, splitting profits with the trader. The trader's risk is limited to the evaluation fee." },
+      { "@type": "DefinedTerm", "name": "Evaluation (challenge)", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "A test on simulated capital where a trader must hit a profit target while respecting drawdown and other rules to qualify for a funded account. Formats include 1-step, 2-step, instant, and pay-later." },
+      { "@type": "DefinedTerm", "name": "R-multiple", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "A trade result measured in units of initial risk. If you risked $100 and made $200, that's +2R. R-multiples make trades of different sizes honestly comparable." },
+      { "@type": "DefinedTerm", "name": "Profit factor", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "Gross profit divided by gross loss across a set of trades. Above 1.0 is profitable; 1.5+ is generally solid; suspiciously high values often signal overfitting in backtests." },
+      { "@type": "DefinedTerm", "name": "Expectancy", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "The average amount won or lost per trade over a large sample. Positive expectancy means the strategy compounds up when repeated; it is the single most honest strategy health metric." },
+      { "@type": "DefinedTerm", "name": "Scaling plan", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "A prop firm's schedule for growing a funded account after sustained performance — e.g., +25% capital after three profitable payout cycles without breaches, often with improved profit splits." },
+      { "@type": "DefinedTerm", "name": "Copier (trade copier)", "inDefinedTermSet": "https://adiox.com/glossary#set", "description": "Software that automatically reproduces trades from one account or signal source onto another account, scaled to the receiver's risk settings. Cloud copiers run server-side with no VPS required." }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<section class="section" style="background:var(--bg-1); padding-top:70px;">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Glossary</span></nav>
+    <h1 class="page-h1 center" style="margin-left:auto; margin-right:auto;">The Trading <span class="grad-text">Glossary</span></h1>
+    <p class="lead center">Every prop trading term, explained in plain language in about sixty seconds — definition first, depth second, then where to see it live in Adiox.</p>
+
+    <div class="search-bar">
+      <span aria-hidden="true">🔎</span>
+      <input type="search" id="contentSearch" placeholder="Search terms — try 'drawdown' or 'copier'…" aria-label="Search glossary terms" />
+    </div>
+
+    <div class="term-list" id="termList">
+
+      <article class="term" id="breach" data-search="breach violation rule terminated">
+        <h3>Breach <span class="t-cat">RULES</span></h3>
+        <p>A breach is any violation of a prop firm's account rules — most commonly exceeding the daily loss limit or maximum drawdown. A breach typically ends the evaluation or funded account immediately, regardless of how profitable the account was before it. Some rule violations (like news-window trades) may void profits instead of terminating.</p>
+        <p>Most breaches are mechanical, not market-driven: an oversized position after losses crosses the daily limit on an otherwise survivable day. That's why breach prevention is about position sizing and hard stops on your own behavior, not better market analysis.</p>
+        <a class="t-link" href="/trade/prop-tools">See it in Adiox: the Risk Manager warns before a breach, not after →</a>
+      </article>
+
+      <article class="term" id="challenge" data-search="challenge evaluation test 1-step 2-step instant pay-later funded">
+        <h3>Challenge / Evaluation <span class="t-cat">FUNDING</span></h3>
+        <p>An evaluation (or "challenge") is a test on simulated capital where a trader must hit a profit target while respecting drawdown and consistency rules to qualify for a funded account. Formats include 2-step (two phases), 1-step (one phase), instant (no evaluation, tighter rules), and pay-later (no upfront fee).</p>
+        <p>The fee is the trader's only capital at risk; the firm's simulated capital absorbs trading risk. Failure rates are high — mostly on rules rather than markets — which is why rehearsing the exact rule set first is the single highest-ROI preparation.</p>
+        <a class="t-link" href="/trade/challenges">See it in Adiox: compare all four challenge formats →</a>
+      </article>
+
+      <article class="term" id="copier" data-search="copier trade copier cloud vps signal execution mirror">
+        <h3>Copier (trade copier) <span class="t-cat">EXECUTION</span></h3>
+        <p>A trade copier automatically reproduces trades from one source — a strategy provider or signal feed — onto your account, scaled to your risk settings. Cloud copiers run server-side, so no VPS or always-on computer is needed; the mirror typically executes in under a second.</p>
+        <p>The critical safety feature is precedence: your allocation caps, equity floors, and per-trade risk limits should always override whatever the source does. A copier without receiver-side risk control is just outsourced gambling.</p>
+        <a class="t-link" href="/trade/signals">See it in Adiox: the Adiox Copier with your limits in charge →</a>
+      </article>
+
+      <article class="term" id="daily-loss" data-search="daily loss limit drawdown reset floating equity">
+        <h3>Daily loss limit <span class="t-cat">RULES</span></h3>
+        <p>The maximum an account's equity may fall below the day's starting balance before the firm ends the account or evaluation — typically 3–5%. Firms differ on two details that end careers: what time the "day" resets, and whether floating (unrealized) P&amp;L counts toward the limit.</p>
+        <p>Professional practice is to set a personal stop 20–30% inside the firm's line and automate it, so a bad day ends with a lockout instead of a termination email.</p>
+        <a class="t-link" href="/trade/prop-tools">See it in Adiox: the daily loss lock →</a>
+      </article>
+
+      <article class="term" id="drawdown" data-search="drawdown max overall equity peak trough percent">
+        <h3>Drawdown <span class="t-cat">RISK</span></h3>
+        <p>Drawdown is the decline in account equity from a peak to a subsequent low, usually expressed as a percentage. Prop firms enforce a maximum overall drawdown (commonly 6–12%) alongside the daily limit; touching it ends the account. Some firms compute it from the initial balance ("static"), others from the highest equity reached ("trailing").</p>
+        <p>Knowing which calculation your firm uses matters more than the headline number — a trailing drawdown follows your profits up and can breach on a pullback that a static one survives.</p>
+        <a class="t-link" href="/train/simulator">See it in Adiox: feel the limit in a $10 PropSim run →</a>
+      </article>
+
+      <article class="term" id="expectancy" data-search="expectancy average trade edge metric">
+        <h3>Expectancy <span class="t-cat">METRICS</span></h3>
+        <p>Expectancy is the average amount you win or lose per trade across a large sample — (win rate × average win) minus (loss rate × average loss). Positive expectancy means repeating the strategy compounds your account upward; negative means every additional trade is a donation.</p>
+        <p>It's the single most honest strategy metric because it can't be gamed by win rate alone: a 90% win rate with occasional catastrophic losers still shows its true color in expectancy.</p>
+        <a class="t-link" href="/train/backtesting">See it in Adiox: expectancy on every backtest →</a>
+      </article>
+
+      <article class="term" id="funded-account" data-search="funded account payout split simulated capital">
+        <h3>Funded account <span class="t-cat">FUNDING</span></h3>
+        <p>A funded account is what a trader receives after passing an evaluation: an account backed by the firm's (typically simulated) capital, where the trader keeps a published share of profits — commonly 70–90% — paid out on a schedule. The firm's rules (drawdown, news, consistency) continue to apply for the account's life.</p>
+        <p>"Funded" does not mean "safe": most funded accounts are lost to the same rule breaches that fail evaluations, which is why protection tooling matters most after you pass.</p>
+        <a class="t-link" href="/trade/challenges">See it in Adiox: payout terms published upfront →</a>
+      </article>
+
+      <article class="term" id="leverage" data-search="leverage margin lots exposure multiplier">
+        <h3>Leverage <span class="t-cat">BASICS</span></h3>
+        <p>Leverage lets you control a position larger than your account balance — 1:20 leverage means $1,000 controls $20,000 of exposure. It multiplies both gains and losses equally; the market doesn't know or care how leveraged you are, but your drawdown limit does.</p>
+        <p>In prop trading, leverage discipline is effectively position-sizing discipline: the question is never "how much can I control?" but "how much can I lose before the daily limit?"</p>
+        <a class="t-link" href="/learn/academy">See it in Adiox: the leverage lesson, then size a real position →</a>
+      </article>
+
+      <article class="term" id="news-rule" data-search="news rule nfp cpi fomc window restricted event high impact">
+        <h3>News rule <span class="t-cat">RULES</span></h3>
+        <p>A news rule restricts trading around high-impact economic releases (NFP, CPI, FOMC). Common forms: no opening or closing positions within 2–5 minutes of the event, no holding through it, or news-window profits not counting toward targets. Violations can void profits or terminate funded accounts.</p>
+        <p>Rules vary firm by firm, and the difference between "can't open" and "can't hold" is the difference between a fine day and a flagged account — read your firm's exact wording, or automate compliance.</p>
+        <a class="t-link" href="/trade/prop-tools">See it in Adiox: the News Filter with per-firm presets →</a>
+      </article>
+
+      <article class="term" id="pip" data-search="pip point price movement forex smallest unit">
+        <h3>Pip <span class="t-cat">BASICS</span></h3>
+        <p>A pip is the standard unit of price movement in forex — for most pairs, the fourth decimal place (0.0001). If EURUSD moves from 1.0850 to 1.0851, that's one pip. Your per-pip dollar value depends on position size, which is why "it only moved 20 pips" means nothing without the lot size attached.</p>
+        <p>Thinking in pips without thinking in dollars (or better, in R-multiples) is one of the earliest habits the Academy trains out.</p>
+        <a class="t-link" href="/learn/academy">See it in Adiox: pips, lots and leverage without tears →</a>
+      </article>
+
+      <article class="term" id="profit-factor" data-search="profit factor gross profit loss ratio metric">
+        <h3>Profit factor <span class="t-cat">METRICS</span></h3>
+        <p>Profit factor is gross profit divided by gross loss over a set of trades. Above 1.0 the strategy makes money; 1.5+ is generally solid; 2.0+ is excellent and — in backtests — worth a skeptical second look for overfitting. It complements win rate by accounting for how big winners are relative to losers.</p>
+        <p>A 35%-win-rate trend strategy with a 2.1 profit factor is a better business than a 75%-win-rate scalper at 1.05.</p>
+        <a class="t-link" href="/train/backtesting">See it in Adiox: profit factor on every replay →</a>
+      </article>
+
+      <article class="term" id="prop-firm" data-search="prop firm proprietary trading firm capital funded">
+        <h3>Prop firm <span class="t-cat">FUNDING</span></h3>
+        <p>A proprietary trading firm ("prop firm") lets traders trade the firm's capital — in the modern retail model, simulated capital — after passing a performance evaluation, splitting profits with the trader. The trader risks only the evaluation fee; the firm manages its risk through drawdown rules and payout verification.</p>
+        <p>The model rewards consistency over brilliance: firms profit from disciplined traders who survive, which is why every rule ultimately encodes "don't blow up."</p>
+        <a class="t-link" href="/trade">See it in Adiox: the professional stage →</a>
+      </article>
+
+      <article class="term" id="r-multiple" data-search="r multiple risk unit reward ratio 2r">
+        <h3>R-multiple <span class="t-cat">METRICS</span></h3>
+        <p>An R-multiple measures a trade's result in units of its initial risk. Risk $100 with your stop, make $200 — that's +2R; lose the $100 — that's -1R. R-multiples make trades of any size honestly comparable and expose the deadliest pattern in retail trading: -3R losers hiding among +1R winners.</p>
+        <p>A journal kept in R tells you in one histogram whether your losses are controlled — dollars can't do that across changing account sizes.</p>
+        <a class="t-link" href="/train/journal">See it in Adiox: your R-distribution, charted →</a>
+      </article>
+
+      <article class="term" id="revenge-trading" data-search="revenge trading tilt psychology oversizing loss chase">
+        <h3>Revenge trading <span class="t-cat">PSYCHOLOGY</span></h3>
+        <p>Revenge trading is re-entering the market quickly after a loss, usually with increased size, trying to "win it back." Its measurable signature: entries within minutes of a losing close, position size above your average after losses, and abandonment of your normal setups. It's the single most common path from a bad hour to a breached account.</p>
+        <p>Because the signs are measurable, the fix is mechanical: cooldown timers, post-loss size caps, and an engine that flags the sequence as it starts.</p>
+        <a class="t-link" href="/train/journal">See it in Adiox: the behavioral engine names it in real time →</a>
+      </article>
+
+      <article class="term" id="scaling-plan" data-search="scaling plan account growth milestone split increase">
+        <h3>Scaling plan <span class="t-cat">FUNDING</span></h3>
+        <p>A scaling plan is a prop firm's published schedule for growing a funded account after sustained performance — for example, +25–50% capital after several profitable payout cycles with no breaches, often with an improved profit split. It converts consistency into compounding without the trader adding capital.</p>
+        <p>Scaling terms differ widely; serious multi-account traders track each firm's milestones the way salespeople track quotas.</p>
+        <a class="t-link" href="/trade/propsync">See it in Adiox: milestone tracking across every firm →</a>
+      </article>
+
+      <article class="term" id="slippage" data-search="slippage execution fill price spread news">
+        <h3>Slippage <span class="t-cat">EXECUTION</span></h3>
+        <p>Slippage is the difference between the price you requested and the price you actually got filled at. It's usually pennies in quiet markets and brutal around news events — which is one practical reason firms restrict news trading and why realistic simulators model it instead of granting perfect fills.</p>
+        <p>A strategy that only works with zero slippage doesn't work.</p>
+        <a class="t-link" href="/train/simulator">See it in Adiox: PropSim models real spreads and slippage →</a>
+      </article>
+
+      <article class="term" id="win-rate" data-search="win rate percentage winning trades accuracy">
+        <h3>Win rate <span class="t-cat">METRICS</span></h3>
+        <p>Win rate is the percentage of trades that close profitably. Alone, it's the most misleading statistic in trading: a 30% win rate with +3R winners is a money machine, while a 75% win rate with occasional -6R disasters is a slow-motion account failure. It only gains meaning next to average win/loss size.</p>
+        <p>Marketing that leads with win rate and hides drawdown is telling you exactly what it doesn't want you to ask.</p>
+        <a class="t-link" href="/trade/copy-trading">See it in Adiox: drawdown shown as loudly as gains →</a>
+      </article>
+
+    </div>
+    <p id="noResults" class="fineprint center" style="margin-top:24px;" hidden>No terms match that search — try a shorter word.</p>
+
+    <div class="newsletter reveal" style="margin-top:70px;">
+      <h2 style="font-size:22px;">Missing a term?</h2>
+      <p class="lead center" style="font-size:15px;">The glossary grows weekly. Tell us what confused you and we'll write it in plain language.</p>
+      <form data-demo>
+        <input type="text" placeholder="e.g. 'trailing drawdown'" aria-label="Suggest a term" required />
+        <button type="submit" class="btn btn-primary">Suggest a Term</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/content.js" defer></script>
+</body>
+</html>

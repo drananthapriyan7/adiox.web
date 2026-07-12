@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy Lab — No-Code Trading Strategy Builder | Adiox</title>
+  <meta name="description" content="Build rule-based trading systems without code: snap indicator, condition, action, and risk blocks together, backtest instantly, then deploy to the simulator, copy trading, or signals." />
+  <link rel="canonical" href="https://adiox.com/train/strategy-builder" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Strategy Lab — No-Code Trading Strategy Builder | Adiox" />
+  <meta property="og:description" content="Build trading systems like Lego — no code. Snap blocks together, backtest instantly, deploy anywhere in the Adiox ecosystem." />
+  <meta property="og:url" content="https://adiox.com/train/strategy-builder" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/train.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/train/strategy-builder",
+        "name": "Strategy Lab — No-Code Trading Strategy Builder",
+        "isPartOf": { "@id": "https://adiox.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Train", "item": "https://adiox.com/train" },
+          { "@type": "ListItem", "position": 3, "name": "Strategy Lab", "item": "https://adiox.com/train/strategy-builder" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox Strategy Lab",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://adiox.com/train/strategy-builder",
+        "description": "No-code trading strategy builder: compose indicator, condition, action, and risk-rule blocks visually, backtest with one click in the Adiox Backtesting Engine, and deploy to the simulator, copy trading marketplace, Signal Hub, or alert exports.",
+        "publisher": { "@id": "https://adiox.com/#org" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "Build your first no-code trading strategy",
+        "step": [
+          { "@type": "HowToStep", "name": "Add an indicator block", "text": "Choose a signal source — for example RSI(14) on EURUSD M15." },
+          { "@type": "HowToStep", "name": "Add a condition block", "text": "Define when the setup is live — for example RSI below 30 during the London session." },
+          { "@type": "HowToStep", "name": "Add an action block", "text": "Say what happens — for example buy at market with a stop under the last swing low." },
+          { "@type": "HowToStep", "name": "Add a risk-rule block", "text": "Cap the damage — for example risk 0.5% per trade with a 2R target. Risk blocks are required before any strategy can deploy." },
+          { "@type": "HowToStep", "name": "Backtest and deploy", "text": "One click runs the strategy through years of history in the Backtesting Engine; deploy winners to the simulator, copy trading, or Signal Hub." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Can I build a trading bot without coding?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Strategy Lab composes trading systems from visual blocks — indicators, conditions, actions, and risk rules — with no programming at all. The logic you snap together is exactly what runs in the backtester and, when deployed, in the simulator or Signal Hub. If you can describe your rules, you can build them." } },
+          { "@type": "Question", "name": "What is a rule-based trading strategy?", "acceptedAnswer": { "@type": "Answer", "text": "A rule-based strategy defines every decision in advance: what signals to watch, when a setup is valid, how to enter and exit, and how much to risk. Because the rules are explicit, the strategy can be backtested honestly and executed consistently — removing the in-the-moment improvisation where most discretionary losses come from." } },
+          { "@type": "Question", "name": "Where can a Strategy Lab strategy run?", "acceptedAnswer": { "@type": "Answer", "text": "Four destinations: run it in PropSim to practice evaluations with it, publish it to the Copy Trading marketplace once its live record qualifies, power a Signal Hub feed for subscribers, or export its signals as alerts to your own platforms. One build, four ways to use it." } },
+          { "@type": "Question", "name": "Do I have to add risk rules?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — by design. A strategy cannot deploy from the Lab without at least one risk-rule block: per-trade risk cap, daily stop, or max concurrent positions. Backtests will run without them (so you can study raw logic), but nothing reaches real execution paths unguarded." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-train">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <canvas class="hero-canvas" data-scene="network" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/train">Train</a><span class="sep">/</span><span class="here">Strategy Lab</span>
+    </nav>
+    <p class="eyebrow accent reveal">STRATEGY LAB — NO-CODE BUILDER</p>
+    <h1 class="page-h1 reveal">Build trading systems like Lego. <span class="accent">No code.</span></h1>
+    <p class="lead reveal">
+      Your logic, without the programming degree. Snap indicator, condition, action, and risk
+      blocks together — then backtest the result on years of history with one click.
+    </p>
+    <div class="hero-actions reveal" style="justify-content:flex-start;">
+      <a href="#lab" class="btn btn-primary btn-lg magnetic">Build My First Strategy</a>
+      <a href="#templates" class="btn btn-ghost btn-lg">Start From a Template</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOY BUILDER ═══ -->
+<section class="section" id="lab" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">TRY IT RIGHT HERE</p>
+    <h2 class="center reveal">Assemble this strategy in four taps</h2>
+    <p class="lead center reveal">The example from our docs, live on this page: <b class="mono" style="font-size:14px;">RSI &lt; 30 → London session → buy market → risk 0.5% / target 2R</b>. Tap each block to snap it into the circuit.</p>
+
+    <div class="lab reveal" id="labDemo">
+      <div class="lab-palette">
+        <div class="lab-block lb-ind" data-type="ind"><b>RSI(14)</b><span>INDICATOR</span></div>
+        <div class="lab-block lb-cond" data-type="cond"><b>&lt; 30 · London</b><span>CONDITION</span></div>
+        <div class="lab-block lb-act" data-type="act"><b>Buy Market</b><span>ACTION</span></div>
+        <div class="lab-block lb-risk" data-type="risk"><b>0.5% · 2R</b><span>RISK RULE</span></div>
+      </div>
+      <div class="lab-track" aria-live="polite">
+        <div class="lab-slot">INDICATOR</div>
+        <div class="lab-slot">CONDITION</div>
+        <div class="lab-slot">ACTION</div>
+        <div class="lab-slot">RISK RULE</div>
+      </div>
+      <p class="lab-status">0 / 4 blocks placed — tap blocks in any order</p>
+      <div class="lab-actions">
+        <button class="btn btn-ghost btn-sm" id="labReset">Reset</button>
+        <a href="/signup" class="btn btn-primary btn-sm">Backtest It Instantly →</a>
+      </div>
+    </div>
+    <p class="fineprint center reveal">The full Lab adds dozens of indicator, condition, and action blocks, multi-condition logic, and per-block settings.</p>
+  </div>
+</section>
+
+<!-- ═══ TEMPLATES ═══ -->
+<section class="section" id="templates" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">TEMPLATE LIBRARY</p>
+    <h2 class="center reveal">Start from a structure that already makes sense</h2>
+    <div class="fair-grid reveal">
+      <div class="fair-card"><h3>Breakout</h3><p>Range detection → breakout confirmation → momentum entry → trail behind structure. The classic, pre-wired — swap in your instrument and session.</p></div>
+      <div class="fair-card"><h3>Mean reversion</h3><p>Extension from a moving average → exhaustion condition → fade entry → fixed-R target. Built with the strict stop discipline reversion demands.</p></div>
+      <div class="fair-card"><h3>Session momentum</h3><p>Asia range → London open direction → continuation entry with a time-based exit. A prop-firm favorite because it respects daily-drawdown reality.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ONE-CLICK BACKTEST ═══ -->
+<section class="section" style="background:var(--bg-1);">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow accent">ONE-CLICK BACKTEST</p>
+        <h2>From blocks to evidence in under a minute</h2>
+        <p class="lead">Every strategy built in the Lab is instantly runnable in the <a href="/train/backtesting" style="text-decoration:underline;">Backtesting Engine</a> — same blocks, same logic, years of data. No export, no translation layer, no "it worked differently in the tester."</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Full metrics: win rate, profit factor, expectancy, max drawdown</li>
+          <li>Session and condition filters applied to your block logic</li>
+          <li>Out-of-sample validation with overfitting warnings</li>
+        </ul>
+      </div>
+      <div class="tilt reveal">
+        <div class="device" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Backtest — "London RSI Fade" (5 yrs)</span><span class="pill pill-live">COMPLETE</span></div>
+          <div class="sim-stats">
+            <div class="sim-stat"><span>Trades</span><b class="mono">412</b></div>
+            <div class="sim-stat"><span>Win rate</span><b class="mono teal">54%</b></div>
+            <div class="sim-stat"><span>Profit factor</span><b class="mono teal">1.62</b></div>
+            <div class="sim-stat"><span>Max drawdown</span><b class="mono" style="color:#F87171;">-7.8%</b></div>
+          </div>
+          <svg class="sim-chart" viewBox="0 0 320 90" preserveAspectRatio="none">
+            <path d="M0,76 L30,72 L55,74 L85,64 L110,68 L140,56 L170,60 L200,46 L235,52 L265,36 L295,40 L320,26" fill="none" stroke="#22D3EE" stroke-width="2"/>
+            <path d="M0,76 L30,72 L55,74 L85,64 L110,68 L140,56 L170,60 L200,46 L235,52 L265,36 L295,40 L320,26 L320,90 L0,90 Z" fill="rgba(34,211,238,0.08)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPLOY ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">DEPLOY DESTINATIONS</p>
+    <h2 class="center reveal">One build. Four places it can live.</h2>
+    <div class="deploy-grid reveal">
+      <a class="deploy" href="/train/simulator"><span class="d-icon">🎯</span><b>PropSim</b><span>Practice evaluations with your system driving</span></a>
+      <a class="deploy" href="/trade/copy-trading"><span class="d-icon">📡</span><b>Copy Trading</b><span>Publish to the marketplace once its record qualifies</span></a>
+      <a class="deploy" href="/trade/signals"><span class="d-icon">📣</span><b>Signal Hub</b><span>Power a verified signal feed for subscribers</span></a>
+      <a class="deploy" href="/signup"><span class="d-icon">🔔</span><b>Alert export</b><span>Send entries as alerts to your own platforms</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GUARDRAILS ═══ -->
+<section class="section" style="background:var(--bg-0); padding-top:70px; padding-bottom:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">GUARDRAILS</p>
+    <h2 class="center reveal">No risk block, no deploy. Non-negotiable.</h2>
+    <p class="lead center reveal" style="max-width:740px;">
+      Backtests run on raw logic so you can study an idea — but nothing leaves the Lab for a real
+      execution path without at least one risk-rule block: per-trade risk cap, daily stop, or max
+      concurrent positions. The builder that makes automation easy also makes recklessness hard.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Strategy Lab, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>Can I build a trading bot without coding?</summary>
+        <p>Yes. Strategy Lab composes trading systems from visual blocks — indicators, conditions, actions, and risk rules — with no programming at all. The logic you snap together is exactly what runs in the backtester and, when deployed, in the simulator or Signal Hub. If you can describe your rules, you can build them.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a rule-based trading strategy?</summary>
+        <p>A rule-based strategy defines every decision in advance: what signals to watch, when a setup is valid, how to enter and exit, and how much to risk. Because the rules are explicit, the strategy can be backtested honestly and executed consistently — removing the in-the-moment improvisation where most discretionary losses come from.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where can a Strategy Lab strategy run?</summary>
+        <p>Four destinations: run it in <a href="/train/simulator">PropSim</a> to practice evaluations with it, publish it to the <a href="/trade/copy-trading">Copy Trading marketplace</a> once its live record qualifies, power a <a href="/trade/signals">Signal Hub</a> feed for subscribers, or export its signals as alerts to your own platforms. One build, four ways to use it.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I have to add risk rules?</summary>
+        <p>Yes — by design. A strategy cannot deploy from the Lab without at least one risk-rule block: per-trade risk cap, daily stop, or max concurrent positions. Backtests will run without them (so you can study raw logic), but nothing reaches real execution paths unguarded.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta" style="background: radial-gradient(700px 380px at 50% 115%, rgba(34,211,238,0.2), transparent 70%), var(--bg-0);">
+  <div class="container reveal">
+    <h2>You already know the rules. Now build them.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Four blocks between your idea and its first backtest.</p>
+    <a href="/signup" class="btn btn-primary btn-xl magnetic">Build My First Strategy</a>
+    <p class="micro">Included on Operator &amp; Professional plans · Phase 3 rollout</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About &amp; Roadmap</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/faq">Help Center</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Backtested and automated strategy performance has inherent limitations. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/train.js" defer></script>
+</body>
+</html>
