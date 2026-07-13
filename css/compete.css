@@ -116,6 +116,7 @@
 
 /* ─── Divisions ladder ─── */
 .ladder { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 48px; align-items: end; }
+.ladder-6 { grid-template-columns: repeat(6, 1fr); }
 .rung {
   display: grid; justify-items: center; gap: 10px; text-align: center;
   padding: 24px 14px; border-radius: 18px;
@@ -282,13 +283,13 @@ body.arena-page { background: #04060C; }
 /* ═══ Responsive ═══ */
 @media (max-width: 1024px) {
   .flip-grid, .modes, .winners { grid-template-columns: repeat(2, 1fr); }
-  .ladder { grid-template-columns: repeat(3, 1fr); }
+  .ladder, .ladder-6 { grid-template-columns: repeat(3, 1fr); }
   .steps, .fair-grid, .rewards, .prize-split { grid-template-columns: 1fr 1fr; }
   .spectate { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 720px) {
   .flip-grid, .modes, .winners, .steps, .fair-grid, .rewards, .prize-split { grid-template-columns: 1fr; }
-  .ladder { grid-template-columns: repeat(2, 1fr); }
+  .ladder, .ladder-6 { grid-template-columns: repeat(2, 1fr); }
   .sticky-join { display: flex; }
   .vs-wrap { grid-template-columns: 1fr; }
   .vs-burst { text-align: center; }

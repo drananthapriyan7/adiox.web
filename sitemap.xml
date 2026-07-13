@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Single sitemap for the current page set. Split into sitemap-pages.xml /
+  sitemap-blog.xml / sitemap-glossary.xml / sitemap-tournaments.xml once
+  individual blog posts, glossary term pages, and per-tournament pages exist
+  as real routes (see Part I1 of the site plan) — a sitemap should only ever
+  list URLs that actually resolve.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://adiox.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://adiox.com/ecosystem</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://adiox.com/learn</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/learn/academy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/learn/ai-coach</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://adiox.com/train</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/train/simulator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/train/backtesting</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adiox.com/train/journal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adiox.com/train/strategy-builder</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://adiox.com/compete</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/compete/tournaments</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adiox.com/compete/trading-games</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://adiox.com/trade</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/trade/challenges</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adiox.com/trade/copy-trading</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/trade/signals</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adiox.com/trade/propsync</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adiox.com/trade/prop-tools</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://adiox.com/pricing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adiox.com/quiz</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adiox.com/about</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adiox.com/blog</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/glossary</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adiox.com/faq</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adiox.com/partners</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://adiox.com/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://adiox.com/legal/risk-disclosure</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://adiox.com/legal/regional-restrictions</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+</urlset>

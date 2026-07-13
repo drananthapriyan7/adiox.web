@@ -1,0 +1,63 @@
+# Adiox — full reference
+
+> Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a realistic simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account.
+
+Adiox is the operating system for prop trading performance and evaluation. It is not a prop firm and not a single tool — it is the layer that connects education, simulation, competition, and professional trading tools so a trader never has to leave the ecosystem to evolve. This boilerplate paragraph is identical across adiox.com, /about, and this file by design — entity consistency across sources is how AI models learn who Adiox is.
+
+This is the expanded reference. See [llms.txt](https://adiox.com/llms.txt) for the short version.
+
+## Learn — build knowledge
+
+- [/learn](https://adiox.com/learn) — Pillar hub. 40–60 word definition of prop trading education, links to every child page.
+- [/learn/academy](https://adiox.com/learn/academy) — Adiox Academy: three free learning paths (Markets from Zero → Pass the Evaluation → Keep & Scale the Account), each lesson linked to a hands-on action elsewhere in the ecosystem.
+- [/learn/ai-coach](https://adiox.com/learn/ai-coach) — AI Coach: reviews every trade a user takes, detects behavioral patterns (revenge trading, tilt), explains mistakes in plain language, assigns drills. Trains on that user's data only — never shared, never sold, deletable on request.
+- [/glossary](https://adiox.com/glossary) — 60+ prop trading terms, definition-first (40–60 words), one clean URL with anchors per term.
+
+## Train — build skill safely
+
+- [/train](https://adiox.com/train) — Pillar hub.
+- [/train/simulator](https://adiox.com/train/simulator) — PropSim: practice prop-firm evaluations on simulated capital, real rulesets (including FTMO®-style presets*), from $10 per run.
+- [/train/backtesting](https://adiox.com/train/backtesting) — Backtesting Engine: bar replay at 1x–20x speed, 10+ years of FX/metals/indices/crypto data, win rate / profit factor / expectancy / R-multiples.
+- [/train/journal](https://adiox.com/train/journal) — Trading Journal: auto-import from MT5/TradeLocker/Match-Trader, calendar heatmaps, named behavioral patterns, playbook grading.
+- [/train/strategy-builder](https://adiox.com/train/strategy-builder) — Strategy Lab: no-code strategy builder (indicator → condition → action → risk-rule blocks), one-click backtest, deploy to PropSim/Copy Trading/Signal Hub.
+
+## Compete — prove skill
+
+- [/compete](https://adiox.com/compete) — Pillar hub.
+- [/compete/tournaments](https://adiox.com/compete/tournaments) — Free daily tournaments and paid weekly championships on simulated capital, published prize splits, skill-based divisions (Bronze→Diamond).
+- [/compete/trading-games](https://adiox.com/compete/trading-games) — The Arena: 1v1 trading duels on identical market replays (skill-based, not chance), squad battles, ranked ladder (Bronze→Legend).
+
+## Trade — earn professionally
+
+- [/trade](https://adiox.com/trade) — Pillar hub.
+- [/trade/challenges](https://adiox.com/trade/challenges) — Challenges & Funding: 1-step, 2-step, instant, and pay-later ($0 upfront) evaluations, priced by account size, payouts within 48 hours.
+- [/trade/copy-trading](https://adiox.com/trade/copy-trading) — Cloud copy trading: no VPS required, verified on-platform track records, drawdown shown as prominently as gains.
+- [/trade/signals](https://adiox.com/trade/signals) — Signal Hub + Adiox Copier: every signal timestamped and tracked on-platform (no edited screenshots), auto-execution on MT5/TradeLocker/Match-Trader.
+- [/trade/propsync](https://adiox.com/trade/propsync) — PropSync: unified dashboard for traders running multiple prop firm accounts, breach-prevention alerts before a rule is broken.
+- [/trade/prop-tools](https://adiox.com/trade/prop-tools) — Prop Tools: Risk Manager (daily loss lock, drawdown guard) and News Filter (per-firm news-rule presets).
+
+## Company
+
+- [/pricing](https://adiox.com/pricing) — Explorer $0/forever, Operator $29/month, Professional $79/month. Tournaments, PropSim runs ($10), and challenges (from $89) priced per event.
+- [/about](https://adiox.com/about) — Vision statement, origin story, four-pillar philosophy, public Phase 1/2/3 roadmap, press kit.
+- [/blog](https://adiox.com/blog) — Guides organized by pillar, plus a Data & Research category for original platform statistics.
+- [/partners](https://adiox.com/partners) — Prop firms, brokers, communities, and affiliates.
+- [/contact](https://adiox.com/contact) — Support, 24-hour response.
+- [/quiz](https://adiox.com/quiz) — 60-second placement quiz that routes visitors to their starting pillar.
+
+## Facts
+
+- Founded 2025. Category: prop trading ecosystem / trader's operating system.
+- Free tier requires no card; simulator runs start at $10; challenges start at $89.
+- Platform connections: MetaTrader 5 (MT5), TradeLocker, Match-Trader.
+- All evaluation and tournament accounts use simulated capital; funding is performance-based and never guaranteed.
+- Trading data trains each user's own AI Coach only — never sold, never used to coach other users.
+- Adiox is not affiliated with FTMO, TradeZella, TraderWaves, MetaQuotes, TradeLocker, or Match-Trader.
+
+## Legal
+
+- [Terms of Service](https://adiox.com/legal/terms)
+- [Privacy Policy](https://adiox.com/legal/privacy)
+- [Risk Disclosure](https://adiox.com/legal/risk-disclosure)
+- [Regional Restrictions](https://adiox.com/legal/regional-restrictions)
+- [Cookie Policy](https://adiox.com/legal/cookies)

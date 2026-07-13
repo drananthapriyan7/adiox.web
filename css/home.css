@@ -93,8 +93,8 @@ h3 { font-size: clamp(20px, 2.4vw, 26px); margin-bottom: 10px; }
 
 /* ─── Buttons ─── */
 .btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px; max-width: 100%; text-align: center;
   font-family: var(--font-display); font-weight: 600; font-size: 15px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
   will-change: transform;
@@ -633,6 +633,11 @@ h3 { font-size: clamp(20px, 2.4vw, 26px); margin-bottom: 10px; }
 
 /* ─── 14. Footer ─── */
 .footer { background: var(--bg-0); border-top: 1px solid var(--line); padding: 72px 0 40px; }
+.footer-vision {
+  text-align: center; font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(16px, 2vw, 20px); color: var(--ink); max-width: 760px;
+  margin: 0 auto 48px; line-height: 1.5;
+}
 .footer-top { display: grid; grid-template-columns: 1.2fr 3fr; gap: 64px; margin-bottom: 56px; }
 .footer-brand p { font-size: 13.5px; color: var(--ink-dim); margin: 18px 0 22px; }
 .footer-social { display: flex; gap: 10px; }
@@ -652,6 +657,28 @@ h3 { font-size: clamp(20px, 2.4vw, 26px); margin-bottom: 10px; }
 .fcol-head .glyph { width: 15px; height: 15px; }
 .fcol a { font-size: 13.5px; color: var(--ink-dim); transition: color 0.15s; }
 .fcol a:hover { color: var(--ink); }
+.footer-bottom {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 28px 0; border-top: 1px solid var(--line);
+}
+.footer-newsletter { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.footer-newsletter span { font-size: 12.5px; color: var(--ink-dim); white-space: nowrap; }
+.footer-newsletter form { display: flex; gap: 8px; }
+.footer-newsletter input {
+  padding: 9px 14px; border-radius: 9px; font: inherit; font-size: 13px; color: var(--ink);
+  background: rgba(255,255,255,0.05); border: 1px solid var(--line); outline: none; width: 200px;
+}
+.footer-newsletter button {
+  padding: 9px 16px; border-radius: 9px; font-family: var(--font-display); font-weight: 600; font-size: 12.5px;
+  background: rgba(59,130,246,0.16); border: 1px solid rgba(59,130,246,0.45); color: #93C5FD; white-space: nowrap;
+}
+.footer-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.footer-badges { display: flex; gap: 8px; }
+.footer-badges span {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; padding: 5px 10px; border-radius: 7px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: var(--ink-faint);
+}
+.footer-lang { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-faint); }
 .footer-legal { border-top: 1px solid var(--line); padding-top: 32px; display: grid; gap: 14px; }
 .footer-legal p { font-size: 11.5px; color: var(--ink-faint); line-height: 1.7; }
 .footer-legal a { color: var(--ink-dim); text-decoration: underline; }

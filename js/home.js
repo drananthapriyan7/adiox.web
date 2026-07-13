@@ -7,6 +7,15 @@
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ─────────── Demo forms (footer newsletter) ─────────── */
+  document.querySelectorAll("form[data-demo]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = form.querySelector("button[type=submit], .btn, button");
+      if (btn) { btn.textContent = "Sent ✓"; btn.disabled = true; btn.style.opacity = 0.6; }
+    });
+  });
+
   /* ─────────── Nav: condense on scroll ─────────── */
   var nav = document.getElementById("nav");
   function onScrollNav() {

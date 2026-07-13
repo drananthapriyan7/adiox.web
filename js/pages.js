@@ -9,6 +9,37 @@
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(pointer: fine)").matches;
 
+  /* ─────────── GA4 event scaffolding (Part J2) ───────────
+     No-ops until a real gtag/dataLayer is wired in; keeps every page
+     instrumented with the same event names ahead of that integration. */
+  function track(name, params) {
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: name }, params || {}));
+  }
+  window.adioxTrack = track; // exposed so page-specific inline scripts (e.g. the quiz) can fire named events
+
+  /* ─────────── Demo forms (footer newsletter, contact, partners) ─────────── */
+  document.querySelectorAll("form[data-demo]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = form.querySelector("button[type=submit], .btn, button");
+      if (btn) { btn.textContent = "Sent ✓"; btn.disabled = true; btn.style.opacity = 0.6; }
+    });
+  });
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".btn, .cta");
+    if (!btn) return;
+    track("cta_click", { label: (btn.textContent || "").trim().slice(0, 60), location: location.pathname });
+  });
+  if (document.getElementById("quizForm")) {
+    document.addEventListener("DOMContentLoaded", function () { track("quiz_start", {}); });
+  }
+  var scrolled75 = false;
+  window.addEventListener("scroll", function () {
+    if (scrolled75) return;
+    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (pct > 0.75) { scrolled75 = true; track("scroll_75", { location: location.pathname }); }
+  }, { passive: true });
+
   /* ─────────── Nav ─────────── */
   var nav = document.getElementById("nav");
   if (nav) {

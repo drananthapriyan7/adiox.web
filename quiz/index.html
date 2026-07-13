@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Starting Point — 60-Second Trader Quiz | Adiox</title>
+  <meta name="description" content="Four quick questions route you to the right stage of the Adiox ecosystem — Learn, Train, Compete, or Trade — with a personalized starting point." />
+  <link rel="canonical" href="https://adiox.com/quiz" />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Find Your Starting Point — 60-Second Trader Quiz | Adiox" />
+  <meta property="og:description" content="Four quick questions route you to the right stage of the Adiox ecosystem." />
+  <meta property="og:url" content="https://adiox.com/quiz" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/content.css" />
+  <style>
+    .quiz-wrap { max-width: 680px; margin: 0 auto; }
+    .quiz-progress { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); overflow: hidden; margin: 30px 0 40px; }
+    .quiz-progress i { display: block; height: 100%; width: 25%; background: linear-gradient(90deg, var(--blue), var(--teal)); transition: width 0.35s ease; }
+    .q-step { display: none; }
+    .q-step.active { display: block; animation: qIn 0.35s ease; }
+    @keyframes qIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .q-num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; color: var(--ink-faint); margin-bottom: 10px; }
+    .q-title { font-size: clamp(20px, 3vw, 28px); margin-bottom: 26px; }
+    .q-options { display: grid; gap: 12px; }
+    .q-opt {
+      text-align: left; padding: 18px 22px; border-radius: 14px;
+      background: var(--glass); border: 1px solid var(--line); color: var(--ink-dim);
+      font-size: 15px; transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .q-opt:hover { border-color: rgba(59,130,246,0.5); background: rgba(255,255,255,0.06); transform: translateX(4px); color: var(--ink); }
+    .q-nav { display: flex; justify-content: space-between; margin-top: 26px; }
+    .result-card {
+      padding: 40px 36px; border-radius: 24px; text-align: center;
+      background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(14px);
+    }
+    .result-glyph { width: 52px; height: 52px; margin: 0 auto 18px; }
+    .result-tag { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; margin-bottom: 8px; }
+    .result-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home">ADI<span>OX</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+<section class="section" style="background:var(--bg-1); min-height:80vh; padding-top:70px;">
+  <div class="container quiz-wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Trader Quiz</span></nav>
+    <p class="eyebrow center" style="text-align:center;">60-SECOND TRADER QUIZ</p>
+    <h1 class="page-h1 center" style="margin-left:auto; margin-right:auto; text-align:center; font-size:clamp(28px,4vw,40px);">Find your <span class="grad-text">starting point</span></h1>
+    <p class="lead center">Four questions, no wrong answers — just the doorway that fits you right now.</p>
+
+    <div class="quiz-progress"><i id="quizProgress"></i></div>
+
+    <form id="quizForm">
+      <div class="q-step active" data-step="1">
+        <p class="q-num">QUESTION 1 OF 4</p>
+        <h2 class="q-title">Have you traded before?</h2>
+        <div class="q-options">
+          <button type="button" class="q-opt" data-w="learn:2">Never — I'm starting from zero</button>
+          <button type="button" class="q-opt" data-w="learn:1,train:1">A little, mostly self-taught</button>
+          <button type="button" class="q-opt" data-w="train:2">Yes, but inconsistently</button>
+          <button type="button" class="q-opt" data-w="trade:1,compete:1">Yes, I'm experienced</button>
+        </div>
+      </div>
+
+      <div class="q-step" data-step="2">
+        <p class="q-num">QUESTION 2 OF 4</p>
+        <h2 class="q-title">What's pulling you to Adiox?</h2>
+        <div class="q-options">
+          <button type="button" class="q-opt" data-w="learn:2">I want to actually understand trading</button>
+          <button type="button" class="q-opt" data-w="train:2">I want to practice risk-free before paying for anything</button>
+          <button type="button" class="q-opt" data-w="compete:2">I want the thrill of competing</button>
+          <button type="button" class="q-opt" data-w="trade:2">I want to get funded and earn</button>
+        </div>
+      </div>
+
+      <div class="q-step" data-step="3">
+        <p class="q-num">QUESTION 3 OF 4</p>
+        <h2 class="q-title">How do you feel about paying for an evaluation right now?</h2>
+        <div class="q-options">
+          <button type="button" class="q-opt" data-w="learn:1,train:1">Not ready to spend anything yet</button>
+          <button type="button" class="q-opt" data-w="train:2">I'd try a $10 practice run first</button>
+          <button type="button" class="q-opt" data-w="compete:2">I'd rather win prize money first</button>
+          <button type="button" class="q-opt" data-w="trade:2">I'm ready to pay for a real challenge</button>
+        </div>
+      </div>
+
+      <div class="q-step" data-step="4">
+        <p class="q-num">QUESTION 4 OF 4</p>
+        <h2 class="q-title">Pick a Friday night.</h2>
+        <div class="q-options">
+          <button type="button" class="q-opt" data-w="learn:2">Watching a lesson, taking notes</button>
+          <button type="button" class="q-opt" data-w="train:2">Running backtests on a new idea</button>
+          <button type="button" class="q-opt" data-w="compete:2">In a live tournament</button>
+          <button type="button" class="q-opt" data-w="trade:2">Checking payouts across funded accounts</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="q-nav">
+      <button type="button" class="btn btn-ghost btn-sm" id="quizBack" style="visibility:hidden;">← Back</button>
+      <span></span>
+    </div>
+
+    <!-- Results -->
+    <div id="quizResult" class="result-card" hidden></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-vision">Build a complete ecosystem where traders evolve from beginners to funded professionals inside one unified system.</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">ADI<span>OX</span></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About</a><a href="/about#roadmap">Roadmap</a><a href="/pricing">Pricing</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/about#press">Press Kit</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-newsletter">
+        <span>The Funded Letter — one email a week</span>
+        <form data-demo>
+          <input type="email" placeholder="you@example.com" aria-label="Newsletter email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-meta">
+        <div class="footer-badges"><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <span class="footer-lang">EN 🌐</span>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/content.js" defer></script>
+<script>
+(function () {
+  "use strict";
+  var scores = { learn: 0, train: 0, compete: 0, trade: 0 };
+  var step = 1;
+  var TOTAL = 4;
+  var form = document.getElementById("quizForm");
+  var progress = document.getElementById("quizProgress");
+  var backBtn = document.getElementById("quizBack");
+
+  var PILLARS = {
+    learn: {
+      name: "Learn", color: "#3B82F6", glyph: "glyph-learn",
+      tag: "STAGE 01 — BUILD KNOWLEDGE",
+      title: "Start in the Adiox Academy",
+      body: "You're building the foundation first — exactly right. Structured lessons, free forever, with every concept practicable inside the same account.",
+      primary: { href: "/learn/academy", label: "Start Learning Free" },
+      secondary: { href: "/glossary", label: "Browse the Glossary" }
+    },
+    train: {
+      name: "Train", color: "#22D3EE", glyph: "glyph-train",
+      tag: "STAGE 02 — BUILD SKILL SAFELY",
+      title: "Open PropSim",
+      body: "You want reps before risk — smart. Practice a real evaluation rule set on simulated capital for $10 and see exactly where your process breaks.",
+      primary: { href: "/train/simulator", label: "Practice a Challenge — $10" },
+      secondary: { href: "/train/journal", label: "Start a Trading Journal" }
+    },
+    compete: {
+      name: "Compete", color: "#8B5CF6", glyph: "glyph-compete",
+      tag: "STAGE 03 — PROVE SKILL",
+      title: "Join a Free Tournament",
+      body: "You want proof under pressure. Free tournaments run daily — no card, real prizes, and a public rank that becomes your reputation.",
+      primary: { href: "/compete/tournaments", label: "Join a Free Tournament" },
+      secondary: { href: "/compete/trading-games", label: "Enter the Arena" }
+    },
+    trade: {
+      name: "Trade", color: "#F5B942", glyph: "glyph-trade",
+      tag: "STAGE 04 — EARN PROFESSIONALLY",
+      title: "Compare Challenge Formats",
+      body: "You're ready for the professional stage. Compare 1-step, 2-step, instant, and pay-later evaluations — every rule published before you pay.",
+      primary: { href: "/trade/challenges", label: "Compare Challenge Formats" },
+      secondary: { href: "/trade/propsync", label: "See PropSync" }
+    }
+  };
+
+  function showStep(n) {
+    document.querySelectorAll(".q-step").forEach(function (s) {
+      s.classList.toggle("active", +s.dataset.step === n);
+    });
+    progress.style.width = (n / TOTAL * 100) + "%";
+    backBtn.style.visibility = n > 1 ? "visible" : "hidden";
+  }
+
+  form.addEventListener("click", function (e) {
+    var opt = e.target.closest(".q-opt");
+    if (!opt) return;
+    opt.dataset.w.split(",").forEach(function (pair) {
+      var parts = pair.split(":");
+      scores[parts[0]] += parseInt(parts[1], 10);
+    });
+    if (step < TOTAL) {
+      step++;
+      showStep(step);
+    } else {
+      showResult();
+    }
+  });
+
+  backBtn.addEventListener("click", function () {
+    if (step > 1) { step--; showStep(step); }
+  });
+
+  function showResult() {
+    form.hidden = true;
+    document.querySelector(".quiz-progress").hidden = true;
+    document.querySelector(".q-nav").hidden = true;
+
+    var winner = Object.keys(scores).reduce(function (a, b) { return scores[b] > scores[a] ? b : a; });
+    if (window.adioxTrack) window.adioxTrack("quiz_complete", { persona: winner });
+    var p = PILLARS[winner];
+    var box = document.getElementById("quizResult");
+    box.style.borderColor = p.color + "80";
+    box.style.boxShadow = "0 0 50px " + p.color + "22";
+    box.innerHTML =
+      '<span class="glyph ' + p.glyph + ' result-glyph" aria-hidden="true"></span>' +
+      '<p class="result-tag" style="color:' + p.color + ';">' + p.tag + '</p>' +
+      '<h2 style="font-size:26px; margin-bottom:10px;">' + p.title + '</h2>' +
+      '<p class="lead center">' + p.body + '</p>' +
+      '<div class="result-actions">' +
+        '<a href="/signup?persona=' + winner + '" class="btn btn-primary btn-lg magnetic">' + p.primary.label + '</a>' +
+        '<a href="' + p.secondary.href + '" class="btn btn-ghost">' + p.secondary.label + '</a>' +
+      '</div>' +
+      '<p class="fineprint center" style="margin-top:22px;">Curious about the rest? <a href="/ecosystem" style="text-decoration:underline;">See the full ecosystem →</a></p>';
+    box.hidden = false;
+  }
+
+  showStep(1);
+})();
+</script>
+</body>
+</html>

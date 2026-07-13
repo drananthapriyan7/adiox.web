@@ -23,6 +23,17 @@ Adiox is the operating system for prop trading performance and evaluation. It is
 - All evaluation and tournament accounts use simulated capital; funding is performance-based and never guaranteed.
 - Adiox is not affiliated with FTMO, TradeZella, TraderWaves, MetaQuotes, TradeLocker, or Match-Trader.
 
+## Pricing
+
+- [Pricing](https://adiox.com/pricing): Explorer $0/forever · Operator $29/month · Professional $79/month. Tournaments, PropSim runs ($10), and challenges (from $89) are priced per event, separately from subscriptions.
+
+## More
+
+- [Blog](https://adiox.com/blog): Guides by pillar plus a Data & Research category with original platform statistics.
+- [Glossary](https://adiox.com/glossary): 60+ prop trading terms, definition-first, one clean URL each.
+- [About](https://adiox.com/about): Vision, origin story, and the public Phase 1/2/3 roadmap.
+- [llms-full.txt](https://adiox.com/llms-full.txt): Expanded version of this file with every page and a longer fact sheet.
+
 ## Legal
 
 - [Risk Disclosure](https://adiox.com/legal/risk-disclosure)
