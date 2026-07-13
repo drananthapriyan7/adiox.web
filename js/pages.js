@@ -53,7 +53,7 @@
     burger.addEventListener("click", function () {
       var open = burger.classList.toggle("open");
       burger.setAttribute("aria-expanded", open);
-      mobileMenu.hidden = !open;
+      mobileMenu.classList.toggle("open", open);
       document.body.style.overflow = open ? "hidden" : "";
     });
   }
