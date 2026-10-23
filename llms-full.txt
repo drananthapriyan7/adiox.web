@@ -31,8 +31,9 @@ This is the expanded reference. See [llms.txt](https://adiox.com/llms.txt) for t
 
 - [/trade](https://adiox.com/trade) — Pillar hub.
 - [/trade/challenges](https://adiox.com/trade/challenges) — Challenges & Funding: 1-step, 2-step, instant, and pay-later ($0 upfront) evaluations, priced by account size, payouts within 48 hours.
-- [/trade/copy-trading](https://adiox.com/trade/copy-trading) — Cloud copy trading: no VPS required, verified on-platform track records, drawdown shown as prominently as gains.
-- [/trade/signals](https://adiox.com/trade/signals) — Signal Hub + Adiox Copier: every signal timestamped and tracked on-platform (no edited screenshots), auto-execution on MT5/TradeLocker/Match-Trader.
+- [/trade/copier](https://adiox.com/trade/copier) — Adiox Copier: Social Copier (follow ranked masters, MT5), Private Copier (master → follower accounts, MT5) and Telegram Copier (Telegram signals → MT4/MT5 trades; 15 languages, up to 5 TPs, symbol mapping). Hosted, encrypted credentials, prop-firm loss limits; Telegram plans $149/$225/$499 per year with a 3-day trial.
+- [/trade/copy-trading](https://adiox.com/trade/copy-trading) — Social Copier: cloud copy trading of ranked master traders, no VPS required, verified on-platform track records, weekly master rankings, drawdown shown as prominently as gains.
+- [/trade/signals](https://adiox.com/trade/signals) — Signal Hub + Adiox Copier: every signal timestamped and tracked on-platform (no edited screenshots), auto-execution on MT4/MT5 via the Telegram Copier, including your own Telegram channels.
 - [/trade/propsync](https://adiox.com/trade/propsync) — PropSync: unified dashboard for traders running multiple prop firm accounts, breach-prevention alerts before a rule is broken.
 - [/trade/prop-tools](https://adiox.com/trade/prop-tools) — Prop Tools: Risk Manager (daily loss lock, drawdown guard) and News Filter (per-firm news-rule presets).
 

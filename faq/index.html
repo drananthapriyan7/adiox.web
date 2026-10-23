@@ -36,6 +36,16 @@
           { "@type": "Question", "name": "Do I need a card to create an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. The Explorer tier is free forever and requires no payment method. You add a card only when you buy a paid event (simulator run, paid tournament, challenge) or upgrade to Operator or Professional." } },
           { "@type": "Question", "name": "How do I delete my account and data?", "acceptedAnswer": { "@type": "Answer", "text": "Settings → Account → Delete. Deletion removes your journal, coach training data, and personal records permanently within 30 days; anonymized aggregate statistics are unaffected. Export your data first if you want a copy — the export tool is on the same page." } },
           { "@type": "Question", "name": "When do free tournaments run?", "acceptedAnswer": { "@type": "Answer", "text": "Daily free tournaments start at 18:00 UTC and run for four hours. Registration is one click and closes at start time. Weekly championships run Friday to Sunday. The full schedule with countdowns is on the Tournaments page." } },
+          { "@type": "Question", "name": "What is the Adiox Copier?", "acceptedAnswer": { "@type": "Answer", "text": "The trade-copying engine inside the Trade stage. Social Copier follows ranked master traders, Private Copier copies trades from your own master account to your follower accounts, and Telegram Copier turns signals from the Telegram channels you follow into trades on your MT4 or MT5 account." } },
+          { "@type": "Question", "name": "Which brokers and platforms does the Copier support?", "acceptedAnswer": { "@type": "Answer", "text": "Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5, for both master and follower accounts. You pick your broker server from a searchable list, exactly as it appears in your MetaTrader login window." } },
+          { "@type": "Question", "name": "Do I need to install anything or run a VPS?", "acceptedAnswer": { "@type": "Answer", "text": "Not for Telegram Copier: copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which." } },
+          { "@type": "Question", "name": "How are copied lot sizes calculated?", "acceptedAnswer": { "@type": "Answer", "text": "You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk." } },
+          { "@type": "Question", "name": "What if my broker uses different symbol names?", "acceptedAnswer": { "@type": "Answer", "text": "Broker suffixes and prefixes such as XAUUSD.m or XAUUSD# are resolved automatically, and common aliases like GOLD, US30 and NAS100 are built in. Indices and unusual instruments can also be mapped by hand." } },
+          { "@type": "Question", "name": "Will copied trades fill at exactly the same price?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. A copied order fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price." } },
+          { "@type": "Question", "name": "What happens if a copy instruction is missed?", "acceptedAnswer": { "@type": "Answer", "text": "The copier regularly compares the positions your account actually holds against what it should hold, and corrects any difference. It catches the rare cases where an instruction does not land, for example if your account was offline when a master closed a trade." } },
+          { "@type": "Question", "name": "Are my broker and Telegram credentials safe?", "acceptedAnswer": { "@type": "Answer", "text": "Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. Masters connect with a read-only investor password. Telegram connects with your phone number and a one-time code; a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices." } },
+          { "@type": "Question", "name": "Will a Copier plan renew or charge me automatically?", "acceptedAnswer": { "@type": "Answer", "text": "No. Telegram Copier plans include a 3-day free trial and are paid at checkout by card or crypto. Nothing renews by itself: we remind you before your period ends, and you renew only if you want to." } },
+          { "@type": "Question", "name": "How and when do masters get paid?", "acceptedAnswer": { "@type": "Answer", "text": "A master earns a share of each subscription fee, plus a performance fee charged only on new profit above the copier's high-water mark. Earnings collect in your Adiox wallet and can be withdrawn in USDT (ERC-20 or TRC-20), USDC or through Rise once your identity is verified." } },
           { "@type": "Question", "name": "How fast are challenge payouts processed?", "acceptedAnswer": { "@type": "Answer", "text": "Within 48 hours of verification. Request a payout from your funded dashboard; verification re-checks your trades against the rules, then payment is sent. Your first payout on a 2-step account also refunds the original challenge fee." } }
         ]
       }
@@ -70,7 +80,7 @@
           <div class="mega-col">
             <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
             <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
           </div>
           <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
         </div>
@@ -96,7 +106,7 @@
   <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
   <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
   <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
   <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
 </div>
 
@@ -110,7 +120,7 @@
 
     <div class="search-bar">
       <span aria-hidden="true">🔎</span>
-      <input type="search" id="contentSearch" placeholder="Search help — try 'payout' or 'refund'…" aria-label="Search help center" />
+      <input type="search" id="contentSearch" placeholder="Search help — try 'payout', 'copier' or 'refund'…" aria-label="Search help center" />
     </div>
 
     <div class="faq-groups">
@@ -198,7 +208,63 @@
           </details>
           <details class="faq-item" data-search="copy trading stop pause equity protection risk">
             <summary>How do I stop or pause copy trading?</summary>
-            <p>Instantly, from the strategy card: Pause keeps positions open but mirrors nothing new; Stop closes copied positions at market. Your equity-protection floor does this automatically if losses reach your limit — no provider action required.</p>
+            <p>Instantly, from the strategy card or the account's Stop switch: Pause keeps positions open but mirrors nothing new; Stop closes copied positions at market. Nothing is queued while copying is stopped, so when you resume only new trades are copied. Your equity-protection floor does this automatically if losses reach your limit — no master action required.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h2><span class="glyph glyph-trade" aria-hidden="true"></span> Adiox Copier — Social, Private &amp; Telegram</h2>
+        <div class="faq-list">
+          <details class="faq-item" data-search="copier what is social private telegram trade copier">
+            <summary>What is the Adiox Copier?</summary>
+            <p>The trade-copying engine inside the Trade stage. Social Copier follows ranked master traders, Private Copier copies trades from your own master account to your follower accounts, and Telegram Copier turns signals from the Telegram channels you follow into trades on your MT4 or MT5 account.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier brokers platforms mt4 mt5 supported server">
+            <summary>Which brokers and platforms does the Copier support?</summary>
+            <p>Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5, for both master and follower accounts. You pick your broker server from a searchable list, exactly as it appears in your MetaTrader login window.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier vps install hosted server online">
+            <summary>Do I need to install anything or run a VPS?</summary>
+            <p>Not for Telegram Copier: copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier lot size sizing risk multiplier percent">
+            <summary>How are copied lot sizes calculated?</summary>
+            <p>You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier symbol mapping suffix broker names gold us30 nas100">
+            <summary>What if my broker uses different symbol names?</summary>
+            <p>Broker suffixes and prefixes such as XAUUSD.m or XAUUSD# are resolved automatically, and common aliases like GOLD, US30 and NAS100 are built in. Indices and unusual instruments can also be mapped by hand.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier slippage price fill late signal skipped">
+            <summary>Will copied trades fill at exactly the same price?</summary>
+            <p>Not always. A copied order fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier missed instruction offline reconcile positions">
+            <summary>What happens if a copy instruction is missed?</summary>
+            <p>The copier regularly compares the positions your account actually holds against what it should hold, and corrects any difference. It catches the rare cases where an instruction does not land, for example if your account was offline when a master closed a trade.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier password security encrypted investor telegram login 2fa">
+            <summary>Are my broker and Telegram credentials safe?</summary>
+            <p>Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. Masters connect with a read-only investor password. Telegram connects with your phone number and a one-time code; a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="copier trial renewal billing crypto card automatic charge">
+            <summary>Will a Copier plan renew or charge me automatically?</summary>
+            <p>No. Telegram Copier plans include a 3-day free trial and are paid at checkout by card or crypto. Nothing renews by itself: we remind you before your period ends, and you renew only if you want to.</p>
+            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
+          </details>
+          <details class="faq-item" data-search="master payout withdraw usdt usdc rise earnings performance fee">
+            <summary>How and when do masters get paid?</summary>
+            <p>A master earns a share of each subscription fee, plus a performance fee charged only on new profit above the copier's high-water mark. Earnings collect in your Adiox wallet and can be withdrawn in USDT (ERC-20 or TRC-20), USDC or through Rise once your identity is verified.</p>
             <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
           </details>
         </div>
@@ -240,7 +306,7 @@
         </div>
         <div class="fcol">
           <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
         </div>
         <div class="fcol">
           <div class="fcol-head">Company</div>
@@ -257,7 +323,7 @@
         </form>
       </div>
       <div class="footer-meta">
-        <div class="footer-badges"><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
         <span class="footer-lang">EN 🌐</span>
       </div>
     </div>

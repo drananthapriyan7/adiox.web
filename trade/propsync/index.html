@@ -52,7 +52,7 @@
         "mainEntity": [
           { "@type": "Question", "name": "How do traders manage multiple prop firm accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Most juggle separate dashboards, spreadsheets, and mental math for each firm's rules — which is exactly how accidental breaches happen. PropSync replaces that with one command center: every account's balance, open risk, daily loss, and distance-to-breach in a single live view, with each firm's specific rules tracked automatically." } },
           { "@type": "Question", "name": "Can I see all my funded accounts in one place?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PropSync connects accounts across MetaTrader 5, TradeLocker, and Match-Trader — regardless of which prop firm issued them — and unifies them into one dashboard with combined equity, per-account health states, and consolidated analytics. Adding an account takes about a minute." } },
-          { "@type": "Question", "name": "Does PropSync copy trades between my prop accounts?", "acceptedAnswer": { "@type": "Answer", "text": "PropSync includes cross-account trade management, but firm rules come first: many prop firms restrict or prohibit copying between accounts, and PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional." } },
+          { "@type": "Question", "name": "Does PropSync copy trades between my prop accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, through the Private Copier built into PropSync: connect one MT5 account as the master and its trades are copied to the follower accounts you choose, each with its own lot multiplier, symbol rules and loss limits. Firm rules still come first. Many prop firms restrict or prohibit copying between accounts, so PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional." } },
           { "@type": "Question", "name": "How do breach-prevention alerts work?", "acceptedAnswer": { "@type": "Answer", "text": "PropSync tracks each account's daily loss and overall drawdown against that firm's specific limits in real time. When any account approaches a threshold you set — say 70% of the daily loss limit — you get an instant alert in the app, by push, or by Telegram, and the account tile turns amber, then red. The warning comes before the breach, not after." } }
         ]
       }
@@ -87,7 +87,7 @@
           <div class="mega-col">
             <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
             <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
           </div>
           <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
         </div>
@@ -113,7 +113,7 @@
   <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
   <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
   <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
   <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
 </div>
 
@@ -248,6 +248,39 @@
   </div>
 </section>
 
+<!-- ═══ PRIVATE COPIER ═══ -->
+<section class="section" id="private-copier" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <div class="split" style="align-items:center;">
+      <div class="tilt reveal">
+        <div class="device" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Private Copier — Master → followers</span><span class="pill pill-live">LIVE</span></div>
+          <div class="fanout">
+            <div class="fan-node master"><b>Master · MT5</b>Trade placed once<span class="mono">SELL EURUSD 1.00</span></div>
+            <div class="fan-kids">
+              <div class="fan-node"><b>Firm A</b>0.5× lot<span class="mono">0.50</span></div>
+              <div class="fan-node"><b>Firm B</b>1× lot<span class="mono">1.00</span></div>
+              <div class="fan-node"><b>Personal</b>% risk<span class="mono">1.40</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow accent">PRIVATE COPIER</p>
+        <h2>Place it once. Every follower account is filled.</h2>
+        <p class="lead">Connect one account as the master and copy its trades to one or more follower accounts automatically, with each account sized and protected on its own terms. Part of the <a href="/trade/copier" style="color:var(--accent); text-decoration:underline;">Adiox Copier</a>.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Lot sizing per follower: fixed lot, multiplier, balance ratio or % risk</li>
+          <li>Prop-firm limits per account: daily loss cap, overall loss cap, per-trade drawdown close and profit target</li>
+          <li>Stop loss, take profit, modifications and closures synchronised</li>
+          <li>Self-healing: positions are reconciled if an account was offline</li>
+        </ul>
+        <a href="/trade/copier#private" class="btn btn-ghost" style="margin-top:6px;">How Private Copier works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ PAYOUTS & MILESTONES ═══ -->
 <section class="section" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
   <div class="container">
@@ -329,7 +362,7 @@
       </details>
       <details class="faq-item">
         <summary>Does PropSync copy trades between my prop accounts?</summary>
-        <p>PropSync includes cross-account trade management, but firm rules come first: many prop firms restrict or prohibit copying between accounts, and PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional.</p>
+        <p>Yes, through the Private Copier built into PropSync: connect one MT5 account as the master and its trades are copied to the follower accounts you choose, each with its own lot multiplier, symbol rules and loss limits. Firm rules still come first. Many prop firms restrict or prohibit copying between accounts, so PropSync ships with per-firm compliance presets that disable copying where a firm disallows it. You are responsible for following each firm's terms; PropSync makes that easier, never optional.</p>
       </details>
       <details class="faq-item">
         <summary>How do breach-prevention alerts work?</summary>
@@ -380,7 +413,7 @@
         </div>
         <div class="fcol">
           <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
         </div>
         <div class="fcol">
           <div class="fcol-head">Company</div>
@@ -397,7 +430,7 @@
         </form>
       </div>
       <div class="footer-meta">
-        <div class="footer-badges"><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
         <span class="footer-lang">EN 🌐</span>
       </div>
     </div>

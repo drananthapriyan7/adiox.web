@@ -50,7 +50,25 @@
           "offers": [
             { "@type": "Offer", "name": "Explorer", "price": "0", "priceCurrency": "USD", "description": "Free forever: Academy, free tournaments, glossary, basic journal, community." },
             { "@type": "Offer", "name": "Operator", "price": "29", "priceCurrency": "USD", "description": "Everything in Explorer plus full journal with auto-import, backtesting, monthly PropSim runs, Strategy Lab, and full AI Coach." },
-            { "@type": "Offer", "name": "Professional", "price": "79", "priceCurrency": "USD", "description": "Everything in Operator plus PropSync, Risk Manager, News Filter, Signal Hub provider tools, and the Adiox Copier." }
+            { "@type": "Offer", "name": "Professional", "price": "79", "priceCurrency": "USD", "description": "Everything in Operator plus PropSync, Risk Manager, News Filter, Signal Hub provider tools, and Copier auto-execution of Signal Hub providers." }
+          ]
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Adiox Copier — Telegram Copier plans",
+        "description": "Yearly Telegram Copier plans for MT4/MT5 with a 3-day free trial and no automatic renewal.",
+        "brand": { "@type": "Brand", "name": "Adiox" },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "149",
+          "highPrice": "499",
+          "priceCurrency": "USD",
+          "offerCount": "3",
+          "offers": [
+            { "@type": "Offer", "name": "Telegram Copier — 1 account", "price": "149", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Telegram Copier — 2 accounts", "price": "225", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Telegram Copier — 6 accounts", "price": "499", "priceCurrency": "USD" }
           ]
         }
       },
@@ -60,6 +78,7 @@
           { "@type": "Question", "name": "How much does Adiox cost?", "acceptedAnswer": { "@type": "Answer", "text": "Adiox starts free: the Explorer plan (Academy, free tournaments, glossary, basic journal) costs $0 forever, no card required. Operator is $29/month and Professional is $79/month, with two months free on annual billing. Tournaments, $10 simulator runs, and challenges from $89 are priced per event, separately from subscriptions." } },
           { "@type": "Question", "name": "Is Adiox free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the Explorer tier is genuinely free forever, not a trial: full Academy access, weekly free tournaments with real prizes, the glossary, community, and a basic journal. You only pay when you choose paid events (simulator runs, paid tournaments, challenges) or upgrade for the training and professional tool stacks." } },
           { "@type": "Question", "name": "Can I cancel or switch plans anytime?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Upgrades apply immediately with prorated billing; downgrades and cancellations take effect at the end of the current billing period, and your data — journal, records, badges — is retained on the free tier. Annual plans include a 14-day full-refund window." } },
+          { "@type": "Question", "name": "How is the Adiox Copier priced?", "acceptedAnswer": { "@type": "Answer", "text": "Telegram Copier plans are yearly: $149 for 1 account, $225 for 2 accounts and $499 for 6 accounts, each with a 3-day free trial. Social and Private Copier are priced per master: a subscription fee for each 30-day period plus a performance fee only on new profit above your high-water mark, shown before you subscribe. Copier plans are paid by card or crypto and never renew automatically. Professional subscribers already get auto-execution of Signal Hub providers." } },
           { "@type": "Question", "name": "Do subscriptions include challenges or tournament entries?", "acceptedAnswer": { "@type": "Answer", "text": "No — and that's deliberate, so you never pay for evaluations you're not ready to take. Subscriptions cover tools; challenges, paid tournament entries, and extra simulator runs are purchased per event at published prices. Operator and Professional include monthly PropSim run credits." } }
         ]
       }
@@ -94,7 +113,7 @@
           <div class="mega-col">
             <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
             <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
           </div>
           <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
         </div>
@@ -120,7 +139,7 @@
   <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
   <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
   <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
   <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
 </div>
 
@@ -173,7 +192,7 @@
           <li>Everything in Operator</li>
           <li>PropSync multi-account manager</li>
           <li>Risk Manager + News Filter</li>
-          <li>Signal Hub + Adiox Copier</li>
+          <li>Signal Hub + Copier auto-execution</li>
           <li>Provider &amp; private-group tools</li>
         </ul>
         <a href="/signup?plan=professional" class="btn btn-ghost">Go Pro</a>
@@ -211,6 +230,40 @@
   </div>
 </section>
 
+<!-- ═══ ADIOX COPIER PLANS ═══ -->
+<section class="section" id="copier" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1)); padding-top:80px; padding-bottom:80px;">
+  <div class="container">
+    <p class="eyebrow center reveal">ADIOX COPIER</p>
+    <h2 class="center reveal">Copier plans: simple, annual, no automatic renewal</h2>
+    <p class="lead center reveal">Telegram Copier plans include a 3-day free trial and copy to any MT4 or MT5 account. Pay by card or crypto; we remind you before the year ends and you renew only if you want to.</p>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <h3>Telegram · 1 account</h3>
+        <p class="price-tagline">Getting started with signal automation. $149.00 per account per year.</p>
+        <div class="price mono">$149<span>/year</span></div>
+        <ul><li>Secure Telegram login (phone + one-time code)</li><li>Real-time copying to MT4 / MT5</li><li>Per-account risk, SL and drawdown controls</li><li>Fully hosted, nothing to install</li></ul>
+        <a href="/trade/copier#plans" class="btn btn-ghost">Start 3-day free trial</a>
+      </div>
+      <div class="price-card price-hot">
+        <span class="price-badge">BEST BALANCE</span>
+        <h3>Telegram · 2 accounts</h3>
+        <p class="price-tagline">For active traders. $112.50 per account per year.</p>
+        <div class="price mono">$225<span>/year</span></div>
+        <ul><li>Everything in 1 account</li><li>Multiple channels on one account</li><li>Start, renewal and ending-soon alerts</li></ul>
+        <a href="/trade/copier#plans" class="btn btn-primary">Start 3-day free trial</a>
+      </div>
+      <div class="price-card">
+        <h3>Telegram · 6 accounts</h3>
+        <p class="price-tagline">High-volume signal copying. $83.17 per account per year.</p>
+        <div class="price mono">$499<span>/year</span></div>
+        <ul><li>Everything in 2 accounts</li><li>Skipped-trade alerts</li><li>Daily trade performance summary</li></ul>
+        <a href="/trade/copier#plans" class="btn btn-ghost">Start 3-day free trial</a>
+      </div>
+    </div>
+    <p class="fineprint center reveal">Social &amp; Private Copier are priced per master: a 30-day subscription fee plus a performance fee only on new profit above your high-water mark, shown before you subscribe. <a href="/trade/copier" style="text-decoration:underline;">How the Adiox Copier works →</a></p>
+  </div>
+</section>
+
 <!-- ═══ COMPARISON TABLE ═══ -->
 <section class="section" id="compare" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
   <div class="container">
@@ -237,10 +290,11 @@
           <tr><td>Arena ranked duels</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>Squad creation</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr class="pillar-row"><td colspan="4">TRADE</td></tr>
-          <tr><td>Copy trading (follower)</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Social Copier (follow masters)</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           <tr><td>PropSync multi-account manager</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
           <tr><td>Risk Manager + News Filter</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-          <tr><td>Signal Hub + Adiox Copier</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Signal Hub + Copier auto-execution</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Telegram Copier (your own channels)</td><td class="lim">From $149/yr</td><td class="lim">From $149/yr</td><td class="lim">From $149/yr</td></tr>
           <tr><td>Provider / private-group tools</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
         </tbody>
       </table>
@@ -265,6 +319,10 @@
       <details class="faq-item">
         <summary>Can I cancel or switch plans anytime?</summary>
         <p>Yes. Upgrades apply immediately with prorated billing; downgrades and cancellations take effect at the end of the current billing period, and your data — journal, records, badges — is retained on the free tier. Annual plans include a 14-day full-refund window.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is the Adiox Copier priced?</summary>
+        <p>Telegram Copier plans are yearly: $149 for 1 account, $225 for 2 accounts and $499 for 6 accounts, each with a 3-day free trial. Social and Private Copier are priced per master: a subscription fee for each 30-day period plus a performance fee only on new profit above your high-water mark, shown before you subscribe. Copier plans are paid by card or crypto and never renew automatically. Professional subscribers already get auto-execution of Signal Hub providers.</p>
       </details>
       <details class="faq-item">
         <summary>Do subscriptions include challenges or tournament entries?</summary>
@@ -316,7 +374,7 @@
         </div>
         <div class="fcol">
           <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
         </div>
         <div class="fcol">
           <div class="fcol-head">Company</div>
@@ -333,7 +391,7 @@
         </form>
       </div>
       <div class="footer-meta">
-        <div class="footer-badges"><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
         <span class="footer-lang">EN 🌐</span>
       </div>
     </div>

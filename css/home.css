@@ -7,11 +7,16 @@
   --bg-0: #05070E;
   --bg-1: #070B14;
   --bg-2: #0B1226;
-  --ink: #E7ECF6;
-  --ink-dim: #9AA6BF;
-  --ink-faint: #66738F;
-  --line: rgba(255,255,255,0.08);
+  --ink: #EDF1F8;
+  --ink-dim: #A9B4CA;   /* lifted for AA contrast on the near-black ground */
+  --ink-faint: #7A87A2;
+  --line: rgba(255,255,255,0.09);
+  --line-hi: rgba(255,255,255,0.16);
   --glass: rgba(255,255,255,0.045);
+  --glass-hi: rgba(255,255,255,0.07);
+  --surface: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+  --pos: #34D399;
+  --neg: #F87171;
   --blue: #3B82F6;
   --teal: #22D3EE;
   --violet: #8B5CF6;
@@ -701,6 +706,55 @@ h3 { font-size: clamp(20px, 2.4vw, 26px); margin-bottom: 10px; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ═══════════════ Refresh layer ═══════════════
+   Modernisation pass: same palette and type, tighter surfaces, clearer
+   focus states, fluid spacing. Shared by every page that loads home.css. */
+::selection { background: rgba(59,130,246,0.35); color: #fff; }
+html { scrollbar-color: #24304d var(--bg-0); }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 8px; }
+.btn:focus-visible { outline-offset: 4px; }
+
+.section { padding: clamp(72px, 9vw, 112px) 0; }
+h2 { text-wrap: balance; }
+.lead { text-wrap: pretty; }
+
+/* Eyebrows read as small status chips */
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; flex: none;
+  background: currentColor; box-shadow: 0 0 10px currentColor;
+}
+.eyebrow.center { display: flex; justify-content: center; }
+
+/* Buttons: crisper edge, softer glow */
+.btn { border-radius: 12px; letter-spacing: -0.005em; }
+.btn-primary { border: 1px solid rgba(147,197,253,0.35); }
+.btn-ghost { background: var(--surface); }
+.btn-ghost:hover { border-color: var(--line-hi); }
+
+/* Cards: one surface treatment across the site */
+.feat-card, .step, .fair-card, .price-card, .faq-item, .split-right, .integ, .cs-node, .phase {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.feat-card:hover, .price-card:hover, .integ:hover { border-color: var(--line-hi); }
+.faq-item { transition: border-color 0.2s, background 0.2s; }
+.faq-item:hover { border-color: var(--line-hi); }
+.faq-item summary { transition: color 0.2s; }
+.faq-item[open] summary { color: #fff; }
+
+/* Nav: a hairline under the bar at all times so it separates from hero art */
+.nav { border-bottom-color: rgba(255,255,255,0.04); }
+.nav-link { font-weight: 500; }
+.mega-col a.is-new::after {
+  content: "NEW"; margin-left: 8px; padding: 2px 6px; border-radius: 6px; vertical-align: 1px;
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em;
+  color: var(--gold); border: 1px solid rgba(245,185,66,0.45);
+}
+
+/* Footer badges legible */
+.footer-badges span { color: var(--ink-dim); }
 
 /* ═══════════════ Responsive ═══════════════ */
 @media (max-width: 1024px) {

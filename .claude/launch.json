@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "adiox-web",
-      "runtimeExecutable": "E:\\xampp\\php\\php.exe",
-      "runtimeArgs": ["-S", "localhost:8123", "-t", "E:\\xampp\\htdocs\\adiox.web"],
+      "runtimeExecutable": "D:\\xampp\\php\\php.exe",
+      "runtimeArgs": ["-S", "localhost:8123", "-t", "D:\\xampp\\htdocs\\adiox.web"],
       "port": 8123
     }
   ]

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <title>Adiox Copier — Social, Private &amp; Telegram Trade Copier for MT4/MT5 | Adiox</title>
+  <meta name="description" content="Copy trades three ways: follow ranked master traders, sync your own MT4/MT5 accounts, or turn Telegram signals into trades automatically. Hosted, encrypted, with prop-firm risk limits." />
+  <link rel="canonical" href="https://adiox.com/trade/copier" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adiox Copier — Social, Private &amp; Telegram Trade Copier for MT4/MT5 | Adiox" />
+  <meta property="og:description" content="Copy trades three ways: follow ranked master traders, sync your own MT4/MT5 accounts, or turn Telegram signals into trades automatically. Hosted, encrypted, with prop-firm risk limits." />
+  <meta property="og:url" content="https://adiox.com/trade/copier" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/trade.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://adiox.com/trade/copier",
+        "name": "Adiox Copier — Social, Private & Telegram Trade Copier",
+        "isPartOf": {
+          "@id": "https://adiox.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://adiox.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Trade",
+            "item": "https://adiox.com/trade"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Adiox Copier",
+            "item": "https://adiox.com/trade/copier"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Adiox Copier",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web; MetaTrader 4; MetaTrader 5",
+        "description": "Trade copier supporting social copy trading, private master-to-follower account copying and Telegram signal copying into MT4/MT5.",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "149.00",
+          "highPrice": "499.00",
+          "offerCount": "3",
+          "description": "Telegram Copier yearly plans for 1, 2 or 6 trading accounts, each with a 3-day free trial"
+        },
+        "publisher": {
+          "@id": "https://adiox.com/#org"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between Social Copier and Private Copier?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Social Copier lets you follow and copy trades from other traders (masters) ranked on Adiox. Private Copier copies trades between trading accounts you own or manage: one master account, any number of followers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which brokers and platforms are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5. You pick your broker server from a searchable list, exactly as it appears in your MT4/MT5 login window. PropSync dashboards additionally monitor TradeLocker and Match-Trader accounts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to install anything or run a VPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not for Telegram Copier. Copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Adiox provide the trading signals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The Adiox Copier is execution software. It copies what a master account or a Telegram channel you already follow sends out. Masters are independent traders and channels are third parties. Adiox does not produce signals for the copier or give investment advice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are lot sizes calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will copied trades fill at exactly the same price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not always. A copied order is sent to your broker and fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use the copier on a prop-firm challenge account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and the risk limits are built for it: a daily loss cap that resets the next day, an overall loss cap in percent or currency, a per-trade drawdown close, and a profit target that stops trading once reached. You enter the numbers to match your firm, because the copier does not know your provider's rules by itself. Always check whether your firm permits copy trading."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my broker password safe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. A master account connects with its read-only investor password, so an account being copied can never be traded from Adiox."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pause copying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every account has a Stop switch that takes effect immediately. Nothing is queued while an account is stopped, so when you start it again only trades that arrive after that point are copied."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the free trial work, and will I be charged automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Telegram Copier plans include a 3-day free trial. Plans are paid at checkout by card or crypto, and nothing renews or charges by itself. We remind you before your period ends, and you renew only if you want to."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="theme-trade">
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" /></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" role="menu">
+          <div class="mega-col">
+            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
+            <p class="mega-tag">Build knowledge</p>
+            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
+            <p class="mega-tag">Build skill safely</p>
+            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
+            <p class="mega-tag">Prove skill</p>
+            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
+            <p class="mega-tag">Earn professionally</p>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          </div>
+          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+        </div>
+      </div>
+      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <div class="nav-item has-mega">
+        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega mega-sm" role="menu">
+          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
+  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
+  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
+</div>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero tall">
+  <canvas class="hero-canvas" data-scene="network" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+  <div class="container page-hero-content" style="max-width:960px;">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span><a href="/trade">Trade</a><span class="sep">/</span><span class="here">Adiox Copier</span>
+    </nav>
+    <p class="eyebrow accent reveal">ADIOX COPIER · MT4 &amp; MT5</p>
+    <h1 class="page-h1 reveal">Trade once. <span class="accent">Copy everywhere.</span></h1>
+    <p class="lead reveal">
+      The Adiox Copier is one execution layer for three ways of copying trades: follow other traders,
+      synchronise your own MT4 and MT5 accounts, or turn Telegram signals into orders automatically.
+      Lot size, risk, symbols, stop loss and take profit are all set by you, from one dashboard.
+    </p>
+    <div class="defbox reveal">
+      <b>What is a trade copier?</b>
+      <p>A trade copier reads trades from a source (another trader's account, your own master account, or a Telegram signal channel) and places matching orders on your connected trading accounts, sized and filtered by the risk settings you choose. No manual entry, no missed alerts.</p>
+    </div>
+    <div class="hero-actions reveal" style="justify-content:flex-start; margin-top:26px;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start 3-day free trial</a>
+      <a href="#modes" class="btn btn-ghost btn-lg js-scroll">See how it works ↓</a>
+    </div>
+    <p class="micro reveal">Free trial applies to Telegram Copier plans · no automatic renewal · works with any MT4 / MT5 broker</p>
+  </div>
+</section>
+
+<!-- ═══ THREE MODES ═══ -->
+<section class="section" id="modes" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">ONE COPIER, THREE MODES</p>
+    <h2 class="center reveal">Copy trades the way that fits how you trade</h2>
+    <p class="lead center reveal">Copy another trader, synchronise accounts you own, or automate the signal channels you already follow. All of it runs from one Adiox account.</p>
+    <div class="mode-grid reveal">
+      <article class="mode-card mode-social">
+        <span class="mode-tag">Social Copier</span>
+        <h3>Follow other traders</h3>
+        <p>Pick a master from the ranked leaderboard and their trades are replicated in your own account, with your own risk settings applied.</p>
+        <ul><li>Ranked, verified master traders</li><li>Your lot sizing and drawdown caps</li><li>Stop or switch masters any time</li></ul>
+        <a class="go" href="/trade/copy-trading">Explore Social Copier →</a>
+      </article>
+      <article class="mode-card mode-private">
+        <span class="mode-tag">Private Copier</span>
+        <h3>Sync your own accounts</h3>
+        <p>Place a trade once on your master account and it is copied to every follower account you connect, each with its own lot multiplier.</p>
+        <ul><li>One master, multiple followers</li><li>Per-account sizing and symbol rules</li><li>Built for teams and account managers</li></ul>
+        <a class="go" href="#private">See Private Copier →</a>
+      </article>
+      <article class="mode-card mode-telegram">
+        <span class="mode-tag">Telegram Copier</span>
+        <h3>Automate signal channels</h3>
+        <p>Signals arriving in your Telegram channels are read, checked against your rules and turned into trades on your MT4 or MT5 account.</p>
+        <ul><li>Entry, SL and up to 5 take-profits</li><li>15 signal languages understood</li><li>Fully hosted, nothing to install</li></ul>
+        <a class="go" href="#telegram">See Telegram Copier →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHO IT'S FOR ═══ -->
+<section class="section" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1)); padding-top:70px;">
+  <div class="container">
+    <p class="eyebrow accent center reveal">WHO IT'S FOR</p>
+    <h2 class="center reveal">Built for four kinds of traders</h2>
+    <div class="feat-grid cols4 reveal">
+      <div class="feat-card"><span class="glyph glyph-trade" aria-hidden="true"></span><h3>Funded &amp; prop traders</h3><p>Challenge rules enforced for you: daily and overall loss caps, per-trade drawdown close and a profit target that stops trading once hit.</p></div>
+      <div class="feat-card"><span class="glyph glyph-learn" aria-hidden="true"></span><h3>Signal subscribers</h3><p>Stop missing entries because the alert landed while you were asleep or at work. The copier acts the moment a signal arrives.</p></div>
+      <div class="feat-card"><span class="glyph glyph-train" aria-hidden="true"></span><h3>Multi-account traders</h3><p>One plan covers 1, 2 or 6 accounts, each with its own risk settings. Account slots are reusable.</p></div>
+      <div class="feat-card"><span class="glyph glyph-compete" aria-hidden="true"></span><h3>Master traders</h3><p>List your MT5 account as a master, rank on the weekly leaderboard and earn from every trader who copies you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRIVATE COPIER ═══ -->
+<section class="section" id="private" style="background:var(--bg-1);">
+  <div class="container">
+    <div class="split" style="align-items:center;">
+      <div class="reveal">
+        <p class="eyebrow accent">PRIVATE COPIER</p>
+        <h2>Copy your own trades across multiple accounts</h2>
+        <p class="lead">Connect one account as the master and every trade you place on it is copied to one or more follower accounts. No repeating the same order five times, and no fat-finger lot sizes.</p>
+        <ul class="spot-list" style="margin-top:18px;">
+          <li>Traders with several personal or funded accounts</li>
+          <li>Fund and account managers running client accounts</li>
+          <li>Trading teams sharing one execution desk</li>
+        </ul>
+        <div class="steps cols2">
+          <div class="step"><div class="step-num">01</div><h3>Connect a master</h3><p>The account where your original trades are placed.</p></div>
+          <div class="step"><div class="step-num">02</div><h3>Add followers</h3><p>The accounts that should receive the copied trades.</p></div>
+          <div class="step"><div class="step-num">03</div><h3>Set copy rules</h3><p>Lot multiplier, symbols, SL / TP and risk per follower.</p></div>
+          <div class="step"><div class="step-num">04</div><h3>Trade as normal</h3><p>Place it once on the master. Followers are filled automatically.</p></div>
+        </div>
+      </div>
+      <div class="tilt reveal">
+        <div class="device" aria-hidden="true">
+          <div class="dev-bar"><span class="dev-title">Private Copier — Desk A</span><span class="pill pill-live">3 FOLLOWERS LIVE</span></div>
+          <div class="fanout">
+            <div class="fan-node master"><b>Master account</b>Your trade is placed once<span class="mono">BUY XAUUSD 1.00</span></div>
+            <div class="fan-kids">
+              <div class="fan-node"><b>Follower 1</b>0.5× lot<span class="mono">0.50</span></div>
+              <div class="fan-node"><b>Follower 2</b>1× lot<span class="mono">1.00</span></div>
+              <div class="fan-node"><b>Follower 3</b>2× lot<span class="mono">2.00</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">Many prop firms restrict copying between funded accounts. Check your firm's terms; <a href="/trade/propsync" style="text-decoration:underline;">PropSync</a> ships per-firm compliance presets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TELEGRAM COPIER ═══ -->
+<section class="section" id="telegram" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">TELEGRAM COPIER</p>
+    <h2 class="center reveal">From Telegram signal to filled order, automatically</h2>
+    <p class="lead center reveal">Stop reading channels and typing trades by hand. The Telegram Copier watches the channels you choose, recognises valid signals and executes them on your MT4 or MT5 account under your rules. Here is a real-world Arabic signal and how it gets parsed:</p>
+
+    <div class="parse reveal">
+      <div class="tg-panel">
+        <div class="tg-head"><b>Gold Signals VIP</b><span>09:14</span></div>
+        <div class="tg-msg" dir="rtl" lang="ar">شراء XAUUSD @ 2412<br>SL 2402<br>TP1 2416<br>TP2 2420</div>
+        <span class="tg-reply">↳ Reply: close half</span><span class="tg-reply">↳ Reply: SL to BE</span>
+        <p class="fineprint" style="margin-top:8px;">Illustrative channel and prices.</p>
+      </div>
+      <dl class="parse-rows">
+        <div class="parse-row"><dt>Action</dt><dd><b>BUY</b>, read from “شراء”</dd></div>
+        <div class="parse-row"><dt>Symbol</dt><dd><b>XAUUSD → XAUUSD.m</b>, your broker's own symbol name</dd></div>
+        <div class="parse-row"><dt>Entry</dt><dd>Market at the live price, or a pending order at <b>2412</b>. Your choice.</dd></div>
+        <div class="parse-row"><dt>Stop loss</dt><dd><b>2402</b>, with an optional spread or 1–5 pip buffer</dd></div>
+        <div class="parse-row"><dt>Targets</dt><dd>Two positions, lot split by your <b>TP1 / TP2 %</b></dd></div>
+        <div class="parse-row"><dt>Lot size</dt><dd>From your mode: fixed, % risk, per balance, or the signal's own lot</dd></div>
+        <div class="parse-row"><dt>Checks</dt><dd>Pair filter · trading hours · per-pair caps · loss limits</dd></div>
+        <div class="parse-row"><dt>Replies</dt><dd>Half closed at your partial %, then the rest moved to <b>breakeven</b></dd></div>
+      </dl>
+    </div>
+
+    <div class="kpis reveal">
+      <div class="kpi"><b>15</b><span>signal languages</span></div>
+      <div class="kpi"><b>5</b><span>take-profit levels per signal</span></div>
+      <div class="kpi"><b>~3 min</b><span>market-entry validity window</span></div>
+      <div class="kpi"><b>24/7</b><span>hosted, nothing to install</span></div>
+    </div>
+    <p class="fineprint center reveal">A late signal is skipped rather than filled at a much worse price. Fills happen at your broker's price at that moment.</p>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══ -->
+<section class="section" id="features" style="background:var(--bg-0);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">FEATURES</p>
+    <h2 class="center reveal">Built for flexible, controlled copy trading</h2>
+    <div class="fair-grid reveal">
+      <div class="fair-card"><h3>Multiple account support</h3><p>Connect and manage multiple MT4 / MT5 accounts from one Adiox dashboard.</p></div>
+      <div class="fair-card"><h3>Real-time trade copying</h3><p>New signals and master trades are passed to your accounts the moment they arrive.</p></div>
+      <div class="fair-card"><h3>Custom risk management</h3><p>Fixed lot, multiplier, balance ratio or % risk, plus max lot, minimum margin level and max drawdown caps.</p></div>
+      <div class="fair-card"><h3>Symbol mapping</h3><p>Broker suffixes such as XAUUSD.m or XAUUSD# resolve automatically. Aliases like GOLD, US30 and NAS100 are built in.</p></div>
+      <div class="fair-card"><h3>SL &amp; TP synchronisation</h3><p>Stop loss and take profit levels, modifications and closures are reflected across connected accounts.</p></div>
+      <div class="fair-card"><h3>Self-healing positions</h3><p>The copier regularly compares the positions you hold against what you should hold and corrects any gap, for example after an account went offline.</p></div>
+      <div class="fair-card"><h3>Prop-firm risk limits</h3><p>Daily loss cap, overall loss cap, per-trade drawdown close and a profit target. Each can flatten open positions when hit.</p></div>
+      <div class="fair-card"><h3>Hosted execution</h3><p>Copying runs on Adiox servers. No VPS to rent and no terminal of your own to keep online.</p></div>
+      <div class="fair-card"><h3>Alerts &amp; logs</h3><p>Every copied trade is logged with its outcome. Alerts cover renewals, skipped trades and daily results.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECURITY ═══ -->
+<section class="section" id="security" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
+  <div class="container">
+    <div class="split" style="align-items:center;">
+      <div class="reveal">
+        <p class="eyebrow accent">SECURITY</p>
+        <h2>Secure connections. You stay in control.</h2>
+        <p class="lead">The copier connects with only the permissions it needs to place and manage trades. Every account can be paused or disconnected at any time, and funding always stays between you and your broker.</p>
+        <div class="hero-actions" style="justify-content:flex-start; margin:26px 0 0;">
+          <a href="/signup" class="btn btn-primary magnetic">Connect an account</a>
+          <a href="#faq" class="btn btn-ghost">Security FAQ</a>
+        </div>
+      </div>
+      <div class="ctrl-panel cols2 reveal">
+        <div class="ctrl"><h3>Encrypted credentials</h3><p>Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs.</p></div>
+        <div class="ctrl"><h3>Trading permissions only</h3><p>Open, modify and close positions. Nothing else. No withdrawals or transfers, ever.</p></div>
+        <div class="ctrl"><h3>Masters connect read-only</h3><p>A master links with its investor password, so the account being copied can never be traded from Adiox.</p></div>
+        <div class="ctrl"><h3>Your Telegram stays yours</h3><p>Sign in with your phone number and a one-time code. A 2-step password is used once and never stored.</p></div>
+        <div class="ctrl"><h3>Revoke any time</h3><p>End the session from Telegram → Settings → Devices, or disconnect an account from your dashboard.</p></div>
+        <div class="ctrl"><h3>Instant stop switch</h3><p>Nothing is queued while an account is stopped. Restarting copies only new trades.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPARE ═══ -->
+<section class="section" id="compare" style="background:var(--bg-1);">
+  <div class="container">
+    <p class="eyebrow accent center reveal">COMPARE</p>
+    <h2 class="center reveal">Choose how you want to copy</h2>
+    <div class="cmp-wrap reveal">
+      <table class="cmp-table compact">
+        <caption class="sr-only">Social Copier, Private Copier and Telegram Copier compared</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Social Copier<span>FOLLOW TRADERS</span></th><th scope="col">Private Copier<span>YOUR ACCOUNTS</span></th><th scope="col" class="col-hot">Telegram Copier<span>SIGNAL CHANNELS</span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Trade source</th><td>Ranked master traders</td><td>Your master account</td><td class="col-hot">Telegram channels you follow</td></tr>
+          <tr><th scope="row">Best for</th><td>Following strategies</td><td>Multi-account trading</td><td class="col-hot">Signal subscribers</td></tr>
+          <tr><th scope="row">Platforms</th><td>MT5</td><td>MT5</td><td class="col-hot">MT4 &amp; MT5</td></tr>
+          <tr><th scope="row">Execution</th><td>Automatic</td><td>Automatic</td><td class="col-hot">Automatic</td></tr>
+          <tr><th scope="row">Risk control</th><td>Your settings per master</td><td>Per-follower settings</td><td class="col-hot">Per-account settings</td></tr>
+          <tr><th scope="row">Billing</th><td>Per master, 30-day periods</td><td>Per follower, 30-day periods</td><td class="col-hot">Yearly plan, 3-day trial</td></tr>
+          <tr><th scope="row">Main benefit</th><td>Copy proven traders</td><td>Trade once across accounts</td><td class="col-hot">No manual signal entry</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="section" id="plans" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0));">
+  <div class="container">
+    <p class="eyebrow accent center reveal">COPIER PLANS</p>
+    <h2 class="center reveal">Simple annual plans. No automatic renewal.</h2>
+    <p class="lead center reveal">Pay by card or crypto. Your plan never renews by itself; we remind you before it ends. Account slots are reusable: disconnect an account to connect another. On the <a href="/pricing" style="text-decoration:underline;">Professional plan</a>, auto-execution of Signal Hub providers is already included; these plans add copying from your own Telegram channels.</p>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <h3>Telegram · 1 account</h3>
+        <p class="price-tagline-sm">For getting started with signal automation</p>
+        <div class="price mono">$149<span>/year</span></div>
+        <p class="per-acct">$149.00 per account per year</p>
+        <ul><li>Secure Telegram login (phone + one-time code)</li><li>Search and add channels from your dashboard</li><li>Real-time copying to MT4 / MT5</li><li>Per-account risk, SL and drawdown controls</li><li>Fully hosted, nothing to install</li></ul>
+        <a href="/signup" class="btn btn-ghost">Start 3-day free trial</a>
+      </div>
+      <div class="price-card price-hot">
+        <span class="price-badge">BEST BALANCE</span>
+        <h3>Telegram · 2 accounts</h3>
+        <p class="price-tagline-sm">For active traders running a second account</p>
+        <div class="price mono">$225<span>/year</span></div>
+        <p class="per-acct">$112.50 per account per year</p>
+        <ul><li>Everything in 1 account</li><li>Copy multiple channels on one account</li><li>Start, renewal and ending-soon alerts</li></ul>
+        <a href="/signup" class="btn btn-primary">Start 3-day free trial</a>
+      </div>
+      <div class="price-card">
+        <h3>Telegram · 6 accounts</h3>
+        <p class="price-tagline-sm">For high-volume, multi-account signal copying</p>
+        <div class="price mono">$499<span>/year</span></div>
+        <p class="per-acct">$83.17 per account per year</p>
+        <ul><li>Everything in 2 accounts</li><li>Skipped-trade alerts</li><li>Daily trade performance summary</li></ul>
+        <a href="/signup" class="btn btn-ghost">Start 3-day free trial</a>
+      </div>
+    </div>
+    <div class="split-right reveal" style="margin-top:22px; display:flex; flex-wrap:wrap; gap:18px 34px; align-items:center; justify-content:space-between;">
+      <div style="max-width:640px;">
+        <h3 style="margin-bottom:6px;">Social &amp; Private Copier: priced per master, shown up front</h3>
+        <p style="font-size:14px; color:var(--ink-dim);">One subscription covers one MT5 follower account copying one master: a subscription fee for each 30-day period, plus a performance fee only on new profit above your high-water mark. Cloud-hosted or own-hosted, as each plan states.</p>
+      </div>
+      <a href="/trade/copy-trading#marketplace" class="btn btn-ghost">Browse masters</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" id="faq" style="background:var(--bg-0);">
+  <div class="container faq-inner">
+    <p class="eyebrow accent center reveal">QUESTIONS</p>
+    <h2 class="center reveal">Adiox Copier, answered</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What is the difference between Social Copier and Private Copier?</summary>
+        <p>Social Copier lets you follow and copy trades from other traders (masters) ranked on Adiox. Private Copier copies trades between trading accounts you own or manage: one master account, any number of followers.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which brokers and platforms are supported?</summary>
+        <p>Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5. You pick your broker server from a searchable list, exactly as it appears in your MT4/MT5 login window. PropSync dashboards additionally monitor TradeLocker and Match-Trader accounts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to install anything or run a VPS?</summary>
+        <p>Not for Telegram Copier. Copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does Adiox provide the trading signals?</summary>
+        <p>No. The Adiox Copier is execution software. It copies what a master account or a Telegram channel you already follow sends out. Masters are independent traders and channels are third parties. Adiox does not produce signals for the copier or give investment advice.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How are lot sizes calculated?</summary>
+        <p>You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will copied trades fill at exactly the same price?</summary>
+        <p>Not always. A copied order is sent to your broker and fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use the copier on a prop-firm challenge account?</summary>
+        <p>Yes, and the risk limits are built for it: a daily loss cap that resets the next day, an overall loss cap in percent or currency, a per-trade drawdown close, and a profit target that stops trading once reached. You enter the numbers to match your firm, because the copier does not know your provider's rules by itself. Always check whether your firm permits copy trading.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is my broker password safe?</summary>
+        <p>Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. A master account connects with its read-only investor password, so an account being copied can never be traded from Adiox.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I pause copying?</summary>
+        <p>Yes. Every account has a Stop switch that takes effect immediately. Nothing is queued while an account is stopped, so when you start it again only trades that arrive after that point are copied.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does the free trial work, and will I be charged automatically?</summary>
+        <p>Telegram Copier plans include a 3-day free trial. Plans are paid at checkout by card or crypto, and nothing renews or charges by itself. We remind you before your period ends, and you renew only if you want to.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="hub-cta">
+  <div class="container reveal">
+    <h2>Stop copying trades by hand.</h2>
+    <p class="lead center" style="margin-bottom:30px;">Social Copier, Private Copier and Telegram Copier: one Adiox account, every copy workflow.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start free trial</a>
+      <a href="#modes" class="btn btn-ghost btn-lg js-scroll">Explore the copiers</a>
+    </div>
+    <p class="micro">Execution software, not signals · no automatic renewal · copying trades carries market risk</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-vision">Build a complete ecosystem where traders evolve from beginners to funded professionals inside one unified system.</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" loading="lazy" /></a>
+        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
+        <div class="footer-social">
+          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
+          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
+          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
+          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
+        </div>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="fcol">
+          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
+          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
+          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
+          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+        </div>
+        <div class="fcol">
+          <div class="fcol-head">Company</div>
+          <a href="/about">About</a><a href="/about#roadmap">Roadmap</a><a href="/pricing">Pricing</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/about#press">Press Kit</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-newsletter">
+        <span>The Funded Letter — one email a week</span>
+        <form data-demo>
+          <input type="email" placeholder="you@example.com" aria-label="Newsletter email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-meta">
+        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <span class="footer-lang">EN 🌐</span>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+
+      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Copy trading involves substantial risk; past performance of any strategy does not guarantee future results. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+      <div class="footer-links">
+        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
+      </div>
+      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/pages.js" defer></script>
+<script src="/js/trade.js" defer></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/images/favicon.ico" sizes="any" />
   <title>Signal Hub — Verified Trading Signals + Auto-Copier | Adiox</title>
-  <meta name="description" content="Trading signals with receipts: every signal timestamped and tracked on-platform. Subscribe to verified providers and auto-execute with the Adiox Copier on MT5, TradeLocker, or Match-Trader." />
+  <meta name="description" content="Trading signals with receipts: every signal timestamped and tracked on-platform. Subscribe to verified providers, or connect your own Telegram channels, and auto-execute with the Adiox Telegram Copier on MT4 or MT5." />
   <link rel="canonical" href="https://adiox.com/trade/signals" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Signal Hub — Verified Trading Signals + Auto-Copier | Adiox" />
@@ -42,13 +42,14 @@
         "name": "Adiox Signal Hub",
         "serviceType": "Trading signal distribution and automated execution",
         "provider": { "@type": "Organization", "name": "Adiox", "url": "https://adiox.com/" },
-        "description": "Verified trading signal marketplace with on-platform timestamped track records and the Adiox Copier, which auto-executes subscribed signals on MetaTrader 5, TradeLocker, and Match-Trader accounts within user-defined risk limits."
+        "description": "Verified trading signal marketplace with on-platform timestamped track records and the Adiox Copier, which auto-executes subscribed signals and your own Telegram channels on MetaTrader 4 and MetaTrader 5 accounts within user-defined risk limits."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "How do I know a signal provider is legit?", "acceptedAnswer": { "@type": "Answer", "text": "On Adiox, you don't have to trust — you can check. Every signal a provider publishes is timestamped by the platform at the moment it's issued and tracked against real market prices afterward. Win rates, average return, and drawdown are computed by Adiox from that record. Edited screenshots, backdated calls, and deleted losers are impossible by design." } },
-          { "@type": "Question", "name": "How does a trade copier work?", "acceptedAnswer": { "@type": "Answer", "text": "A trade copier turns a signal into an actual order on your account automatically. With the Adiox Copier you connect your MT5, TradeLocker, or Match-Trader account, choose providers, and set your risk per trade. When a signal fires, the Copier sizes and places the order within your limits — including stop loss and take profit — in under a second, without you touching a terminal." } },
+          { "@type": "Question", "name": "How does a trade copier work?", "acceptedAnswer": { "@type": "Answer", "text": "A trade copier turns a signal into an actual order on your account automatically. With the Adiox Telegram Copier you connect your MT4 or MT5 account, choose Signal Hub providers or the Telegram channels you already follow, and set your risk per trade. When a signal arrives, the Copier reads the symbol, direction, entry, stop loss and up to five take-profits, sizes the order within your limits and places it, without you touching a terminal." } },
+          { "@type": "Question", "name": "Can the Copier read my own Telegram signal channels?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sign in with your own phone number and a one-time code, then search and add the channels you follow from your dashboard. The connection only reads the channels you choose, a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices. Supported signals in 15 languages are recognised, and reply instructions such as close half or move SL to breakeven are applied too." } },
           { "@type": "Question", "name": "Can I receive signals without auto-execution?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every subscription includes manual delivery — in the Adiox app, by Telegram, or over the API — with entry, stop, and target clearly stated. The Copier is optional; many subscribers start manual and enable auto-execution once they trust a provider's record." } },
           { "@type": "Question", "name": "How do signal providers earn on Adiox?", "acceptedAnswer": { "@type": "Answer", "text": "Providers set tiered subscription prices (for example: signals-only, signals + analysis, priority tier). Adiox handles billing and distribution and keeps a platform share; providers keep the majority. Because records are verified on-platform, honest providers convert followers dramatically better than screenshot marketing ever could." } }
         ]
@@ -84,7 +85,7 @@
           <div class="mega-col">
             <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
             <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
           </div>
           <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
         </div>
@@ -110,7 +111,7 @@
   <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
   <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
   <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
+  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
   <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
 </div>
 
@@ -189,16 +190,23 @@
 <!-- ═══ THE COPIER ═══ -->
 <section class="section" id="copier" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1));">
   <div class="container">
-    <p class="eyebrow accent center reveal">THE ADIOX COPIER</p>
-    <h2 class="center reveal">From signal to filled order — without touching a terminal</h2>
-    <p class="lead center reveal">The Copier auto-executes your subscribed signals on your own MT5, TradeLocker, or Match-Trader account, sized to your rules, in under a second.</p>
+    <p class="eyebrow accent center reveal">TELEGRAM COPIER</p>
+    <h2 class="center reveal">From signal to filled order, without touching a terminal</h2>
+    <p class="lead center reveal">The Telegram Copier auto-executes Signal Hub providers <em>and</em> the Telegram channels you already follow on your own MT4 or MT5 account, sized to your rules. Fully hosted, so there is nothing to install and no VPS to keep online.</p>
     <div class="eval-line cols3 reveal">
-      <div class="eval-step"><span class="eval-dot">1</span><h3>Connect your account</h3><p>MT5, TradeLocker, or Match-Trader — one secure connection, revocable anytime.</p></div>
-      <div class="eval-step"><span class="eval-dot">2</span><h3>Choose your providers</h3><p>Subscribe to any verified provider; enable the Copier per provider, not all-or-nothing.</p></div>
-      <div class="eval-step"><span class="eval-dot">3</span><h3>Set your risk</h3><p>Fixed lots or % risk per signal, max concurrent positions, and an equity floor that halts everything.</p></div>
+      <div class="eval-step"><span class="eval-dot">1</span><h3>Connect your accounts</h3><p>Any MT4 or MT5 broker, plus Telegram via your phone number and a one-time code. Revocable anytime.</p></div>
+      <div class="eval-step"><span class="eval-dot">2</span><h3>Choose your sources</h3><p>Enable the Copier per Signal Hub provider or per Telegram channel, not all-or-nothing.</p></div>
+      <div class="eval-step"><span class="eval-dot">3</span><h3>Set your risk</h3><p>Fixed lot, % risk, lot per balance or the signal's own lot, with pair filters, trading hours and daily loss caps.</p></div>
     </div>
-    <div class="center reveal" style="margin-top:34px;">
-      <a href="/signup" class="btn btn-primary btn-lg magnetic">Set Up the Copier</a>
+    <div class="kpis reveal" style="max-width:900px; margin-left:auto; margin-right:auto;">
+      <div class="kpi"><b>15</b><span>signal languages recognised</span></div>
+      <div class="kpi"><b>5</b><span>take-profit levels per signal</span></div>
+      <div class="kpi"><b>Auto</b><span>broker symbol mapping (XAUUSD.m, GOLD…)</span></div>
+      <div class="kpi"><b>Replies</b><span>close half, SL to breakeven, close all</span></div>
+    </div>
+    <div class="hero-actions reveal" style="justify-content:center; margin:34px 0 0;">
+      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start 3-day free trial</a>
+      <a href="/trade/copier#telegram" class="btn btn-ghost btn-lg">See a signal get parsed →</a>
     </div>
   </div>
 </section>
@@ -254,7 +262,11 @@
       </details>
       <details class="faq-item">
         <summary>How does a trade copier work?</summary>
-        <p>A trade copier turns a signal into an actual order on your account automatically. With the Adiox Copier you connect your MT5, TradeLocker, or Match-Trader account, choose providers, and set your risk per trade. When a signal fires, the Copier sizes and places the order within your limits — including stop loss and take profit — in under a second, without you touching a terminal.</p>
+        <p>A trade copier turns a signal into an actual order on your account automatically. With the Adiox Telegram Copier you connect your MT4 or MT5 account, choose Signal Hub providers or the Telegram channels you already follow, and set your risk per trade. When a signal arrives, the Copier reads the symbol, direction, entry, stop loss and up to five take-profits, sizes the order within your limits and places it, without you touching a terminal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can the Copier read my own Telegram signal channels?</summary>
+        <p>Yes. Sign in with your own phone number and a one-time code, then search and add the channels you follow from your dashboard. The connection only reads the channels you choose, a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices. Supported signals in 15 languages are recognised, and reply instructions such as close half or move SL to breakeven are applied too.</p>
       </details>
       <details class="faq-item">
         <summary>Can I receive signals without auto-execution?</summary>
@@ -277,7 +289,7 @@
       <a href="#providers" class="btn btn-primary btn-lg magnetic">See Verified Track Records</a>
       <a href="/signup" class="btn btn-ghost btn-lg">Start Selling Signals</a>
     </div>
-    <p class="micro">Timestamped on-platform · Copier optional · not investment advice</p>
+    <p class="micro">Timestamped on-platform · Telegram Copier optional · MT4 &amp; MT5 · not investment advice</p>
   </div>
 </section>
 
@@ -312,7 +324,7 @@
         </div>
         <div class="fcol">
           <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
+          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
         </div>
         <div class="fcol">
           <div class="fcol-head">Company</div>
@@ -329,7 +341,7 @@
         </form>
       </div>
       <div class="footer-meta">
-        <div class="footer-badges"><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
+        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
         <span class="footer-lang">EN 🌐</span>
       </div>
     </div>

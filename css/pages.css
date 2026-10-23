@@ -81,6 +81,32 @@ body { --accent: var(--blue); --accent-rgb: 59,130,246; }
 .feat-card p { font-size: 13.5px; color: var(--ink-dim); }
 .feat-card .go { font-family: var(--font-mono); font-size: 12px; color: var(--accent); margin-top: 4px; }
 
+/* ─── Numbered steps + shield cards (shared; compete.css refines them) ─── */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+.steps.cols4 { grid-template-columns: repeat(4, 1fr); }
+.step {
+  position: relative; padding: 30px 26px; border-radius: 20px;
+  background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px);
+}
+.step-num {
+  font-family: var(--font-mono); font-size: 44px; font-weight: 700; line-height: 1;
+  color: rgba(var(--accent-rgb), 0.4); margin-bottom: 14px;
+}
+.step h3 { font-size: 18px; }
+.step p { font-size: 14px; color: var(--ink-dim); margin-top: 6px; }
+
+.fair-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+.fair-card {
+  padding: 26px 24px; border-radius: 18px;
+  background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px);
+}
+.fair-card h3 { font-size: 16px; display: flex; align-items: center; gap: 10px; }
+.fair-card h3::before {
+  content: ""; width: 8px; height: 8px; border-radius: 2px; flex: none; transform: rotate(45deg);
+  background: var(--accent); box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.8);
+}
+.fair-card p { font-size: 13.5px; color: var(--ink-dim); margin-top: 8px; }
+
 /* ─── Connect strip ("how this pillar connects") ─── */
 .connect-strip {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px;
@@ -246,11 +272,12 @@ body { --accent: var(--blue); --accent-rgb: 59,130,246; }
 @media (max-width: 1024px) {
   .chapter-inner { grid-template-columns: 1fr; gap: 40px; }
   .chapter:nth-of-type(even) .chapter-copy { order: 0; }
-  .feat-grid, .feat-grid.cols4 { grid-template-columns: repeat(2, 1fr); }
+  .feat-grid, .feat-grid.cols4, .steps.cols4 { grid-template-columns: repeat(2, 1fr); }
   .dots-nav { display: none; }
 }
 @media (max-width: 720px) {
-  .feat-grid, .feat-grid.cols4, .chapter-cards, .phases, .related { grid-template-columns: 1fr; }
+  .feat-grid, .feat-grid.cols4, .chapter-cards, .phases, .related,
+  .steps, .steps.cols4, .fair-grid { grid-template-columns: 1fr; }
   .page-hero { min-height: auto; padding: 64px 0 76px; }
   .chapter { padding: 72px 0; }
   .connect-strip { flex-direction: column; }
