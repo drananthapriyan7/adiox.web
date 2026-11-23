@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prop-Firm Challenges — Multi-Phase Evaluation | Adiox</title>
+  <meta name="description" content="Buy a challenge package, pass each phase's profit target and minimum trading days, and move to a funded account with weekly or monthly profit-share payouts. Later phases are free." />
+  <link rel="canonical" href="https://adiox.io/challenges" />
+  <meta name="theme-color" content="#070912" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Adiox" />
+  <meta property="og:title" content="Prop-Firm Challenges — Multi-Phase Evaluation | Adiox" />
+  <meta property="og:description" content="Buy a challenge package, pass each phase's profit target and minimum trading days, and move to a funded account with weekly or monthly profit-share payouts. Later phases are free." />
+  <meta property="og:url" content="https://adiox.io/challenges" />
+  <meta property="og:image" content="https://adiox.io/images/adiox-logo.png" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://adiox.io/#org","name":"Adiox","url":"https://adiox.io/","logo":"https://adiox.io/images/adiox-logo.png"},{"@type":"WebPage","url":"https://adiox.io/challenges","name":"Prop-Firm Challenges — Multi-Phase Evaluation | Adiox","description":"Buy a challenge package, pass each phase's profit target and minimum trading days, and move to a funded account with weekly or monthly profit-share payouts. Later phases are free.","isPartOf":{"@type":"WebSite","name":"Adiox","url":"https://adiox.io/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adiox.io/"},{"@type":"ListItem","position":2,"name":"Challenges","item":"https://adiox.io/challenges"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I pay again for Phase 2?","acceptedAnswer":{"@type":"Answer","text":"No. When you pass a phase your trades are closed and the next phase account is created automatically for free, using the same package."}},{"@type":"Question","name":"When do I pass a phase?","acceptedAnswer":{"@type":"Answer","text":"When both conditions are met: your equity reaches the profit target and you have traded the minimum number of days. A day counts when your equity changed compared with the previous day."}},{"@type":"Question","name":"How is the daily loss measured?","acceptedAnswer":{"@type":"Answer","text":"From the day's opening balance, recorded at midnight UTC. With a 5% limit on a $10,000 opening balance, equity must stay above $9,500 that day. Profit made earlier in the same day gives you extra room."}},{"@type":"Question","name":"What happens if I break a rule?","acceptedAnswer":{"@type":"Answer","text":"The account is eliminated: open trades are closed and the account is locked. There is no refund of the challenge fee."}},{"@type":"Question","name":"Can I stop trading for a while?","acceptedAnswer":{"@type":"Answer","text":"Up to a point. 15 idle days in a row eliminates the account; you'll receive warnings after 7, 10 and 14 idle days."}},{"@type":"Question","name":"What is the payout cycle?","acceptedAnswer":{"@type":"Answer","text":"You choose weekly (7 days) or monthly (30 days) when you buy the challenge. Each cycle has its own profit-share percentage, shown on the challenge before you pay."}}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" /></a>
+    <nav class="main-nav" aria-label="Main">
+      <div class="nav-drop">
+        <button class="nav-link is-active" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="drop-panel" id="products-menu">
+          <a class="drop-item" href="/challenges"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span><b>Prop-Firm Challenges</b><span>Multi-phase evaluation, later phases free</span></span></a>
+          <a class="drop-item" href="/challenges/instant-funded"><span class="ico c-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span><b>Instant Funded</b><span>One stage, no profit target, 2% trade limit</span></span></a>
+          <a class="drop-item" href="/challenges/funded-accounts"><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><span><b>Funded Accounts</b><span>Weekly or monthly profit-share payouts</span></span></a>
+          <a class="drop-item" href="/tournaments"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><span><b>Tournaments</b><span>Free and paid contests with ranked prizes</span></span></a>
+          <a class="drop-item" href="/games"><span class="ico c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M4 4v4M4 4h4M20 4l-8 8M20 4v4M20 4h-4"/><path d="M8 16l-4 4M16 16l4 4M9 15l-2 2M15 15l2 2"/></svg></span><span><b>Trading Duels & Battles</b><span>1-vs-1 and multiplayer prize pots</span></span></a>
+          <a class="drop-item" href="/games/single-player"><span class="ico c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M17 3l2 2 3-3" /></svg></span><span><b>Single Player Games</b><span>Solo trading-discipline missions</span></span></a>
+          <a class="drop-item" href="/training-room"><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span><span><b>Training Room</b><span>Practise a challenge from $10</span></span></a>
+          <a class="drop-item" href="/trade-copier"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><span><b>Trade Copier</b><span>Top masters and signal providers</span></span></a>
+          <div class="drop-foot"><a href="/leaderboards">Leaderboards →</a><a href="/#compare">Compare all products →</a></div>
+        </div>
+      </div>
+      <a class="nav-link" href="/how-it-works">How it works</a>
+      <a class="nav-link" href="/pricing">Pricing</a>
+      <a class="nav-link" href="/rewards">Rewards</a>
+      <a class="nav-link" href="/faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost btn-sm" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary btn-sm" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <h4>Products</h4>
+  <a class="m-link" href="/challenges">Prop-Firm Challenges<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/instant-funded">Instant Funded<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/funded-accounts">Funded Accounts<span aria-hidden="true">→</span></a><a class="m-link" href="/tournaments">Tournaments<span aria-hidden="true">→</span></a><a class="m-link" href="/games">Trading Duels & Battles<span aria-hidden="true">→</span></a><a class="m-link" href="/games/single-player">Single Player Games<span aria-hidden="true">→</span></a><a class="m-link" href="/training-room">Training Room<span aria-hidden="true">→</span></a><a class="m-link" href="/trade-copier">Trade Copier<span aria-hidden="true">→</span></a><a class="m-link" href="/leaderboards">Leaderboards<span aria-hidden="true">→</span></a>
+  <h4>Platform</h4>
+  <a class="m-link" href="/how-it-works">How it works<span aria-hidden="true">→</span></a><a class="m-link" href="/wallet">Wallet &amp; payments<span aria-hidden="true">→</span></a><a class="m-link" href="/pricing">Pricing<span aria-hidden="true">→</span></a><a class="m-link" href="/rewards">Rewards &amp; referrals<span aria-hidden="true">→</span></a><a class="m-link" href="/faq">FAQ<span aria-hidden="true">→</span></a><a class="m-link" href="/contact">Contact<span aria-hidden="true">→</span></a>
+  <div class="actions"><a class="btn btn-secondary" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a><a class="btn btn-primary" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a></div>
+</nav>
+<main id="main">
+<section class="page-hero">
+  <div class="container hero-grid">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Challenges</span></nav>
+      <p class="kicker">Prop-firm challenge</p>
+      <h1>Pass the phases. <span class="grad">Become a funded trader.</span></h1>
+      <p class="lead">Pick a challenge and an account size, pay once, and trade Phase 1. Hit the profit target and the minimum trading days and the next phase is created for you — free. After the last phase you move to a funded account that pays you a share of the profit.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="https://portal.adiox.io/Challenge/Index">Browse challenges <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="/training-room">Practise first</a>
+      </div>
+      <div class="hero-facts"><span>Later phases free</span><span>Weekly or monthly payouts</span><span>Pay Later option</span></div>
+    </div>
+    <div class="reveal">
+      <div class="panel">
+        <div class="panel-head"><div><b>Choose your package</b><span>Example account sizes — prices are shown in the portal</span></div><span class="badge badge-violet">Step 1 of 2</span></div>
+        <div class="rows">
+          <div class="row-item"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><b>$5,000 account</b><small>First-Buyer Offer for new buyers</small></div><span class="num">$4.95</span></div>
+          <div class="row-item"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><b>$10,000 account</b><small>Phase 1 → Phase 2 → Funded</small></div><span class="badge">Package</span></div>
+          <div class="row-item"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><b>$25,000 account</b><small>Phase 1 → Phase 2 → Funded</small></div><span class="badge">Package</span></div>
+        </div>
+        <div class="panel-foot"><span>Payout cycle chosen at purchase</span><span class="badge">Weekly · Monthly</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal"><p class="kicker">How it works</p><h2>From purchase to funded</h2></div>
+    <ol class="steps row reveal" style="--n:3">
+      <li class="step"><h4>Pick a challenge and size</h4><p>Each challenge has packages — for example $10k or $25k — with their own price. Choose a weekly or monthly payout cycle.</p></li>
+      <li class="step"><h4>Pay once at checkout</h4><p>Coupons, bonus credit and wallet cash can all be used. Your account is created on the server you choose.</p></li>
+      <li class="step"><h4>Trade Phase 1</h4><p>Reach the profit target and trade the minimum number of days. Both are needed to pass.</p></li>
+      <li class="step"><h4>Next phase, free</h4><p>Your trades are closed and the next phase account is created automatically with the same package.</p></li>
+      <li class="step"><h4>Funded request</h4><p>After the last evaluation phase a funded-account request is sent to the Adiox team for approval.</p></li>
+      <li class="step"><h4>Trade funded, get paid</h4><p>Keep your login, trade the same loss rules and request a payout each cycle. <a class="link" href="/challenges/funded-accounts">Payouts →</a></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><p class="kicker">Rules</p><h2>The rules of every phase</h2><p class="lead">Each phase sets its own numbers. Break any loss rule and the account is eliminated — trades are closed and the account is locked, with no refund.</p></div>
+    <div class="grid g3">
+      <div class="card reveal"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><h3>Profit target</h3><p>For example 8%. Equity must reach the starting balance plus that percentage.</p></div>
+      <div class="card reveal"><span class="ico c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Minimum trading days</h3><p>A day counts as traded when your equity changed compared with the day before.</p></div>
+      <div class="card reveal"><span class="ico c-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3L12 4z"/><path d="M12 10v4M12 17h.01"/></svg></span><h3>Overall loss limit</h3><p>For example 10%. Equity must never fall to the starting balance minus that percentage.</p></div>
+      <div class="card reveal"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3L12 4z"/><path d="M12 10v4M12 17h.01"/></svg></span><h3>Daily loss limit</h3><p>For example 5% of the day's opening balance, recalculated each day. Profit made earlier that day gives extra room.</p></div>
+      <div class="card reveal"><span class="ico c-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2zM10 21h4"/></svg></span><h3>Inactivity</h3><p>15 idle days in a row eliminates the account. Warnings are sent at 7, 10 and 14 days.</p></div>
+      <div class="card reveal"><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><h3>Weekend holding</h3><p>Shown on each challenge page. Positions may currently be held over the weekend.</p></div>
+    </div>
+    <div class="note note-violet reveal" style="margin-top:22px;"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>How the checks run.</b> Every 2 seconds the platform reads your equity and balance, tracks your worst single-trade loss and lowest equity, and checks the rules in this order: overall loss, daily loss, then profit target. At midnight UTC it records each account's opening balance and counts trading and idle days.</div></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="calculator">
+  <div class="container">
+    <div class="section-head reveal"><p class="kicker">Calculator</p><h2>Work out your rule levels</h2><p class="lead">Enter an account size and the phase's percentages to see the exact equity levels that pass or end the phase.</p></div>
+    <div class="calc reveal">
+      <form class="calc-form" data-calc="rules" novalidate>
+        <div class="field"><label for="r-balance">Starting balance</label><div class="input-affix" data-prefix="$"><input class="input num" id="r-balance" name="balance" type="number" min="0" step="1000" value="10000" inputmode="decimal" /></div></div>
+        <div class="field-row">
+          <div class="field"><label for="r-target">Profit target</label><div class="input-affix suffix" data-prefix="%"><input class="input num" id="r-target" name="target" type="number" min="0" max="100" step="0.5" value="8" /></div><span class="hint">Use 0 for no target.</span></div>
+          <div class="field"><label for="r-overall">Overall loss limit</label><div class="input-affix suffix" data-prefix="%"><input class="input num" id="r-overall" name="overall" type="number" min="0" max="100" step="0.5" value="10" /></div></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="r-daily">Daily loss limit</label><div class="input-affix suffix" data-prefix="%"><input class="input num" id="r-daily" name="daily" type="number" min="0" max="100" step="0.5" value="5" /></div></div>
+          <div class="field"><label for="r-daystart">Today's opening balance</label><div class="input-affix" data-prefix="$"><input class="input num" id="r-daystart" name="daystart" type="number" min="0" step="100" placeholder="Same as starting" /></div><span class="hint">Optional — daily loss is measured from it.</span></div>
+        </div>
+      </form>
+      <div class="calc-out" aria-live="polite">
+        <h3>Your levels</h3>
+        <div class="out-line"><span>Pass at equity</span><b data-out="target">—</b></div>
+        <div class="out-line"><span>Overall loss floor</span><b data-out="overall">—</b></div>
+        <div class="out-line"><span>Today's daily loss floor</span><b data-out="daily">—</b></div>
+        <div class="out-line"><span>Instant Funded single-trade limit (2%)</span><b data-out="single">—</b></div>
+        <p class="out-note" data-out="summary"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><p class="kicker">Variants</p><h2>Three more ways in</h2><p class="lead">The same challenge engine powers a few special offers.</p></div>
+    <div class="grid g3">
+      <div class="card reveal"><span class="badge badge-violet">Pay Later</span><h3>Small fee now, activation fee later</h3><p>Pay a small upfront fee to start. An activation fee is shown as payable after you pass. Coupons reduce the activation fee too.</p></div>
+      <div class="card reveal"><span class="badge badge-green">First-Buyer Offer</span><h3>A $5,000 account for $4.95</h3><p>A one-time offer for new buyers. It is protected by email, IP address and device checks; a second account on the same IP from another device is allowed with a warning.</p></div>
+      <div class="card reveal"><span class="badge badge-amber">Prize</span><h3>Won in a tournament</h3><p>Tournament prize tables can award a free challenge account to the winning ranks. <a class="link" href="/tournaments">Tournaments →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <div class="reveal">
+      <p class="kicker">Your account</p>
+      <h2>Everything for each account on one page</h2>
+      <p class="lead">Every challenge account has a live page in the portal that refreshes by itself and reloads when the status changes.</p>
+      <ul class="checks">
+        <li><b>Account access</b> — login, server, leverage and your trading password, stored encrypted. Reveal or reset it any time.</li>
+        <li><b>Progress meters</b> — profit target, overall loss and daily loss with On track, Reached and Not started badges.</li>
+        <li><b>Start Trading</b> — opens the Adiox Trading Platform web terminal.</li>
+        <li><b>My Challenges, Payout History and Compare</b> — your accounts, your payouts, and how Adiox compares with other prop firms.</li>
+      </ul>
+      <div class="actions" style="margin-top:26px;"><a class="btn btn-secondary" href="https://portal.adiox.io/Challenge/MyChallenges">My challenges</a><a class="btn btn-ghost" href="https://portal.adiox.io/Challenge/Compare">Compare prop firms ↗</a></div>
+    </div>
+    <div class="reveal">
+      <div class="panel">
+        <div class="panel-head"><div><b>Account access</b><span>Phase 2 · $25,000 · Adiox-Server</span></div><span class="badge badge-green badge-dot">Active</span></div>
+        <div class="out-line"><span>Login</span><b>4100877</b></div>
+        <div class="out-line"><span>Password</span><b>••••••••  <span class="faint">Reveal</span></b></div>
+        <div class="out-line"><span>Leverage</span><b>1:100</b></div>
+        <div class="out-line"><span>Server</span><b>Adiox-Server</b></div>
+        <div class="meter" style="margin-top:16px;"><div class="meter-top"><span>Profit target · 5%</span><span class="badge badge-green">Reached</span></div><div class="bar green"><i style="--w:100%"></i></div></div>
+        <div class="meter"><div class="meter-top"><span>Minimum trading days</span><span class="num">4 / 4</span></div><div class="bar"><i style="--w:100%"></i></div></div>
+      </div>
+      <p class="panel-caption">Illustration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:860px;">
+    <div class="section-head center reveal"><p class="kicker">FAQ</p><h2>Challenge questions</h2></div>
+    <div class="faq reveal">
+      <details class="faq-item"><summary>Do I pay again for Phase 2?</summary><div class="faq-body"><p>No. When you pass a phase your trades are closed and the next phase account is created automatically for free, using the same package.</p></div></details>
+      <details class="faq-item"><summary>When do I pass a phase?</summary><div class="faq-body"><p>When both conditions are met: your equity reaches the profit target and you have traded the minimum number of days. A day counts when your equity changed compared with the previous day.</p></div></details>
+      <details class="faq-item"><summary>How is the daily loss measured?</summary><div class="faq-body"><p>From the day's opening balance, recorded at midnight UTC. With a 5% limit on a $10,000 opening balance, equity must stay above $9,500 that day. Profit made earlier in the same day gives you extra room.</p></div></details>
+      <details class="faq-item"><summary>What happens if I break a rule?</summary><div class="faq-body"><p>The account is eliminated: open trades are closed and the account is locked. There is no refund of the challenge fee.</p></div></details>
+      <details class="faq-item"><summary>Can I stop trading for a while?</summary><div class="faq-body"><p>Up to a point. 15 idle days in a row eliminates the account; you'll receive warnings after 7, 10 and 14 idle days.</p></div></details>
+      <details class="faq-item"><summary>What is the payout cycle?</summary><div class="faq-body"><p>You choose weekly (7 days) or monthly (30 days) when you buy the challenge. Each cycle has its own profit-share percentage, shown on the challenge before you pay.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container"><div class="cta-band reveal"><div><h2>Ready for Phase 1?</h2><p>Browse the live challenges, sizes and prices in the portal — or rehearse the rules in the Training Room first.</p></div><div class="actions"><a class="btn btn-primary btn-lg" href="https://portal.adiox.io/Challenge/Index">Browse challenges</a></div></div></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" loading="lazy" /></a>
+        <p>Prop-firm challenges, tournaments, trading games and a practice simulator — one account, one wallet, live accounts on the Adiox Trading Platform.</p>
+      </div>
+      <nav class="footer-col" aria-label="Products">
+        <h4>Products</h4>
+        <a href="/challenges">Challenges</a><a href="/challenges/instant-funded">Instant Funded</a><a href="/challenges/funded-accounts">Funded Accounts</a><a href="/tournaments">Tournaments</a><a href="/games">Duels &amp; Battles</a><a href="/games/single-player">Single Player Games</a>
+      </nav>
+      <nav class="footer-col" aria-label="More">
+        <h4>More</h4>
+        <a href="/training-room">Training Room</a><a href="/leaderboards">Leaderboards</a><a href="/trade-copier">Trade Copier</a><a href="/ai-journal">AI Journal</a><a href="/rewards">Rewards &amp; Referrals</a>
+      </nav>
+      <nav class="footer-col" aria-label="Platform">
+        <h4>Platform</h4>
+        <a href="/how-it-works">How it works</a><a href="/wallet">Wallet &amp; payments</a><a href="/pricing">Pricing</a><a href="https://trade.adiox.io" rel="noopener">Trading platform ↗</a><a href="https://portal.adiox.io" rel="noopener">Client portal ↗</a>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="/about">About</a><a href="/faq">FAQ</a><a href="/contact">Contact</a><a href="/legal/terms">Terms</a><a href="/legal/risk-disclosure">Risk Disclosure</a>
+      </nav>
+    </div>
+    <div class="footer-risk">
+      <p><strong>Risk disclosure.</strong> Every Adiox product gives you a trading account on the Adiox Trading Platform funded with virtual money. Entry fees buy access to a skill-based challenge, competition, game or simulator; they are not deposits. Payouts, prizes and rewards are paid only when the published rules are met, and breaking a rule ends the account without a refund. Trading leveraged products carries a high level of risk. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>Paid competitions may not be available in every country — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adiox. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/terms">Terms</a><a href="/legal/privacy">Privacy</a><a href="/legal/cookies">Cookies</a><a href="/legal/risk-disclosure">Risk</a><a href="/legal/regional-restrictions">Regional</a></nav>
+    </div>
+  </div>
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

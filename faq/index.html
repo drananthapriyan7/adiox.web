@@ -2,345 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/images/favicon.ico" sizes="any" />
-  <title>Help Center — Adiox FAQ</title>
-  <meta name="description" content="Searchable answers about Adiox: accounts and billing, tournaments and the Arena, PropSim and training tools, challenges and payouts, copy trading and signals." />
-  <link rel="canonical" href="https://adiox.com/faq" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — Adiox Help Center</title>
+  <meta name="description" content="Answers about Adiox accounts, the wallet, deposits and withdrawals, KYC, challenges, funded accounts, tournaments, trading games, the Training Room and rewards." />
+  <link rel="canonical" href="https://adiox.io/faq" />
+  <meta name="theme-color" content="#070912" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Help Center — Adiox FAQ" />
-  <meta property="og:description" content="Searchable answers about accounts, tournaments, training tools, challenges, and copy trading." />
-  <meta property="og:url" content="https://adiox.com/faq" />
-
+  <meta property="og:site_name" content="Adiox" />
+  <meta property="og:title" content="FAQ — Adiox Help Center" />
+  <meta property="og:description" content="Answers about Adiox accounts, the wallet, deposits and withdrawals, KYC, challenges, funded accounts, tournaments, trading games, the Training Room and rewards." />
+  <meta property="og:url" content="https://adiox.io/faq" />
+  <meta property="og:image" content="https://adiox.io/images/adiox-logo.png" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/home.css" />
-  <link rel="stylesheet" href="/css/pages.css" />
-  <link rel="stylesheet" href="/css/content.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Help Center", "item": "https://adiox.com/faq" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Do I need a card to create an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. The Explorer tier is free forever and requires no payment method. You add a card only when you buy a paid event (simulator run, paid tournament, challenge) or upgrade to Operator or Professional." } },
-          { "@type": "Question", "name": "How do I delete my account and data?", "acceptedAnswer": { "@type": "Answer", "text": "Settings → Account → Delete. Deletion removes your journal, coach training data, and personal records permanently within 30 days; anonymized aggregate statistics are unaffected. Export your data first if you want a copy — the export tool is on the same page." } },
-          { "@type": "Question", "name": "When do free tournaments run?", "acceptedAnswer": { "@type": "Answer", "text": "Daily free tournaments start at 18:00 UTC and run for four hours. Registration is one click and closes at start time. Weekly championships run Friday to Sunday. The full schedule with countdowns is on the Tournaments page." } },
-          { "@type": "Question", "name": "What is the Adiox Copier?", "acceptedAnswer": { "@type": "Answer", "text": "The trade-copying engine inside the Trade stage. Social Copier follows ranked master traders, Private Copier copies trades from your own master account to your follower accounts, and Telegram Copier turns signals from the Telegram channels you follow into trades on your MT4 or MT5 account." } },
-          { "@type": "Question", "name": "Which brokers and platforms does the Copier support?", "acceptedAnswer": { "@type": "Answer", "text": "Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5, for both master and follower accounts. You pick your broker server from a searchable list, exactly as it appears in your MetaTrader login window." } },
-          { "@type": "Question", "name": "Do I need to install anything or run a VPS?", "acceptedAnswer": { "@type": "Answer", "text": "Not for Telegram Copier: copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which." } },
-          { "@type": "Question", "name": "How are copied lot sizes calculated?", "acceptedAnswer": { "@type": "Answer", "text": "You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk." } },
-          { "@type": "Question", "name": "What if my broker uses different symbol names?", "acceptedAnswer": { "@type": "Answer", "text": "Broker suffixes and prefixes such as XAUUSD.m or XAUUSD# are resolved automatically, and common aliases like GOLD, US30 and NAS100 are built in. Indices and unusual instruments can also be mapped by hand." } },
-          { "@type": "Question", "name": "Will copied trades fill at exactly the same price?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. A copied order fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price." } },
-          { "@type": "Question", "name": "What happens if a copy instruction is missed?", "acceptedAnswer": { "@type": "Answer", "text": "The copier regularly compares the positions your account actually holds against what it should hold, and corrects any difference. It catches the rare cases where an instruction does not land, for example if your account was offline when a master closed a trade." } },
-          { "@type": "Question", "name": "Are my broker and Telegram credentials safe?", "acceptedAnswer": { "@type": "Answer", "text": "Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. Masters connect with a read-only investor password. Telegram connects with your phone number and a one-time code; a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices." } },
-          { "@type": "Question", "name": "Will a Copier plan renew or charge me automatically?", "acceptedAnswer": { "@type": "Answer", "text": "No. Telegram Copier plans include a 3-day free trial and are paid at checkout by card or crypto. Nothing renews by itself: we remind you before your period ends, and you renew only if you want to." } },
-          { "@type": "Question", "name": "How and when do masters get paid?", "acceptedAnswer": { "@type": "Answer", "text": "A master earns a share of each subscription fee, plus a performance fee charged only on new profit above the copier's high-water mark. Earnings collect in your Adiox wallet and can be withdrawn in USDT (ERC-20 or TRC-20), USDC or through Rise once your identity is verified." } },
-          { "@type": "Question", "name": "How fast are challenge payouts processed?", "acceptedAnswer": { "@type": "Answer", "text": "Within 48 hours of verification. Request a payout from your funded dashboard; verification re-checks your trades against the rules, then payment is sent. Your first payout on a 2-step account also refunds the original challenge fee." } }
-        ]
-      }
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://adiox.io/#org","name":"Adiox","url":"https://adiox.io/","logo":"https://adiox.io/images/adiox-logo.png"},{"@type":"WebPage","url":"https://adiox.io/faq","name":"FAQ — Adiox Help Center","description":"Answers about Adiox accounts, the wallet, deposits and withdrawals, KYC, challenges, funded accounts, tournaments, trading games, the Training Room and rewards.","isPartOf":{"@type":"WebSite","name":"Adiox","url":"https://adiox.io/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adiox.io/"},{"@type":"ListItem","position":2,"name":"FAQ","item":"https://adiox.io/faq"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I create an account?","acceptedAnswer":{"@type":"Answer","text":"Register on the portal and confirm your email address — sign-in is blocked until the email is confirmed. Then complete your profile to unlock the $30 welcome credit."}},{"@type":"Question","name":"What can I set on my profile?","acceptedAnswer":{"@type":"Answer","text":"Your nickname, an avatar (choose a built-in one or upload your own), country and state, language and WhatsApp number. Your country and dialling code are suggested automatically. You can change your password from the profile page too."}},{"@type":"Question","name":"Why was I signed out?","acceptedAnswer":{"@type":"Answer","text":"Sessions end after 30 minutes without activity. Pages that refresh live, such as account pages, keep your session alive while they're open."}},{"@type":"Question","name":"How can I deposit?","acceptedAnswer":{"@type":"Answer","text":"By card, by payment link or with crypto. Your wallet is credited when the payment provider confirms the payment, and you'll get an email and a notification."}},{"@type":"Question","name":"How do I withdraw?","acceptedAnswer":{"@type":"Answer","text":"Complete KYC, then request at least $10 to crypto or a bank account. The amount is reserved from your balance immediately; you can edit or cancel while it's pending, and the Adiox team approves and sends the payout."}},{"@type":"Question","name":"What is bonus credit?","acceptedAnswer":{"@type":"Answer","text":"Credit you earn from achievements, the welcome bonus, level rewards, points exchange and some prizes. It can pay for part of a purchase — at most 50% — and expires after 30 days. It can't be withdrawn."}},{"@type":"Question","name":"In what order is a purchase paid?","acceptedAnswer":{"@type":"Answer","text":"Coupon first, then bonus credit up to the cap, then wallet cash, then the payment gateway for anything left (minimum $1). Try the checkout calculator."}},{"@type":"Question","name":"What if my account isn't created after I pay?","acceptedAnswer":{"@type":"Answer","text":"The purchase is refunded automatically."}},{"@type":"Question","name":"When do I need KYC?","acceptedAnswer":{"@type":"Answer","text":"Only for withdrawals. You can register, deposit and use every product without it."}},{"@type":"Question","name":"How does verification work?","acceptedAnswer":{"@type":"Answer","text":"Start a verification session from the KYC page in the portal. The result arrives automatically, and you can refresh the status from the same page."}},{"@type":"Question","name":"How do I pass a challenge phase?","acceptedAnswer":{"@type":"Answer","text":"Reach the phase's profit target and trade the minimum number of days, without breaking the overall or daily loss limit. The next phase is then created for free."}},{"@type":"Question","name":"How long can I be inactive?","acceptedAnswer":{"@type":"Answer","text":"15 idle days in a row eliminates a challenge account. You'll be warned after 7, 10 and 14 idle days."}},{"@type":"Question","name":"How do funded payouts work?","acceptedAnswer":{"@type":"Answer","text":"When you're in profit and your weekly or monthly cycle has passed, click Request Payout. Trading pauses during review; on approval your wallet receives profit × your payout share and the account resets for the next cycle."}},{"@type":"Question","name":"What is the First-Buyer Offer?","acceptedAnswer":{"@type":"Answer","text":"A one-time $5,000 challenge account for $4.95 for new buyers, protected by email, IP and device checks."}},{"@type":"Question","name":"What is Pay Later?","acceptedAnswer":{"@type":"Answer","text":"A challenge you start with a small upfront fee. An activation fee is shown as payable after you pass, and coupons reduce it too."}},{"@type":"Question","name":"How are tournament players ranked?","acceptedAnswer":{"@type":"Answer","text":"By final equity, highest first, among players who qualify. Players with too few trades, or who missed the target profit when one is set, don't qualify."}},{"@type":"Question","name":"Can I rejoin after being eliminated?","acceptedAnswer":{"@type":"Answer","text":"If the tournament allows it: buy a new account for the rejoin fee, up to the maximum number of rejoins, after the cooldown period."}},{"@type":"Question","name":"How are tied players paid?","acceptedAnswer":{"@type":"Answer","text":"Tied players share one rank. Cash or credit prizes for the ranks they cover are pooled and split; a challenge prize goes to each tied player."}},{"@type":"Question","name":"What's the difference between a Duel and a Battle?","acceptedAnswer":{"@type":"Answer","text":"A Duel is exactly two players and can end in a draw. A Battle is three or more players, ranks everyone, and pays only first place."}},{"@type":"Question","name":"What if my lobby never fills?","acceptedAnswer":{"@type":"Answer","text":"A lobby waiting more than 24 hours expires and every player is refunded. The creator can also cancel before the game starts."}},{"@type":"Question","name":"What do single player games pay?","acceptedAnswer":{"@type":"Answer","text":"Bonus credit when you pass the mission. If you fail, there's no reward."}},{"@type":"Question","name":"How much does a simulator cost?","acceptedAnswer":{"@type":"Answer","text":"Custom simulators cost $10 for up to 30 days, $15 up to 40, $20 up to 50 and $25 beyond that. Preset simulators show their price in the portal."}},{"@type":"Question","name":"Can I cancel a simulator?","acceptedAnswer":{"@type":"Answer","text":"Yes, within 5 minutes of starting. The fee is refunded the same way you paid."}},{"@type":"Question","name":"How do points and levels work?","acceptedAnswer":{"@type":"Answer","text":"Claimed achievements give XP. Exchange 100 points for $10 of credit; your level uses lifetime XP, so exchanging never lowers it."}},{"@type":"Question","name":"How much referral commission do I earn?","acceptedAnswer":{"@type":"Answer","text":"10% of the cash paid by each of your first 20 referred users and 15% from the 21st on. It's paid to your wallet after a short settling delay and reversed if the purchase is refunded."}}]}]}</script>
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" /></a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <div class="nav-item has-mega">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mega" role="menu">
-          <div class="mega-col">
-            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
-            <p class="mega-tag">Build knowledge</p>
-            <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
-            <p class="mega-tag">Build skill safely</p>
-            <a href="/train/simulator">PropSim Simulator</a><a href="/train/backtesting">Backtesting Engine</a><a href="/train/journal">Trading Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
-            <p class="mega-tag">Prove skill</p>
-            <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
-            <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a><a href="/trade/copier" class="is-new">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
-          </div>
-          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" /></a>
+    <nav class="main-nav" aria-label="Main">
+      <div class="nav-drop">
+        <button class="nav-link" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="drop-panel" id="products-menu">
+          <a class="drop-item" href="/challenges"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span><b>Prop-Firm Challenges</b><span>Multi-phase evaluation, later phases free</span></span></a>
+          <a class="drop-item" href="/challenges/instant-funded"><span class="ico c-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span><b>Instant Funded</b><span>One stage, no profit target, 2% trade limit</span></span></a>
+          <a class="drop-item" href="/challenges/funded-accounts"><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><span><b>Funded Accounts</b><span>Weekly or monthly profit-share payouts</span></span></a>
+          <a class="drop-item" href="/tournaments"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><span><b>Tournaments</b><span>Free and paid contests with ranked prizes</span></span></a>
+          <a class="drop-item" href="/games"><span class="ico c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M4 4v4M4 4h4M20 4l-8 8M20 4v4M20 4h-4"/><path d="M8 16l-4 4M16 16l4 4M9 15l-2 2M15 15l2 2"/></svg></span><span><b>Trading Duels & Battles</b><span>1-vs-1 and multiplayer prize pots</span></span></a>
+          <a class="drop-item" href="/games/single-player"><span class="ico c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M17 3l2 2 3-3" /></svg></span><span><b>Single Player Games</b><span>Solo trading-discipline missions</span></span></a>
+          <a class="drop-item" href="/training-room"><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span><span><b>Training Room</b><span>Practise a challenge from $10</span></span></a>
+          <a class="drop-item" href="/trade-copier"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><span><b>Trade Copier</b><span>Top masters and signal providers</span></span></a>
+          <div class="drop-foot"><a href="/leaderboards">Leaderboards →</a><a href="/#compare">Compare all products →</a></div>
         </div>
       </div>
-      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/how-it-works">How it works</a>
       <a class="nav-link" href="/pricing">Pricing</a>
-      <div class="nav-item has-mega">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mega mega-sm" role="menu">
-          <div class="mega-col"><a href="/blog">Blog</a><a href="/glossary">Glossary</a><a href="/faq">Help Center</a><a href="/about">About &amp; Roadmap</a><a href="/partners">Partners</a></div>
-        </div>
-      </div>
+      <a class="nav-link" href="/rewards">Rewards</a>
+      <a class="nav-link is-active" href="/faq" aria-current="page">FAQ</a>
     </nav>
-    <div class="nav-cta">
-      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
-      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    <div class="header-cta">
+      <a class="btn btn-ghost btn-sm" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary btn-sm" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a>
     </div>
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
   </div>
 </header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
-  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
-  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
-  <div class="mm-actions"><a href="/login" class="btn btn-ghost">Log in</a><a href="/signup" class="btn btn-primary">Start Free</a></div>
-</div>
-
-<main>
-
-<section class="section" style="background:var(--bg-1); padding-top:70px;">
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <h4>Products</h4>
+  <a class="m-link" href="/challenges">Prop-Firm Challenges<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/instant-funded">Instant Funded<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/funded-accounts">Funded Accounts<span aria-hidden="true">→</span></a><a class="m-link" href="/tournaments">Tournaments<span aria-hidden="true">→</span></a><a class="m-link" href="/games">Trading Duels & Battles<span aria-hidden="true">→</span></a><a class="m-link" href="/games/single-player">Single Player Games<span aria-hidden="true">→</span></a><a class="m-link" href="/training-room">Training Room<span aria-hidden="true">→</span></a><a class="m-link" href="/trade-copier">Trade Copier<span aria-hidden="true">→</span></a><a class="m-link" href="/leaderboards">Leaderboards<span aria-hidden="true">→</span></a>
+  <h4>Platform</h4>
+  <a class="m-link" href="/how-it-works">How it works<span aria-hidden="true">→</span></a><a class="m-link" href="/wallet">Wallet &amp; payments<span aria-hidden="true">→</span></a><a class="m-link" href="/pricing">Pricing<span aria-hidden="true">→</span></a><a class="m-link" href="/rewards">Rewards &amp; referrals<span aria-hidden="true">→</span></a><a class="m-link" href="/faq">FAQ<span aria-hidden="true">→</span></a><a class="m-link" href="/contact">Contact<span aria-hidden="true">→</span></a>
+  <div class="actions"><a class="btn btn-secondary" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a><a class="btn btn-primary" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a></div>
+</nav>
+<main id="main">
+<section class="page-hero" style="padding-bottom:36px;">
   <div class="container">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Help Center</span></nav>
-    <h1 class="page-h1 center" style="margin-left:auto; margin-right:auto;">How can we <span class="grad-text">help?</span></h1>
-    <p class="lead center">Search the help center, or browse by product. Can't find it? <a href="/contact" style="text-decoration:underline;">Contact us</a> — we reply within 24 hours.</p>
-
-    <div class="search-bar">
-      <span aria-hidden="true">🔎</span>
-      <input type="search" id="contentSearch" placeholder="Search help — try 'payout', 'copier' or 'refund'…" aria-label="Search help center" />
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">FAQ</span></nav>
+    <p class="kicker">Help center</p>
+    <h1>Questions, <span class="grad">answered.</span></h1>
+    <p class="lead">Search below, or browse by topic. Still stuck? <a class="link" href="/contact">Contact support</a>.</p>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <label class="sr-only" for="faq-search">Search questions</label>
+      <input class="input" id="faq-search" type="search" placeholder="Search questions…" autocomplete="off" />
     </div>
-
-    <div class="faq-groups">
-
-      <div class="faq-group">
-        <h2><span class="glyph glyph-learn" aria-hidden="true"></span> Account &amp; Billing</h2>
-        <div class="faq-list">
-          <details class="faq-item" data-search="card create account free payment explorer signup">
-            <summary>Do I need a card to create an account?</summary>
-            <p>No. The Explorer tier is free forever and requires no payment method. You add a card only when you buy a paid event (simulator run, paid tournament, challenge) or upgrade to Operator or Professional.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="cancel downgrade refund annual subscription switch plans billing">
-            <summary>How do refunds and plan changes work?</summary>
-            <p>Upgrades apply immediately with prorated billing. Downgrades and cancellations take effect at the end of the billing period, and your data stays intact on the free tier. Annual plans carry a 14-day full-refund window. Event purchases (tournament entries, simulator runs, challenge fees) are refundable until the event or run starts.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="delete account data export privacy gdpr remove">
-            <summary>How do I delete my account and data?</summary>
-            <p>Settings → Account → Delete. Deletion removes your journal, coach training data, and personal records permanently within 30 days; anonymized aggregate statistics are unaffected. Export your data first if you want a copy — the export tool is on the same page.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-        </div>
-      </div>
-
-      <div class="faq-group">
-        <h2><span class="glyph glyph-train" aria-hidden="true"></span> PropSim &amp; Training Tools</h2>
-        <div class="faq-list">
-          <details class="faq-item" data-search="propsim run cost credits included monthly simulator price">
-            <summary>How do PropSim run credits work?</summary>
-            <p>Each run is one full simulated evaluation. Runs cost $10 individually; Operator includes 2 per month and Professional includes 4, refreshing on your billing date (unused credits don't roll over). A run ends when you pass, breach a rule, or abandon it — the debrief is generated either way.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="journal auto import connect mt5 tradelocker match-trader sync broker">
-            <summary>How do I connect my trading account for auto-import?</summary>
-            <p>Journal → Connections → Add account, then follow the platform flow for MT5, TradeLocker, or Match-Trader. Sync is read-only by default and typically completes within a minute; historical trades import up to 12 months back. You can revoke a connection anytime from the same screen.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="backtest data markets years coverage granularity">
-            <summary>What data does the Backtesting Engine cover?</summary>
-            <p>FX majors and minors, gold and silver, US and EU index CFDs, and major crypto pairs — 10+ years on FX and metals, 8+ on indices, M1 through weekly granularity, with session-accurate spread modeling per instrument.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-        </div>
-      </div>
-
-      <div class="faq-group">
-        <h2><span class="glyph glyph-compete" aria-hidden="true"></span> Tournaments &amp; The Arena</h2>
-        <div class="faq-list">
-          <details class="faq-item" data-search="free tournament schedule when daily time utc register">
-            <summary>When do free tournaments run?</summary>
-            <p>Daily free tournaments start at 18:00 UTC and run for four hours. Registration is one click and closes at start time. Weekly championships run Friday to Sunday. The full schedule with countdowns is on the <a href="/compete/tournaments">Tournaments page</a>.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="prize paid delivery voucher cash tournament winner 48 hours">
-            <summary>How and when are tournament prizes delivered?</summary>
-            <p>Within 48 hours of results verification. Cash prizes go to your Adiox balance (withdrawable), vouchers and subscription credit apply to your account automatically. Winning accounts are audited before payout; the prize split for every event is published before it starts.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="arena rank placement matches elo division reset season duel">
-            <summary>How does Arena ranking work?</summary>
-            <p>Five placement matches set your starting division, then an ELO-style rating adjusts after every duel based on your opponent's strength. Divisions run Bronze to Legend and soft-reset each season; your peak emblem stays on your profile permanently.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-        </div>
-      </div>
-
-      <div class="faq-group">
-        <h2><span class="glyph glyph-trade" aria-hidden="true"></span> Challenges, Payouts &amp; Pro Tools</h2>
-        <div class="faq-list">
-          <details class="faq-item" data-search="payout processing time 48 hours funded withdraw split refund fee">
-            <summary>How fast are challenge payouts processed?</summary>
-            <p>Within 48 hours of verification. Request a payout from your funded dashboard; verification re-checks your trades against the rules, then payment is sent. Your first payout on a 2-step account also refunds the original challenge fee.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="pay later qualify simulator record eligibility zero upfront">
-            <summary>How do I qualify for Pay-Later?</summary>
-            <p>Three passed PropSim evaluations with disciplined drawdown stats (your dashboard shows a live eligibility meter). Qualify, and you can start a standard 2-step evaluation with $0 upfront — 1.5× the normal fee is deducted from your first funded payouts, and you owe nothing if you never reach one.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="propsync supported firms platforms read only connect accounts">
-            <summary>Which firms work with PropSync and Prop Tools?</summary>
-            <p>Any prop firm account issued on MetaTrader 5, TradeLocker, or Match-Trader. Rule presets ship for popular firms and are maintained by Adiox; read-only sync is available for firms that restrict third-party order routing. Following each firm's terms remains your responsibility.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copy trading stop pause equity protection risk">
-            <summary>How do I stop or pause copy trading?</summary>
-            <p>Instantly, from the strategy card or the account's Stop switch: Pause keeps positions open but mirrors nothing new; Stop closes copied positions at market. Nothing is queued while copying is stopped, so when you resume only new trades are copied. Your equity-protection floor does this automatically if losses reach your limit — no master action required.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-        </div>
-      </div>
-
-      <div class="faq-group">
-        <h2><span class="glyph glyph-trade" aria-hidden="true"></span> Adiox Copier — Social, Private &amp; Telegram</h2>
-        <div class="faq-list">
-          <details class="faq-item" data-search="copier what is social private telegram trade copier">
-            <summary>What is the Adiox Copier?</summary>
-            <p>The trade-copying engine inside the Trade stage. Social Copier follows ranked master traders, Private Copier copies trades from your own master account to your follower accounts, and Telegram Copier turns signals from the Telegram channels you follow into trades on your MT4 or MT5 account.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier brokers platforms mt4 mt5 supported server">
-            <summary>Which brokers and platforms does the Copier support?</summary>
-            <p>Telegram Copier works with any broker that gives you an MT4 or MT5 account. Social and Private Copier currently support MT5, for both master and follower accounts. You pick your broker server from a searchable list, exactly as it appears in your MetaTrader login window.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier vps install hosted server online">
-            <summary>Do I need to install anything or run a VPS?</summary>
-            <p>Not for Telegram Copier: copying runs on Adiox servers, so there is nothing to install and nothing of your own to keep online. Social and Private Copier plans are either hosted by Adiox or run on your own MT5; each plan states which.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier lot size sizing risk multiplier percent">
-            <summary>How are copied lot sizes calculated?</summary>
-            <p>You choose. Telegram Copier can use a fixed lot, a percentage of balance risked per trade, a lot per fixed amount of balance, or the lot published in the signal, with separate sizing available for gold. Social and Private Copier can use a fixed lot, a multiplier of the master trade, a balance ratio between the two accounts, or a percentage risk.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier symbol mapping suffix broker names gold us30 nas100">
-            <summary>What if my broker uses different symbol names?</summary>
-            <p>Broker suffixes and prefixes such as XAUUSD.m or XAUUSD# are resolved automatically, and common aliases like GOLD, US30 and NAS100 are built in. Indices and unusual instruments can also be mapped by hand.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier slippage price fill late signal skipped">
-            <summary>Will copied trades fill at exactly the same price?</summary>
-            <p>Not always. A copied order fills at your broker's price at that moment, so spread, latency and market conditions can move it. A market entry is only valid for about three minutes, so a late signal is skipped rather than filled at a much worse price.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier missed instruction offline reconcile positions">
-            <summary>What happens if a copy instruction is missed?</summary>
-            <p>The copier regularly compares the positions your account actually holds against what it should hold, and corrects any difference. It catches the rare cases where an instruction does not land, for example if your account was offline when a master closed a trade.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier password security encrypted investor telegram login 2fa">
-            <summary>Are my broker and Telegram credentials safe?</summary>
-            <p>Broker passwords are encrypted at rest, used only to sign in and start copying, and never written to logs. Masters connect with a read-only investor password. Telegram connects with your phone number and a one-time code; a 2-step password is used once and never stored, and you can end the session any time from Telegram → Settings → Devices.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="copier trial renewal billing crypto card automatic charge">
-            <summary>Will a Copier plan renew or charge me automatically?</summary>
-            <p>No. Telegram Copier plans include a 3-day free trial and are paid at checkout by card or crypto. Nothing renews by itself: we remind you before your period ends, and you renew only if you want to.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-          <details class="faq-item" data-search="master payout withdraw usdt usdc rise earnings performance fee">
-            <summary>How and when do masters get paid?</summary>
-            <p>A master earns a share of each subscription fee, plus a performance fee charged only on new profit above the copier's high-water mark. Earnings collect in your Adiox wallet and can be withdrawn in USDT (ERC-20 or TRC-20), USDC or through Rise once your identity is verified.</p>
-            <div class="helpful"><span>Was this helpful?</span><button>Yes</button><button>No</button></div>
-          </details>
-        </div>
-      </div>
-
-    </div>
-    <p id="noResults" class="fineprint center" style="margin-top:24px;" hidden>No answers match that search — try a shorter word, or <a href="/contact">contact us</a>.</p>
   </div>
 </section>
 
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <p class="footer-vision">Build a complete ecosystem where traders evolve from beginners to funded professionals inside one unified system.</p>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="nav-logo"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" loading="lazy" /></a>
-        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
-        <div class="footer-social">
-          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
-          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
-          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
-          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
-        </div>
+<section class="section" style="padding-top:20px;">
+  <div class="container" style="max-width:900px;">
+    <div class="faq-group">
+      <h2><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></svg></span>Account</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I create an account?</summary><div class="faq-body"><p>Register on the portal and confirm your email address — sign-in is blocked until the email is confirmed. Then complete your profile to unlock the $30 welcome credit.</p></div></details>
+        <details class="faq-item"><summary>What can I set on my profile?</summary><div class="faq-body"><p>Your nickname, an avatar (choose a built-in one or upload your own), country and state, language and WhatsApp number. Your country and dialling code are suggested automatically. You can change your password from the profile page too.</p></div></details>
+        <details class="faq-item"><summary>Why was I signed out?</summary><div class="faq-body"><p>Sessions end after 30 minutes without activity. Pages that refresh live, such as account pages, keep your session alive while they're open.</p></div></details>
       </div>
-      <nav class="footer-cols" aria-label="Footer">
-        <div class="fcol">
-          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
-          <a href="/learn/academy">Adiox Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a><a href="/blog">Blog</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
-          <a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
-          <a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head">Company</div>
-          <a href="/about">About</a><a href="/about#roadmap">Roadmap</a><a href="/pricing">Pricing</a><a href="/partners">Partners</a><a href="/contact">Contact</a><a href="/about#press">Press Kit</a>
-        </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"/><circle cx="16.5" cy="13.5" r="1.2"/></svg></span>Wallet, deposits &amp; withdrawals</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How can I deposit?</summary><div class="faq-body"><p>By card, by payment link or with crypto. Your wallet is credited when the payment provider confirms the payment, and you'll get an email and a notification.</p></div></details>
+        <details class="faq-item"><summary>How do I withdraw?</summary><div class="faq-body"><p>Complete KYC, then request at least $10 to crypto or a bank account. The amount is reserved from your balance immediately; you can edit or cancel while it's pending, and the Adiox team approves and sends the payout.</p></div></details>
+        <details class="faq-item"><summary>What is bonus credit?</summary><div class="faq-body"><p>Credit you earn from achievements, the welcome bonus, level rewards, points exchange and some prizes. It can pay for part of a purchase — at most 50% — and expires after 30 days. It can't be withdrawn.</p></div></details>
+        <details class="faq-item"><summary>In what order is a purchase paid?</summary><div class="faq-body"><p>Coupon first, then bonus credit up to the cap, then wallet cash, then the payment gateway for anything left (minimum $1). <a class="link" href="/wallet#checkout">Try the checkout calculator</a>.</p></div></details>
+        <details class="faq-item"><summary>What if my account isn't created after I pay?</summary><div class="faq-body"><p>The purchase is refunded automatically.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 16a3.6 3.6 0 0 1 7 0M15 10h3M15 13.5h3"/></svg></span>Identity verification (KYC)</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>When do I need KYC?</summary><div class="faq-body"><p>Only for withdrawals. You can register, deposit and use every product without it.</p></div></details>
+        <details class="faq-item"><summary>How does verification work?</summary><div class="faq-body"><p>Start a verification session from the KYC page in the portal. The result arrives automatically, and you can refresh the status from the same page.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>Challenges &amp; funded accounts</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I pass a challenge phase?</summary><div class="faq-body"><p>Reach the phase's profit target and trade the minimum number of days, without breaking the overall or daily loss limit. The next phase is then created for free.</p></div></details>
+        <details class="faq-item"><summary>How long can I be inactive?</summary><div class="faq-body"><p>15 idle days in a row eliminates a challenge account. You'll be warned after 7, 10 and 14 idle days.</p></div></details>
+        <details class="faq-item"><summary>How do funded payouts work?</summary><div class="faq-body"><p>When you're in profit and your weekly or monthly cycle has passed, click Request Payout. Trading pauses during review; on approval your wallet receives profit × your payout share and the account resets for the next cycle.</p></div></details>
+        <details class="faq-item"><summary>What is the First-Buyer Offer?</summary><div class="faq-body"><p>A one-time $5,000 challenge account for $4.95 for new buyers, protected by email, IP and device checks.</p></div></details>
+        <details class="faq-item"><summary>What is Pay Later?</summary><div class="faq-body"><p>A challenge you start with a small upfront fee. An activation fee is shown as payable after you pass, and coupons reduce it too.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span>Tournaments</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How are tournament players ranked?</summary><div class="faq-body"><p>By final equity, highest first, among players who qualify. Players with too few trades, or who missed the target profit when one is set, don't qualify.</p></div></details>
+        <details class="faq-item"><summary>Can I rejoin after being eliminated?</summary><div class="faq-body"><p>If the tournament allows it: buy a new account for the rejoin fee, up to the maximum number of rejoins, after the cooldown period.</p></div></details>
+        <details class="faq-item"><summary>How are tied players paid?</summary><div class="faq-body"><p>Tied players share one rank. Cash or credit prizes for the ranks they cover are pooled and split; a challenge prize goes to each tied player.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M4 4v4M4 4h4M20 4l-8 8M20 4v4M20 4h-4"/><path d="M8 16l-4 4M16 16l4 4M9 15l-2 2M15 15l2 2"/></svg></span>Trading games</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What's the difference between a Duel and a Battle?</summary><div class="faq-body"><p>A Duel is exactly two players and can end in a draw. A Battle is three or more players, ranks everyone, and pays only first place.</p></div></details>
+        <details class="faq-item"><summary>What if my lobby never fills?</summary><div class="faq-body"><p>A lobby waiting more than 24 hours expires and every player is refunded. The creator can also cancel before the game starts.</p></div></details>
+        <details class="faq-item"><summary>What do single player games pay?</summary><div class="faq-body"><p>Bonus credit when you pass the mission. If you fail, there's no reward.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span>Training Room</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How much does a simulator cost?</summary><div class="faq-body"><p>Custom simulators cost $10 for up to 30 days, $15 up to 40, $20 up to 50 and $25 beyond that. Preset simulators show their price in the portal.</p></div></details>
+        <details class="faq-item"><summary>Can I cancel a simulator?</summary><div class="faq-body"><p>Yes, within 5 minutes of starting. The fee is refunded the same way you paid.</p></div></details>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h2><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L12 16.4 6.7 19.2l1.2-5.9L3.4 9.2l6-.7L12 3z"/></svg></span>Rewards &amp; referrals</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do points and levels work?</summary><div class="faq-body"><p>Claimed achievements give XP. Exchange 100 points for $10 of credit; your level uses lifetime XP, so exchanging never lowers it.</p></div></details>
+        <details class="faq-item"><summary>How much referral commission do I earn?</summary><div class="faq-body"><p>10% of the cash paid by each of your first 20 referred users and 15% from the 21st on. It's paid to your wallet after a short settling delay and reversed if the purchase is refunded.</p></div></details>
+      </div>
+    </div>
+
+    <div class="empty-state" id="faq-empty" role="status"><b>No matching questions.</b><p class="small" style="margin-top:6px;">Try a shorter word, or <a class="link" href="/contact">ask support</a>.</p></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" loading="lazy" /></a>
+        <p>Prop-firm challenges, tournaments, trading games and a practice simulator — one account, one wallet, live accounts on the Adiox Trading Platform.</p>
+      </div>
+      <nav class="footer-col" aria-label="Products">
+        <h4>Products</h4>
+        <a href="/challenges">Challenges</a><a href="/challenges/instant-funded">Instant Funded</a><a href="/challenges/funded-accounts">Funded Accounts</a><a href="/tournaments">Tournaments</a><a href="/games">Duels &amp; Battles</a><a href="/games/single-player">Single Player Games</a>
+      </nav>
+      <nav class="footer-col" aria-label="More">
+        <h4>More</h4>
+        <a href="/training-room">Training Room</a><a href="/leaderboards">Leaderboards</a><a href="/trade-copier">Trade Copier</a><a href="/ai-journal">AI Journal</a><a href="/rewards">Rewards &amp; Referrals</a>
+      </nav>
+      <nav class="footer-col" aria-label="Platform">
+        <h4>Platform</h4>
+        <a href="/how-it-works">How it works</a><a href="/wallet">Wallet &amp; payments</a><a href="/pricing">Pricing</a><a href="https://trade.adiox.io" rel="noopener">Trading platform ↗</a><a href="https://portal.adiox.io" rel="noopener">Client portal ↗</a>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="/about">About</a><a href="/faq">FAQ</a><a href="/contact">Contact</a><a href="/legal/terms">Terms</a><a href="/legal/risk-disclosure">Risk Disclosure</a>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-newsletter">
-        <span>The Funded Letter — one email a week</span>
-        <form data-demo>
-          <input type="email" placeholder="you@example.com" aria-label="Newsletter email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <div class="footer-meta">
-        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
-        <span class="footer-lang">EN 🌐</span>
-      </div>
+    <div class="footer-risk">
+      <p><strong>Risk disclosure.</strong> Every Adiox product gives you a trading account on the Adiox Trading Platform funded with virtual money. Entry fees buy access to a skill-based challenge, competition, game or simulator; they are not deposits. Payouts, prizes and rewards are paid only when the published rules are met, and breaking a rule ends the account without a refund. Trading leveraged products carries a high level of risk. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>Paid competitions may not be available in every country — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
     </div>
-
-    <div class="footer-legal">
-
-      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
-      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
-      <div class="footer-links">
-        <a href="/legal/terms">Terms of Service</a><a href="/legal/privacy">Privacy Policy</a><a href="/legal/risk-disclosure">Risk Disclosure</a><a href="/legal/regional-restrictions">Regional Restrictions</a>
-      </div>
-      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adiox. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/terms">Terms</a><a href="/legal/privacy">Privacy</a><a href="/legal/cookies">Cookies</a><a href="/legal/risk-disclosure">Risk</a><a href="/legal/regional-restrictions">Regional</a></nav>
     </div>
   </div>
 </footer>
-
-<script src="/js/pages.js" defer></script>
-<script src="/js/content.js" defer></script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>

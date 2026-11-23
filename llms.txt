@@ -1,42 +1,24 @@
 # Adiox
 
-> Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a realistic simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, social, private and Telegram trade copying, signals, and professional risk tools — all inside one account.
+> Adiox is a gamified prop-trading and trading-competition platform. Users register, fund one wallet and buy access to prop-firm challenges, tournaments, trading games and a challenge simulator. Every product gives the user a trading account on the Adiox Trading Platform funded with virtual money; the system checks it against the product's rules every 1–3 seconds and closes and locks the account when a rule is broken.
 
-Adiox is the operating system for prop trading performance and evaluation. It is not a prop firm and not a single tool — it is the layer that connects education, simulation, competition, and professional trading tools so a trader never has to leave the ecosystem to evolve.
+## Products
 
-## Start here
+- [Prop-Firm Challenges](https://adiox.io/challenges): multi-phase evaluation per package (account size). Pass a phase by reaching the profit target and the minimum trading days; later phases are created free. Rules per phase: profit target, minimum trading days, overall loss limit (from starting balance), daily loss limit (from the day's opening balance), 15 idle days eliminates. Variants: Pay Later, First-Buyer Offer ($5,000 account for $4.95), tournament prize challenges.
+- [Funded Accounts](https://adiox.io/challenges/funded-accounts): after approval, request a payout each weekly (7-day) or monthly (30-day) cycle; the wallet is credited with profit × payout share % and the account resets.
+- [Instant Funded](https://adiox.io/challenges/instant-funded): one stage, no profit target, mandatory 2% single-trade loss limit plus daily and overall loss limits.
+- [Tournaments](https://adiox.io/tournaments): free or paid timed contests; same starting balance; qualifying players ranked by final equity; prizes by rank in cash, credit or a challenge account; rejoins; tie prizes pooled and split.
+- [Trading Duels and Battles](https://adiox.io/games): 1-vs-1 or 3+ player games with a player-set stake; winner takes the pot minus commission; duels can draw; lobbies expire after 24 hours with refunds.
+- [Single Player Games](https://adiox.io/games/single-player): Stop Loss Master, Daily Loss Defender, Overall Loss Guardian, Consistency Challenge, Precision Entry; pass to earn bonus credit.
+- [Training Room](https://adiox.io/training-room): preset or custom challenge simulators; custom fees $10 (≤30 days), $15 (≤40), $20 (≤50), $25 (>50); pass/fail only; cancel within 5 minutes for a refund.
+- [Leaderboards](https://adiox.io/leaderboards), [Rewards & Referrals](https://adiox.io/rewards), [Trade Copier](https://adiox.io/trade-copier) (read-only overview of copier.adiox.io), [AI Journal](https://adiox.io/ai-journal) (coming soon).
 
-- [The Adiox Ecosystem](https://adiox.com/ecosystem): The complete map of the platform — every feature, how the four stages connect, and the public roadmap. Read this first.
-- [Home](https://adiox.com/): Overview, live platform statistics, pricing, and FAQ.
+## Money
 
-## The four stages
+- [Wallet & payments](https://adiox.io/wallet): deposits by card, payment link or crypto; withdrawals to crypto or bank after KYC, $10 minimum. Checkout order: coupon → bonus credit (max 50%) → wallet → gateway (min $1). Bonus credit expires after 30 days. 100 points = $10 credit. Referral commission 10% (first 20 referrals) and 15% (21st on).
+- [Pricing](https://adiox.io/pricing): free account, no platform subscription; pay per product.
 
-- [Learn](https://adiox.com/learn): Trading education — Adiox Academy courses, AI Coach, and glossary. Free forever.
-- [Train](https://adiox.com/train): Skill building on simulated capital — PropSim challenge simulator (from $10), backtesting engine, auto-logging trading journal, Strategy Lab.
-- [Compete](https://adiox.com/compete): Skill proving — free and paid tournaments with published prize pools, 1v1 Arena duels, public leaderboards.
-- [Trade](https://adiox.com/trade): Professional stage — funded challenges (1-step, 2-step, instant, pay-later), the Adiox Copier (Social Copier, Private Copier, Telegram Copier for MT4/MT5), Signal Hub, PropSync multi-account manager, Risk Manager, News Filter.
-- [Adiox Copier](https://adiox.com/trade/copier): One trade copier, three modes — follow ranked master traders (Social Copier, MT5), copy your own master account to follower accounts (Private Copier, MT5), or turn Telegram signals into trades (Telegram Copier, MT4 & MT5). Hosted execution, encrypted credentials, prop-firm loss limits.
+## Links
 
-## Facts
-
-- Free tier requires no card; simulator runs start at $10.
-- Platform connections: MetaTrader 5 (MT5), TradeLocker, Match-Trader. The Adiox Copier supports MT4 and MT5 (Telegram Copier) and MT5 (Social and Private Copier).
-- The Adiox Copier is execution software: it does not produce the signals it copies or give investment advice.
-- All evaluation and tournament accounts use simulated capital; funding is performance-based and never guaranteed.
-- Adiox is not affiliated with FTMO, TradeZella, TraderWaves, MetaQuotes, TradeLocker, or Match-Trader.
-
-## Pricing
-
-- [Pricing](https://adiox.com/pricing): Explorer $0/forever · Operator $29/month · Professional $79/month. Tournaments, PropSim runs ($10), and challenges (from $89) are priced per event, separately from subscriptions. Telegram Copier: $149/yr (1 account), $225/yr (2), $499/yr (6), 3-day free trial, no automatic renewal.
-
-## More
-
-- [Blog](https://adiox.com/blog): Guides by pillar plus a Data & Research category with original platform statistics.
-- [Glossary](https://adiox.com/glossary): 60+ prop trading terms, definition-first, one clean URL each.
-- [About](https://adiox.com/about): Vision, origin story, and the public Phase 1/2/3 roadmap.
-- [llms-full.txt](https://adiox.com/llms-full.txt): Expanded version of this file with every page and a longer fact sheet.
-
-## Legal
-
-- [Risk Disclosure](https://adiox.com/legal/risk-disclosure)
-- [Regional Restrictions](https://adiox.com/legal/regional-restrictions)
+- Client portal: https://portal.adiox.io · Trading platform: https://trade.adiox.io · Trade copier: https://copier.adiox.io
+- [FAQ](https://adiox.io/faq) · [Risk Disclosure](https://adiox.io/legal/risk-disclosure)

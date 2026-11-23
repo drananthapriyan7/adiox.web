@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /login
-Disallow: /signup?*
+Disallow: /contact/send.php
+Disallow: /storage/
 
 # AI / LLM crawlers explicitly allowed — visibility in AI answers is the goal
 User-agent: GPTBot
@@ -31,4 +31,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://adiox.com/sitemap.xml
+Sitemap: https://adiox.io/sitemap.xml

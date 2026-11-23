@@ -1,0 +1,3 @@
+# Contact-form submissions and rate-limit data (personal data — never commit)
+/storage/*
+!/storage/.htaccess

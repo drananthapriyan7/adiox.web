@@ -2,877 +2,375 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/images/favicon.ico" sizes="any" />
-  <title>Adiox — Learn, Train, Compete &amp; Trade | Prop Trading Ecosystem</title>
-  <meta name="description" content="The all-in-one prop trading ecosystem: tournaments, challenge simulation, copy trading, AI coaching & pro tools. Start free — evolve from beginner to funded." />
-  <link rel="canonical" href="https://adiox.com/" />
-
-  <!-- Open Graph -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adiox — Prop-Firm Challenges, Trading Tournaments & Trading Games</title>
+  <meta name="description" content="Adiox brings prop-firm challenges, funded accounts, trading tournaments, 1-vs-1 trading duels, multiplayer battles, single-player trading missions and a challenge simulator into one account and one wallet." />
+  <link rel="canonical" href="https://adiox.io/" />
+  <meta name="theme-color" content="#070912" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Adiox — Learn, Train, Compete & Trade | Prop Trading Ecosystem" />
-  <meta property="og:description" content="The all-in-one prop trading ecosystem: tournaments, challenge simulation, copy trading, AI coaching & pro tools. Start free — evolve from beginner to funded." />
-  <meta property="og:url" content="https://adiox.com/" />
   <meta property="og:site_name" content="Adiox" />
-  <meta name="twitter:card" content="summary_large_image" />
-
+  <meta property="og:title" content="Adiox — Prop-Firm Challenges, Trading Tournaments & Trading Games" />
+  <meta property="og:description" content="Adiox brings prop-firm challenges, funded accounts, trading tournaments, 1-vs-1 trading duels, multiplayer battles, single-player trading missions and a challenge simulator into one account and one wallet." />
+  <meta property="og:url" content="https://adiox.io/" />
+  <meta property="og:image" content="https://adiox.io/images/adiox-logo.png" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/pages.css" />
-
-  <!-- Structured data: Organization, WebSite + SearchAction, SoftwareApplication -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://adiox.com/#org",
-        "name": "Adiox",
-        "url": "https://adiox.com/",
-        "logo": "https://adiox.com/assets/logo.png",
-        "description": "Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a realistic simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, social, private and Telegram trade copying, signals, and professional risk tools — all inside one account.",
-        "sameAs": [
-          "https://x.com/adiox",
-          "https://discord.gg/adiox",
-          "https://t.me/adiox",
-          "https://www.youtube.com/@adiox"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://adiox.com/#website",
-        "url": "https://adiox.com/",
-        "name": "Adiox",
-        "publisher": { "@id": "https://adiox.com/#org" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://adiox.com/search?q={search_term_string}" },
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Adiox",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "url": "https://adiox.com/",
-        "description": "Prop trading ecosystem with a challenge simulator (PropSim), trading tournaments, the Adiox Copier (social, private and Telegram trade copying for MT4/MT5), AI trading coach, backtesting, journaling, and multi-account management (PropSync).",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free tier — no card required" },
-        "publisher": { "@id": "https://adiox.com/#org" }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Structured data: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Adiox?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, social, private and Telegram trade copying, signals, and professional risk tools — all inside one account." }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Adiox free to start?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Creating an Adiox account is free and requires no card. The free tier includes Academy lessons, free tournaments, the trading glossary, and community access. Paid options — simulator runs from $10, evaluations, and Pro subscriptions — unlock as you progress, so you only pay when you're ready to level up." }
-      },
-      {
-        "@type": "Question",
-        "name": "What does Learn, Train, Compete, Trade mean?",
-        "acceptedAnswer": { "@type": "Answer", "text": "They are the four stages of a trader's evolution on Adiox. Learn builds knowledge with the Academy and AI Coach. Train builds skill safely with PropSim, backtesting, and journaling. Compete proves skill in tournaments, PvP games, and leaderboards. Trade is the professional stage: funded challenges, copy trading, signals, and risk tools." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get funded through Adiox?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Adiox offers performance-based evaluations — 1-step, 2-step, instant, and pay-later formats. Pass an evaluation on simulated capital and you qualify for a funded account with performance-based payouts. Trading involves risk and funding is never guaranteed; results depend entirely on your performance under the published rules." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need experience to join Adiox?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No experience is required. Complete beginners start in the Adiox Academy with structured learning paths and an AI coach, then practice risk-free in the simulator before any money is at stake. Experienced traders can skip straight to evaluations, tournaments, PropSync multi-account management, or the Adiox Copier." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the Adiox Copier?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Adiox Copier is the trade-copying engine inside the Trade stage. It works three ways: Social Copier follows ranked master traders, Private Copier copies trades from your own master account to any number of follower accounts, and Telegram Copier reads signals from the Telegram channels you follow and places them on your MT4 or MT5 account. Copying is hosted, credentials are encrypted, and lot size, symbols, stop loss, take profit and prop-firm loss limits are all set by you." }
-      },
-      {
-        "@type": "Question",
-        "name": "Which platforms does Adiox connect to?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Challenges, the journal and PropSync connect to MetaTrader 5 (MT5), TradeLocker, and Match-Trader, so you can monitor accounts across multiple prop firms in one dashboard. The Adiox Copier works with MetaTrader: the Telegram Copier copies signals to any MT4 or MT5 account, while the Social and Private Copier currently support MT5, always with your own risk settings applied." }
-      }
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://adiox.io/#org","name":"Adiox","url":"https://adiox.io/","logo":"https://adiox.io/images/adiox-logo.png"},{"@type":"WebPage","url":"https://adiox.io/","name":"Adiox — Prop-Firm Challenges, Trading Tournaments & Trading Games","description":"Adiox brings prop-firm challenges, funded accounts, trading tournaments, 1-vs-1 trading duels, multiplayer battles, single-player trading missions and a challenge simulator into one account and one wallet.","isPartOf":{"@type":"WebSite","name":"Adiox","url":"https://adiox.io/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Adiox?","acceptedAnswer":{"@type":"Answer","text":"Adiox is a gamified prop-trading and trading-competition portal. You register, fund one wallet and buy access to challenges, tournaments, trading games or the Training Room. Each one gives you a trading account on the Adiox Trading Platform, and the system tracks it live against the rules — you pass or fail, win prizes, or become a funded trader who receives a share of the profit."}},{"@type":"Question","name":"Is the money on my trading account real?","acceptedAnswer":{"@type":"Answer","text":"No. Every product account is funded with virtual money on the Adiox Trading Platform. What is real is the money in your wallet: deposits, prizes, game winnings, funded-account payouts and referral commission."}},{"@type":"Question","name":"What happens if I break a rule?","acceptedAnswer":{"@type":"Answer","text":"The account is eliminated: open trades are closed and the account is locked automatically. Entry fees are not refunded. Tournaments allow a paid rejoin where the organiser has enabled it."}},{"@type":"Question","name":"How do I withdraw?","acceptedAnswer":{"@type":"Answer","text":"Complete identity verification (KYC), then request a withdrawal of at least $10 to crypto or a bank account. The amount is reserved from your balance straight away, you can edit or cancel while it is pending, and our team approves the payout."}},{"@type":"Question","name":"Can I practise before buying a challenge?","acceptedAnswer":{"@type":"Answer","text":"Yes — the Training Room gives you a practice prop-firm account with preset or custom rules from $10. It is pass or fail only, and you can cancel within 5 minutes for a refund."}},{"@type":"Question","name":"Where do I trade?","acceptedAnswer":{"@type":"Answer","text":"On the Adiox Trading Platform web terminal at trade.adiox.io. Use the Start Trading button on any account page in the portal; your login and password are shown there and emailed to you."}}]}]}</script>
 </head>
 <body>
-
-<!-- ══════════════════════════ LIVE TICKER ══════════════════════════ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ticker-item"><i class="dot dot-gold"></i>Weekend Clash prize pool <b class="mono gold">$12,500</b></span>
-    <span class="ticker-item"><i class="dot dot-teal"></i><b class="mono">2,417</b> simulated evaluations run this week</span>
-    <span class="ticker-item"><i class="dot dot-gold"></i>Latest payout <b class="mono gold">$3,240</b> — trader K.M.</span>
-    <span class="ticker-item"><i class="dot dot-blue"></i><b class="mono">96</b> tournaments live this month</span>
-    <span class="ticker-item"><i class="dot dot-violet"></i>AI Coach reviewed <b class="mono">18,309</b> trades today</span>
-    <span class="ticker-item"><i class="dot dot-teal"></i>New: Adiox Copier — <b>Social · Private · Telegram</b></span>
-    <span class="ticker-item"><i class="dot dot-gold"></i>Weekend Clash prize pool <b class="mono gold">$12,500</b></span>
-    <span class="ticker-item"><i class="dot dot-teal"></i><b class="mono">2,417</b> simulated evaluations run this week</span>
-    <span class="ticker-item"><i class="dot dot-gold"></i>Latest payout <b class="mono gold">$3,240</b> — trader K.M.</span>
-    <span class="ticker-item"><i class="dot dot-blue"></i><b class="mono">96</b> tournaments live this month</span>
-    <span class="ticker-item"><i class="dot dot-violet"></i>AI Coach reviewed <b class="mono">18,309</b> trades today</span>
-    <span class="ticker-item"><i class="dot dot-teal"></i>New: Adiox Copier — <b>Social · Private · Telegram</b></span>
-  </div>
-</div>
-
-<!-- ══════════════════════════ NAV ══════════════════════════ -->
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" /></a>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <div class="nav-item has-mega">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ecosystem <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mega" role="menu">
-          <div class="mega-col">
-            <div class="mega-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> LEARN</div>
-            <p class="mega-tag">Build knowledge</p>
-            <a href="/learn/academy">Adiox Academy</a>
-            <a href="/learn/ai-coach">AI Coach</a>
-            <a href="/glossary">Glossary</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head train"><span class="glyph glyph-train" aria-hidden="true"></span> TRAIN</div>
-            <p class="mega-tag">Build skill safely</p>
-            <a href="/train/simulator">PropSim Simulator</a>
-            <a href="/train/backtesting">Backtesting Engine</a>
-            <a href="/train/journal">Trading Journal</a>
-            <a href="/train/strategy-builder">Strategy Lab</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> COMPETE</div>
-            <p class="mega-tag">Prove skill</p>
-            <a href="/compete/tournaments">Tournaments</a>
-            <a href="/compete/trading-games">The Arena</a>
-            <a href="/compete/leaderboards">Leaderboards</a>
-          </div>
-          <div class="mega-col">
-            <div class="mega-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> TRADE</div>
-            <p class="mega-tag">Earn professionally</p>
-            <a href="/trade/challenges">Challenges &amp; Funding</a>
-            <a href="/trade/copier" class="is-new">Adiox Copier</a>
-            <a href="/trade/copy-trading">Copy Trading</a>
-            <a href="/trade/signals">Signal Hub</a>
-            <a href="/trade/propsync">PropSync</a>
-            <a href="/trade/prop-tools">Prop Tools</a>
-          </div>
-          <a class="mega-all" href="/ecosystem">Explore the full Adiox ecosystem →</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" /></a>
+    <nav class="main-nav" aria-label="Main">
+      <div class="nav-drop">
+        <button class="nav-link" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="drop-panel" id="products-menu">
+          <a class="drop-item" href="/challenges"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span><b>Prop-Firm Challenges</b><span>Multi-phase evaluation, later phases free</span></span></a>
+          <a class="drop-item" href="/challenges/instant-funded"><span class="ico c-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span><b>Instant Funded</b><span>One stage, no profit target, 2% trade limit</span></span></a>
+          <a class="drop-item" href="/challenges/funded-accounts"><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><span><b>Funded Accounts</b><span>Weekly or monthly profit-share payouts</span></span></a>
+          <a class="drop-item" href="/tournaments"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span><span><b>Tournaments</b><span>Free and paid contests with ranked prizes</span></span></a>
+          <a class="drop-item" href="/games"><span class="ico c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M4 4v4M4 4h4M20 4l-8 8M20 4v4M20 4h-4"/><path d="M8 16l-4 4M16 16l4 4M9 15l-2 2M15 15l2 2"/></svg></span><span><b>Trading Duels & Battles</b><span>1-vs-1 and multiplayer prize pots</span></span></a>
+          <a class="drop-item" href="/games/single-player"><span class="ico c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M17 3l2 2 3-3" /></svg></span><span><b>Single Player Games</b><span>Solo trading-discipline missions</span></span></a>
+          <a class="drop-item" href="/training-room"><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span><span><b>Training Room</b><span>Practise a challenge from $10</span></span></a>
+          <a class="drop-item" href="/trade-copier"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><span><b>Trade Copier</b><span>Top masters and signal providers</span></span></a>
+          <div class="drop-foot"><a href="/leaderboards">Leaderboards →</a><a href="/#compare">Compare all products →</a></div>
         </div>
       </div>
-      <a class="nav-link" href="/compete">Compete</a>
+      <a class="nav-link" href="/how-it-works">How it works</a>
       <a class="nav-link" href="/pricing">Pricing</a>
-      <div class="nav-item has-mega">
-        <button class="nav-link" aria-expanded="false" aria-haspopup="true">Resources <svg class="chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mega mega-sm" role="menu">
-          <div class="mega-col">
-            <a href="/blog">Blog</a>
-            <a href="/glossary">Glossary</a>
-            <a href="/faq">Help Center</a>
-            <a href="/about">About &amp; Roadmap</a>
-            <a href="/partners">Partners</a>
-          </div>
-        </div>
-      </div>
+      <a class="nav-link" href="/rewards">Rewards</a>
+      <a class="nav-link" href="/faq">FAQ</a>
     </nav>
-
-    <div class="nav-cta">
-      <a href="/login" class="btn btn-ghost btn-sm">Log in</a>
-      <a href="/signup" class="btn btn-primary btn-sm magnetic">Start Free</a>
+    <div class="header-cta">
+      <a class="btn btn-ghost btn-sm" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary btn-sm" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a>
     </div>
-
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
   </div>
 </header>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mm-group"><div class="mm-head learn">Learn</div><a href="/learn/academy">Academy</a><a href="/learn/ai-coach">AI Coach</a><a href="/glossary">Glossary</a></div>
-  <div class="mm-group"><div class="mm-head train">Train</div><a href="/train/simulator">PropSim</a><a href="/train/backtesting">Backtesting</a><a href="/train/journal">Journal</a><a href="/train/strategy-builder">Strategy Lab</a></div>
-  <div class="mm-group"><div class="mm-head compete">Compete</div><a href="/compete/tournaments">Tournaments</a><a href="/compete/trading-games">The Arena</a><a href="/compete/leaderboards">Leaderboards</a></div>
-  <div class="mm-group"><div class="mm-head trade">Trade</div><a href="/trade/challenges">Challenges</a><a href="/trade/copier">Adiox Copier</a><a href="/trade/copy-trading">Copy Trading</a><a href="/trade/signals">Signal Hub</a><a href="/trade/propsync">PropSync</a><a href="/trade/prop-tools">Prop Tools</a></div>
-  <div class="mm-actions">
-    <a href="/login" class="btn btn-ghost">Log in</a>
-    <a href="/signup" class="btn btn-primary">Start Free</a>
-  </div>
-</div>
-
-<main>
-
-<!-- ══════════════════════════ 1. HERO ══════════════════════════ -->
-<section class="hero" id="hero">
-  <canvas id="coreCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-vignette" aria-hidden="true"></div>
-
-  <div class="container hero-content">
-    <p class="eyebrow reveal">THE PROP TRADING ECOSYSTEM</p>
-
-    <h1 class="hero-title reveal">
-      <span class="w-learn">Learn.</span>
-      <span class="w-train">Train.</span>
-      <span class="w-compete">Compete.</span>
-      <span class="w-trade">Trade.</span>
-    </h1>
-
-    <p class="hero-sub reveal">
-      Adiox is the operating system for prop trading performance —
-      one ecosystem that takes you from your first lesson to funded professional.
-    </p>
-
-    <p class="hero-pitch reveal">
-      Adiox is a unified prop trading ecosystem built around four stages: Learn, Train,
-      Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations
-      in a realistic simulator, compete in tournaments and PvP trading games, and graduate
-      to funded challenges, the Adiox Copier for social, private and Telegram trade copying,
-      and professional risk tools — all inside one account.
-    </p>
-
-    <div class="hero-actions reveal">
-      <a href="/signup" class="btn btn-primary btn-lg magnetic">Start Free</a>
-      <a href="#pillars" class="btn btn-ghost btn-lg js-scroll">Explore the Ecosystem ↓</a>
-      <a href="#film" class="btn btn-text">▶ Watch the 60-sec film</a>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <h4>Products</h4>
+  <a class="m-link" href="/challenges">Prop-Firm Challenges<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/instant-funded">Instant Funded<span aria-hidden="true">→</span></a><a class="m-link" href="/challenges/funded-accounts">Funded Accounts<span aria-hidden="true">→</span></a><a class="m-link" href="/tournaments">Tournaments<span aria-hidden="true">→</span></a><a class="m-link" href="/games">Trading Duels & Battles<span aria-hidden="true">→</span></a><a class="m-link" href="/games/single-player">Single Player Games<span aria-hidden="true">→</span></a><a class="m-link" href="/training-room">Training Room<span aria-hidden="true">→</span></a><a class="m-link" href="/trade-copier">Trade Copier<span aria-hidden="true">→</span></a><a class="m-link" href="/leaderboards">Leaderboards<span aria-hidden="true">→</span></a>
+  <h4>Platform</h4>
+  <a class="m-link" href="/how-it-works">How it works<span aria-hidden="true">→</span></a><a class="m-link" href="/wallet">Wallet &amp; payments<span aria-hidden="true">→</span></a><a class="m-link" href="/pricing">Pricing<span aria-hidden="true">→</span></a><a class="m-link" href="/rewards">Rewards &amp; referrals<span aria-hidden="true">→</span></a><a class="m-link" href="/faq">FAQ<span aria-hidden="true">→</span></a><a class="m-link" href="/contact">Contact<span aria-hidden="true">→</span></a>
+  <div class="actions"><a class="btn btn-secondary" href="https://portal.adiox.io/Identity/Account/Login" target="_blank" rel="noopener">Log in</a><a class="btn btn-primary" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account</a></div>
+</nav>
+<main id="main">
+<section class="page-hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="kicker">Prop trading · Tournaments · Trading games</p>
+      <h1>Prove your trading. <span class="grad">Get paid for it.</span></h1>
+      <p class="lead">Adiox puts prop-firm challenges, funded accounts, tournaments, head-to-head trading games and a practice simulator into one account and one wallet. Every product gives you a live account on the Adiox Trading Platform, checked against its rules every few seconds.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create your account <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="#products">Explore products</a>
+      </div>
+      <div class="hero-facts">
+        <span>First $5,000 challenge for $4.95</span>
+        <span>Practice simulator from $10</span>
+        <span>Free tournaments</span>
+      </div>
     </div>
-
-    <div class="hero-trust reveal">
-      <div class="trust-stat"><b class="mono" data-count="28400">0</b><span>traders in the ecosystem</span></div>
-      <div class="trust-div"></div>
-      <div class="trust-stat"><b class="mono" data-count="2417">0</b><span>simulated evaluations this week</span></div>
-      <div class="trust-div"></div>
-      <div class="trust-stat"><b class="mono gold" data-count="148200" data-prefix="$">0</b><span>in prizes &amp; payouts to date</span></div>
+    <div class="reveal">
+      <div class="panel" role="img" aria-label="Illustration of a challenge account page: Phase 1, equity $10,486, profit target 61% reached, overall and daily loss within limits.">
+        <div class="panel-head">
+          <div><b>Two-Step Challenge · Phase 1</b><span>$10,000 · Login 4100231 · Adiox-Server</span></div>
+          <span class="badge badge-green badge-dot">Active</span>
+        </div>
+        <div class="tiles">
+          <div class="tile"><span>Balance</span><b class="num">$10,000</b></div>
+          <div class="tile"><span>Equity</span><b class="num up">$10,486</b></div>
+          <div class="tile"><span>Trading days</span><b class="num">3 / 4</b></div>
+        </div>
+        <div class="meter">
+          <div class="meter-top"><span>Profit target · 8%</span><span class="badge badge-violet">On track</span></div>
+          <div class="bar"><i style="--w:61%"></i></div>
+        </div>
+        <div class="meter">
+          <div class="meter-top"><span>Overall loss · floor $9,000</span><span class="num">0.0% used</span></div>
+          <div class="bar green"><i style="--w:2%"></i></div>
+        </div>
+        <div class="meter">
+          <div class="meter-top"><span>Daily loss · 5% of today's start</span><span class="num">0.6% used</span></div>
+          <div class="bar amber"><i style="--w:12%"></i></div>
+        </div>
+        <div class="panel-foot"><span>Updated live</span><span class="badge">Start trading →</span></div>
+      </div>
+      <p class="panel-caption">Illustration of a challenge account in the Adiox portal.</p>
     </div>
   </div>
-
-  <a href="#problem" class="scroll-cue js-scroll" aria-label="Scroll down"><span></span></a>
 </section>
 
-<!-- ══════════════════════════ 2. PROBLEM → ANSWER ══════════════════════════ -->
-<section class="section problem" id="problem">
+<section class="section-tight">
   <div class="container">
-    <div class="split">
-      <div class="split-left reveal">
-        <p class="eyebrow">THE PROBLEM</p>
-        <h2>Your trading life is scattered across six different apps</h2>
-        <p class="lead">
-          A course in one tab. A journal in another. A prop firm dashboard, a signal group,
-          a backtester, and a Discord for competitions — none of them talking to each other.
-          Every switch costs focus, data, and money.
-        </p>
-        <ul class="scatter-list">
-          <li>Courses that never connect to your real results</li>
-          <li>Evaluations you pay for before you've ever practiced one</li>
-          <li>Journals, copiers, and risk tools sold as separate subscriptions</li>
-          <li>No single record of your evolution as a trader</li>
-        </ul>
-      </div>
-      <div class="split-right reveal">
-        <p class="eyebrow teal">THE ANSWER</p>
-        <h2 class="answer-h">One account. One ecosystem. <span class="grad-text">Every stage of your evolution.</span></h2>
-        <p class="lead">
-          Adiox unifies the entire journey — learning, simulation, competition, and
-          professional trading tools — into one connected platform, so your data,
-          progress, and edge travel with you.
-        </p>
-        <div class="unify-visual" aria-hidden="true">
-          <span class="chipf">Academy</span><span class="chipf">Journal</span><span class="chipf">Simulator</span>
-          <span class="chipf">Tournaments</span><span class="chipf">Copier</span><span class="chipf">Risk Tools</span>
-          <span class="unify-arrow">→</span>
-          <span class="unify-core">ADIOX</span>
-        </div>
-      </div>
+    <div class="stat-row reveal" style="--n:4">
+      <div class="stat"><b>7</b><span>trading products, one wallet</span></div>
+      <div class="stat"><b>1–3 s</b><span>between live rule checks</span></div>
+      <div class="stat"><b>100 → $10</b><span>points to bonus credit</span></div>
+      <div class="stat"><b>$10</b><span>minimum withdrawal</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════ 3. FOUR PILLARS ══════════════════════════ -->
-<section class="section pillars" id="pillars">
+<section class="section" id="products">
   <div class="container">
-    <p class="eyebrow center reveal">THE FOUR PILLARS</p>
-    <h2 class="center reveal">The prop trading ecosystem, in four stages</h2>
-    <p class="lead center reveal">Every feature on Adiox belongs to one of four stages. Wherever you are today, there's a doorway built for you.</p>
-
-    <div class="pillar-tabs reveal" role="tablist" aria-label="The four pillars">
-      <button class="pillar-tab active" role="tab" aria-selected="true" aria-controls="panel-learn" id="tab-learn" data-pillar="learn">
-        <span class="glyph glyph-learn" aria-hidden="true"></span><b>Learn</b><span class="pt-sub">Build knowledge</span>
-      </button>
-      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-train" id="tab-train" data-pillar="train">
-        <span class="glyph glyph-train" aria-hidden="true"></span><b>Train</b><span class="pt-sub">Build skill safely</span>
-      </button>
-      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-compete" id="tab-compete" data-pillar="compete">
-        <span class="glyph glyph-compete" aria-hidden="true"></span><b>Compete</b><span class="pt-sub">Prove skill</span>
-      </button>
-      <button class="pillar-tab" role="tab" aria-selected="false" aria-controls="panel-trade" id="tab-trade" data-pillar="trade">
-        <span class="glyph glyph-trade" aria-hidden="true"></span><b>Trade</b><span class="pt-sub">Earn professionally</span>
-      </button>
+    <div class="section-head reveal">
+      <p class="kicker">Products</p>
+      <h2>One account. Every way to compete.</h2>
+      <p class="lead">Pay once at a single checkout, get your trading account, and the platform tracks it live. Pick the format that suits how you trade.</p>
     </div>
-
-    <div class="pillar-panels reveal">
-      <div class="pillar-panel active p-learn" role="tabpanel" id="panel-learn" aria-labelledby="tab-learn">
-        <div class="pp-copy">
-          <h3>Study with a coach that never sleeps</h3>
-          <p>Structured learning paths in the Adiox Academy, an AI Coach that answers in plain language, and a glossary that turns jargon into knowledge — free from day one.</p>
-          <ul class="pp-list">
-            <li><b>Adiox Academy</b> — guided courses from candlesticks to funded-account rules</li>
-            <li><b>AI Coach</b> — ask anything, get feedback on every trade you take</li>
-            <li><b>Glossary</b> — every prop trading term, explained in 60 seconds</li>
-          </ul>
-          <a class="btn btn-ghost" href="/learn">Enter the Learn hub →</a>
-        </div>
-        <div class="pp-cards">
-          <a class="pp-card" href="/learn/academy"><b>Academy</b><span>Learning paths &amp; courses</span></a>
-          <a class="pp-card" href="/learn/ai-coach"><b>AI Coach</b><span>Personal trading mentor</span></a>
-          <a class="pp-card" href="/glossary"><b>Glossary</b><span>Terms, decoded</span></a>
-        </div>
-      </div>
-
-      <div class="pillar-panel p-train" role="tabpanel" id="panel-train" aria-labelledby="tab-train" hidden>
-        <div class="pp-copy">
-          <h3>Practice the challenge before you pay for it</h3>
-          <p>PropSim recreates real prop-firm evaluations — targets, drawdown rules, daily limits — on simulated capital. Backtest, journal, and build strategies without risking a dollar of evaluation fees.</p>
-          <ul class="pp-list">
-            <li><b>PropSim</b> — prop-firm-style evaluation simulator, runs from $10</li>
-            <li><b>Backtesting Engine</b> — replay years of market data against your rules</li>
-            <li><b>Trading Journal</b> — every trade logged, tagged, and scored automatically</li>
-            <li><b>Strategy Lab</b> — no-code strategy builder</li>
-          </ul>
-          <a class="btn btn-ghost" href="/train">Enter the Train hub →</a>
-        </div>
-        <div class="pp-cards">
-          <a class="pp-card" href="/train/simulator"><b>PropSim</b><span>Challenge simulator</span></a>
-          <a class="pp-card" href="/train/backtesting"><b>Backtesting</b><span>Prove your edge on history</span></a>
-          <a class="pp-card" href="/train/journal"><b>Journal</b><span>Your feedback loop</span></a>
-          <a class="pp-card" href="/train/strategy-builder"><b>Strategy Lab</b><span>No-code builder</span></a>
-        </div>
-      </div>
-
-      <div class="pillar-panel p-compete" role="tabpanel" id="panel-compete" aria-labelledby="tab-compete" hidden>
-        <div class="pp-copy">
-          <h3>Trading tournaments with real prizes</h3>
-          <p>Free and paid tournaments, 1v1 duels and squad battles in the Arena, and public leaderboards where rankings — not follower counts — decide who's good.</p>
-          <ul class="pp-list">
-            <li><b>Tournaments</b> — scheduled competitions with published prize pools</li>
-            <li><b>The Arena</b> — PvP trading duels and team-based games</li>
-            <li><b>Leaderboards</b> — global rankings, public and verifiable</li>
-          </ul>
-          <a class="btn btn-ghost" href="/compete">Enter the Compete hub →</a>
-        </div>
-        <div class="pp-cards">
-          <a class="pp-card" href="/compete/tournaments"><b>Tournaments</b><span>Free &amp; paid, real prizes</span></a>
-          <a class="pp-card" href="/compete/trading-games"><b>The Arena</b><span>1v1 duels &amp; squads</span></a>
-          <a class="pp-card" href="/compete/leaderboards"><b>Leaderboards</b><span>Global rankings</span></a>
-        </div>
-      </div>
-
-      <div class="pillar-panel p-trade" role="tabpanel" id="panel-trade" aria-labelledby="tab-trade" hidden>
-        <div class="pp-copy">
-          <h3>Trade like a professional operation</h3>
-          <p>Funded challenges in every format, the Adiox Copier for social, private and Telegram trade copying, the Signal Hub, and PropSync to run every prop account you own from one command deck.</p>
-          <ul class="pp-list">
-            <li><b>Challenges &amp; Funding</b> — 1-step, 2-step, instant, and pay-later evaluations</li>
-            <li><b>Adiox Copier</b> — Social, Private &amp; Telegram Copier for MT4 / MT5</li>
-            <li><b>Signal Hub</b> — verified providers, auto-executed with your risk settings</li>
-            <li><b>PropSync + Prop Tools</b> — multi-account manager, Risk Manager, News Filter</li>
-          </ul>
-          <a class="btn btn-ghost" href="/trade">Enter the Trade hub →</a>
-        </div>
-        <div class="pp-cards">
-          <a class="pp-card" href="/trade/challenges"><b>Challenges</b><span>Get evaluated, get funded</span></a>
-          <a class="pp-card" href="/trade/copier"><b>Adiox Copier</b><span>Social · Private · Telegram</span></a>
-          <a class="pp-card" href="/trade/signals"><b>Signal Hub</b><span>Verified signal providers</span></a>
-          <a class="pp-card" href="/trade/propsync"><b>PropSync</b><span>All prop accounts, one deck</span></a>
-        </div>
-      </div>
+    <div class="grid g4">
+      <a class="card is-link product-card c-violet reveal" href="/challenges">
+        <span class="ico ico-lg c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+        <h3>Prop-Firm Challenges</h3>
+        <p>Pass each phase's profit target and minimum trading days. Later phases are created for free.</p>
+        <div class="meta"><span class="badge">Multi-phase</span><span class="badge">Pay Later</span></div>
+        <span class="more">See challenges <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-green reveal" href="/challenges/funded-accounts">
+        <span class="ico ico-lg c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span>
+        <h3>Funded Accounts</h3>
+        <p>After passing, trade a funded account and request a share of the profit every week or month.</p>
+        <div class="meta"><span class="badge">Profit share</span><span class="badge">Repeat cycles</span></div>
+        <span class="more">How payouts work <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-orange reveal" href="/challenges/instant-funded">
+        <span class="ico ico-lg c-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+        <h3>Instant Funded</h3>
+        <p>One stage and no profit target. A strict 2% single-trade loss limit replaces the evaluation.</p>
+        <div class="meta"><span class="badge">No target</span><span class="badge">2% per trade</span></div>
+        <span class="more">See the rules <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-amber reveal" href="/tournaments">
+        <span class="ico ico-lg c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span>
+        <h3>Tournaments</h3>
+        <p>Free and paid timed contests. Everyone starts equal; prizes paid by rank in cash, credit or a challenge.</p>
+        <div class="meta"><span class="badge">Free &amp; paid</span><span class="badge">Rejoins</span></div>
+        <span class="more">Browse tournaments <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-pink reveal" href="/games#duel">
+        <span class="ico ico-lg c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M4 4v4M4 4h4M20 4l-8 8M20 4v4M20 4h-4"/><path d="M8 16l-4 4M16 16l4 4M9 15l-2 2M15 15l2 2"/></svg></span>
+        <h3>Trading Duel</h3>
+        <p>1 vs 1. You set the stake within the limits, the winner takes the pot minus commission.</p>
+        <div class="meta"><span class="badge">2 players</span><span class="badge">Draw refunds</span></div>
+        <span class="more">How duels work <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-red reveal" href="/games#battle">
+        <span class="ico ico-lg c-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 7-3.7"/></svg></span>
+        <h3>Trading Battle</h3>
+        <p>Three or more traders, one pot, winner takes all. Starts as soon as the seats are full.</p>
+        <div class="meta"><span class="badge">3+ players</span><span class="badge">Winner takes all</span></div>
+        <span class="more">How battles work <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-blue reveal" href="/games/single-player">
+        <span class="ico ico-lg c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="M17 3l2 2 3-3" /></svg></span>
+        <h3>Single Player Games</h3>
+        <p>Solo missions that score one habit — stop losses, daily loss, consistency or win rate. Pass to earn credit.</p>
+        <div class="meta"><span class="badge">5 missions</span><span class="badge">Credit reward</span></div>
+        <span class="more">See the missions <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="card is-link product-card c-teal reveal" href="/training-room">
+        <span class="ico ico-lg c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span>
+        <h3>Training Room</h3>
+        <p>Rehearse a challenge cheaply with preset or custom rules. Pass or fail only — no prizes, no payouts.</p>
+        <div class="meta"><span class="badge">From $10</span><span class="badge">5-min cancel</span></div>
+        <span class="more">Open the simulator <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════ 4. ECOSYSTEM MAP ══════════════════════════ -->
-<section class="section ecomap" id="ecosystem">
+<section class="section section-alt">
   <div class="container">
-    <p class="eyebrow center reveal">THE ECOSYSTEM</p>
-    <h2 class="center reveal">Everything orbits one thing: you</h2>
-    <p class="lead center reveal">Twelve connected features, one trader at the center. Hover any node to see how it fits.</p>
-
-    <div class="orbit-wrap reveal" id="orbitWrap">
-      <svg class="orbit-svg" viewBox="0 0 800 800" role="img" aria-label="Interactive map of the Adiox ecosystem: twelve features orbiting the trader">
-        <defs>
-          <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <circle cx="400" cy="400" r="150" class="orbit-ring"/>
-        <circle cx="400" cy="400" r="250" class="orbit-ring"/>
-        <circle cx="400" cy="400" r="340" class="orbit-ring"/>
-        <circle cx="400" cy="400" r="90" fill="url(#coreGrad)"/>
-        <g id="orbitThreads" class="orbit-threads"></g>
-      </svg>
-      <div class="orbit-center">
-        <span class="oc-avatar">YOU</span>
-        <span class="oc-label">The Trader</span>
-      </div>
-      <!-- nodes injected by JS -->
+    <div class="section-head center center reveal">
+      <p class="kicker">How it works</p>
+      <h2>From sign-up to your first trade</h2>
+      <p class="lead center">The same flow for every product — only the rules and the reward change.</p>
     </div>
-    <div class="orbit-tip" id="orbitTip" hidden></div>
+    <ol class="steps row reveal" style="--n:4">
+      <li class="step"><h4>Create your account</h4><p>Register and confirm your email. Complete your profile to unlock the $30 welcome credit.</p></li>
+      <li class="step"><h4>Fund your wallet</h4><p>Deposit by card, payment link or crypto — or pay with bonus credit and coupons where allowed.</p></li>
+      <li class="step"><h4>Pick and pay once</h4><p>One checkout for everything: coupon, then credit, then wallet, then the gateway for the rest.</p></li>
+      <li class="step"><h4>Trade and get results</h4><p>Your credentials are shown and emailed. Trade on the web terminal while the rules are checked live.</p></li>
+    </ol>
+    <div class="center reveal" style="margin-top:32px;"><a class="link" href="/how-it-works">Read the full walkthrough</a></div>
   </div>
 </section>
 
-<!-- ══════════════════════════ 5. TRADER'S JOURNEY ══════════════════════════ -->
-<section class="section journey" id="journey">
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <p class="kicker">The prop path</p>
+      <h2>Practise cheaply. Get evaluated. Get paid.</h2>
+      <p class="lead">Most traders fail a challenge on rules, not on direction. Adiox lets you rehearse the exact rule set in the Training Room before you pay for the real evaluation.</p>
+      <ul class="checks">
+        <li><b>Training Room</b> — preset Phase 1, Phase 2 and Funded simulators, or design your own rules.</li>
+        <li><b>Challenge</b> — pass Phase 1 and the next phase account is created for free with the same package.</li>
+        <li><b>Funded account</b> — keep your login, trade the same loss rules, request payouts on your cycle.</li>
+      </ul>
+      <div class="actions" style="margin-top:26px;"><a class="btn btn-primary" href="/challenges">See challenges</a><a class="btn btn-secondary" href="/training-room">Try the Training Room</a></div>
+    </div>
+    <div class="reveal">
+      <div class="panel">
+        <div class="rows">
+          <div class="row-item"><span class="ico c-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></span><div><b>Training Room</b><small>Rehearse the rules · pass or fail</small></div><span class="num">from $10</span></div>
+          <div class="row-item"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><b>Phase 1</b><small>Profit target + minimum days</small></div><span class="badge">Paid once</span></div>
+          <div class="row-item"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><b>Phase 2</b><small>Created automatically on pass</small></div><span class="badge badge-green">Free</span></div>
+          <div class="row-item"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><b>Funded request</b><small>Reviewed and approved by Adiox</small></div><span class="badge badge-amber">Review</span></div>
+          <div class="row-item"><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><div><b>Funded account</b><small>Profit × your share %, weekly or monthly</small></div><span class="badge badge-green">Payouts</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="compare">
   <div class="container">
-    <p class="eyebrow center reveal">THE TRADER'S JOURNEY</p>
-    <h2 class="center reveal">From first lesson to funded professional</h2>
-    <p class="lead center reveal">One path, four milestones. Your account carries your history through every stage.</p>
-
-    <div class="journey-line" id="journeyLine">
-      <div class="jl-progress" id="jlProgress"></div>
-
-      <article class="milestone reveal" data-stage="learn">
-        <div class="ms-num mono">01</div>
-        <div class="ms-body">
-          <h3>Beginner — the classroom</h3>
-          <p>Start free in the Academy. Learning paths, the AI Coach, and zero pressure — no card, no risk, no jargon walls.</p>
-          <p class="ms-stat mono">Free forever · 40+ structured lessons</p>
-        </div>
-      </article>
-
-      <article class="milestone reveal" data-stage="train">
-        <div class="ms-num mono">02</div>
-        <div class="ms-body">
-          <h3>Simulated evaluations — the holodeck</h3>
-          <p>Run prop-firm-style challenges in PropSim before you ever pay evaluation fees. Journal every trade, find the leaks, fix them cheaply.</p>
-          <p class="ms-stat mono">2,417 simulated evaluations run this week</p>
-        </div>
-      </article>
-
-      <article class="milestone reveal" data-stage="compete">
-        <div class="ms-num mono">03</div>
-        <div class="ms-body">
-          <h3>Tournament rankings — the arena</h3>
-          <p>Prove your consistency where everyone can see it. Free entries to start, prize pools when you're ready, a public rank that follows you.</p>
-          <p class="ms-stat mono">96 tournaments live this month</p>
-        </div>
-      </article>
-
-      <article class="milestone reveal" data-stage="trade">
-        <div class="ms-num mono">04</div>
-        <div class="ms-body">
-          <h3>Funded professional — the command deck</h3>
-          <p>Pass an evaluation, trade simulated capital for performance-based payouts, and run every account with PropSync and pro risk tools.</p>
-          <p class="ms-stat mono gold">$148,200 in prizes &amp; payouts to date</p>
-        </div>
-      </article>
+    <div class="section-head reveal">
+      <p class="kicker">Compare</p>
+      <h2>How the products differ</h2>
+      <p class="lead">Same platform, same wallet — different opponents, results and rewards.</p>
     </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════ 6. FEATURE SPOTLIGHTS ══════════════════════════ -->
-<section class="section spotlights" id="features">
-  <div class="container">
-
-    <!-- PropSim -->
-    <div class="spot reveal">
-      <div class="spot-copy">
-        <p class="eyebrow teal">TRAIN · PROPSIM</p>
-        <h2>Practice prop firm challenges before you pay for one</h2>
-        <p class="lead">PropSim recreates evaluation conditions — profit targets, daily drawdown, max loss — on simulated capital. Fail for $10, learn the lesson, pass the real one.</p>
-        <ul class="spot-list">
-          <li>Real evaluation rulesets, including FTMO®-style formats*</li>
-          <li>Instant rule-breach alerts so you learn <em>why</em> you failed</li>
-          <li>Every run feeds your Journal and AI Coach automatically</li>
-        </ul>
-        <a href="/train/simulator" class="btn btn-primary magnetic">Try the Simulator — $10</a>
-      </div>
-      <div class="spot-media tilt">
-        <div class="device sim-ui" aria-hidden="true">
-          <div class="dev-bar"><span class="dev-title">PropSim — Evaluation #4,112</span><span class="pill pill-live">RUNNING</span></div>
-          <div class="sim-stats">
-            <div class="sim-stat"><span>Profit target</span><b class="mono teal">$6,240 / $8,000</b><i class="bar"><i style="width:78%"></i></i></div>
-            <div class="sim-stat"><span>Daily drawdown</span><b class="mono">-1.2% / -5%</b><i class="bar bar-safe"><i style="width:24%"></i></i></div>
-            <div class="sim-stat"><span>Days traded</span><b class="mono">7 / 30</b><i class="bar"><i style="width:23%"></i></i></div>
-          </div>
-          <svg class="sim-chart" viewBox="0 0 320 90" preserveAspectRatio="none">
-            <path d="M0,70 L30,62 L55,66 L85,48 L110,54 L140,38 L170,44 L200,30 L235,36 L265,20 L295,26 L320,12" fill="none" stroke="#22D3EE" stroke-width="2"/>
-            <path d="M0,70 L30,62 L55,66 L85,48 L110,54 L140,38 L170,44 L200,30 L235,36 L265,20 L295,26 L320,12 L320,90 L0,90 Z" fill="rgba(34,211,238,0.08)"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tournaments / Arena -->
-    <div class="spot spot-flip reveal">
-      <div class="spot-copy">
-        <p class="eyebrow violet">COMPETE · TOURNAMENTS &amp; THE ARENA</p>
-        <h2>Trading tournaments with real prizes</h2>
-        <p class="lead">Scheduled competitions, 1v1 duels, and squad battles — ranked on skill, settled on the leaderboard, paid from published prize pools.</p>
-        <ul class="spot-list">
-          <li>Free entry tournaments every week — no card required</li>
-          <li>PvP duels in the Arena: same market, same capital, best trader wins</li>
-          <li>Public, verifiable leaderboards and season rankings</li>
-        </ul>
-        <a href="/compete/tournaments" class="btn btn-primary magnetic">Join a Free Tournament</a>
-      </div>
-      <div class="spot-media tilt">
-        <div class="device arena-ui" aria-hidden="true">
-          <div class="dev-bar"><span class="dev-title">Weekend Clash — Final</span><span class="pill pill-gold">$12,500 POOL</span></div>
-          <div class="duel">
-            <div class="duel-side"><span class="duel-av av-a">RX</span><b>Rexon</b><span class="mono teal">+8.4%</span></div>
-            <div class="duel-vs mono">VS</div>
-            <div class="duel-side"><span class="duel-av av-b">NV</span><b>NovaFx</b><span class="mono">+6.1%</span></div>
-          </div>
-          <div class="arena-rows">
-            <div class="arena-row"><span class="mono">#1</span><b>Rexon</b><span class="mono teal">+8.4%</span></div>
-            <div class="arena-row"><span class="mono">#2</span><b>NovaFx</b><span class="mono">+6.1%</span></div>
-            <div class="arena-row"><span class="mono">#3</span><b>Drift</b><span class="mono">+5.7%</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Adiox Copier -->
-    <div class="spot reveal">
-      <div class="spot-copy">
-        <p class="eyebrow">TRADE · ADIOX COPIER</p>
-        <h2>Trade once. Copy everywhere.</h2>
-        <p class="lead">One copier, three modes: follow ranked master traders, synchronise your own MT4 and MT5 accounts, or turn Telegram signals into trades automatically.</p>
-        <ul class="spot-list">
-          <li><b>Social Copier</b> — copy verified masters with your own lot sizing and drawdown caps</li>
-          <li><b>Private Copier</b> — place a trade once on your master, fill every follower account</li>
-          <li><b>Telegram Copier</b> — entry, SL and up to 5 TPs read from 15 signal languages</li>
-          <li>Hosted execution, encrypted credentials, prop-firm loss limits built in</li>
-        </ul>
-        <a href="/trade/copier" class="btn btn-primary magnetic">Explore the Copier</a>
-      </div>
-      <div class="spot-media tilt">
-        <div class="device copy-ui" aria-hidden="true">
-          <div class="dev-bar"><span class="dev-title">Adiox Copier — Dashboard</span><span class="pill pill-live">3 COPIERS RUNNING</span></div>
-          <div class="strat-card"><div><b>Telegram Copier</b><span class="strat-meta">Gold Signals VIP · BUY XAUUSD.m 0.40 · filled</span></div><span class="mono teal">+$312</span></div>
-          <div class="strat-card"><div><b>Private Copier</b><span class="strat-meta">Master → 2 followers · EURUSD</span></div><span class="mono teal">+$88</span></div>
-          <div class="strat-card"><div><b>Social Copier</b><span class="strat-meta">Master #4471 · Gold tier</span></div><span class="mono" style="color:var(--neg);">−$25</span></div>
-          <div class="strat-card"><div><b>Daily loss used</b><span class="strat-meta">Prop-firm limit · auto-flatten on breach</span></div><span class="mono gold">1.2% / 5%</span></div>
-        </div>
-        <p class="fineprint" style="text-align:center;">Illustrative dashboard. Past performance does not guarantee future results.</p>
-      </div>
-    </div>
-
-    <!-- AI Coach -->
-    <div class="spot spot-flip reveal">
-      <div class="spot-copy">
-        <p class="eyebrow violet">LEARN · AI COACH</p>
-        <h2>Your AI Coach reviews every trade you take</h2>
-        <p class="lead">Not a chatbot bolted on — an AI layer wired into your journal, simulator runs, and evaluations. It sees your patterns before you do.</p>
-        <ul class="spot-list">
-          <li>Post-trade reviews with the exact rule or habit that cost you</li>
-          <li>Weekly performance reports in plain language</li>
-          <li>Trained on your data — advice gets sharper the more you trade</li>
-        </ul>
-        <a href="/learn/ai-coach" class="btn btn-primary magnetic">Meet Your AI Coach</a>
-      </div>
-      <div class="spot-media tilt">
-        <div class="device coach-ui" aria-hidden="true">
-          <div class="dev-bar"><span class="dev-title">AI Coach</span><span class="pill pill-violet">ANALYZING</span></div>
-          <div class="chat-msg ai">You've broken your own 1% risk rule on 4 of your last 6 losing trades — all after a winning streak. Overconfidence pattern.</div>
-          <div class="chat-msg user">How do I fix it?</div>
-          <div class="chat-msg ai">Enable the Risk Manager hard-cap at 1% and I'll flag any order above it before execution. Want me to switch it on?</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════ 7. LIVE STATS BAND ══════════════════════════ -->
-<section class="statband" id="stats">
-  <div class="container statband-grid reveal">
-    <div class="bigstat"><b class="mono" data-count="28400">0</b><span>traders in the ecosystem</span></div>
-    <div class="bigstat"><b class="mono" data-count="96">0</b><span>tournaments this month</span></div>
-    <div class="bigstat"><b class="mono" data-count="2417">0</b><span>simulated evaluations this week</span></div>
-    <div class="bigstat"><b class="mono gold" data-count="148200" data-prefix="$">0</b><span>in prizes &amp; payouts</span></div>
-  </div>
-  <p class="statband-note container">Live platform data. Simulated results are labeled as simulated; past performance does not guarantee future results.</p>
-</section>
-
-<!-- ══════════════════════════ 8. LEADERBOARD TEASER ══════════════════════════ -->
-<section class="section lboard" id="leaderboard">
-  <div class="container">
-    <div class="lb-head reveal">
-      <div>
-        <p class="eyebrow violet">THIS WEEK'S RANKINGS</p>
-        <h2>The leaderboard doesn't care about your follower count</h2>
-      </div>
-      <a href="/compete/leaderboards" class="btn btn-ghost">Full leaderboards →</a>
-    </div>
-
-    <div class="lb-grid reveal">
-      <div class="podium" aria-hidden="true">
-        <div class="pod pod-2"><span class="pod-av">NV</span><b>NovaFx</b><span class="mono">+6.1%</span><i></i></div>
-        <div class="pod pod-1"><span class="pod-crown">👑</span><span class="pod-av">RX</span><b>Rexon</b><span class="mono gold">+8.4%</span><i></i></div>
-        <div class="pod pod-3"><span class="pod-av">DR</span><b>Drift</b><span class="mono">+5.7%</span><i></i></div>
-      </div>
-
-      <table class="lb-table">
-        <caption class="sr-only">Top 10 traders this week by return</caption>
-        <thead><tr><th>#</th><th>Trader</th><th>Return</th><th>Win rate</th></tr></thead>
-        <tbody class="mono">
-          <tr><td>1</td><td class="lb-name">Rexon</td><td class="teal">+8.4%</td><td>68%</td></tr>
-          <tr><td>2</td><td class="lb-name">NovaFx</td><td class="teal">+6.1%</td><td>61%</td></tr>
-          <tr><td>3</td><td class="lb-name">Drift</td><td class="teal">+5.7%</td><td>64%</td></tr>
-          <tr><td>4</td><td class="lb-name">Kestrel</td><td class="teal">+5.2%</td><td>57%</td></tr>
-          <tr><td>5</td><td class="lb-name">MonoPip</td><td class="teal">+4.9%</td><td>59%</td></tr>
-          <tr><td>6</td><td class="lb-name">Aster</td><td class="teal">+4.4%</td><td>55%</td></tr>
-          <tr><td>7</td><td class="lb-name">Volt</td><td class="teal">+4.1%</td><td>62%</td></tr>
-          <tr><td>8</td><td class="lb-name">Nimbus</td><td class="teal">+3.8%</td><td>53%</td></tr>
-          <tr><td>9</td><td class="lb-name">Fathom</td><td class="teal">+3.5%</td><td>58%</td></tr>
-          <tr><td>10</td><td class="lb-name">Onyx</td><td class="teal">+3.2%</td><td>51%</td></tr>
+    <div class="table-wrap reveal">
+      <table class="table table-wide">
+        <caption class="sr-only">Comparison of Adiox trading products</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Challenge</th><th scope="col">Instant Funded</th><th scope="col">Tournament</th><th scope="col">Duel</th><th scope="col">Battle</th><th scope="col">Single Player</th><th scope="col">Training Room</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Opponents</th><td>None</td><td>None</td><td>Many</td><td>1</td><td>2+</td><td>None</td><td>None</td></tr>
+          <tr><th scope="row">Profit target</th><td>Yes</td><td>No</td><td>Optional, to qualify</td><td>Optional, first to target wins</td><td>Optional</td><td>Depends on game</td><td>Optional</td></tr>
+          <tr><th scope="row">Result decided by</th><td>Target + trading days</td><td>Surviving the rules</td><td>Final equity rank</td><td>Profit %</td><td>Profit %, then lowest loss</td><td>A behaviour rule</td><td>Target, or survival</td></tr>
+          <tr><th scope="row">Reward</th><td>Funded account → payouts</td><td>Payouts</td><td>Cash, credit or a challenge by rank</td><td>Pot minus commission</td><td>Pot (winner only)</td><td>Bonus credit</td><td>None — practice</td></tr>
+          <tr><th scope="row">Special rule</th><td>Later phases free</td><td>2% max loss per trade</td><td>Rejoins, max trades</td><td>Draw refunds both</td><td>Ranks everyone</td><td>e.g. SL within 30 s</td><td>Custom rules, 5-min cancel</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="fineprint reveal">Results from simulated tournament accounts. Simulated performance is not indicative of future results.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════ 9. AI LAYER TEASER ══════════════════════════ -->
-<section class="section ailayer" id="ai">
-  <div class="container ailayer-inner reveal">
-    <p class="eyebrow violet center">THE AI LAYER</p>
-    <h2 class="center">Every feature you touch makes your AI Coach smarter</h2>
-    <p class="lead center">Lessons you finish, simulations you run, tournaments you enter, trades you take — it all feeds one intelligence layer that coaches <em>you</em>, not a generic "average trader."</p>
-    <div class="ai-chips center">
-      <span class="chipf">Academy progress</span><span class="chipf">Journal entries</span><span class="chipf">PropSim runs</span>
-      <span class="chipf">Tournament results</span><span class="chipf">Live trades</span>
-      <span class="unify-arrow">→</span><span class="chipf chip-ai">AI Coach</span>
-    </div>
-    <div class="center"><a href="/learn/ai-coach" class="btn btn-primary magnetic">Meet Your AI Coach</a></div>
-  </div>
-</section>
-
-<!-- ══════════════════════════ 10. COMMUNITY WALL ══════════════════════════ -->
-<section class="section community" id="community">
+<section class="section">
   <div class="container">
-    <p class="eyebrow center reveal">THE COMMUNITY</p>
-    <h2 class="center reveal">Traders who evolve together</h2>
-    <p class="lead center reveal">14,200 members on Discord · 9,800 on Telegram · rankings, duels, and payouts posted daily.</p>
-
-    <div class="testi-grid reveal">
-      <figure class="testi">
-        <blockquote>"I failed two paid challenges before Adiox. Ran nine PropSim evaluations at $10 each, found my drawdown habit, passed the real one on my next attempt."</blockquote>
-        <figcaption><span class="t-av">MK</span><div><b>Marek K.</b><span>Funded trader · Prague</span></div></figcaption>
-      </figure>
-      <figure class="testi">
-        <blockquote>"The Arena got me addicted to being consistent. You can't fake it in a 1v1 — the leaderboard is the only opinion that counts."</blockquote>
-        <figcaption><span class="t-av">SA</span><div><b>Sofia A.</b><span>Arena season 2 finalist · Dubai</span></div></figcaption>
-      </figure>
-      <figure class="testi">
-        <blockquote>"PropSync runs my five prop accounts from one screen. The Risk Manager has stopped me from breaching a daily limit twice this month alone."</blockquote>
-        <figcaption><span class="t-av">JT</span><div><b>James T.</b><span>Multi-account trader · London</span></div></figcaption>
-      </figure>
-      <figure class="testi">
-        <blockquote>"I publish my strategy in a private group and earn from performance fees. Adiox verified my track record — that's what made followers trust it."</blockquote>
-        <figcaption><span class="t-av">LN</span><div><b>Lena N.</b><span>Strategy provider · Singapore</span></div></figcaption>
-      </figure>
+    <div class="section-head reveal">
+      <p class="kicker">Rewards</p>
+      <h2>Every trade counts toward something</h2>
+      <p class="lead">Achievements track what you do across every product and pay out in XP and bonus credit.</p>
     </div>
-    <p class="fineprint center reveal">Individual experiences on simulated and evaluation accounts. Not typical results; trading involves substantial risk.</p>
+    <div class="grid g4">
+      <div class="card reveal"><span class="ico c-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L12 16.4 6.7 19.2l1.2-5.9L3.4 9.2l6-.7L12 3z"/></svg></span><h3>Achievements</h3><p>Login streaks, phases passed, games won, friends invited — each one pays XP and sometimes credit.</p></div>
+      <div class="card reveal"><span class="ico c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.7 0-3 1-3 2.2 0 2.8 6 1.4 6 4.3 0 1.2-1.3 2.3-3 2.3-1.2 0-2.3-.6-2.8-1.6M12 6.5V8M12 16.8v1.5"/></svg></span><h3>100 points = $10</h3><p>Exchange points for bonus credit. Levels use lifetime XP, so redeeming never lowers your level.</p></div>
+      <div class="card reveal"><span class="ico c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8c-2-3-6-3-6-.5S9 8 12 8zM12 8c2-3 6-3 6-.5S15 8 12 8z"/></svg></span><h3>$30 welcome credit</h3><p>Complete your profile to open the welcome treasure box.</p></div>
+      <div class="card reveal"><span class="ico c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></svg></span><h3>Referral commission</h3><p>10% of the cash your first 20 referrals pay, 15% from the 21st on — paid to your wallet.</p></div>
+    </div>
+    <div class="reveal" style="margin-top:26px;"><a class="link" href="/rewards">Explore rewards, levels and referrals</a></div>
   </div>
 </section>
 
-<!-- ══════════════════════════ 11. PRICING TEASER ══════════════════════════ -->
-<section class="section pricing" id="pricing">
+<section class="section section-alt">
+  <div class="container split">
+    <div class="reveal">
+      <p class="kicker">Wallet</p>
+      <h2>One wallet for every product</h2>
+      <p class="lead">Deposit once and use the balance anywhere. Winnings, payouts, refunds and referral commission land in the same place.</p>
+      <ul class="checks">
+        <li><b>Deposits</b> by card, payment link or crypto.</li>
+        <li><b>Withdrawals</b> to crypto or bank once your KYC is approved — $10 minimum.</li>
+        <li><b>Bonus credit</b> covers part of a purchase (capped) and expires after 30 days, with reminders.</li>
+      </ul>
+      <div class="actions" style="margin-top:26px;"><a class="btn btn-secondary" href="/wallet">Wallet &amp; payments</a></div>
+    </div>
+    <div class="reveal">
+      <div class="panel">
+        <div class="panel-head"><div><b>Checkout · Tournament entry</b><span>Fee order: coupon → credit → wallet → gateway</span></div></div>
+        <div class="out-line"><span>Entry fee</span><b>$25.00</b></div>
+        <div class="out-line"><span>Coupon 20%</span><b>−$5.00</b></div>
+        <div class="out-line"><span>Bonus credit (max 50%)</span><b>−$10.00</b></div>
+        <div class="out-line"><span>Wallet</span><b>−$6.00</b></div>
+        <div class="out-line total"><span>Paid by card / crypto</span><b>$4.00</b></div>
+      </div>
+      <p class="panel-caption">Example split — try your own numbers on the <a class="link" href="/wallet#checkout">wallet page</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid g2">
+    <a class="card is-link c-violet reveal" href="/trade-copier">
+      <div class="card-top"><span class="ico ico-lg c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><span class="badge badge-violet">copier.adiox.io</span></div>
+      <h3>Trade Copier</h3>
+      <p>See the top masters and signal providers from the Adiox copier portal, plus your own masters and copiers, right inside your dashboard.</p>
+      <span class="more">About the Trade Copier <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+    <a class="card is-link c-blue reveal" href="/ai-journal">
+      <div class="card-top"><span class="ico ico-lg c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg></span><span class="badge badge-amber">Coming soon</span></div>
+      <h3>AI Journal</h3>
+      <p>A per-account trading journal with an equity curve, day-by-day review with notes, reports and an economic calendar.</p>
+      <span class="more">See what's coming <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container" style="max-width:860px;">
+    <div class="section-head center reveal"><p class="kicker">FAQ</p><h2>Common questions</h2></div>
+    <div class="faq reveal">
+      <details class="faq-item"><summary>What is Adiox?</summary><div class="faq-body"><p>Adiox is a gamified prop-trading and trading-competition portal. You register, fund one wallet and buy access to challenges, tournaments, trading games or the Training Room. Each one gives you a trading account on the Adiox Trading Platform, and the system tracks it live against the rules — you pass or fail, win prizes, or become a funded trader who receives a share of the profit.</p></div></details>
+      <details class="faq-item"><summary>Is the money on my trading account real?</summary><div class="faq-body"><p>No. Every product account is funded with virtual money on the Adiox Trading Platform. What is real is the money in your wallet: deposits, prizes, game winnings, funded-account payouts and referral commission.</p></div></details>
+      <details class="faq-item"><summary>What happens if I break a rule?</summary><div class="faq-body"><p>The account is eliminated: open trades are closed and the account is locked automatically. Entry fees are not refunded. Tournaments allow a paid rejoin where the organiser has enabled it.</p></div></details>
+      <details class="faq-item"><summary>How do I withdraw?</summary><div class="faq-body"><p>Complete identity verification (KYC), then request a withdrawal of at least $10 to crypto or a bank account. The amount is reserved from your balance straight away, you can edit or cancel while it is pending, and our team approves the payout.</p></div></details>
+      <details class="faq-item"><summary>Can I practise before buying a challenge?</summary><div class="faq-body"><p>Yes — the Training Room gives you a practice prop-firm account with preset or custom rules from $10. It is pass or fail only, and you can cancel within 5 minutes for a refund.</p></div></details>
+      <details class="faq-item"><summary>Where do I trade?</summary><div class="faq-body"><p>On the Adiox Trading Platform web terminal at trade.adiox.io. Use the Start Trading button on any account page in the portal; your login and password are shown there and emailed to you.</p></div></details>
+    </div>
+    <div class="center reveal" style="margin-top:26px;"><a class="link" href="/faq">All questions</a></div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
-    <p class="eyebrow center reveal">PRICING</p>
-    <h2 class="center reveal">Start free. Upgrade as you evolve.</h2>
-    <p class="lead center reveal">No card to start. Pay only for the stages you're ready for.</p>
-
-    <div class="price-grid reveal">
-      <div class="price-card">
-        <h3>Explorer</h3>
-        <div class="price mono">$0<span>/forever</span></div>
-        <ul><li>Adiox Academy access</li><li>Free tournaments</li><li>Glossary &amp; community</li><li>Basic journal</li></ul>
-        <a href="/signup" class="btn btn-ghost">Start Free</a>
-      </div>
-      <div class="price-card price-hot">
-        <span class="price-badge">MOST POPULAR</span>
-        <h3>Operator</h3>
-        <div class="price mono">$29<span>/month</span></div>
-        <ul><li>Everything in Explorer</li><li>PropSim runs included monthly</li><li>AI Coach + full journal</li><li>Backtesting &amp; Strategy Lab</li></ul>
-        <a href="/pricing" class="btn btn-primary">See Pricing</a>
-      </div>
-      <div class="price-card">
-        <h3>Professional</h3>
-        <div class="price mono">$79<span>/month</span></div>
-        <ul><li>Everything in Operator</li><li>PropSync multi-account manager</li><li>Risk Manager + News Filter</li><li>Signal Hub + Copier auto-execution</li></ul>
-        <a href="/pricing" class="btn btn-ghost">See Pricing</a>
-      </div>
+    <div class="cta-band reveal">
+      <div><h2>Start with a $4.95 challenge.</h2><p>New buyers can take a one-time $5,000 challenge account for $4.95. Create your account, confirm your email and pick it at checkout.</p></div>
+      <div class="actions"><a class="btn btn-primary btn-lg" href="https://portal.adiox.io/Identity/Account/Register" target="_blank" rel="noopener">Create account <span class="arrow" aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════════════════ QUIZ ROUTER ══════════════════════════ -->
-<section class="section quiz reveal" id="quiz">
-  <div class="container quiz-inner">
-    <div>
-      <h2>Not sure where to start?</h2>
-      <p class="lead">Take the 60-second trader quiz and we'll route you to the right stage — Learn, Train, Compete, or Trade.</p>
-    </div>
-    <a href="/quiz" class="btn btn-primary btn-lg magnetic">Find my starting point →</a>
-  </div>
-</section>
-
-<!-- ══════════════════════════ 12. FAQ ══════════════════════════ -->
-<section class="section faq" id="faq">
-  <div class="container faq-inner">
-    <p class="eyebrow center reveal">QUESTIONS, ANSWERED</p>
-    <h2 class="center reveal">Frequently asked questions</h2>
-
-    <div class="faq-list reveal">
-      <details class="faq-item" open>
-        <summary>What is Adiox?</summary>
-        <p>Adiox is a unified prop trading ecosystem built around four stages: Learn, Train, Compete, Trade. Traders study with an AI coach, practice prop-firm-style evaluations in a simulator, compete in tournaments and PvP trading games, and graduate to funded challenges, copy trading, signals, and professional risk tools — all inside one account.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Is Adiox free to start?</summary>
-        <p>Yes. Creating an Adiox account is free and requires no card. The free tier includes Academy lessons, free tournaments, the trading glossary, and community access. Paid options — simulator runs from $10, evaluations, and Pro subscriptions — unlock as you progress, so you only pay when you're ready to level up.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What does Learn, Train, Compete, Trade mean?</summary>
-        <p>They are the four stages of a trader's evolution on Adiox. Learn builds knowledge with the Academy and AI Coach. Train builds skill safely with PropSim, backtesting, and journaling. Compete proves skill in tournaments, PvP games, and leaderboards. Trade is the professional stage: funded challenges, copy trading, signals, and risk tools.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can I get funded through Adiox?</summary>
-        <p>Yes. Adiox offers performance-based evaluations — 1-step, 2-step, instant, and pay-later formats. Pass an evaluation on simulated capital and you qualify for a funded account with performance-based payouts. Trading involves risk and funding is never guaranteed; results depend entirely on your performance under the published rules.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do I need experience to join Adiox?</summary>
-        <p>No experience is required. Complete beginners start in the Adiox Academy with structured learning paths and an AI coach, then practice risk-free in the simulator before any money is at stake. Experienced traders can skip straight to evaluations, tournaments, PropSync multi-account management, or the Adiox Copier.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What is the Adiox Copier?</summary>
-        <p>The Adiox Copier is the trade-copying engine inside the Trade stage. It works three ways: Social Copier follows ranked master traders, Private Copier copies trades from your own master account to any number of follower accounts, and Telegram Copier reads signals from the Telegram channels you follow and places them on your MT4 or MT5 account. Copying is hosted, credentials are encrypted, and lot size, symbols, stop loss, take profit and prop-firm loss limits are all set by you.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Which platforms does Adiox connect to (MT4, MT5, TradeLocker, Match-Trader)?</summary>
-        <p>Challenges, the journal and PropSync connect to MetaTrader 5 (MT5), TradeLocker, and Match-Trader, so you can monitor accounts across multiple prop firms in one dashboard. The Adiox Copier works with MetaTrader: the Telegram Copier copies signals to any MT4 or MT5 account, while the Social and Private Copier currently support MT5, always with your own risk settings applied.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════ 13. FINAL CTA ══════════════════════════ -->
-<section class="finale" id="start">
-  <div class="finale-glow" aria-hidden="true"></div>
-  <div class="container center reveal">
-    <h2 class="finale-title">Your evolution starts here.</h2>
-    <p class="lead">One ecosystem. Every stage of your evolution.</p>
-    <a href="/signup" class="btn btn-primary btn-xl magnetic">Create Free Account</a>
-    <p class="micro">No card required · 2-minute setup</p>
-  </div>
-</section>
-
 </main>
-
-<!-- ══════════════════════════ 14. FOOTER ══════════════════════════ -->
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
-    <p class="footer-vision">Build a complete ecosystem where traders evolve from beginners to funded professionals inside one unified system.</p>
-    <div class="footer-top">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="nav-logo"><img src="/images/adiox-logo.png" alt="Adiox" class="nav-logo-img" width="182" height="87" loading="lazy" /></a>
-        <p>Adiox is the operating system for prop trading performance and evaluation — one unified ecosystem where traders learn, train, compete, and trade their way from beginner to funded professional.</p>
-        <div class="footer-social">
-          <a href="https://x.com/adiox" aria-label="Adiox on X">X</a>
-          <a href="https://discord.gg/adiox" aria-label="Adiox on Discord">Discord</a>
-          <a href="https://t.me/adiox" aria-label="Adiox on Telegram">Telegram</a>
-          <a href="https://www.youtube.com/@adiox" aria-label="Adiox on YouTube">YouTube</a>
-        </div>
+        <a href="/" aria-label="Adiox home"><img src="/images/adiox-logo.png" alt="Adiox" width="182" height="87" loading="lazy" /></a>
+        <p>Prop-firm challenges, tournaments, trading games and a practice simulator — one account, one wallet, live accounts on the Adiox Trading Platform.</p>
       </div>
-
-      <nav class="footer-cols" aria-label="Footer">
-        <div class="fcol">
-          <div class="fcol-head learn"><span class="glyph glyph-learn" aria-hidden="true"></span> Learn</div>
-          <a href="/learn/academy">Adiox Academy</a>
-          <a href="/learn/ai-coach">AI Coach</a>
-          <a href="/glossary">Glossary</a>
-          <a href="/blog">Blog</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head train"><span class="glyph glyph-train" aria-hidden="true"></span> Train</div>
-          <a href="/train/simulator">PropSim</a>
-          <a href="/train/backtesting">Backtesting</a>
-          <a href="/train/journal">Journal</a>
-          <a href="/train/strategy-builder">Strategy Lab</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head compete"><span class="glyph glyph-compete" aria-hidden="true"></span> Compete</div>
-          <a href="/compete/tournaments">Tournaments</a>
-          <a href="/compete/trading-games">The Arena</a>
-          <a href="/compete/leaderboards">Leaderboards</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head trade"><span class="glyph glyph-trade" aria-hidden="true"></span> Trade</div>
-          <a href="/trade/challenges">Challenges</a>
-          <a href="/trade/copier">Adiox Copier</a>
-          <a href="/trade/copy-trading">Copy Trading</a>
-          <a href="/trade/signals">Signal Hub</a>
-          <a href="/trade/propsync">PropSync</a>
-          <a href="/trade/prop-tools">Prop Tools</a>
-        </div>
-        <div class="fcol">
-          <div class="fcol-head">Company</div>
-          <a href="/about">About</a>
-          <a href="/about#roadmap">Roadmap</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/partners">Partners</a>
-          <a href="/contact">Contact</a>
-          <a href="/about#press">Press Kit</a>
-        </div>
+      <nav class="footer-col" aria-label="Products">
+        <h4>Products</h4>
+        <a href="/challenges">Challenges</a><a href="/challenges/instant-funded">Instant Funded</a><a href="/challenges/funded-accounts">Funded Accounts</a><a href="/tournaments">Tournaments</a><a href="/games">Duels &amp; Battles</a><a href="/games/single-player">Single Player Games</a>
+      </nav>
+      <nav class="footer-col" aria-label="More">
+        <h4>More</h4>
+        <a href="/training-room">Training Room</a><a href="/leaderboards">Leaderboards</a><a href="/trade-copier">Trade Copier</a><a href="/ai-journal">AI Journal</a><a href="/rewards">Rewards &amp; Referrals</a>
+      </nav>
+      <nav class="footer-col" aria-label="Platform">
+        <h4>Platform</h4>
+        <a href="/how-it-works">How it works</a><a href="/wallet">Wallet &amp; payments</a><a href="/pricing">Pricing</a><a href="https://trade.adiox.io" rel="noopener">Trading platform ↗</a><a href="https://portal.adiox.io" rel="noopener">Client portal ↗</a>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="/about">About</a><a href="/faq">FAQ</a><a href="/contact">Contact</a><a href="/legal/terms">Terms</a><a href="/legal/risk-disclosure">Risk Disclosure</a>
       </nav>
     </div>
-
-    <div class="footer-bottom">
-      <div class="footer-newsletter">
-        <span>The Funded Letter — one email a week</span>
-        <form data-demo>
-          <input type="email" placeholder="you@example.com" aria-label="Newsletter email" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <div class="footer-meta">
-        <div class="footer-badges"><span>MT4</span><span>MT5</span><span>TradeLocker</span><span>Match-Trader</span></div>
-        <span class="footer-lang">EN 🌐</span>
-      </div>
+    <div class="footer-risk">
+      <p><strong>Risk disclosure.</strong> Every Adiox product gives you a trading account on the Adiox Trading Platform funded with virtual money. Entry fees buy access to a skill-based challenge, competition, game or simulator; they are not deposits. Payouts, prizes and rewards are paid only when the published rules are met, and breaking a rule ends the account without a refund. Trading leveraged products carries a high level of risk. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
+      <p>Paid competitions may not be available in every country — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
     </div>
-
-    <div class="footer-legal">
-
-      <p><strong>Risk Disclosure:</strong> Trading foreign exchange, CFDs, and other leveraged products carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Evaluation and tournament accounts on Adiox use simulated capital; simulated performance is not indicative of future results and funding is performance-based, never guaranteed. Nothing on this site is investment advice. <a href="/legal/risk-disclosure">Read the full risk disclosure</a>.</p>
-      <p>*Adiox is not affiliated with, endorsed by, or sponsored by FTMO®, TradeZella, TraderWaves, MetaQuotes, TradeLocker, Match-Trader, or any prop firm or platform mentioned. All trademarks belong to their respective owners. Paid-entry competitions may be unavailable in some jurisdictions — see <a href="/legal/regional-restrictions">Regional Restrictions</a>.</p>
-      <div class="footer-links">
-        <a href="/legal/terms">Terms of Service</a>
-        <a href="/legal/privacy">Privacy Policy</a>
-        <a href="/legal/risk-disclosure">Risk Disclosure</a>
-        <a href="/legal/regional-restrictions">Regional Restrictions</a>
-      </div>
-      <p class="copyright">© 2026 Adiox. All rights reserved.</p>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adiox. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/legal/terms">Terms</a><a href="/legal/privacy">Privacy</a><a href="/legal/cookies">Cookies</a><a href="/legal/risk-disclosure">Risk</a><a href="/legal/regional-restrictions">Regional</a></nav>
     </div>
   </div>
 </footer>
-
-<script src="js/home.js" defer></script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
