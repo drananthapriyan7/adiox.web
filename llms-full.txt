@@ -1,0 +1,338 @@
+# Adiox — full reference
+
+> Adiox (https://adiox.io) is a gamified prop-trading and trading-competition platform. Users register, fund one wallet and buy access to prop-firm challenges, tournaments, trading games and a challenge simulator. Every product gives the user a trading account on the Adiox Trading Platform funded with virtual money, checked against its rules every 1–3 seconds. Client portal: https://portal.adiox.io. Trading platform: https://trade.adiox.io. Trade copier: https://copier.adiox.io.
+
+Last updated: 2026-11-24. Prices are in US dollars. Nothing here is investment advice.
+
+## Adiox — Prop-Firm Challenges, Tournaments & Trading Games
+
+URL: https://adiox.io/
+
+Adiox combines prop-firm challenges, funded accounts, trading tournaments, 1-vs-1 duels, battles and a $10 challenge simulator in one account and wallet.
+
+- What Adiox is: A gamified prop-trading and trading-competition platform with one account and one wallet.
+- Products: Challenges, Funded Accounts, Instant Funded, Tournaments, Trading Duels, Trading Battles, Single Player Games and the Training Room.
+- Trading accounts: Every product opens an account on the Adiox Trading Platform funded with virtual money.
+- Rule checks: Accounts are checked every 1–3 seconds; breaking a rule closes trades and locks the account.
+- Cheapest start: First-Buyer Offer: a $5,000 challenge for $4.95. Training Room from $10. Free tournaments.
+- Withdrawals: To crypto or bank after KYC, $10 minimum.
+
+Q: What is Adiox?
+A: Adiox is a gamified prop-trading and trading-competition portal. You register, fund one wallet and buy access to challenges, tournaments, trading games or the Training Room. Each one gives you a trading account on the Adiox Trading Platform, and the system tracks it live against the rules — you pass or fail, win prizes, or become a funded trader who receives a share of the profit.
+Q: Is the money on my trading account real?
+A: No. Every product account is funded with virtual money on the Adiox Trading Platform. What is real is the money in your wallet: deposits, prizes, game winnings, funded-account payouts and referral commission.
+Q: What happens if I break a rule?
+A: The account is eliminated: open trades are closed and the account is locked automatically. Entry fees are not refunded. Tournaments allow a paid rejoin where the organiser has enabled it.
+Q: How do I withdraw?
+A: Complete identity verification (KYC), then request a withdrawal of at least $10 to crypto or a bank account. The amount is reserved from your balance straight away, you can edit or cancel while it is pending, and our team approves the payout.
+Q: Can I practise before buying a challenge?
+A: Yes — the Training Room gives you a practice prop-firm account with preset or custom rules from $10. It is pass or fail only, and you can cancel within 5 minutes for a refund.
+Q: Where do I trade?
+A: On the Adiox Trading Platform web terminal at trade.adiox.io. Use the Start Trading button on any account page in the portal; your login and password are shown there and emailed to you.
+
+## Prop-Firm Challenges — Multi-Phase Evaluation | Adiox
+
+URL: https://adiox.io/challenges/
+
+Pass each phase’s profit target and minimum trading days to get funded. Later phases are free, payouts are weekly or monthly, and Pay Later is available.
+
+- How you pass: Reach the profit target and trade the minimum number of days in each phase.
+- Price of later phases: Free — the next phase account is created automatically with the same package.
+- Loss rules: Overall loss from the starting balance; daily loss from each day’s opening balance.
+- Inactivity: 15 idle days in a row eliminates the account (warnings at 7, 10 and 14 days).
+- After passing: A funded-account request is reviewed, then you trade for weekly or monthly payouts.
+- Offers: Pay Later, and a one-time $5,000 First-Buyer account for $4.95.
+
+Q: Do I pay again for Phase 2?
+A: No. When you pass a phase your trades are closed and the next phase account is created automatically for free, using the same package.
+Q: When do I pass a phase?
+A: When both conditions are met: your equity reaches the profit target and you have traded the minimum number of days. A day counts when your equity changed compared with the previous day.
+Q: How is the daily loss measured?
+A: From the day's opening balance, recorded at midnight UTC. With a 5% limit on a $10,000 opening balance, equity must stay above $9,500 that day. Profit made earlier in the same day gives you extra room.
+Q: What happens if I break a rule?
+A: The account is eliminated: open trades are closed and the account is locked. There is no refund of the challenge fee.
+Q: Can I stop trading for a while?
+A: Up to a point. 15 idle days in a row eliminates the account; you'll receive warnings after 7, 10 and 14 idle days.
+Q: What is the payout cycle?
+A: You choose weekly (7 days) or monthly (30 days) when you buy the challenge. Each cycle has its own profit-share percentage, shown on the challenge before you pay.
+
+## Funded Accounts & Profit-Share Payouts | Adiox
+
+URL: https://adiox.io/challenges/funded-accounts/
+
+Pass an Adiox challenge to trade a funded account. Request a payout every weekly or monthly cycle and receive profit × your payout share in your wallet.
+
+- Payout amount: Profit × your payout share percentage for the cycle.
+- Payout cycle: Weekly (7 days) or monthly (30 days), chosen when you buy the challenge.
+- First payout: No waiting period.
+- During review: Trading is paused; approval credits your wallet and resets the account.
+- Rules: Daily and overall loss limits still apply.
+
+Q: Do I get a new login when I'm funded?
+A: No — you keep the same login on a fresh funded account. The trading password is reset and shown on your account page.
+Q: Can I trade while a payout is being reviewed?
+A: No. Trading is paused while the request is reviewed. After approval the account is reset to its starting balance and you continue with the next cycle.
+Q: How is the payout calculated?
+A: Profit × your payout share percentage for the cycle you chose. For example, $1,200 profit at an 80% share credits $960 to your wallet.
+Q: Is there a waiting period before the first payout?
+A: No. The first payout has no waiting period; after that, requests follow your weekly or monthly cycle.
+
+## Instant Funded Challenge — No Profit Target | Adiox
+
+URL: https://adiox.io/challenges/instant-funded/
+
+Instant Funded is a one-stage Adiox challenge with no profit target. A mandatory 2% single-trade loss limit replaces the evaluation phases.
+
+- Stages: One — no phases.
+- Profit target: None.
+- Special rule: Any single trade losing 2% of the starting balance eliminates the account.
+- Other limits: Daily and overall loss limits still apply.
+- Payout condition: The account must be in profit.
+
+Q: Is there a profit target?
+A: No. Instant Funded has no profit target and no phases. You keep the account by staying inside the single-trade, daily and overall loss limits.
+Q: How is the 2% single-trade limit measured?
+A: Against the starting balance. If any single trade loses 2% of the starting balance or more, the account is eliminated.
+Q: How do payouts work on Instant Funded?
+A: A payout only requires the account to be in profit. Payouts are reviewed by the Adiox team and credited to your wallet, like funded-account payouts.
+
+## Trading Tournaments — Free & Paid, Ranked Prizes | Adiox
+
+URL: https://adiox.io/tournaments/
+
+Free and paid Adiox trading tournaments: equal starting balances, ranking by final equity, and prizes by rank in cash, bonus credit or a challenge account.
+
+- Entry: Free ($0) or paid, shown on each tournament.
+- Ranking: Qualifying players ranked by final equity, highest first.
+- Qualifying: Minimum number of trades, and the target profit when one is set.
+- Prizes: Cash, bonus credit or a free challenge account, by rank range.
+- Ties: Tied players share a rank; cash and credit prizes are pooled and split.
+- Rejoins: Allowed per tournament for a rejoin fee, with a cooldown and a maximum.
+
+Q: Are there free tournaments?
+A: Yes. Free tournaments have a $0 entry fee; paid tournaments show their fee before you join. Both rank players the same way.
+Q: Can I join after the tournament starts?
+A: Until the join cutoff time and while slots are available. If you join before the start, your account waits as pending and switches on when the tournament begins.
+Q: How is the daily loss measured in a tournament?
+A: From yesterday's closing balance, in dollars. Tournament rules are set as dollar amounts rather than percentages.
+Q: Why was I removed from the final ranking?
+A: At the end, players who made fewer than the minimum number of trades, or who missed the target profit when one is set, do not qualify for a rank.
+Q: When are prizes paid?
+A: After the tournament ends and ranks are final. Depending on the tournament, prizes are distributed automatically or by the Adiox team.
+
+## Trading Duels & Trading Battles | Adiox
+
+URL: https://adiox.io/games/
+
+Create or join a 1-vs-1 Trading Duel or a multiplayer Trading Battle. Trade the same balance for a fixed time; the winner takes the pot minus commission.
+
+- Trading Duel: Exactly 2 players; the only Adiox product with a draw.
+- Trading Battle: 3 or more players; winner takes all.
+- Stake: Set by the lobby creator within the template’s minimum, maximum and step.
+- Winner: Paid the pot minus the platform commission.
+- No winner: If nobody meets the target, the platform keeps the fees.
+- Lobby expiry: 24 hours — then every player is refunded.
+
+Q: Who sets the entry fee?
+A: The player who creates the lobby, within the template's minimum, maximum and step. Everyone who joins pays the same fee.
+Q: What does the platform commission cover?
+A: The commission percentage is set on each game template and is deducted from the pot before the winner is paid, and from refunds in a Duel draw.
+Q: What if nobody reaches the profit target?
+A: When a game has a target and nobody meets it, there is no winner and the platform keeps the fees. Check whether a template has a target before you join.
+Q: Where are finished games recorded?
+A: On the game leaderboard, which lists completed Duels and Battles with the winner, the prize and the commission. Leaderboards →
+
+## Single Player Trading Games — Discipline Missions | Adiox
+
+URL: https://adiox.io/games/single-player/
+
+Solo trading missions that score one habit at a time — stop losses, daily loss, overall loss, consistency and win rate. Pass a mission to earn bonus credit.
+
+- Missions: Stop Loss Master, Daily Loss Defender, Overall Loss Guardian, Consistency Challenge, Precision Entry.
+- Entry: A cash entry fee per mission.
+- Reward: Bonus credit on pass; nothing on fail.
+- Enforcement: Rules are enforced directly by the Adiox Trading Platform.
+- Every mission: Needs at least one closed trade to pass.
+
+Q: What do I win?
+A: Bonus credit, credited when you pass. The amount is shown on each mission before you pay. Credit covers part of future purchases and expires after 30 days.
+Q: Who checks the rules?
+A: The Adiox Trading Platform enforces single player rules directly on your account, so a breach is applied the moment it happens.
+Q: Do I need to make a profit to pass?
+A: Only where the mission says so — the Consistency Challenge requires finishing in profit. Every mission needs at least one closed trade.
+
+## Training Room — Challenge Simulator from $10 | Adiox
+
+URL: https://adiox.io/training-room/
+
+Rehearse a prop-firm challenge before paying for one. Preset or custom rules; custom simulators cost $10–$25 by duration, with a 5-minute refund window.
+
+- What it is: A practice prop-firm account — pass or fail only, no prizes or payouts.
+- Modes: Presets (Phase 1, Phase 2, Funded) or custom rules.
+- Custom price: $10 up to 30 days, $15 up to 40, $20 up to 50, $25 beyond.
+- Refund: Cancel within 5 minutes for a refund the way you paid.
+- Without a target: Survival mode: pass by reaching the end inside the loss limits.
+
+Q: Can I win money in the Training Room?
+A: No. Simulators are pass or fail only, with no prizes and no payouts. They exist so you can rehearse a real challenge cheaply.
+Q: Can I get a refund?
+A: Yes, if you cancel within 5 minutes of starting. The fee is returned the same way you paid — wallet, credit or both.
+Q: Can I use bonus credit?
+A: Each simulator shows how much of its fee can be paid with credit, up to a maximum of 50%.
+
+## Leaderboards — Tournament & Game Rankings | Adiox
+
+URL: https://adiox.io/leaderboards/
+
+See Adiox tournament rankings, per tournament or as a global top-traders view with a country filter and world map, plus completed Trading Duels and Battles.
+
+- Tournament leaderboard: Per tournament and global, with a country filter and world map.
+- Game leaderboard: Completed Duels and Battles with winner, prize and commission.
+- Update rate: Tournament ranks refresh every minute while running.
+
+## Rewards, Levels & Referrals | Adiox
+
+URL: https://adiox.io/rewards/
+
+Earn XP and bonus credit from Adiox achievements, exchange 100 points for $10 credit, claim the $30 welcome credit and earn 10–15% referral commission.
+
+- Points exchange: 100 points = $10 of bonus credit.
+- Levels: Based on lifetime XP, so exchanging points never lowers your level.
+- Welcome bonus: $30 credit for completing your profile.
+- Referral commission: 10% of cash paid by your first 20 referrals; 15% from the 21st on.
+- Credit expiry: Bonus credit expires after 30 days.
+
+## Trade Copier — Top Masters & Signal Providers | Adiox
+
+URL: https://adiox.io/trade-copier/
+
+The Adiox portal shows a read-only overview from copier.adiox.io: top masters, top signal providers, and the masters and copiers that belong to you.
+
+- What it shows: Top masters, top signal providers, your masters and your copiers.
+- Where copying happens: On the separate copier portal at copier.adiox.io.
+- In the Adiox portal: A read-only overview; your accounts are matched by email.
+
+## AI Journal — Trading Journal, Coming Soon | Adiox
+
+URL: https://adiox.io/ai-journal/
+
+The Adiox AI Journal is a per-account trading journal with an equity curve, day review and notes, reports and an economic calendar. Coming soon.
+
+- Status: Coming soon.
+- Features: Dashboard with equity curve, day view with notes, reports, economic calendar.
+- Planned plans: $9.99 monthly, $24.99 quarterly, $79.99 yearly per journal account.
+
+## Wallet & Payments — Deposits, Credit, Withdrawals | Adiox
+
+URL: https://adiox.io/wallet/
+
+Deposit by card, payment link or crypto, withdraw to crypto or bank after KYC ($10 minimum), and see how checkout splits coupon, credit, wallet and card.
+
+- Deposits: Card, payment link or crypto.
+- Withdrawals: Crypto or bank, after KYC, $10 minimum.
+- Checkout order: Coupon → bonus credit (max 50%) → wallet → payment gateway (min $1).
+- Bonus credit: Part of a purchase only; expires after 30 days.
+- Failed account creation: The purchase is refunded automatically.
+
+Q: Why do I need KYC to withdraw?
+A: Identity verification protects your funds and is required before any withdrawal. You can deposit, play and trade without it. Start it from the KYC page in the portal; the result usually arrives automatically.
+Q: Can I withdraw bonus credit?
+A: No. Bonus credit can only be used toward part of a purchase, and it expires after 30 days. Only the cash balance is withdrawable.
+Q: What happens to my balance when I request a withdrawal?
+A: The amount is deducted when you submit the request, so it can't be spent twice. If you cancel while it's pending, or the request is rejected, it goes back to your balance.
+Q: Where can I see my history?
+A: The wallet section of the portal has separate histories for deposits, withdrawals, deductions, credit received and credit used.
+
+## How Adiox Works — Account, Wallet & Trading
+
+URL: https://adiox.io/how-it-works/
+
+Register and confirm your email, fund one wallet, buy any product at one checkout, trade on the web terminal with live rule checks, and withdraw after KYC.
+
+## Pricing — What Each Adiox Product Costs
+
+URL: https://adiox.io/pricing/
+
+Adiox has no platform subscription. Pay per product: challenges by account size ($4.95 first account), free or paid tournaments and simulators from $10.
+
+- Account: Free — no platform subscription.
+- First challenge: $4.95 for a $5,000 account (new buyers, once).
+- Training Room: $10–$25 for custom simulators.
+- Tournaments: Free, or a published entry fee.
+- Currency: US dollars.
+
+Q: Is there a monthly subscription?
+A: No. Creating an account is free and there is no platform subscription. You pay per product. The AI Journal, when it opens, will be the only subscription.
+Q: Are entry fees refundable?
+A: Not once your account is created and the product has started. Exceptions: Training Room simulators can be cancelled within 5 minutes; game lobbies that expire after 24 hours are refunded; a Duel draw refunds both players minus commission; and a purchase is refunded automatically if the account can't be created.
+Q: What currency are prices in?
+A: US dollars.
+
+## Adiox FAQ & Glossary — Help Center
+
+URL: https://adiox.io/faq/
+
+Answers about Adiox accounts, wallet, KYC, challenges, funded payouts, tournaments, trading games, the Training Room and rewards, plus a glossary of key terms.
+
+Q: How do I create an account?
+A: Register on the portal and confirm your email address — sign-in is blocked until the email is confirmed. Then complete your profile to unlock the $30 welcome credit.
+Q: What can I set on my profile?
+A: Your nickname, an avatar (choose a built-in one or upload your own), country and state, language and WhatsApp number. Your country and dialling code are suggested automatically. You can change your password from the profile page too.
+Q: Why was I signed out?
+A: Sessions end after 30 minutes without activity. Pages that refresh live, such as account pages, keep your session alive while they're open.
+Q: How can I deposit?
+A: By card, by payment link or with crypto. Your wallet is credited when the payment provider confirms the payment, and you'll get an email and a notification.
+Q: How do I withdraw?
+A: Complete KYC, then request at least $10 to crypto or a bank account. The amount is reserved from your balance immediately; you can edit or cancel while it's pending, and the Adiox team approves and sends the payout.
+Q: What is bonus credit?
+A: Credit you earn from achievements, the welcome bonus, level rewards, points exchange and some prizes. It can pay for part of a purchase — at most 50% — and expires after 30 days. It can't be withdrawn.
+Q: In what order is a purchase paid?
+A: Coupon first, then bonus credit up to the cap, then wallet cash, then the payment gateway for anything left (minimum $1). Try the checkout calculator.
+Q: What if my account isn't created after I pay?
+A: The purchase is refunded automatically.
+Q: When do I need KYC?
+A: Only for withdrawals. You can register, deposit and use every product without it.
+Q: How does verification work?
+A: Start a verification session from the KYC page in the portal. The result arrives automatically, and you can refresh the status from the same page.
+Q: How do I pass a challenge phase?
+A: Reach the phase's profit target and trade the minimum number of days, without breaking the overall or daily loss limit. The next phase is then created for free.
+Q: How long can I be inactive?
+A: 15 idle days in a row eliminates a challenge account. You'll be warned after 7, 10 and 14 idle days.
+Q: How do funded payouts work?
+A: When you're in profit and your weekly or monthly cycle has passed, click Request Payout. Trading pauses during review; on approval your wallet receives profit × your payout share and the account resets for the next cycle.
+Q: What is the First-Buyer Offer?
+A: A one-time $5,000 challenge account for $4.95 for new buyers, protected by email, IP and device checks.
+Q: What is Pay Later?
+A: A challenge you start with a small upfront fee. An activation fee is shown as payable after you pass, and coupons reduce it too.
+Q: How are tournament players ranked?
+A: By final equity, highest first, among players who qualify. Players with too few trades, or who missed the target profit when one is set, don't qualify.
+Q: Can I rejoin after being eliminated?
+A: If the tournament allows it: buy a new account for the rejoin fee, up to the maximum number of rejoins, after the cooldown period.
+Q: How are tied players paid?
+A: Tied players share one rank. Cash or credit prizes for the ranks they cover are pooled and split; a challenge prize goes to each tied player.
+Q: What's the difference between a Duel and a Battle?
+A: A Duel is exactly two players and can end in a draw. A Battle is three or more players, ranks everyone, and pays only first place.
+Q: What if my lobby never fills?
+A: A lobby waiting more than 24 hours expires and every player is refunded. The creator can also cancel before the game starts.
+Q: What do single player games pay?
+A: Bonus credit when you pass the mission. If you fail, there's no reward.
+Q: How much does a simulator cost?
+A: Custom simulators cost $10 for up to 30 days, $15 up to 40, $20 up to 50 and $25 beyond that. Preset simulators show their price in the portal.
+Q: Can I cancel a simulator?
+A: Yes, within 5 minutes of starting. The fee is refunded the same way you paid.
+Q: How do points and levels work?
+A: Claimed achievements give XP. Exchange 100 points for $10 of credit; your level uses lifetime XP, so exchanging never lowers it.
+Q: How much referral commission do I earn?
+A: 10% of the cash paid by each of your first 20 referred users and 15% from the 21st on. It's paid to your wallet after a short settling delay and reversed if the purchase is refunded.
+
+## About Adiox — Gamified Prop Trading Platform
+
+URL: https://adiox.io/about/
+
+Adiox is a gamified prop-trading and trading-competition platform: challenges, funded accounts, tournaments, trading games and a simulator in one wallet.
+
+## Contact Adiox Support
+
+URL: https://adiox.io/contact/
+
+Contact Adiox support about your account, wallet, deposits, withdrawals, KYC, challenges, funded payouts, tournaments, trading games or the Training Room.

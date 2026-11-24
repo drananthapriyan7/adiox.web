@@ -4,21 +4,26 @@
 
 ## Products
 
-- [Prop-Firm Challenges](https://adiox.io/challenges): multi-phase evaluation per package (account size). Pass a phase by reaching the profit target and the minimum trading days; later phases are created free. Rules per phase: profit target, minimum trading days, overall loss limit (from starting balance), daily loss limit (from the day's opening balance), 15 idle days eliminates. Variants: Pay Later, First-Buyer Offer ($5,000 account for $4.95), tournament prize challenges.
-- [Funded Accounts](https://adiox.io/challenges/funded-accounts): after approval, request a payout each weekly (7-day) or monthly (30-day) cycle; the wallet is credited with profit × payout share % and the account resets.
-- [Instant Funded](https://adiox.io/challenges/instant-funded): one stage, no profit target, mandatory 2% single-trade loss limit plus daily and overall loss limits.
-- [Tournaments](https://adiox.io/tournaments): free or paid timed contests; same starting balance; qualifying players ranked by final equity; prizes by rank in cash, credit or a challenge account; rejoins; tie prizes pooled and split.
-- [Trading Duels and Battles](https://adiox.io/games): 1-vs-1 or 3+ player games with a player-set stake; winner takes the pot minus commission; duels can draw; lobbies expire after 24 hours with refunds.
-- [Single Player Games](https://adiox.io/games/single-player): Stop Loss Master, Daily Loss Defender, Overall Loss Guardian, Consistency Challenge, Precision Entry; pass to earn bonus credit.
-- [Training Room](https://adiox.io/training-room): preset or custom challenge simulators; custom fees $10 (≤30 days), $15 (≤40), $20 (≤50), $25 (>50); pass/fail only; cancel within 5 minutes for a refund.
-- [Leaderboards](https://adiox.io/leaderboards), [Rewards & Referrals](https://adiox.io/rewards), [Trade Copier](https://adiox.io/trade-copier) (read-only overview of copier.adiox.io), [AI Journal](https://adiox.io/ai-journal) (coming soon).
+- [Prop-Firm Challenges](https://adiox.io/challenges/): multi-phase evaluation per package (account size). Pass a phase by reaching the profit target and the minimum trading days; later phases are created free. Rules per phase: profit target, minimum trading days, overall loss limit (from starting balance), daily loss limit (from the day's opening balance), 15 idle days eliminates. Variants: Pay Later, First-Buyer Offer ($5,000 account for $4.95), tournament prize challenges.
+- [Funded Accounts](https://adiox.io/challenges/funded-accounts/): after approval, request a payout each weekly (7-day) or monthly (30-day) cycle; the wallet is credited with profit × payout share % and the account resets.
+- [Instant Funded](https://adiox.io/challenges/instant-funded/): one stage, no profit target, mandatory 2% single-trade loss limit plus daily and overall loss limits.
+- [Tournaments](https://adiox.io/tournaments/): free or paid timed contests; same starting balance; qualifying players ranked by final equity; prizes by rank in cash, credit or a challenge account; rejoins; tie prizes pooled and split.
+- [Trading Duels and Battles](https://adiox.io/games/): 1-vs-1 or 3+ player games with a player-set stake; winner takes the pot minus commission; duels can draw; lobbies expire after 24 hours with refunds.
+- [Single Player Games](https://adiox.io/games/single-player/): Stop Loss Master, Daily Loss Defender, Overall Loss Guardian, Consistency Challenge, Precision Entry; pass to earn bonus credit.
+- [Training Room](https://adiox.io/training-room/): preset or custom challenge simulators; custom fees $10 (≤30 days), $15 (≤40), $20 (≤50), $25 (>50); pass/fail only; cancel within 5 minutes for a refund.
+- [Leaderboards](https://adiox.io/leaderboards/), [Rewards & Referrals](https://adiox.io/rewards/), [Trade Copier](https://adiox.io/trade-copier/) (read-only overview of copier.adiox.io), [AI Journal](https://adiox.io/ai-journal/) (coming soon).
 
 ## Money
 
-- [Wallet & payments](https://adiox.io/wallet): deposits by card, payment link or crypto; withdrawals to crypto or bank after KYC, $10 minimum. Checkout order: coupon → bonus credit (max 50%) → wallet → gateway (min $1). Bonus credit expires after 30 days. 100 points = $10 credit. Referral commission 10% (first 20 referrals) and 15% (21st on).
-- [Pricing](https://adiox.io/pricing): free account, no platform subscription; pay per product.
+- [Wallet & payments](https://adiox.io/wallet/): deposits by card, payment link or crypto; withdrawals to crypto or bank after KYC, $10 minimum. Checkout order: coupon → bonus credit (max 50%) → wallet → gateway (min $1). Bonus credit expires after 30 days. 100 points = $10 credit. Referral commission 10% (first 20 referrals) and 15% (21st on).
+- [Pricing](https://adiox.io/pricing/): free account, no platform subscription; pay per product.
+
+## More
+
+- [Full reference for AI assistants](https://adiox.io/llms-full.txt): every page's summary, key facts and answers.
+- [Glossary](https://adiox.io/faq/#glossary): definitions of profit target, daily loss limit, payout share, Instant Funded and more.
 
 ## Links
 
 - Client portal: https://portal.adiox.io · Trading platform: https://trade.adiox.io · Trade copier: https://copier.adiox.io
-- [FAQ](https://adiox.io/faq) · [Risk Disclosure](https://adiox.io/legal/risk-disclosure)
+- [FAQ](https://adiox.io/faq/) · [Risk Disclosure](https://adiox.io/legal/risk-disclosure/)

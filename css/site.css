@@ -459,6 +459,24 @@ input[type="range"] { width: 100%; height: 30px; accent-color: #a855f7; backgrou
 .prose a { color: #c4b5fd; text-decoration: underline; }
 .doc-meta { font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); margin-bottom: 26px; }
 
+/* ─── At a glance (answer-first facts) ─── */
+.facts { border: 1px solid var(--line-2); border-radius: var(--r-xl); background: var(--surface); overflow: hidden; }
+.facts-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); background: var(--surface-2); }
+.facts-head h2 { font-size: 15px; font-family: var(--f-mono); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #c4b5fd; }
+.facts-head span { font-size: 12.5px; color: var(--ink-3); }
+.facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.facts-grid > div { padding: 18px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts-grid > div:nth-child(3n) { border-right: 0; }
+.facts-grid dt { font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink-3); margin-bottom: 4px; }
+.facts-grid dd { font-size: 14.5px; color: var(--ink); line-height: 1.5; }
+
+/* ─── Glossary ─── */
+.glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.glossary > div { padding: 18px 20px; border-radius: var(--r); background: var(--surface); border: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 16px); }
+.glossary > div:target { border-color: rgba(139,92,246,0.6); box-shadow: 0 0 0 3px rgba(139,92,246,0.18); }
+.glossary dt { font-family: var(--f-display); font-weight: 700; font-size: 16px; margin-bottom: 6px; }
+.glossary dd { font-size: 14.5px; color: var(--ink-2); }
+
 /* calculator band highlight (Training Room fees) */
 tr[data-band] td { transition: background-color 0.15s, color 0.15s; }
 tr[data-band].is-current td { background: rgba(139,92,246,0.12); color: var(--ink); }
@@ -483,6 +501,14 @@ tr[data-band].is-current td:first-child { box-shadow: inset 3px 0 0 var(--violet
   .stat-row { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2n) { border-right: 0; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .facts-grid { grid-template-columns: 1fr 1fr; }
+  .facts-grid > div:nth-child(3n) { border-right: 1px solid var(--line); }
+  .facts-grid > div:nth-child(2n) { border-right: 0; }
+}
+@media (max-width: 640px) {
+  .facts-grid, .glossary { grid-template-columns: 1fr; }
+  .facts-grid > div { border-right: 0 !important; padding: 14px 18px; }
+  .facts-head { padding: 14px 18px; }
 }
 @media (max-width: 640px) {
   .container { padding: 0 16px; }
