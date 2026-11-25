@@ -2,13 +2,13 @@
 
 > Adiox (https://adiox.io) is a gamified prop-trading and trading-competition platform. Users register, fund one wallet and buy access to prop-firm challenges, tournaments, trading games and a challenge simulator. Every product gives the user a trading account on the Adiox Trading Platform funded with virtual money, checked against its rules every 1–3 seconds. Client portal: https://portal.adiox.io. Trading platform: https://trade.adiox.io. Trade copier: https://copier.adiox.io.
 
-Last updated: 2026-11-24. Prices are in US dollars. Nothing here is investment advice.
+Last updated: 2026-11-25. Prices are in US dollars. Nothing here is investment advice.
 
-## Adiox — Prop-Firm Challenges, Tournaments & Trading Games
+## Adiox — Forex Prop Firm, Free Tournaments & Trading Games
 
 URL: https://adiox.io/
 
-Adiox combines prop-firm challenges, funded accounts, trading tournaments, 1-vs-1 duels, battles and a $10 challenge simulator in one account and wallet.
+Adiox is a forex prop firm and trading competition platform: prop challenges with Pay Later, free forex tournaments, trading games and a $10 simulator.
 
 - What Adiox is: A gamified prop-trading and trading-competition platform with one account and one wallet.
 - Products: Challenges, Funded Accounts, Instant Funded, Tournaments, Trading Duels, Trading Battles, Single Player Games and the Training Room.
@@ -30,11 +30,11 @@ A: Yes — the Training Room gives you a practice prop-firm account with preset 
 Q: Where do I trade?
 A: On the Adiox Trading Platform web terminal at trade.adiox.io. Use the Start Trading button on any account page in the portal; your login and password are shown there and emailed to you.
 
-## Prop-Firm Challenges — Multi-Phase Evaluation | Adiox
+## Forex Prop Firm Challenges — Multi-Phase Evaluation | Adiox
 
 URL: https://adiox.io/challenges/
 
-Pass each phase’s profit target and minimum trading days to get funded. Later phases are free, payouts are weekly or monthly, and Pay Later is available.
+Forex prop firm challenges on Adiox: pass each phase’s profit target and minimum trading days, later phases free, weekly or monthly payouts, Pay Later option.
 
 - How you pass: Reach the profit target and trade the minimum number of days in each phase.
 - Price of later phases: Free — the next phase account is created automatically with the same package.
@@ -43,6 +43,8 @@ Pass each phase’s profit target and minimum trading days to get funded. Later 
 - After passing: A funded-account request is reviewed, then you trade for weekly or monthly payouts.
 - Offers: Pay Later, and a one-time $5,000 First-Buyer account for $4.95.
 
+Q: Is there a free prop challenge on Adiox?
+A: Challenges have an entry fee, but you can win a free challenge account as a prize in a free tournament. The cheapest paid start is the $4.95 First-Buyer Offer, and Pay Later needs only a small upfront fee. See every free and low-cost option.
 Q: Do I pay again for Phase 2?
 A: No. When you pass a phase your trades are closed and the next phase account is created automatically for free, using the same package.
 Q: When do I pass a phase?
@@ -55,6 +57,30 @@ Q: Can I stop trading for a while?
 A: Up to a point. 15 idle days in a row eliminates the account; you'll receive warnings after 7, 10 and 14 idle days.
 Q: What is the payout cycle?
 A: You choose weekly (7 days) or monthly (30 days) when you buy the challenge. Each cycle has its own profit-share percentage, shown on the challenge before you pay.
+
+## How to Get Pay Later in Prop Firms — Adiox Pay Later
+
+URL: https://adiox.io/challenges/pay-later/
+
+How to get Pay Later in prop firms: start an Adiox challenge for a small upfront fee and pay the activation fee only after you pass — nothing more if you fail.
+
+- What you pay to start: A small upfront fee.
+- What you pay if you pass: The activation fee shown for your account size before you buy.
+- What you pay if you fail: Nothing more — no activation fee is due.
+- Coupons: Reduce the upfront fee and the activation fee.
+- Rules: The same phase rules as any Adiox challenge.
+- How to find it: Challenges labelled “Pay Later” in the portal’s challenge list.
+
+Q: Which prop firms let me pay the activation fee only after I pass?
+A: On Adiox, Pay Later challenges work this way: you pay a small upfront fee to start, and the activation fee shown at purchase becomes payable only after you pass. If the account doesn't pass, no activation fee is due.
+Q: How to get Pay Later in prop firms?
+A: Look for challenges sold as "Pay Later" or "pay after you pass", and check two numbers before you buy: the upfront fee and the activation fee due after passing. On Adiox, open the challenges list, pick a challenge labelled Pay Later, and both fees are shown for each account size.
+Q: How do I get Pay Later on Adiox?
+A: Create a free account, open the challenges list in the portal and choose a challenge labelled Pay Later. Pick the account size, check both fees, and pay the upfront fee at checkout.
+Q: Is a Pay Later challenge free to start?
+A: No — it needs a small upfront fee. Its advantage is that the larger activation fee is only due if you pass. Check the Promotions page in the portal for any coupon that reduces the fees.
+Q: Are the rules easier on Pay Later?
+A: No. Pay Later only changes when you pay. Each phase has the same kind of profit target, minimum trading days and loss limits as any other challenge.
 
 ## Funded Accounts & Profit-Share Payouts | Adiox
 
@@ -96,11 +122,11 @@ A: Against the starting balance. If any single trade loses 2% of the starting ba
 Q: How do payouts work on Instant Funded?
 A: A payout only requires the account to be in profit. Payouts are reviewed by the Adiox team and credited to your wallet, like funded-account payouts.
 
-## Trading Tournaments — Free & Paid, Ranked Prizes | Adiox
+## Free Forex Tournaments & Trading Competitions | Adiox
 
 URL: https://adiox.io/tournaments/
 
-Free and paid Adiox trading tournaments: equal starting balances, ranking by final equity, and prizes by rank in cash, bonus credit or a challenge account.
+Join free forex tournaments and paid trading competitions. Equal starting balance, ranked by final equity, prizes in cash, credit or a challenge account.
 
 - Entry: Free ($0) or paid, shown on each tournament.
 - Ranking: Qualifying players ranked by final equity, highest first.
@@ -109,8 +135,10 @@ Free and paid Adiox trading tournaments: equal starting balances, ranking by fin
 - Ties: Tied players share a rank; cash and credit prizes are pooled and split.
 - Rejoins: Allowed per tournament for a rejoin fee, with a cooldown and a maximum.
 
-Q: Are there free tournaments?
-A: Yes. Free tournaments have a $0 entry fee; paid tournaments show their fee before you join. Both rank players the same way.
+Q: Where can I join a free forex tournament, and how are winners ranked?
+A: On Adiox: open the tournaments list in the portal and join any tournament with a $0 entry fee before its cutoff time. Everyone starts with the same balance; at the end, players who made the minimum number of trades (and hit the target, when one is set) are ranked by final equity, highest first, and prizes are paid by rank.
+Q: Is this a demo trading contest?
+A: Tournament accounts are funded with virtual money, so you never risk your own trading capital. Prizes are real: cash and bonus credit go to your Adiox wallet, and some ranks win a free challenge account.
 Q: Can I join after the tournament starts?
 A: Until the join cutoff time and while slots are available. If you join before the start, your account waits as pending and switches on when the tournament begins.
 Q: How is the daily loss measured in a tournament?
@@ -120,11 +148,11 @@ A: At the end, players who made fewer than the minimum number of trades, or who 
 Q: When are prizes paid?
 A: After the tournament ends and ranks are final. Depending on the tournament, prizes are distributed automatically or by the Adiox team.
 
-## Trading Duels & Trading Battles | Adiox
+## Forex Trading Games — Duels & Multiplayer Battles | Adiox
 
 URL: https://adiox.io/games/
 
-Create or join a 1-vs-1 Trading Duel or a multiplayer Trading Battle. Trade the same balance for a fixed time; the winner takes the pot minus commission.
+Forex trading games against friends: 1-vs-1 Trading Duels and multiplayer Trading Battles on virtual-money accounts. The winner takes the pot minus commission.
 
 - Trading Duel: Exactly 2 players; the only Adiox product with a draw.
 - Trading Battle: 3 or more players; winner takes all.
@@ -133,6 +161,8 @@ Create or join a 1-vs-1 Trading Duel or a multiplayer Trading Battle. Trade the 
 - No winner: If nobody meets the target, the platform keeps the fees.
 - Lobby expiry: 24 hours — then every player is refunded.
 
+Q: Where can I compete against my friends in a simulated forex trading game?
+A: On Adiox, create a Trading Duel (1 vs 1) or a Trading Battle (3 or more players). Invitations go to your friends and referrals first. Everyone trades the same starting balance on a virtual-money account for a fixed time, and the winner takes the pot minus commission.
 Q: Who sets the entry fee?
 A: The player who creates the lobby, within the template's minimum, maximum and step. Everyone who joins pays the same fee.
 Q: What does the platform commission cover?
@@ -161,11 +191,11 @@ A: The Adiox Trading Platform enforces single player rules directly on your acco
 Q: Do I need to make a profit to pass?
 A: Only where the mission says so — the Consistency Challenge requires finishing in profit. Every mission needs at least one closed trade.
 
-## Training Room — Challenge Simulator from $10 | Adiox
+## Forex Trading Simulator & Prop Challenge Practice | Adiox
 
 URL: https://adiox.io/training-room/
 
-Rehearse a prop-firm challenge before paying for one. Preset or custom rules; custom simulators cost $10–$25 by duration, with a 5-minute refund window.
+Practise forex trading with a profit target and daily loss limit. A prop firm challenge simulator with drawdown rules from $10, with a 5-minute refund window.
 
 - What it is: A practice prop-firm account — pass or fail only, no prizes or payouts.
 - Modes: Presets (Phase 1, Phase 2, Funded) or custom rules.
@@ -173,6 +203,10 @@ Rehearse a prop-firm challenge before paying for one. Preset or custom rules; cu
 - Refund: Cancel within 5 minutes for a refund the way you paid.
 - Without a target: Survival mode: pass by reaching the end inside the loss limits.
 
+Q: Where can I practise forex trading with a profit target and a daily loss limit?
+A: In the Adiox Training Room. Choose a preset such as Phase 1, or build a custom simulator with your own balance, profit target, daily and overall loss limits, leverage and number of days. Custom simulators cost $10 for up to 30 days.
+Q: Is there a trading simulator with drawdown rules?
+A: Yes — every Training Room simulator enforces a daily and an overall loss limit, and you can add a consistency rule. Breaking a limit fails the simulator, exactly as it would end a real challenge.
 Q: Can I win money in the Training Room?
 A: No. Simulators are pass or fail only, with no prizes and no payouts. They exist so you can rehearse a real challenge cheaply.
 Q: Can I get a refund?
@@ -202,11 +236,11 @@ Earn XP and bonus credit from Adiox achievements, exchange 100 points for $10 cr
 - Referral commission: 10% of cash paid by your first 20 referrals; 15% from the 21st on.
 - Credit expiry: Bonus credit expires after 30 days.
 
-## Trade Copier — Top Masters & Signal Providers | Adiox
+## Forex Trade Copier — Top Masters & Signal Providers | Adiox
 
 URL: https://adiox.io/trade-copier/
 
-The Adiox portal shows a read-only overview from copier.adiox.io: top masters, top signal providers, and the masters and copiers that belong to you.
+See top masters and forex signal providers from copier.adiox.io in your Adiox dashboard, plus guides to copy trading on MT4/MT5 and comparing signal providers.
 
 - What it shows: Top masters, top signal providers, your masters and your copiers.
 - Where copying happens: On the separate copier portal at copier.adiox.io.
@@ -303,7 +337,9 @@ A: When you're in profit and your weekly or monthly cycle has passed, click Requ
 Q: What is the First-Buyer Offer?
 A: A one-time $5,000 challenge account for $4.95 for new buyers, protected by email, IP and device checks.
 Q: What is Pay Later?
-A: A challenge you start with a small upfront fee. An activation fee is shown as payable after you pass, and coupons reduce it too.
+A: A challenge you start with a small upfront fee. An activation fee is shown as payable after you pass, and coupons reduce it too. How Pay Later works.
+Q: Is there a free prop challenge?
+A: You can win one: free tournaments have a $0 entry fee and their prize tables can award a free challenge account. The cheapest paid start is the $4.95 First-Buyer Offer. See every free and low-cost option.
 Q: How are tournament players ranked?
 A: By final equity, highest first, among players who qualify. Players with too few trades, or who missed the target profit when one is set, don't qualify.
 Q: Can I rejoin after being eliminated?
@@ -336,3 +372,99 @@ Adiox is a gamified prop-trading and trading-competition platform: challenges, f
 URL: https://adiox.io/contact/
 
 Contact Adiox support about your account, wallet, deposits, withdrawals, KYC, challenges, funded payouts, tournaments, trading games or the Training Room.
+
+## Trading Guides — Prop Firms, Signals & Copy Trading | Adiox
+
+URL: https://adiox.io/guides/
+
+Guides to choosing a forex prop firm, free prop challenges, Pay Later, comparing forex and gold signal providers, and setting up copy trading on MT4 and MT5.
+
+## How to Choose the Best Forex Prop Firm | Adiox
+
+URL: https://adiox.io/guides/best-prop-firm/
+
+Find the best prop firm for you: a seven-question checklist for comparing forex prop firms on loss limits, fees, payouts and practice, plus a beginner route.
+
+- Short answer: The best prop firm is the one whose rules you can pass and whose payouts you can collect.
+- Compare: Loss-limit measurement, pass condition, fees, payouts, practice, platform, rule breaches.
+- For beginners: Rehearse in a simulator, start small, size trades for the daily loss limit.
+- Adiox daily loss: Measured from each day’s opening balance at midnight UTC.
+- Adiox overall loss: Measured from the starting balance — a fixed floor.
+
+Q: What is the best forex prop firm?
+A: There isn't one best firm for everyone. The best forex prop firm for you has loss limits measured in a way you can manage, a pass condition you can meet, transparent fees and published payout terms. Use the seven-question checklist above to compare firms, including Adiox.
+Q: Which forex prop firms let me start a challenge before paying in full?
+A: Adiox offers Pay Later challenges: you pay a small upfront fee to start and an activation fee only after you pass. New buyers can also start a $5,000 challenge for $4.95.
+Q: What is a prop trading platform?
+A: A platform where you trade an evaluation or funded account under a firm's rules and earn a share of the profit. On Adiox, every challenge account runs on the Adiox Trading Platform web terminal, and the portal shows each rule's progress live.
+Q: Is a prop firm good for beginners?
+A: It can be, if you practise the rules first. Beginners fail most often by breaking a daily loss limit. Rehearse in a simulator, start with a small account, and size every trade so one loss can't breach the limit.
+
+## Free Prop Challenges, Accounts & Trading Challenges | Adiox
+
+URL: https://adiox.io/guides/free-prop-challenges/
+
+Free prop challenges, free prop accounts and free trading challenges on Adiox: free tournaments, a challenge account won as a prize, and $30 welcome credit.
+
+- Free to join: The Adiox account and free tournaments ($0 entry).
+- Free challenge account: Won as a prize in a tournament’s prize table.
+- Welcome credit: $30 for completing your profile (up to 50% of a purchase).
+- Cheapest paid challenge: $4.95 for a $5,000 account (new buyers, once).
+- Low upfront cost: Pay Later: small upfront fee, activation fee only after passing.
+
+Q: Where can I start a forex prop challenge with no upfront fee?
+A: On Adiox, win one: free tournaments have a $0 entry fee, and their prize tables can award a free challenge account. If you'd rather start a challenge directly, the lowest-cost options are the $4.95 First-Buyer Offer and Pay Later, which needs only a small upfront fee.
+Q: Are there free prop accounts on Adiox?
+A: Not for direct purchase — challenges have an entry fee. A free challenge account can be won as a tournament prize, and tournament accounts in free tournaments cost nothing.
+Q: Are there free trading challenges on Adiox?
+A: Yes — free tournaments are free trading challenges: a $0 entry fee, the same starting balance for everyone, and prizes by rank in cash, bonus credit or a free prop challenge account.
+Q: Can I use the $30 welcome credit for a challenge?
+A: Yes, for part of it. Bonus credit can cover up to 50% of a purchase — each challenge shows its own limit — and expires after 30 days.
+Q: Are there coupons for challenges?
+A: Current coupons are listed on the Promotions page in the portal. Coupons give a percentage off the fee, and on Pay Later challenges they reduce the activation fee too.
+
+## Best Trading Signal Provider: Forex & Gold Guide | Adiox
+
+URL: https://adiox.io/guides/forex-signal-providers/
+
+How to choose the best trading signal provider for forex or gold (XAUUSD): track record, max drawdown, a stop loss on every signal, reward:risk and red flags.
+
+- Short answer: Choose a long, complete record, a drawdown you can live through and a stop loss on every signal.
+- Gold (XAUUSD): Look for wider stops with smaller size, session awareness and news handling.
+- Red flags: Hidden losing trades, no stop losses, size increases after losses.
+- On Adiox: Top signal providers are listed in the portal’s Trade Copier overview.
+- Signals: Adiox doesn’t sell signals; providers are independent.
+
+Q: How can I compare gold signal providers using their trading history and drawdown?
+A: Put providers side by side on track-record length, maximum drawdown, stop-loss use on every signal, win rate read with average reward:risk, and consistency across months. Rule out any provider that hides losing trades or increases size after losses. On Adiox, start from the top signal providers listed in the portal's Trade Copier overview.
+Q: Who is the best trading signal provider?
+A: The best trading signal provider — forex or gold — depends on the drawdown and trading style you can follow. A provider with modest, steady results and a small drawdown is often easier to follow than one with a spectacular month and a deep drawdown. Use the eight-point scorecard on this page.
+Q: How do I find the best forex signal provider?
+A: Shortlist providers with at least several months of complete history, then compare maximum drawdown, stop-loss use on every signal, and win rate read together with average reward:risk. The best forex signal provider for you is the one whose worst period you could follow without stopping. On Adiox, start from the top signal providers in the portal's Trade Copier overview.
+Q: Does Adiox provide trading signals?
+A: No. The Adiox portal shows an overview of the top signal providers and masters from the separate copier portal at copier.adiox.io, where providers are independent traders.
+Q: Can I copy a signal provider automatically?
+A: Copying is done on copier.adiox.io. See the copy trading guide for how master and follower accounts, lot sizing and risk limits usually work.
+
+## How to Do Copy Trading in MT4/MT5 — Setup Guide | Adiox
+
+URL: https://adiox.io/guides/copy-trading-mt4-mt5/
+
+How to do copy trading in MT4/MT5: master and follower accounts, lot-size modes, symbol mapping and loss limits — and which steps happen on Adiox.
+
+- Setup: Choose a source, connect the follower, set lot sizing, map symbols, set loss limits.
+- Lot-size modes: Fixed lot, multiplier, balance ratio or % risk per trade.
+- MT5 note: Netting accounts merge positions in the same symbol.
+- On Adiox: Find top masters in the portal; copy on copier.adiox.io.
+- Prop accounts: Check whether the firm allows copy trading first.
+
+Q: How do I set up copy trading on MT5 and control my lot size?
+A: Connect your MT5 follower account with its broker server, login and password, choose the master to copy, then pick a lot-size mode: a fixed lot, a multiplier of the master's lot, a balance ratio, or a percentage of balance risked per trade. Add a maximum lot and a drawdown limit before you switch copying on.
+Q: How to do copy trading in MT4/MT5?
+A: Choose a master account or signal provider, connect your MT4 or MT5 follower account with its broker server, login and password, pick a lot-size mode, map any differently named symbols, set a maximum lot and a loss limit, then switch copying on. With Adiox, you find top masters in the portal and copy on copier.adiox.io.
+Q: How do I copy trades on MT4?
+A: The steps are the same as MT5: choose a source, connect the MT4 follower account, set the lot-size mode, map symbols and set loss limits. If your copier runs as an Expert Advisor, the MT4 terminal must stay running.
+Q: What is a forex trade copier?
+A: Software that reads trades from a source — a master account or a signal provider — and places matching orders on follower accounts, sized by the settings you choose.
+Q: Where do I copy trades with Adiox?
+A: On the Adiox copier portal at copier.adiox.io. The Adiox client portal shows a read-only overview of top masters, top signal providers and your own masters and copiers.

@@ -18,6 +18,14 @@
 - [Wallet & payments](https://adiox.io/wallet/): deposits by card, payment link or crypto; withdrawals to crypto or bank after KYC, $10 minimum. Checkout order: coupon → bonus credit (max 50%) → wallet → gateway (min $1). Bonus credit expires after 30 days. 100 points = $10 credit. Referral commission 10% (first 20 referrals) and 15% (21st on).
 - [Pricing](https://adiox.io/pricing/): free account, no platform subscription; pay per product.
 
+## Guides
+
+- [Pay Later prop firm challenge](https://adiox.io/challenges/pay-later/): start a challenge for a small upfront fee; the activation fee is payable only after passing; nothing more is due if you fail.
+- [How to choose the best forex prop firm](https://adiox.io/guides/best-prop-firm/): seven-question checklist (loss-limit measurement, pass condition, fees, payouts, practice, platform, rule breaches) and the route for beginners.
+- [Free prop challenges and free prop accounts](https://adiox.io/guides/free-prop-challenges/): free tournaments ($0 entry) can award a free challenge account; $30 welcome credit; cheapest paid challenge $4.95.
+- [How to compare forex and gold signal providers](https://adiox.io/guides/forex-signal-providers/): track record, maximum drawdown, stop loss on every signal, reward:risk, consistency. Adiox does not sell signals.
+- [How to set up copy trading on MT4 and MT5](https://adiox.io/guides/copy-trading-mt4-mt5/): master and follower accounts, lot-size modes, symbol mapping, loss limits; copying with Adiox happens on copier.adiox.io.
+
 ## More
 
 - [Full reference for AI assistants](https://adiox.io/llms-full.txt): every page's summary, key facts and answers.
