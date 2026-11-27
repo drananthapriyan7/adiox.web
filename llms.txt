@@ -20,7 +20,7 @@
 
 ## Tournament guide
 
-- [How Adiox tournaments work](https://adiox.io/tournament-arena/): single-page guide to Adiox trading tournaments — lifecycle (Coming soon → Live → Ended), rules in dollars (overall, daily, single-trade loss, max trades checked every second; min trades, target profit and equity > $0 checked at the end; 0 = rule off), competition ranking by final equity (1, 1, 3), tied cash/credit prizes pooled and split, challenge prizes to every tied player, rejoins. Shows live, upcoming and completed tournaments, with a rule checker and a leaderboard and prize simulator.
+- [How Adiox tournaments work](https://tournaments.adiox.io/): single-page guide to Adiox trading tournaments — lifecycle (Coming soon → Live → Ended), rules in dollars (overall, daily, single-trade loss, max trades checked every second; min trades, target profit and equity > $0 checked at the end; 0 = rule off), competition ranking by final equity (1, 1, 3), tied cash/credit prizes pooled and split, challenge prizes to every tied player, rejoins. Shows live, upcoming and completed tournaments, with a rule checker and a leaderboard and prize simulator.
 
 ## Guides
 

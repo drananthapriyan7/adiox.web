@@ -1,0 +1,24 @@
+# Adiox Tournaments — tournaments.adiox.io
+# Search engines and AI answer engines are welcome to crawl and cite this site.
+
+User-agent: *
+Allow: /
+
+# AI search and answer engines (explicitly allowed)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://tournaments.adiox.io/sitemap.xml
