@@ -2,7 +2,7 @@
 
 > Adiox (https://adiox.io) is a gamified prop-trading and trading-competition platform. Users register, fund one wallet and buy access to prop-firm challenges, tournaments, trading games and a challenge simulator. Every product gives the user a trading account on the Adiox Trading Platform funded with virtual money, checked against its rules every 1–3 seconds. Client portal: https://portal.adiox.io. Trading platform: https://trade.adiox.io. Trade copier: https://copier.adiox.io.
 
-Last updated: 2026-11-25. Prices are in US dollars. Nothing here is investment advice.
+Last updated: 2026-11-27. Prices are in US dollars. Nothing here is investment advice.
 
 ## Adiox — Forex Prop Firm, Free Tournaments & Trading Games
 
@@ -468,3 +468,45 @@ Q: What is a forex trade copier?
 A: Software that reads trades from a source — a master account or a signal provider — and places matching orders on follower accounts, sized by the settings you choose.
 Q: Where do I copy trades with Adiox?
 A: On the Adiox copier portal at copier.adiox.io. The Adiox client portal shows a read-only overview of top masters, top signal providers and your own masters and copiers.
+
+## How to Pass a Prop Firm Challenge: 9 Steps | Adiox
+
+URL: https://adiox.io/guides/how-to-pass-prop-firm-challenge/
+
+How to pass a prop firm challenge: size trades for the daily loss limit, know how each limit is measured, spread the target, and rehearse the rules first.
+
+- Short answer: Most challenges are failed on a loss rule, not a missed target — size trades for the daily loss limit.
+- Risk per trade: At 1% risk, five losses in a row are needed to hit a 5% daily limit.
+- Know the reference: Adiox: daily loss from the day’s opening balance; overall loss from the starting balance.
+- Rehearse: Practise the same rules in the Training Room from $10.
+- Inactivity: 15 idle days in a row ends an Adiox challenge account.
+
+Q: What is the hardest rule in a prop firm challenge?
+A: For most traders it is the daily loss limit, because a single oversized trade or a revenge-trading session can breach it in minutes. Size each trade so several losses in a row stay inside it.
+Q: How long does it take to pass a prop firm challenge?
+A: At least the minimum number of trading days set by the phase, and as long as you need to reach the profit target without breaking a loss limit. On Adiox, passing Phase 1 creates Phase 2 for free.
+Q: Should I practise before buying a challenge?
+A: Yes. Rehearsing the exact rules is the cheapest way to find your weak spot. The Adiox Training Room runs a challenge simulator from $10, and you can cancel within 5 minutes for a refund.
+Q: What happens if I break a rule?
+A: On Adiox the account is eliminated: open trades are closed and the account is locked, with no refund. You can buy a new challenge and start again.
+
+## Daily Loss Limit vs Max Drawdown, Explained | Adiox
+
+URL: https://adiox.io/guides/daily-loss-limit-explained/
+
+Daily loss limit vs max drawdown in prop trading: static, daily-reset and trailing limits with worked $10,000 examples, and how Adiox measures each one.
+
+- Daily loss limit: Caps one day’s losses; resets each day.
+- Max drawdown: Caps the total fall for the whole challenge.
+- Static vs trailing: Static floors stay put; trailing floors follow your highest balance.
+- Adiox daily loss: % of the day’s opening balance, recorded at midnight UTC.
+- Adiox overall loss: % of the starting balance — static.
+
+Q: What is a daily loss limit in prop trading?
+A: The most an account may lose in a single trading day, usually a percentage of a reference balance. On Adiox challenges it is a percentage of the day's opening balance, recorded at midnight UTC.
+Q: What is the difference between daily loss and max drawdown?
+A: Daily loss limits one day's losses and resets each day. Max (overall) drawdown limits the total fall from a fixed or trailing reference point for the whole challenge. On Adiox the overall limit is static, measured from the starting balance.
+Q: Is a static or trailing drawdown better?
+A: A static drawdown gives you more room as you profit, because the floor stays where it started. A trailing drawdown moves up with your highest balance, so your room never grows. Adiox challenges use a static overall limit.
+Q: Can I practise with a daily loss limit?
+A: Yes — every Adiox Training Room simulator enforces a daily and an overall loss limit, and custom simulators let you choose the percentages.

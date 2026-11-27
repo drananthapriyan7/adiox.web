@@ -191,6 +191,31 @@
       out.split.textContent = tier1 + ' × 10% · ' + tier2 + ' × 15%';
     },
 
+    /* Pay Later total cost: upfront fee now, activation fee only after passing; coupons reduce both. */
+    paylater: function (f, out) {
+      var hasUp = f.upfront.value !== '', hasAct = f.activation.value !== '';
+      var c = 1 - clamp(num(f.coupon.value), 0, 100) / 100;
+      var up = round2(Math.max(0, num(f.upfront.value)) * c);
+      var act = round2(Math.max(0, num(f.activation.value)) * c);
+      var std = f.standard.value !== '' ? round2(Math.max(0, num(f.standard.value)) * c) : null;
+      if (!hasUp || !hasAct) {
+        out.fail.textContent = out.pass.textContent = '—';
+        out.std.textContent = std === null ? '—' : usd(std);
+        out.note.textContent = 'Enter the upfront and activation fees shown on the challenge in the portal.';
+        return;
+      }
+      out.fail.textContent = usd(up);
+      out.pass.textContent = usd(up + act);
+      out.std.textContent = std === null ? 'Not entered' : usd(std);
+      if (std === null) {
+        out.note.textContent = 'Fail: you only ever pay the upfront fee. Pass: you pay both fees in total.';
+      } else {
+        var diffPass = round2(up + act - std), diffFail = round2(std - up);
+        out.note.textContent = 'Compared with the standard fee, Pay Later costs ' + usd(Math.abs(diffPass)) + (diffPass >= 0 ? ' more' : ' less') +
+          ' if you pass, and saves ' + usd(Math.max(0, diffFail)) + ' if you don’t.';
+      }
+    },
+
     /* Funded payout: profit × payout share %. */
     payout: function (f, out) {
       var profit = Math.max(0, num(f.profit.value));

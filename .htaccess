@@ -2,6 +2,26 @@
 Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+AddType image/webp .webp
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # One canonical origin: https://adiox.io (only on the live domains, so local dev is untouched).
+  RewriteCond %{HTTP_HOST} ^www\.adiox\.io$ [NC]
+  RewriteRule ^ https://adiox.io%{REQUEST_URI} [R=301,L,NE]
+  RewriteCond %{HTTP_HOST} ^adiox\.io$ [NC]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://adiox.io%{REQUEST_URI} [R=301,L,NE]
+
+  # Internal folders are never public.
+  RewriteRule ^(storage|tools|docs)(/|$) - [F,L]
+
+  # Kept here (not mod_alias) so the #fragment is not escaped to %23.
+  RewriteRule ^partners/?$ /rewards/#referrals [R=301,L,NE]
+</IfModule>
 
 <IfModule mod_alias.c>
   # Pages from the previous site, mapped to their closest current page.
@@ -16,7 +36,6 @@ ErrorDocument 404 /404.html
   RedirectMatch 301 ^/train(/.*)?$                 /training-room/
   RedirectMatch 301 ^/learn(/.*)?$                 /how-it-works/
   RedirectMatch 301 ^/(glossary|quiz)/?$           /faq/
-  RedirectMatch 301 ^/partners/?$                  /rewards/#referrals
   RedirectMatch 301 ^/(ecosystem|blog)(/.*)?$      /
   RedirectMatch 301 ^/copytrading(-v2)?\.html$     /trade-copier/
   RedirectMatch 301 ^/signup/?$                    https://portal.adiox.io/Identity/Account/Register
@@ -27,11 +46,26 @@ ErrorDocument 404 /404.html
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # Serve the llms files as UTF-8 plain text.
+  <FilesMatch "^llms(-full)?\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript application/json image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 1 hour"
   ExpiresByType text/css "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/plain "access plus 1 hour"
 </IfModule>

@@ -26,6 +26,9 @@
 - [How to compare forex and gold signal providers](https://adiox.io/guides/forex-signal-providers/): track record, maximum drawdown, stop loss on every signal, reward:risk, consistency. Adiox does not sell signals.
 - [How to set up copy trading on MT4 and MT5](https://adiox.io/guides/copy-trading-mt4-mt5/): master and follower accounts, lot-size modes, symbol mapping, loss limits; copying with Adiox happens on copier.adiox.io.
 
+- [How to pass a prop firm challenge](https://adiox.io/guides/how-to-pass-prop-firm-challenge/): nine steps; most failures are loss-rule breaches; at 1% risk per trade five losses in a row reach a 5% daily limit; rehearse first.
+- [Daily loss limit vs max drawdown](https://adiox.io/guides/daily-loss-limit-explained/): static, daily-reset and trailing limits with $10,000 worked examples. Adiox: daily loss from the day's opening balance (midnight UTC), overall loss static from the starting balance.
+
 ## More
 
 - [Full reference for AI assistants](https://adiox.io/llms-full.txt): every page's summary, key facts and answers.

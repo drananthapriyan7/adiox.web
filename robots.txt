@@ -5,6 +5,8 @@ User-agent: *
 Allow: /
 Disallow: /contact/send.php
 Disallow: /storage/
+Disallow: /tools/
+Disallow: /docs/
 
 # AI search and answer engines (explicitly allowed)
 User-agent: GPTBot
@@ -24,5 +26,7 @@ User-agent: meta-externalagent
 Allow: /
 Disallow: /contact/send.php
 Disallow: /storage/
+Disallow: /tools/
+Disallow: /docs/
 
 Sitemap: https://adiox.io/sitemap.xml
