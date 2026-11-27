@@ -2,9 +2,9 @@
    ADIOX TOURNAMENTS — page behaviour
    The rule checker and the leaderboard/prize simulator mirror the
    tournament logic in the Adiox portal (TournamentService):
-   - live checks in order: overall loss → daily loss → single-trade loss → max trades
+   - live checks in order: overall loss → daily loss
    - a rule set to 0 is off
-   - at the end: min trades, equity ≤ 0 and target profit decide eligibility
+   - at the end: the minimum number of trades decides eligibility
    - competition ranking by equity (1, 1, 3); tied cash/credit prizes pooled
      and split equally; challenge prizes given to every tied player.
 ═══════════════════════════════════════════════════════════════ */
@@ -46,19 +46,16 @@
     var runChecker = function () {
       var f = checker.elements;
       var init = Math.max(0, num(f.init.value)), maxLoss = Math.max(0, num(f.maxLoss.value)), daily = Math.max(0, num(f.daily.value));
-      var single = Math.max(0, num(f.single.value)), maxTrades = Math.max(0, Math.floor(num(f.maxTrades.value)));
-      var minTrades = Math.max(0, Math.floor(num(f.minTrades.value))), target = Math.max(0, num(f.target.value));
+      var minTrades = Math.max(0, Math.floor(num(f.minTrades.value)));
       var equity = num(f.equity.value), prev = f.prev.value === '' ? init : Math.max(0, num(f.prev.value));
-      var worst = Math.abs(num(f.worst.value)), trades = Math.max(0, Math.floor(num(f.trades.value)));
+      var trades = Math.max(0, Math.floor(num(f.trades.value)));
       var atEnd = f.stage.value === 'end';
 
       var rows = [], broken = null;
       var add = function (label, state, detail) { rows.push({ label: label, state: state, detail: detail }); };
       var live = [
         { label: 'Overall loss', on: maxLoss > 0, fail: equity <= init - maxLoss, detail: 'Floor ' + usd0(init - maxLoss) + ' · equity ' + usd0(equity), reason: 'Overall loss reached' },
-        { label: 'Daily loss', on: daily > 0, fail: prev - equity >= daily, detail: 'Floor ' + usd0(prev - daily) + ' · lost ' + usd0(Math.max(0, prev - equity)) + ' today', reason: 'Daily loss reached' },
-        { label: 'Single-trade loss', on: single > 0, fail: worst >= single, detail: 'Worst ' + usd0(worst) + ' of ' + usd0(single), reason: 'Single trade loss reached' },
-        { label: 'Max trades', on: maxTrades > 0, fail: trades > maxTrades, detail: trades + ' of ' + maxTrades, reason: 'Max trades reached' }
+        { label: 'Daily loss', on: daily > 0, fail: prev - equity >= daily, detail: 'Floor ' + usd0(prev - daily) + ' · lost ' + usd0(Math.max(0, prev - equity)) + ' today', reason: 'Daily loss reached' }
       ];
       live.forEach(function (r) {
         if (!r.on) return add(r.label, 'na', 'Off');
@@ -70,11 +67,7 @@
       var notEligible = [];
       if (atEnd && !broken) {
         if (trades < minTrades) notEligible.push('fewer than ' + minTrades + ' trades');
-        if (equity <= 0) notEligible.push('equity $0 or less');
-        if (target > 0 && equity < init + target) notEligible.push('below the ' + usd0(init + target) + ' target');
         add('Minimum trades', minTrades > 0 ? (trades < minTrades ? 'bad' : 'ok') : 'na', minTrades > 0 ? trades + ' of ' + minTrades : 'Off');
-        add('Target profit', target > 0 ? (equity < init + target ? 'bad' : 'ok') : 'na', target > 0 ? 'Needs ' + usd0(init + target) : 'Off');
-        add('Equity above $0', equity > 0 ? 'ok' : 'bad', usd0(equity));
       }
 
       list.innerHTML = rows.map(function (r) {
@@ -102,8 +95,8 @@
     Arena.loadRules = function (t) {
       var r = t.rules || {}, f = checker.elements;
       f.init.value = t.startingBalance || 0; f.maxLoss.value = r.maxOverallLoss || 0; f.daily.value = r.maxDailyLoss || 0;
-      f.single.value = r.maxSingleTradeLoss || 0; f.maxTrades.value = r.maxTrades || 0; f.minTrades.value = r.minTrades || 0;
-      f.target.value = r.targetProfit || 0; f.equity.value = t.startingBalance || 0; f.prev.value = ''; f.worst.value = 0; f.trades.value = 0;
+      f.minTrades.value = r.minTrades || 0;
+      f.equity.value = t.startingBalance || 0; f.prev.value = ''; f.trades.value = 0;
       runChecker();
     };
   }
@@ -113,7 +106,7 @@
   if (pBody && zBody) {
     var EXAMPLE_PLAYERS = [
       ['trader_kai', 11840, 42], ['m.santos', 11215, 18], ['pipwizard', 11215, 27], ['lena_fx', 10702, 9],
-      ['rex_fx', 10450, 2], ['nova', 10390, 15], ['drift', 9980, 6], ['zed', 0, 4]
+      ['rex_fx', 10450, 2], ['nova', 10390, 15], ['drift', 9980, 6], ['zed', 9640, 4]
     ];
     var EXAMPLE_PRIZES = [[1, 1, 'cash', 500], [2, 3, 'cash', 250], [4, 5, 'credit', 100], [6, 6, 'challenge', 10000]];
     var TYPES = { cash: 'Cash', credit: 'Credit', challenge: 'Challenge' };
@@ -144,7 +137,7 @@
     };
 
     var simulate = function () {
-      var init = Math.max(0, num($('#s-init').value)), minT = Math.max(0, Math.floor(num($('#s-min').value))), target = Math.max(0, num($('#s-target').value));
+      var init = Math.max(0, num($('#s-init').value)), minT = Math.max(0, Math.floor(num($('#s-min').value)));
       var players = read(pBody).map(function (p, i) { return { name: (p.name || 'Player ' + (i + 1)).trim(), equity: num(p.equity), trades: Math.max(0, Math.floor(num(p.trades))) }; });
       var prizes = read(zBody).map(function (z) {
         var a = Math.max(1, Math.floor(num(z.from))), b = Math.max(1, Math.floor(num(z.to)));
@@ -155,8 +148,6 @@
       players.forEach(function (p) {
         var why = [];
         if (p.trades < minT) why.push('fewer than ' + minT + ' trades');
-        if (p.equity <= 0) why.push('equity $0 or less');
-        if (target > 0 && p.equity < init + target) why.push('below target');
         if (why.length) { p.why = why.join(', '); out_.push(p); } else eligible.push(p);
       });
       eligible.sort(function (a, b) { return b.equity - a.equity; });
@@ -230,7 +221,6 @@
       }
       $('#s-init').value = t.startingBalance || 0;
       $('#s-min').value = r.minTrades || 0;
-      $('#s-target').value = r.targetProfit || 0;
       zBody.innerHTML = rows.length
         ? rows.map(function (z) { return prizeRow([z.rankFrom, z.rankTo, z.type, z.type === 'challenge' ? (z.challengeAccountSize || 0) : z.amount]); }).join('')
         : '';
@@ -242,7 +232,7 @@
         if (d) { d.closest('tr').remove(); simulate(); }
       });
     });
-    ['#s-init', '#s-min', '#s-target'].forEach(function (s) { $(s).addEventListener('input', simulate); });
+    ['#s-init', '#s-min'].forEach(function (s) { $(s).addEventListener('input', simulate); });
     pBody.addEventListener('input', simulate);
     zBody.addEventListener('input', simulate);
     zBody.addEventListener('change', simulate);
@@ -263,6 +253,8 @@
     return base.replace(/\/+$/, '');
   })();
   var grid = $('#t-grid');
+  // The static card in the HTML, shown when nothing is open for registration.
+  var fb = grid && $('.t-fallback', grid), FALLBACK = fb ? fb.outerHTML : '';
 
   function getJSON(path) {
     var ctrl = 'AbortController' in window ? new AbortController() : null;
@@ -330,47 +322,49 @@
       slotsLine(t) +
       '<div class="tfoot">' + timeLine(t) + '</div>' + regLine(t) +
       '<div class="tact"><button class="btn btn-ghost btn-sm" type="button" data-open="' + t.id + '">Details</button>' +
-      '<a class="btn btn-gold btn-sm" href="' + PORTAL + '" target="_blank" rel="noopener">' + (t.registrationOpen ? 'Join ↗' : 'View ↗') + '</a></div>' +
+      '<a class="btn btn-gold btn-sm" href="' + PORTAL + '" target="_blank" rel="noopener" aria-label="Join Now: ' + esc(t.name) + ' (opens the Adiox portal)">Join Now ↗</a></div>' +
       '</div></article>';
   }
 
-  var data = null, current = 'live';
+  var data = null;
   function byStatus(s) { return data ? data.tournaments.filter(function (t) { return t.status === s; }) : []; }
-  function setTab(s) {
-    current = s;
-    $$('.tabs .tab').forEach(function (b) {
-      var on = b.getAttribute('data-status') === s;
-      b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1;
-      if (on) grid.setAttribute('aria-labelledby', b.id);
-    });
-    render();
+  // Open for registration: live or upcoming, registration open (full or closed ones are left out).
+  function openList() {
+    if (!data) return [];
+    var rank = { live: 0, upcoming: 1 };
+    return data.tournaments.filter(function (t) { return t.registrationOpen && t.status !== 'completed'; })
+      .sort(function (a, b) {
+        return (rank[a.status] - rank[b.status]) ||
+          (new Date(a.registrationClosesAt || a.startTime) - new Date(b.registrationClosesAt || b.startTime));
+      });
+  }
+  function setCount(n) {
+    var pill = $('#n-open'); if (!pill) return;
+    pill.textContent = n ? String(n) : ''; pill.hidden = !n;
+  }
+  function setNote(text) {
+    var el = $('#t-note'); if (!el) return;
+    el.textContent = text || ''; el.hidden = !text;
+  }
+  function showFallback(text) {
+    grid.innerHTML = FALLBACK;
+    grid.classList.remove('is-loading');
+    grid.setAttribute('aria-busy', 'false');
+    setCount(0);
+    setNote(text);
   }
   function render() {
-    var state = $('#t-state');
-    var list = byStatus(current);
-    grid.setAttribute('aria-busy', 'false');
+    var list = openList();
+    setCount(list.length);
     if (!list.length) {
-      grid.innerHTML = '';
-      state.hidden = false;
-      state.innerHTML = current === 'live'
-        ? '<b>No tournament is live right now</b>Check the upcoming tournaments, or open the portal to be ready when the next one starts.'
-        : current === 'upcoming' ? '<b>No upcoming tournaments announced yet</b>New tournaments appear here as soon as they are published.'
-        : '<b>No completed tournaments to show</b>Results appear here once a tournament ends.';
-      state.innerHTML += '<div class="actions"><a class="btn btn-ghost btn-sm" href="' + PORTAL + '" target="_blank" rel="noopener">Open the portal ↗</a></div>';
+      showFallback('No tournaments are open for registration right now. The card above shows what a tournament looks like. Join Now opens the Adiox portal, where new tournaments appear first.');
       return;
     }
-    state.hidden = true;
+    grid.classList.remove('is-loading');
+    grid.setAttribute('aria-busy', 'false');
+    setNote('');
     grid.innerHTML = list.map(card).join('');
     tick();
-  }
-  function showError() {
-    grid.innerHTML = '';
-    grid.setAttribute('aria-busy', 'false');
-    var state = $('#t-state');
-    state.hidden = false;
-    state.innerHTML = '<b>Live tournaments couldn’t be loaded</b>The portal may be busy. Everything on this page still explains how tournaments work.' +
-      '<div class="actions"><button class="btn btn-ghost btn-sm" type="button" id="t-retry">Try again</button><a class="btn btn-gold btn-sm" href="' + PORTAL + '" target="_blank" rel="noopener">Open the portal ↗</a></div>';
-    $('#t-retry').addEventListener('click', function () { grid.setAttribute('aria-busy', 'true'); state.hidden = true; grid.innerHTML = '<div class="tcard skel"></div><div class="tcard skel"></div><div class="tcard skel"></div>'; loadLive(true); });
   }
   function tick() {
     $$('[data-cd]').forEach(function (el) {
@@ -381,10 +375,10 @@
 
   function heroStats() {
     var box = $('#live-stats'); if (!box || !data) return;
-    var open = data.tournaments.filter(function (t) { return t.status !== 'completed'; });
+    var open = openList();
     var cash = open.reduce(function (s, t) { return s + num(t.prizes && t.prizes.cashPool); }, 0);
-    var html = '<span><i class="pulse"></i><b>' + data.counts.live + '</b> live</span><span><b>' + data.counts.upcoming + '</b> upcoming</span>';
-    if (cash > 0) html += '<span><b>' + money(cash) + '</b> in cash prizes open now</span>';
+    var html = '<span><i class="pulse"></i><b>' + open.length + '</b> open for registration</span><span><b>' + num(data.counts.live) + '</b> live</span>';
+    if (cash > 0) html += '<span><b>' + money(cash) + '</b> in cash prizes to join now</span>';
     box.innerHTML = html; box.hidden = false;
   }
   function heroBoard() {
@@ -460,10 +454,7 @@
     return '<div class="tw"><table><tbody>' +
       row('Overall loss limit', num(r.maxOverallLoss) ? money(r.maxOverallLoss) + ' <span class="faint">(floor ' + money(num(t.startingBalance) - num(r.maxOverallLoss)) + ')</span>' : off) +
       row('Daily loss limit', num(r.maxDailyLoss) ? money(r.maxDailyLoss) : off) +
-      row('Single-trade loss', num(r.maxSingleTradeLoss) ? money(r.maxSingleTradeLoss) : off) +
-      row('Max trades', num(r.maxTrades) || off) +
       row('Min trades to qualify', num(r.minTrades) || off) +
-      row('Target profit to qualify', num(r.targetProfit) ? money(r.targetProfit) + ' <span class="faint">(equity ' + money(num(t.startingBalance) + num(r.targetProfit)) + ')</span>' : off) +
       '</tbody></table></div>' +
       '<div class="flags">' + [['News trading', r.newsTradingAllowed], ['Copy trading', r.copyTradingAllowed], ['HFT', r.hftAllowed]].map(function (f) {
         return '<span class="badge ' + (f[1] ? 'b-green' : 'b-red') + '">' + f[0] + (f[1] ? ' allowed' : ' not allowed') + '</span>';
@@ -526,32 +517,21 @@
     if (b) openDetails(Number(b.getAttribute('data-open')), b);
   });
 
-  // Tabs (click + arrow keys)
-  var tabs = $$('.tabs .tab');
-  tabs.forEach(function (b, i) {
-    b.addEventListener('click', function () { setTab(b.getAttribute('data-status')); });
-    b.addEventListener('keydown', function (e) {
-      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (d) { e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; setTab(n.getAttribute('data-status')); n.focus(); }
-    });
-  });
-
   var firstLoad = true;
   function loadLive(manual) {
-    if (!API || !grid) return;
+    if (!grid) return;
+    if (!API) { showFallback(''); return; }
     getJSON('?status=all').then(function (res) {
       data = res && Array.isArray(res.tournaments) ? res : { counts: { live: 0, upcoming: 0, completed: 0 }, tournaments: [] };
-      ['live', 'upcoming', 'completed'].forEach(function (s) { var n = $('#n-' + s); if (n) n.textContent = data.counts[s] || ''; });
-      if (firstLoad || manual) {
-        // Open on the first tab that has something to show.
-        current = data.counts.live ? 'live' : data.counts.upcoming ? 'upcoming' : data.counts.completed ? 'completed' : 'live';
-        heroBoard();
-      }
+      if (firstLoad || manual) heroBoard();
       firstLoad = false;
-      setTab(current);
+      render();
       heroStats(); fillPickers(); eventSchema();
       $('#t-updated').textContent = 'Updated ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' · data from the Adiox portal';
-    }).catch(function () { if (firstLoad || manual) showError(); });
+    }).catch(function () {
+      // Keep showing real cards from an earlier load; otherwise show the static card. The 60 s refresh retries.
+      if (!data) showFallback('Live tournaments couldn’t be loaded right now. Join Now still takes you to the Adiox portal.');
+    });
   }
   if (grid) {
     loadLive();

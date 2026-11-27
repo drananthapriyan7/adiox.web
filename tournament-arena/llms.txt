@@ -1,12 +1,12 @@
 # Adiox Tournaments
 
-> tournaments.adiox.io shows Adiox's live, upcoming and completed trading tournaments and explains how they work. Adiox (https://adiox.io) is a gamified prop-trading and trading-competition platform; players join tournaments in the client portal at https://portal.adiox.io.
+> tournaments.adiox.io lists every Adiox trading tournament currently open for registration, each with a Join Now button, and explains how tournaments work. Adiox (https://adiox.io) is a gamified prop-trading and trading-competition platform; players join tournaments in the client portal at https://portal.adiox.io.
 
 ## How Adiox tournaments work
 
 - Free ($0 entry) and paid tournaments. Every player starts with the same balance on an account funded with virtual money on the Adiox Trading Platform.
 - Lifecycle: Coming soon → Live → Ended. Accounts made before the start wait as pending and switch on at the start. Registration closes at the cutoff time shown on each tournament. Tournament accounts are disabled 3 days after the end.
-- Rules are dollar amounts set per tournament; a rule set to 0 is off. Checked every second while live: overall loss (equity at or below starting balance minus the limit), daily loss (yesterday's closing balance, or the starting balance on day one, minus equity reaches the limit), single-trade loss, max trades. Checked at the end: minimum trades, target profit (when set), equity above $0.
+- Rules are dollar amounts set per tournament; a rule set to 0 is off. Checked every second while live: overall loss (equity at or below starting balance minus the limit) and daily loss (yesterday's closing balance, or the starting balance on day one, minus equity reaches the limit). Checked at the end: the minimum number of trades.
 - Ranking: qualifying players by final equity, highest first; ranks refresh every minute while live. Equal equity shares a rank and the next rank is skipped (1, 1, 3).
 - Prizes by rank: cash (to the Adiox wallet, withdrawable after KYC), bonus credit (up to 50% of a purchase, expires after 30 days) or a free challenge account. Tied players' cash and credit prizes are pooled and split equally; a challenge-account prize goes to each tied player.
 - Rejoin (where enabled): only while live, after a cooldown, up to a maximum number of times, for the rejoin fee; the account is reset to the starting balance.
