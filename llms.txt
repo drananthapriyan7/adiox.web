@@ -18,6 +18,10 @@
 - [Wallet & payments](https://adiox.io/wallet/): deposits by card, payment link or crypto; withdrawals to crypto or bank after KYC, $10 minimum. Checkout order: coupon → bonus credit (max 50%) → wallet → gateway (min $1). Bonus credit expires after 30 days. 100 points = $10 credit. Referral commission 10% (first 20 referrals) and 15% (21st on).
 - [Pricing](https://adiox.io/pricing/): free account, no platform subscription; pay per product.
 
+## Tournament guide
+
+- [How Adiox tournaments work](https://adiox.io/tournament-arena/): single-page guide to Adiox trading tournaments — lifecycle (Coming soon → Live → Ended), rules in dollars (overall, daily, single-trade loss, max trades checked every second; min trades, target profit and equity > $0 checked at the end; 0 = rule off), competition ranking by final equity (1, 1, 3), tied cash/credit prizes pooled and split, challenge prizes to every tied player, rejoins. Shows live, upcoming and completed tournaments, with a rule checker and a leaderboard and prize simulator.
+
 ## Guides
 
 - [Pay Later prop firm challenge](https://adiox.io/challenges/pay-later/): start a challenge for a small upfront fee; the activation fee is payable only after passing; nothing more is due if you fail.

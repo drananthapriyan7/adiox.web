@@ -38,8 +38,8 @@ AddType image/webp .webp
   RedirectMatch 301 ^/(glossary|quiz)/?$           /faq/
   RedirectMatch 301 ^/(ecosystem|blog)(/.*)?$      /
   RedirectMatch 301 ^/copytrading(-v2)?\.html$     /trade-copier/
-  RedirectMatch 301 ^/signup/?$                    https://portal.adiox.io/Identity/Account/Register
-  RedirectMatch 301 ^/login/?$                     https://portal.adiox.io/Identity/Account/Login
+  RedirectMatch 301 ^/signup/?$                    https://portal.adiox.io
+  RedirectMatch 301 ^/login/?$                     https://portal.adiox.io
 </IfModule>
 
 <IfModule mod_headers.c>

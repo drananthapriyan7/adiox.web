@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adiox Tournaments — Free &amp; Paid Trading Competitions</title>
+  <meta name="description" content="How Adiox trading tournaments work: lifecycle, rules, elimination, ranking, ties and prizes — with a rule checker and a leaderboard and prize simulator." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://adiox.io/tournament-arena/" />
+  <meta name="theme-color" content="#07080f" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Adiox" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Adiox Tournaments — Free &amp; Paid Trading Competitions" />
+  <meta property="og:description" content="Lifecycle, rules, elimination, ranking, ties and prizes of Adiox trading tournaments — with a rule checker and a prize simulator." />
+  <meta property="og:url" content="https://adiox.io/tournament-arena/" />
+  <meta property="og:image" content="https://adiox.io/images/og-adiox.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adiox.io/images/og-adiox.png" />
+  <meta name="adiox-api" content="https://portal.adiox.io/api/public/tournaments" />
+  <link rel="preconnect" href="https://portal.adiox.io" crossorigin />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="assets/arena.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://adiox.io/#org", "name": "Adiox", "url": "https://adiox.io/", "logo": "https://adiox.io/images/adiox-logo.png" },
+      { "@type": "WebPage", "@id": "https://adiox.io/tournament-arena/#webpage", "url": "https://adiox.io/tournament-arena/", "name": "Adiox Tournaments", "description": "How Adiox trading tournaments work: lifecycle, rules, elimination, ranking, ties and prizes.", "isPartOf": { "@type": "WebSite", "@id": "https://adiox.io/#website", "name": "Adiox", "url": "https://adiox.io/" }, "publisher": { "@id": "https://adiox.io/#org" }, "inLanguage": "en", "dateModified": "2026-11-27", "breadcrumb": { "@id": "https://adiox.io/tournament-arena/#breadcrumb" } },
+      { "@type": "BreadcrumbList", "@id": "https://adiox.io/tournament-arena/#breadcrumb", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adiox.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Tournaments", "item": "https://adiox.io/tournaments/" },
+        { "@type": "ListItem", "position": 3, "name": "How tournaments work", "item": "https://adiox.io/tournament-arena/" } ] },
+      { "@type": "Service", "@id": "https://adiox.io/tournament-arena/#service", "name": "Adiox Trading Tournaments", "serviceType": "Trading competition", "provider": { "@id": "https://adiox.io/#org" }, "areaServed": "Worldwide", "description": "Free and paid timed trading competitions on accounts funded with virtual money. Qualifying players are ranked by final equity and prizes are paid by rank in cash, bonus credit or a challenge account.", "offers": { "@type": "Offer", "name": "Free tournament entry", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Adiox home"><picture><source srcset="/images/adiox-logo-sm.webp" type="image/webp" /><img src="/images/adiox-logo-sm.png" alt="Adiox" width="182" height="87" /></picture><span><b>Tournaments</b></span></a>
+    <nav class="hnav" aria-label="On this page">
+      <a href="#lifecycle">Lifecycle</a><a href="#tournaments">Live</a><a href="#formats">Formats</a><a href="#rules">Rules</a><a href="#prizes">Prizes</a><a href="#leaderboards">Leaderboards</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="https://portal.adiox.io" target="_blank" rel="noopener">Open tournaments ↗</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Free &amp; paid trading tournaments</p>
+      <h1>Same balance. Same clock. <span class="grad">Best equity takes the prize.</span></h1>
+      <p class="lead">Adiox tournaments are timed trading competitions, free or paid. Every player starts with the same balance on a virtual-money account, the platform checks the rules every second, and qualifying players are ranked by final equity. Prizes go by rank — cash, bonus credit or a free challenge account.</p>
+      <div class="actions">
+        <a class="btn btn-gold btn-lg" href="https://portal.adiox.io" target="_blank" rel="noopener">See open tournaments ↗</a>
+        <a class="btn btn-ghost btn-lg" href="#rules">Check the rules</a>
+      </div>
+      <div class="facts"><span>Free ($0) and paid entry</span><span>Rules checked every second</span><span>Ranks refresh every minute</span></div>
+      <div class="live-stats" id="live-stats" hidden aria-live="polite"></div>
+    </div>
+    <div class="rv">
+      <div class="tcard" id="hero-board" role="img" aria-label="Illustration of a live tournament leaderboard with three ranked players">
+        <div class="tbanner">
+          <span class="badge dot b-green" id="hb-badge">Live</span>
+          <svg viewBox="0 0 120 60" fill="none" aria-hidden="true"><path d="M2 52 L20 40 L34 46 L52 26 L66 32 L84 14 L100 20 L118 6" stroke="#fcd57a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="tbody">
+          <h3 id="hb-name">Weekly Forex Tournament</h3>
+          <p class="desc" id="hb-desc">Live leaderboard · ranked by equity</p>
+          <div class="tw" style="border-radius:12px;">
+            <table>
+              <thead><tr><th scope="col">Rank</th><th scope="col">Trader</th><th scope="col">Equity</th></tr></thead>
+              <tbody id="hb-rows">
+                <tr><td><span class="rk r1">1</span></td><td>trader_kai 🇦🇪</td><td class="num">$11,840</td></tr>
+                <tr><td><span class="rk r2">2</span></td><td>m.santos 🇧🇷</td><td class="num">$11,215</td></tr>
+                <tr><td><span class="rk r3">3</span></td><td>pipwizard 🇮🇳</td><td class="num">$10,960</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p class="caption" id="hb-caption">Illustration with example players. Live tournaments are listed in the portal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIVE TOURNAMENTS (from the portal API) ═══ -->
+<section class="sec" id="tournaments" aria-labelledby="t-title">
+  <div class="wrap">
+    <div class="head"><p class="kicker">Live from the portal</p><h2 id="t-title">Live &amp; upcoming tournaments</h2><p class="lead">Real tournaments, straight from the Adiox portal: schedule, entry fee, slots, rules and prizes. Updated every minute.</p></div>
+    <div class="tabs" role="tablist" aria-label="Tournament status">
+      <button class="tab" role="tab" id="tab-live" aria-selected="true" aria-controls="t-grid" data-status="live">Live <span class="count" id="n-live"></span></button>
+      <button class="tab" role="tab" id="tab-upcoming" aria-selected="false" aria-controls="t-grid" data-status="upcoming" tabindex="-1">Upcoming <span class="count" id="n-upcoming"></span></button>
+      <button class="tab" role="tab" id="tab-completed" aria-selected="false" aria-controls="t-grid" data-status="completed" tabindex="-1">Completed <span class="count" id="n-completed"></span></button>
+    </div>
+    <div class="t-grid" id="t-grid" role="tabpanel" aria-labelledby="tab-live" aria-live="polite" aria-busy="true">
+      <div class="tcard skel" aria-hidden="true"></div><div class="tcard skel" aria-hidden="true"></div><div class="tcard skel" aria-hidden="true"></div>
+    </div>
+    <div class="state" id="t-state" hidden></div>
+    <p class="updated" id="t-updated"></p>
+  </div>
+</section>
+
+<!-- ═══ LIFECYCLE ═══ -->
+<section class="sec sec-alt" id="lifecycle">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Lifecycle</p><h2>From announcement to prizes</h2><p class="lead">Every tournament moves through the same stages. The status on its card tells you where it is.</p></div>
+    <ol class="timeline rv">
+      <li class="tl" style="--c:var(--blue)"><div class="dotc">1</div><h4>Coming soon</h4><p>Published with its start and end time, rules and prize table. You can join already.</p></li>
+      <li class="tl"><div class="dotc">2</div><h4>Joined · pending</h4><p>Accounts made before the start wait as pending and switch on when it begins.</p></li>
+      <li class="tl" style="--c:var(--green)"><div class="dotc">3</div><h4>Live</h4><p>Everyone trades the same starting balance. Rules checked every second, ranks every minute.</p></li>
+      <li class="tl" style="--c:var(--pink)"><div class="dotc">4</div><h4>Registration closes</h4><p>Joining stops at the cutoff time shown on the tournament — before the end.</p></li>
+      <li class="tl" style="--c:var(--violet)"><div class="dotc">5</div><h4>Ended</h4><p>Non-qualifying players are removed and final ranks are set by equity.</p></li>
+      <li class="tl" style="--c:var(--ink-3)"><div class="dotc">6</div><h4>Prizes &amp; close</h4><p>Prizes paid by rank. Tournament accounts are disabled 3 days after the end.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ CARD ANATOMY ═══ -->
+<section class="sec" id="card">
+  <div class="wrap anatomy">
+    <div class="rv">
+      <p class="kicker">Read a tournament card</p>
+      <h2>Everything you need to decide, on one card</h2>
+      <p class="lead" style="margin-bottom:22px;">Each tournament in the portal shows the same details, so you can compare them at a glance.</p>
+      <ol class="callouts">
+        <li><div><b>Status</b><span>Coming soon, Live or Ended.</span></div></li>
+        <li><div><b>Starting balance</b><span>The same virtual balance for every player.</span></div></li>
+        <li><div><b>Entry fee</b><span>$0 for free tournaments; otherwise the published fee.</span></div></li>
+        <li><div><b>Slots</b><span>Places taken against places available. 0 slots means unlimited.</span></div></li>
+        <li><div><b>Start, end and countdown</b><span>"Starts in" before it begins, "Ends in" while it's live.</span></div></li>
+        <li><div><b>Registration closes</b><span>The last moment you can join.</span></div></li>
+      </ol>
+    </div>
+    <div class="rv">
+      <article class="tcard" aria-label="Example tournament card">
+        <div class="tbanner"><span class="badge dot b-blue">Coming soon</span>
+          <svg viewBox="0 0 120 60" fill="none" aria-hidden="true"><path d="M2 48 L22 44 L38 30 L56 36 L72 18 L90 24 L118 8" stroke="#fcd57a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="tbody">
+          <h3>Weekend Free Forex Tournament</h3>
+          <p class="desc">Free entry · ranked by final equity · prizes for the top ranks</p>
+          <div class="tgrid">
+            <div><span>Starting balance</span><b>$10,000</b></div>
+            <div><span>Entry fee</span><b class="gold">Free</b></div>
+            <div><span>Rejoin fee</span><b>$5</b></div>
+          </div>
+          <div class="slots"><div class="slots-top"><span>Slots</span><span class="num">146 / 200</span></div><div class="bar"><i style="--w:73%"></i></div></div>
+          <div class="tfoot">
+            <div class="when">Starts in<b>1d 06h 20m</b></div>
+            <div class="when" style="text-align:right;">Registration closes<b>Sat 18:00 UTC</b></div>
+          </div>
+        </div>
+      </article>
+      <p class="caption">Example values. Real tournaments set their own balance, fees, slots and times.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMATS ═══ -->
+<section class="sec sec-alt" id="formats">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Formats</p><h2>Free or paid, one account or several</h2></div>
+    <div class="grid g4">
+      <div class="card rv"><div class="ic c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7c-2-3-6-3-6-.5S9 7 12 7zM12 7c2-3 6-3 6-.5S15 7 12 7z"/></svg></div><h3>Free tournaments</h3><p>$0 entry. A free Adiox account is all you need — and the prize table still pays by rank.</p></div>
+      <div class="card rv"><div class="ic c-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div><h3>Paid tournaments</h3><p>A published entry fee, paid at one checkout with coupons, bonus credit and wallet cash where allowed.</p></div>
+      <div class="card rv"><div class="ic c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></div><h3>Multiple accounts</h3><p>Some tournaments let you hold more than one account at once, up to the limit shown.</p></div>
+      <div class="card rv"><div class="ic c-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Rejoin</h3><p>Eliminated while the tournament is live? Buy back in for the rejoin fee, where it's enabled.</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px;">
+      <div class="card rv">
+        <h3 style="margin-top:0;">How rejoining works</h3>
+        <ul class="checks">
+          <li><b>Only while live</b> — rejoins aren't possible before the start or after the end.</li>
+          <li><b>Cooldown</b> — wait the cooldown period shown on the tournament after elimination.</li>
+          <li><b>Limit</b> — each tournament sets a maximum number of rejoins per user.</li>
+          <li><b>Fresh start</b> — the account is reset to the starting balance and new credentials are emailed.</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <h3 style="margin-top:0;">How joining works</h3>
+        <ul class="checks">
+          <li><b>Before the cutoff</b> — and while slots are available.</li>
+          <li><b>Pay once</b> — the entry fee is taken at checkout ($0 for free tournaments).</li>
+          <li><b>Get your account</b> — login and password are shown in the portal and emailed to you.</li>
+          <li><b>Trade on the web terminal</b> — press Start Trading to open the Adiox Trading Platform.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RULES + CHECKER ═══ -->
+<section class="sec" id="rules">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Rules &amp; elimination</p><h2>Rules in dollars, checked every second</h2><p class="lead">Each tournament sets its own rules as dollar amounts. A rule set to 0 is switched off. Break a live rule and the account is eliminated straight away; the end-of-tournament checks decide who qualifies for a rank.</p></div>
+    <div class="tw rv">
+      <table>
+        <thead><tr><th scope="col">Rule</th><th scope="col">When it triggers</th><th scope="col">Checked</th><th scope="col">Shown as</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Overall loss limit</th><td>Equity falls to the starting balance minus the limit, or lower</td><td>Every second</td><td><span class="code">Overall loss reached</span></td></tr>
+          <tr><th scope="row">Daily loss limit</th><td>Yesterday's closing balance (the starting balance on day one) minus equity reaches the limit</td><td>Every second</td><td><span class="code">Daily loss reached</span></td></tr>
+          <tr><th scope="row">Single-trade loss</th><td>Any one trade loses the limit or more</td><td>Every second</td><td><span class="code">Single trade loss reached</span></td></tr>
+          <tr><th scope="row">Max trades</th><td>You place more trades than allowed</td><td>Every second</td><td><span class="code">Max trades reached</span></td></tr>
+          <tr><th scope="row">Minimum trades</th><td>Fewer trades than required when the tournament ends</td><td>At the end</td><td><span class="code">Not eligible</span></td></tr>
+          <tr><th scope="row">Target profit</th><td>Set, and final equity is below starting balance + target</td><td>At the end</td><td><span class="code">Not eligible</span></td></tr>
+          <tr><th scope="row">Zero equity</th><td>Final equity is $0 or less</td><td>At the end</td><td><span class="code">Not eligible</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="head rv" style="margin-top:56px;"><p class="kicker">Rule checker</p><h3 style="font-size:24px;">Would this account survive?</h3><p class="muted" style="margin-top:8px;">Enter a tournament's rules and an account's numbers. The checker applies the same tests, in the same order, as the platform.</p></div>
+    <div class="sim rv">
+      <form class="sim-in" id="checker" novalidate>
+        <div class="fld load-real" hidden><label for="c-load">Load the rules of a real tournament</label><select class="inp" id="c-load"><option value="">Choose a tournament…</option></select></div>
+        <fieldset style="border:0; display:grid; gap:12px;">
+          <legend class="faint small" style="margin-bottom:8px;">Tournament rules (0 = off)</legend>
+          <div class="row3">
+            <div class="fld"><label for="c-init">Starting balance $</label><input class="inp" id="c-init" name="init" type="number" min="0" step="100" value="10000" /></div>
+            <div class="fld"><label for="c-maxloss">Overall loss $</label><input class="inp" id="c-maxloss" name="maxLoss" type="number" min="0" step="50" value="1000" /></div>
+            <div class="fld"><label for="c-daily">Daily loss $</label><input class="inp" id="c-daily" name="daily" type="number" min="0" step="50" value="500" /></div>
+            <div class="fld"><label for="c-single">Single-trade loss $</label><input class="inp" id="c-single" name="single" type="number" min="0" step="10" value="200" /></div>
+            <div class="fld"><label for="c-maxtrades">Max trades</label><input class="inp" id="c-maxtrades" name="maxTrades" type="number" min="0" step="1" value="50" /></div>
+            <div class="fld"><label for="c-mintrades">Min trades</label><input class="inp" id="c-mintrades" name="minTrades" type="number" min="0" step="1" value="5" /></div>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="c-target">Target profit $</label><input class="inp" id="c-target" name="target" type="number" min="0" step="50" value="0" /></div>
+            <div class="fld"><label for="c-stage">Check at</label><select class="inp" id="c-stage" name="stage"><option value="live">During the tournament</option><option value="end">The end of the tournament</option></select></div>
+          </div>
+        </fieldset>
+        <fieldset style="border:0; display:grid; gap:12px;">
+          <legend class="faint small" style="margin-bottom:8px;">The account</legend>
+          <div class="row2">
+            <div class="fld"><label for="c-equity">Current equity $</label><input class="inp" id="c-equity" name="equity" type="number" step="10" value="9650" /></div>
+            <div class="fld"><label for="c-prev">Yesterday's closing balance $</label><input class="inp" id="c-prev" name="prev" type="number" min="0" step="10" placeholder="Day one: starting balance" /></div>
+            <div class="fld"><label for="c-worst">Worst single-trade loss $</label><input class="inp" id="c-worst" name="worst" type="number" min="0" step="10" value="120" /></div>
+            <div class="fld"><label for="c-trades">Trades so far</label><input class="inp" id="c-trades" name="trades" type="number" min="0" step="1" value="12" /></div>
+          </div>
+        </fieldset>
+      </form>
+      <div class="sim-out" aria-live="polite">
+        <h3>Result</h3>
+        <div class="verdict" id="c-verdict">—</div>
+        <ul class="checklist" id="c-list"></ul>
+        <p class="out-note">Checks run in this order and stop at the first rule broken. Equity floor and daily floor are shown so you know your room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RANKING, TIES, PRIZES + SIMULATOR ═══ -->
+<section class="sec sec-alt" id="prizes">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Ranking &amp; prizes</p><h2>How ranks and prizes are decided</h2></div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ic c-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.7 0-3 1-3 2.2 0 2.8 6 1.4 6 4.3 0 1.2-1.3 2.3-3 2.3-1.2 0-2.3-.6-2.8-1.6M12 6.5V8M12 16.8v1.5"/></svg></div><h3>Cash</h3><p>Paid to your Adiox wallet. Spend it on any product or withdraw it after identity verification.</p></div>
+      <div class="card rv"><div class="ic c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L12 16.4 6.7 19.2l1.2-5.9L3.4 9.2l6-.7L12 3z"/></svg></div><h3>Bonus credit</h3><p>Covers part of a future purchase (up to 50%). Credit expires after 30 days.</p></div>
+      <div class="card rv"><div class="ic c-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Challenge account</h3><p>A free prop-firm challenge account of the size set in the prize table.</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px;">
+      <div class="card rv"><h3 style="margin-top:0;">Ranking</h3><ul class="checks"><li>Qualifying players are ranked by <b>final equity</b>, highest first.</li><li>While live, ranks refresh <b>every minute</b>.</li><li>Equal equity means an <b>equal rank</b>, and the next rank is skipped — 1, 1, 3.</li></ul></div>
+      <div class="card rv"><h3 style="margin-top:0;">Ties and prizes</h3><ul class="checks"><li><b>Cash and credit</b>: the prizes for every rank the tied players cover are pooled and split equally.</li><li><b>Challenge accounts</b>: every tied player receives one — nothing is split.</li><li>Prizes are paid automatically or by the Adiox team, depending on the tournament.</li></ul></div>
+    </div>
+
+    <div class="head rv" style="margin-top:56px;"><p class="kicker">Leaderboard &amp; prize simulator</p><h3 style="font-size:24px;">Rank a tournament and split its prizes</h3><p class="muted" style="margin-top:8px;">Edit the players and the prize table. The simulator removes players who don't qualify, ranks the rest by equity, handles ties and splits prizes the way the platform does.</p></div>
+    <div class="sim rv" style="grid-template-columns:1fr;">
+      <div class="sim-in">
+        <div class="fld load-real" hidden><label for="s-load">Load the prize table of a real tournament</label><select class="inp" id="s-load"><option value="">Choose a tournament…</option></select></div>
+        <div class="row3">
+          <div class="fld"><label for="s-init">Starting balance $</label><input class="inp" id="s-init" type="number" min="0" step="100" value="10000" /></div>
+          <div class="fld"><label for="s-min">Min trades</label><input class="inp" id="s-min" type="number" min="0" step="1" value="3" /></div>
+          <div class="fld"><label for="s-target">Target profit $ (0 = none)</label><input class="inp" id="s-target" type="number" min="0" step="50" value="0" /></div>
+        </div>
+        <div class="grid g2" style="gap:18px;">
+          <div class="lb-edit">
+            <h4 style="font-size:15px; margin-bottom:8px;">Players</h4>
+            <div class="tw"><table><thead><tr><th scope="col">Player</th><th scope="col">Final equity $</th><th scope="col">Trades</th><th scope="col"><span class="sr-only">Remove</span></th></tr></thead><tbody id="s-players"></tbody></table></div>
+            <div class="lb-tools"><button class="btn btn-ghost btn-sm" type="button" id="s-add-player">+ Add player</button></div>
+          </div>
+          <div class="lb-edit">
+            <h4 style="font-size:15px; margin-bottom:8px;">Prize table</h4>
+            <div class="tw"><table><thead><tr><th scope="col">Ranks</th><th scope="col">Type</th><th scope="col">Amount</th><th scope="col"><span class="sr-only">Remove</span></th></tr></thead><tbody id="s-prizes"></tbody></table></div>
+            <div class="lb-tools"><button class="btn btn-ghost btn-sm" type="button" id="s-add-prize">+ Add prize row</button><button class="btn btn-ghost btn-sm" type="button" id="s-reset">Reset example</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="sim-out" style="border-left:0; border-top:1px solid var(--line);" aria-live="polite">
+        <h3>Final leaderboard</h3>
+        <div class="tw lb-result"><table><thead><tr><th scope="col">Rank</th><th scope="col">Player</th><th scope="col">Equity</th><th scope="col">Prize</th></tr></thead><tbody id="s-result"></tbody></table></div>
+        <p class="out-note" id="s-note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEADERBOARDS ═══ -->
+<section class="sec" id="leaderboards">
+  <div class="wrap">
+    <div class="head rv"><p class="kicker">Leaderboards</p><h2>Follow every rank, live</h2><p class="lead">Tournament leaderboards in the portal show where every player stands while the event runs and how it finished.</p></div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ic c-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Per tournament &amp; global</h3><p>Each tournament has its own leaderboard, plus a global top-traders view across tournaments.</p></div>
+      <div class="card rv"><div class="ic c-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Country filter &amp; world map</h3><p>Filter by country and see results on a world map.</p></div>
+      <div class="card rv"><div class="ic c-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><h3>Clear sections</h3><p>Active, eliminated and — once it ends — completed players, each in their own section.</p></div>
+    </div>
+    <div class="actions rv" style="margin-top:24px;"><a class="btn btn-ghost" href="https://portal.adiox.io" target="_blank" rel="noopener">Open the leaderboard ↗</a><a class="btn btn-ghost" href="https://portal.adiox.io" target="_blank" rel="noopener">My tournaments ↗</a></div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec sec-alt" id="faq">
+  <div class="wrap">
+    <div class="head c rv"><p class="kicker">FAQ</p><h2>Tournament questions</h2></div>
+    <div class="faq rv">
+      <details><summary>Are Adiox tournaments free?</summary><div class="a">Free tournaments have a $0 entry fee; paid tournaments show their fee before you join. Both rank players the same way and pay prizes by rank.</div></details>
+      <details><summary>Is the money in a tournament account real?</summary><div class="a">No — tournament accounts are funded with virtual money on the Adiox Trading Platform. Prizes are real: cash and bonus credit go to your Adiox wallet, and some ranks win a free challenge account.</div></details>
+      <details><summary>How are winners ranked?</summary><div class="a">By final equity, highest first, among players who qualify. Players with fewer than the minimum trades, below the target profit (when one is set), or with $0 equity or less don't qualify.</div></details>
+      <details><summary>What happens if two players finish with the same equity?</summary><div class="a">They share the rank and the next rank is skipped. Cash and credit prizes for the ranks they cover are pooled and split equally; a challenge-account prize goes to each of them.</div></details>
+      <details><summary>Can I join after a tournament has started?</summary><div class="a">Yes, until the registration cutoff shown on the tournament and while slots are available.</div></details>
+      <details><summary>Can I rejoin after being eliminated?</summary><div class="a">Where the tournament allows it: while it's live, after the cooldown, up to the maximum number of rejoins, for the rejoin fee. The account is reset to the starting balance.</div></details>
+      <details><summary>Are news trading, copy trading and HFT allowed?</summary><div class="a">Each tournament page states whether news trading, copy trading and high-frequency trading are allowed for that event. Check before you trade.</div></details>
+      <details><summary>What happens to my account after the tournament?</summary><div class="a">Final ranks are set and prizes are paid. Tournament accounts are disabled 3 days after the end.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cta rv">
+      <div><h2>Ready to compete?</h2><p>Create a free Adiox account, pick a free or paid tournament, and trade for a place on the leaderboard.</p></div>
+      <div class="actions"><a class="btn btn-gold btn-lg" href="https://portal.adiox.io" target="_blank" rel="noopener">Create free account ↗</a><a class="btn btn-ghost btn-lg" href="https://portal.adiox.io" target="_blank" rel="noopener">Open tournaments ↗</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<dialog class="tdlg" id="t-dialog" aria-labelledby="d-title">
+  <div class="tdlg-in">
+    <button class="tdlg-x" type="button" data-close aria-label="Close">✕</button>
+    <div id="d-body"></div>
+  </div>
+</dialog>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <a class="logo" href="/" aria-label="Adiox home"><picture><source srcset="/images/adiox-logo-sm.webp" type="image/webp" /><img src="/images/adiox-logo-sm.png" alt="Adiox" width="182" height="87" loading="lazy" /></picture></a>
+      <nav aria-label="Adiox site"><a href="/">Adiox home</a><a href="/tournaments/">Tournaments</a><a href="/challenges/">Challenges</a><a href="/games/">Trading games</a><a href="/training-room/">Training Room</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+    </div>
+    <p class="risk"><strong>Risk disclosure.</strong> Tournament accounts are trading accounts on the Adiox Trading Platform funded with virtual money. Entry and rejoin fees buy access to a skill-based competition and are not deposits. Prizes are paid only to qualifying players under the published rules. Trading leveraged products carries a high level of risk. Nothing here is investment advice. Paid competitions may not be available in every country. <a href="/legal/risk-disclosure/">Risk disclosure</a> · <a href="/legal/terms/">Terms</a> · <a href="/legal/regional-restrictions/">Regional restrictions</a> · © <span data-year>2026</span> Adiox</p>
+  </div>
+</footer>
+
+<script src="assets/arena.js" defer></script>
+</body>
+</html>
